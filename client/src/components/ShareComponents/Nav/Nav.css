@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap');
+/* -- Setting some variables to color and fonts ,enz-- */
+:root{
+    --FirstColor:#C0392B ;
+    --secondColor :#e47cb5;
+    --ValColor :red;
+    --FontColor :rgba(60,46,76,255);
+
+    
+    
+}
+
+.container-homepage {
+  background-color:var(--FirstColor) !important;
+
+}
+
+.logo{
+  font-size: 2rem;
+  font-family: 'Monoton', cursive;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #30d045 0%, #cfc426 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	
+}
+   
+  
+  
+
+
+.nav-color{
+  color:var( --FontColor)!important;
+  font-family: 'Righteous', cursive;
+  margin: 5px 10px;
+  font-size: 1.2rem;
+
+}
+
+.nav-color:hover{
+  color: var( --secondColor ) !important;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.6;
+  margin-right:70px;
+}
+.container-homepage{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+h1{
+
+  margin-top: 10rem;
+  color:var( --FontColor);
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2rem;
+  
+
+}
+
+.span{
+  font-size: 1rem;
+
+}
+
+.dummy-text{
+  line-height: 1.6;
+}

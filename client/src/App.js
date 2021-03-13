@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Nav from "./components/ShareComponents/Nav/Nav";
+import MainNav from "./components/ShareComponents/Nav/MainNav";
 import Home from "./components/ShareComponents/Home/Home";
 import AboutUs from "./components/ShareComponents/AboutUs/AboutUs";
 import SubnavF from "./components/Food/SubNavF/SubNavF";
@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Router>
         {/* change the Nav to Nav_Logout when the user is login */}
-        <Nav />
+        <MainNav />
 
         <Switch>
           <Route path="/workshop/pricing">
