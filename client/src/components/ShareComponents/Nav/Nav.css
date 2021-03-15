@@ -4,7 +4,7 @@
 /* -- Setting some variables to color and fonts ,enz-- */
 :root{
     --FirstColor:#C0392B ;
-    --secondColor :#e47cb5;
+    --secondColor :#9fe9f3;
     --ValColor :rgb(53, 45, 126);
     --FontColor :rgba(60,46,76,255);  
     
@@ -15,7 +15,7 @@
   font-size: 2rem;
   font-family: 'Monoton', cursive;
   text-transform: uppercase;
-  color: rgb(38, 33, 41);
+  color:var( --FontColor)!important;
 	
 }
 
