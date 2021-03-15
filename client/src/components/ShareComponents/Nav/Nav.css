@@ -5,7 +5,7 @@
 :root{
     --FirstColor:#C0392B ;
     --secondColor :#e47cb5;
-    --ValColor :red;
+    --ValColor :rgb(53, 45, 126);
     --FontColor :rgba(60,46,76,255);  
     
 }
@@ -15,7 +15,7 @@
   font-size: 2rem;
   font-family: 'Monoton', cursive;
   text-transform: uppercase;
-  color: black;
+  color: rgb(38, 33, 41);
 	
 }
 
