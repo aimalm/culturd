@@ -19,7 +19,7 @@ function MainNav() {
               <LinkContainer to="/workshop"><NavDropdown.Item  className="nav-color">CULTURD WORKSHOP</NavDropdown.Item></LinkContainer>
               <LinkContainer to="/food"><NavDropdown.Item className="nav-color" to="/food" >CULTURD KITCHING</NavDropdown.Item></LinkContainer>
              </NavDropdown>
-                <LinkContainer to="/about_us"><Nav.Link className="nav-color">About Us</Nav.Link></LinkContainer>
+                <LinkContainer to="/about_us"><Nav.Link className="nav-color">About CULTURD</Nav.Link></LinkContainer>
                 <Nav.Link className="nav-color" href="#foo">Register</Nav.Link>
                <Nav.Link className="nav-color" href="#foo">Login</Nav.Link>
           </Nav>

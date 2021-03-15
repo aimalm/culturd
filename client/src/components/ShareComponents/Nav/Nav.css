@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap');
 /* -- Setting some variables to color and fonts ,enz-- */
 :root{
-    --FirstColor:#C0392B ;
+
     --secondColor :#9fe9f3;
     --ValColor :rgb(53, 45, 126);
-    --FontColor :rgba(60,46,76,255);  
+    --FontColor :#2f4e5d ;  
     
 }
 
@@ -30,16 +30,14 @@
   font-family: 'Righteous', cursive;
   margin: 5px 10px;
   font-size: 1.2rem;
+  color:var( --FontColor)!important;
+	
 
 }
 
 .nav-color:hover{
   color: var( --secondColor ) !important;
 }
-
-
-
-
 
 .container-homepage{
   display: grid;

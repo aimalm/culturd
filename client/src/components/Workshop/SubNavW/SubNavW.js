@@ -8,7 +8,7 @@ import {LinkContainer} from 'react-router-bootstrap'
 function SubNavW() {
     return (
       <div className="container-navbar">
-      <Navbar bg="light  fixed-top" expand="lg">
+      <Navbar bg="light fixed-top">
           <LinkContainer to="/"><Navbar.Brand className="logo">CULTURD</Navbar.Brand></LinkContainer>
         <Navbar.Toggle />
         <Navbar.Collapse>

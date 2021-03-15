@@ -3,6 +3,11 @@ import './LandingW.css'
 import logo from '../image/poto1.png'; 
 import team from '../image/aboutus.png'
 import bgimage2 from '../image/bg5.png'
+import cooking from '../image/cooking.png'
+import dance from '../image/dance.png'
+import art from '../image/art.png'
+
+
 
 function LandingW() {
     return (
@@ -12,7 +17,7 @@ function LandingW() {
             <img src={logo} alt="Logo" />
          </div>
         <div className="dummy-text">
-             <h1>CULTURD WORKSHOP</h1>
+             <h1>CULTURD WORKSHOP</h1><br></br><br></br>
             <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br></br>Aenean commodo ligula eget dolor. Aenean massa.<br></br> Cum sociis natoque penatibus et magnis dis<br></br> parturient montes, nascetur ridiculus mus. 
             <br></br>Donec quam felis, ultricies nec.</h4>
             <br></br>
@@ -38,6 +43,76 @@ function LandingW() {
             <img src={team} alt="team"/>
         </div>
     </div>
+    <div className="container-ourservice">
+        <h1 className="text-ourservise">OUR WORKSHOP</h1>
+    <div className="wrapper-cooking">
+        <div className="img-cooking" >
+            <img src={cooking} alt="cooking"/>
+        </div>
+        <div className="text-cooking">
+             <h2>Cooking Workshop </h2>
+             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br></br>Aenean commodo ligula eget dolor. Aenean massa.<br></br> Cum sociis natoque penatibus et magnis dis<br></br> parturient montes, nascetur ridiculus mus. 
+            <br></br>Donec quam felis, ultricies nec.
+            </p>
+        </div>
+    </div>
+        <div className="wrapper-dance">
+        <div className="text-cooking">
+          <h2>Dance Workshop </h2>
+          <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br></br>Aenean commodo ligula eget dolor. Aenean massa.<br></br> Cum sociis natoque penatibus et magnis dis<br></br> parturient montes, nascetur ridiculus mus. 
+            <br></br>Donec quam felis, ultricies nec.
+          </p>
+        </div>
+        <div className="img-dance">
+        <img src={dance} alt="dance"/>
+      </div>
+    </div>
+    <div className="wrapper-art">
+        <div className="img-art">
+            <img src={art} alt="art"/>
+        </div>
+        <div className="text-cooking">
+             <h2>Art Workshop </h2>
+             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br></br>Aenean commodo ligula eget dolor. Aenean massa.<br></br> Cum sociis natoque penatibus et magnis dis<br></br> parturient montes, nascetur ridiculus mus. 
+            <br></br>Donec quam felis, ultricies nec.
+            </p>
+        </div>
+    </div>
+    </div>
+
+ <footer className="mainfooter fixed-bottom" role="contentinfo">
+  <div className="footer-middle">
+  <div className="container">
+    <div className="row">
+      <div className="col-md-3 col-sm-6">
+        <div className="footer-pad">
+          <h4>Heading 1</h4>
+        </div>
+      </div>
+      <div className="col-md-3 col-sm-6">
+        <div className="footer-pad">
+          <h4>Heading 2</h4>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div className="footer-pad">
+          <h4>Heading 3</h4>
+          
+        </div>
+      </div>
+    	<div className="col-md-3">
+    		<h4>Follow Us</h4>
+		</div>
+    </div>
+	<div className="row">
+		<div className="col-md-12 copy">
+			<p className="text-center">&copy; Copyright 2021 - CULTURD WORKSHOP  All rights reserved.</p>
+		</div>
+	</div>
+  </div>
+  </div>
+</footer>
     </>
         
     )
