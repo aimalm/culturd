@@ -21,9 +21,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* change the Nav to Nav_Logout when the user is login */}
-        <MainNav />
-
         <Switch>
           <Route path="/workshop/pricing">
             <SubNavW />
@@ -32,17 +29,17 @@ function App() {
 
           <Route path="/workshop/event_coming_up">
             <SubNavW />
-            <EventComingUpW/>
+            <EventComingUpW />
           </Route>
 
           <Route path="/workshop/list">
             <SubNavW />
-            <ListW/>
+            <ListW />
           </Route>
 
           <Route path="/workshop/about_us">
-            <SubNavW/>
-            <AboutUsW/>
+            <SubNavW />
+            <AboutUsW />
           </Route>
 
           <Route path="/food/profile">
@@ -61,6 +58,9 @@ function App() {
           </Route>
 
           <Route path="/about_us">
+            {/* change the Nav to Nav_Logout when the user is login */}
+            <MainNav />
+
             <AboutUs />
           </Route>
 
@@ -75,6 +75,9 @@ function App() {
           </Route>
 
           <Route path="/">
+            {/* change the Nav to Nav_Logout when the user is login */}
+            <MainNav />
+
             <Home />
           </Route>
         </Switch>
