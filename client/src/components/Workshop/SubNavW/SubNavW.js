@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 function SubNavW() {
     return (
-        <div >
+        <div className="container-subnavW">
       <ul >
         <li>
           <Link to ="/workshop/pricing">

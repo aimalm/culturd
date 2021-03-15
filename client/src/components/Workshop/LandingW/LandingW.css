@@ -1,0 +1,22 @@
+
+
+
+.container-homepage{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color:#bfede4;
+
+}
+
+
+
+
+img{
+ display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.6;
+  margin-right:40px;
+
+
+}
