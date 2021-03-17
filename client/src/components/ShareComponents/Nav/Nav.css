@@ -19,12 +19,6 @@
 	
 }
 
-
-.container-headerr{
-  z-index: 10;
-}
-   
-
 .nav-color{
   color:var( --FontColor)!important;
   font-family: 'Righteous', cursive;

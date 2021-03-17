@@ -1,0 +1,63 @@
+
+
+.container-homeMain{
+    background-color: rgba(248, 248, 247, 0.829);
+  
+}
+
+.image-logo{
+    margin-left: 50px;
+    border-image: round;
+}
+
+.text-homeMain{
+    width: 60%;
+    color: rgb(66, 77, 129);
+    text-align:center;
+    margin-top: -200px;
+    margin-left: 240px;
+    font-size: 1.6rem;
+}
+
+.text-h1Main{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cards-prouductsMain{
+    display: grid;
+   
+
+  
+}
+
+.workshop-page{
+    border: 4px solid pink;
+
+  
+  
+}
+
+.foodie-page{
+    border: 4px solid pink;
+
+}
+
+
+.cards-prouductsMain{
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+
+.workshop-image {
+   max-height: 30px;
+}
+
+
+.foodie-image{
+    width: 100%;
+}
+

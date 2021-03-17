@@ -8,11 +8,10 @@
 
 }
 
-img{
- display: block;
-  max-width: 100%;
+.image-logo{
+  display: block;
+  max-width: 80%;
   height: auto;
-  opacity: 0.6;
   margin-right:40px;
 
 }
@@ -32,6 +31,11 @@ img{
   padding: 2px;
 
 
+}
+
+
+.container-aboutus{
+  background-image: url('../image/bg5.png');
 }
 
 
@@ -89,6 +93,7 @@ footer a:hover {
   padding-top: 2em;
   color: white;
 }
+
 
 
 

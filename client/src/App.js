@@ -16,6 +16,7 @@ import PricingW from "./components/Workshop/PricingW/PricingW";
 import EventComingUpW from "./components/Workshop/EventComingUpW/EventComingUpW";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+import Footer from "./components/ShareComponents/Footer/Footer";
 
 function App() {
   return (
@@ -67,11 +68,13 @@ function App() {
           <Route path="/food">
             <SubnavF />
             <LandingF />
+            <Footer />
           </Route>
 
           <Route path="/workshop">
             <SubNavW />
             <LandingW />
+            <Footer />
           </Route>
 
           <Route path="/">
@@ -79,6 +82,7 @@ function App() {
             <MainNav />
 
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </Router>
