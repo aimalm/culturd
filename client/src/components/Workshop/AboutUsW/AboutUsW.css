@@ -1,0 +1,42 @@
+body {
+    background-color: #ffffff;
+}
+
+.container-aboutus{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: 90%;
+
+
+  }
+  
+  h1{
+    margin-top: 10rem;
+    color:var( --FontColor);
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2rem;
+    text-align: left;
+    
+
+    
+  
+  }
+
+  .text-aboutUS{
+      margin-left: 80px;
+  }
+  
+
+
+.image-aboutusW{
+    opacity: 0.7;
+    margin-top: 100px;
+    display: inline-block;
+    position: relative;
+    width: 60%;
+
+  
+}

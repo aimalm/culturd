@@ -1,0 +1,79 @@
+
+
+
+.container-homepage{
+   display: flex;
+    background-color:#bfede4;
+
+}
+
+.image-logo{
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin-right:40px;
+
+}
+
+
+.img-class {
+
+    display: block;
+     max-width: 100%;
+     height: auto;
+     opacity: 0.6;
+     margin-right:40px;
+   
+   }
+
+
+
+.text-ourservise{
+  text-align: center;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+
+.container-ourservice{
+  background-color: #ffe7d9;
+  height: 170vh;
+  margin: 80px;
+  padding: 2px;
+
+
+}
+
+
+.container-aboutus{
+  background-image: url('../image/bg5.png');
+}
+
+
+.wrapper-cooking{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 100px;
+  margin-left: 150px;
+
+}
+
+.wrapper-dance{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 100px;
+  margin-left: 150px;
+
+}
+
+
+.wrapper-art{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 100px;
+  margin-left: 150px;
+
+}
+
+
+
