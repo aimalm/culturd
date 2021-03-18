@@ -1,33 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap');
-/* -- Setting some variables to color and fonts ,enz-- */
-:root{
 
-    --secondColor :#9fe9f3;
-    --ValColor :rgb(53, 45, 126);
-    --FontColor :#2f4e5d ;  
-    
-}
+
 
 
 .logo{
   font-size: 2rem;
   font-family: 'Monoton', cursive;
   text-transform: uppercase;
-  color:var( --FontColor)!important;
-	
+  background: linear-gradient(to right, #63DBC4 0%, #F5C133 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  
 }
 
 .nav-color{
   color:var( --FontColor)!important;
-  font-family: 'Righteous', cursive;
+  font-family: 'Montserrat', sans-serif;
   margin: 5px 10px;
   font-size: 1.2rem;
-  color:var( --FontColor)!important;
-	
+  color:var( --NavbarColor )!important;
+  
 
 }
+  
+
+.bgwhite{
+  background-color:  white !important;
+}
+	
+
+
 
 .nav-color:hover{
   color: var( --secondColor ) !important;
