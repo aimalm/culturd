@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+/* -- Setting some variables to color and fonts ,enz-- */
+:root {
+  --NavbarColor: rgb(67, 92, 76);
+
+  --light-turquiose: #bfede4;
+  --turquiose: #63dbc4;
+  --dark-turquiose: #3aab95;
+
+  --light-yellow: #f5e3b1;
+  --yellow: #f5c133;
+  --dark-yellow: #9e7f1f;
+
+  --light-beige: #f4eccf;
+  --beige: #f5d98e;
+  --dark-beige: #a08c61;
+
+  --light-carol: #f5d6cb;
+  --carol: #f59d87;
+  --dark-carol: #a26554;
+
+  --light-green: #cfd7bd;
+  --green: #86a059;
+  --dark-green: #556a3b;
+}
