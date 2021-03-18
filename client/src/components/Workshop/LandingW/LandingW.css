@@ -2,8 +2,7 @@
 
 
 .container-homepage{
-    display: grid;
-    grid-template-columns: auto auto;
+   display: flex;
     background-color:#bfede4;
 
 }
@@ -17,6 +16,18 @@
 }
 
 
+.img-class {
+
+    display: block;
+     max-width: 100%;
+     height: auto;
+     opacity: 0.6;
+     margin-right:40px;
+   
+   }
+
+
+
 .text-ourservise{
   text-align: center;
   font-size: 2rem;
@@ -25,7 +36,7 @@
 
 
 .container-ourservice{
-  background-color: #ffcbdb;
+  background-color: #ffe7d9;
   height: 170vh;
   margin: 80px;
   padding: 2px;
@@ -63,37 +74,6 @@
   margin-left: 150px;
 
 }
-
-footer {
-  background: #16222A;
-  background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
-  background: linear-gradient(59deg, #3A6073, #16222A);
-  color: white;
-  margin-top:100px;
-}
-
-footer a {
-  color: #fff;
-  font-size: 14px;
-  transition-duration: 0.2s;
-}
-
-footer a:hover {
-  color: #FA944B;
-  text-decoration: none;
-}
-
-.copy {
-  font-size: 12px;
-  padding: 10px;
-  border-top: 1px solid #FFFFFF;
-}
-
-.footer-middle {
-  padding-top: 2em;
-  color: white;
-}
-
 
 
 
