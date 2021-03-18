@@ -1,3 +1,7 @@
+.food-home *{
+  margin:0;
+  padding:0;
+}
 .home-container {
     background-color: rgba(240, 201, 41, 0.3);
     width: 80%;
@@ -28,22 +32,59 @@
       border-radius: 20px;
       padding: 1rem;
   }
+
+  .food-new{
+    background-color: var(--beige);
+    padding: 5rem;
+  }
+
+  .food-title-new{
+    font-family: var(--font);
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+  }
   .random-container{
-      width: 80%;
-      margin: auto;
+    padding: 3rem 0;
+      width: 95%;
+      margin:  auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, 20rem);
-      grid-gap: 3rem;
+      grid-template-columns: repeat(auto-fit, 18rem);
+      grid-gap: 2rem;
   }
   
-  .product{
-      display: flex;
-      flex-direction: column;
-      border: 1px solid rgb(204, 204, 204);
-      border-radius: 20px;
-      padding: 1.5rem;
-  
-  }
+ 
   .product-image{
-      max-width: 20rem;
+      height: 18rem;
+      width: 18rem;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      color: rgba(255, 255, 255, 0.7);
   }
+  .food-info{
+    background-color: white; 
+    width: 18rem;
+    border-radius: 0 0 10px 10px ;
+    padding: 1rem;
+    color: rgb(80, 80, 80);
+   }
+   .dish-name{
+     font-weight: bolder;
+     text-transform: capitalize;
+   }
+.star{
+  color:var(--yellowish)  !important;
+}
+.more-button{
+  background-color: transparent;
+  border:none;
+}
+.more-icon{
+  color:var(--beige);
+  font-size: 2.5rem !important;
+ 
+}
+.more-button-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
