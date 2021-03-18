@@ -1,6 +1,5 @@
 import React from "react";
-import "./Footer.css";
-import RemoveIcon from "@material-ui/icons/Remove";
+import  './Footer.css'
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -8,17 +7,20 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 function footer() {
   return (
-    <div>
-      <footer>
+    <div className="footer">
+      
         <div className="footer-icon-container">
-          <FacebookIcon/>
-          <InstagramIcon/>
-          <TwitterIcon/>
-          <MailOutlineIcon/>
+          <FacebookIcon className="footer-icon"/>
+          <InstagramIcon className="footer-icon"/>
+          <TwitterIcon className="footer-icon"/>
+          <MailOutlineIcon className="footer-icon"/>
+          </div>
+         <span className="footer-line">&#x2015;</span> 
+        <span className="footer-copyright">&copy; Copyright 2021 - CULTURD - All rights reserved.</span>
+        
+        
 
-        </div>
-        <RemoveIcon className="line" />
-      </footer>
+    
 
       {/* <div class="d-flex flex-column">
   
