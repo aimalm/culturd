@@ -63,6 +63,7 @@ function App() {
             <MainNav />
 
             <AboutUs />
+            <Footer/>
           </Route>
 
           <Route path="/food">

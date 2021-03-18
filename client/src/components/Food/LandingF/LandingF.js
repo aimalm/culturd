@@ -2,8 +2,12 @@ import React from "react";
 // import cookingPic from "../Assets/cooking.png";
 import "./LandingF.css";
 import SearchIcon from "@material-ui/icons/Search";
+import{FoodTable} from "../Template"
+import StarIcon from '@material-ui/icons/Star';
 
 function LandingF() {
+
+
   return (
     <div className="food-home">
       <div className="home-container">
@@ -15,28 +19,27 @@ function LandingF() {
           <SearchIcon className="search-button" />
         </div>
       </div>
+
+
+
       <div className="random-container">
-        <div className="product">
-          <h4>Name of food</h4>
-          <p>Cook's Name</p>
-          <div className="cook-score">4</div>
-          <img className="product-image" src="https://images.unsplash.com/photo-1584739200850-dc2072fdfe04?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
-          <button>More info</button>
-        </div>
-        <div className="product">
-          <h4>Name of food</h4>
-          <p>Cook's Name</p>
-          <div className="cook-score">4</div>
-          <img className="product-image" src="https://images.unsplash.com/photo-1584739200850-dc2072fdfe04?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
-          <button>More info</button>
-        </div>
-        <div className="product">
-          <h4>Name of food</h4>
-          <p>Cook's Name</p>
-          <div className="cook-score">4</div>
-          <img className="product-image" src="https://images.unsplash.com/photo-1584739200850-dc2072fdfe04?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
-          <button>More info</button>
-        </div>
+        
+          {FoodTable.map((dish)=>(
+            
+            <div className="product"><h4>{dish.dishName}</h4>
+            <p>{dish.cooker}</p>
+
+            <div className="cook-score">
+              {(dish.cookerScore).map((star)=>(
+                <StarIcon/>))}
+            
+            </div>
+            <img className="product-image" src={dish.imageUrl} alt=""/>
+            <button>More info</button>
+          </div>
+            ))}
+          
+    
 
       </div>
     </div>

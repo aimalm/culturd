@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import  './Footer.css'
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -8,70 +9,16 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 function footer() {
   return (
     <div className="footer">
-      
+               <span className="footer-line">&#x2015;</span> 
+
         <div className="footer-icon-container">
-          <FacebookIcon className="footer-icon"/>
-          <InstagramIcon className="footer-icon"/>
-          <TwitterIcon className="footer-icon"/>
-          <MailOutlineIcon className="footer-icon"/>
+          <Link to="/"><FacebookIcon className="footer-icon"/></Link>
+          <Link to="/"><InstagramIcon className="footer-icon"/></Link>
+          <Link to="/"><TwitterIcon className="footer-icon"/></Link>
+          <a href="mailto:name@email.com"><MailOutlineIcon className="footer-icon"/></a>
           </div>
-         <span className="footer-line">&#x2015;</span> 
         <span className="footer-copyright">&copy; Copyright 2021 - CULTURD - All rights reserved.</span>
-        
-        
-
-    
-
-      {/* <div class="d-flex flex-column">
   
-  <footer class="footer">
-    <div>
-      <a href="https://coreui.io">CoreUI</a>
-      <span>&copy; 2020 creativeLabs.</span>
-    </div>
-    <div class="ml-auto">
-      <span>Powered by</span>
-      <a href="https://coreui.io">CoreUI</a>
-    </div>
-		<div className="col-md-12 copy">
-			<p className="text-center">&copy; Copyright 2021 - CULTURD - All rights reserved.</p>
-		</div>
-	
-  </footer>
-</div> */}
-
-      {/* <footer className="mainfooter" role="contentinfo">
-  <div className="footer-middle">
-  <div className="container">
-    <div className="row">
-      <div className="col-md-3 col-sm-6">
-        <div className="footer-pad">
-          <h4>Cul</h4>
-        </div>
-      </div>
-      <div className="col-md-3 col-sm-6">
-        <div className="footer-pad">
-          <h4>Heading 2</h4>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div className="footer-pad">
-          <h4>Heading 3</h4>
-          
-        </div>
-      </div>
-    	<div className="col-md-3">
-    		<h4>Follow Us</h4>
-		</div>
-    </div>
-	<div className="row">
-		<div className="col-md-12 copy">
-			<p className="text-center">&copy; Copyright 2021 - CULTURD - All rights reserved.</p>
-		</div>
-	</div>
-  </div>
-  </div>
-</footer> */}
     </div>
   );
 }
