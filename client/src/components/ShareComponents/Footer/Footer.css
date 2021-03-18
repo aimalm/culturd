@@ -1,19 +1,19 @@
 
 footer {
-    background: #597c5c;
-    background: -webkit-linear-gradient(59deg, #3A6073, #1e523c);
-    background: linear-gradient(59deg, #3f7c77, #1f4d34);
-    color:#ffe7d9;;
+    background: #bfc7cf;;
+    /* background: -webkit-linear-gradient(59deg, #3A6073, #1e523c);
+    background: linear-gradient(59deg, #3f7c77, #1f4d34); */
+    color:#0f491c;
     margin-top:100px;
   }
    footer a {
-    color: #fff;
+    color: #0f491c;
     font-size: 14px;
     transition-duration: 0.2s;
   }
   
   footer a:hover {
-    color: #FA944B;
+    color: #0f491c;
     text-decoration: none;
   }
   
@@ -25,7 +25,7 @@ footer {
   
   .footer-middle {
     padding-top: 2em;
-    color:#ffe7d9;;
+    color:#0f491c;
   }
   
   
