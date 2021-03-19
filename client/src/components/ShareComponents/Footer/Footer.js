@@ -5,18 +5,22 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import line from '../image/line.png'
 
 function footer() {
   return (
     <div className="footer">
-               <span className="footer-line">&#x2015;</span> 
-
+               {/* <span className="footer-line">&#x2015;</span>  */}
+        
         <div className="footer-icon-container">
           <Link to="/"><FacebookIcon className="footer-icon"/></Link>
           <Link to="/"><InstagramIcon className="footer-icon"/></Link>
           <Link to="/"><TwitterIcon className="footer-icon"/></Link>
           <a href="mailto:name@email.com"><MailOutlineIcon className="footer-icon"/></a>
           </div>
+          <div className="footer-line-container">
+        <img className="footer-line-img" src={line} alt=""/>
+        </div>
         <span className="footer-copyright">&copy; Copyright 2021 - CULTURD - All rights reserved.</span>
   
     </div>

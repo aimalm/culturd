@@ -40,16 +40,24 @@
 
   .food-title-new{
     font-family: var(--font);
-    font-size: 4rem;
+    font-size: 3rem;
+    padding: 0 7rem;
     color: white;
     font-weight: bold;
   }
+  .breakline{
+    border-bottom: 3px solid white;
+
+  margin: 0 7rem;
+  padding-bottom: .5rem;
+
+  }
   .random-container{
     padding: 3rem 0;
-      width: 95%;
+      width: 90%;
       margin:  auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, 18rem);
+      grid-template-columns: repeat(4, 18rem);
       grid-gap: 2rem;
   }
   
@@ -87,4 +95,70 @@
 .more-button-wrapper{
   display: flex;
   justify-content: space-between;
+}
+
+.how-it-works-border{
+  margin: 1.5rem;
+  border: 3px solid var(--yellowish);
+  border-radius: 8px;
+  max-height: 100vh;
+}
+.how-it-works-title{
+  font-family: var(--font);
+  font-size: 3rem;
+  color: var(--yellowish);
+  font-weight: bold;
+  padding:3rem 7rem;
+}
+.how-it-works{
+  display: grid;
+  grid-template-columns: repeat(3,33%);
+  grid-template-rows: 40% 35%;
+  width: 80%;
+  margin: auto;
+  justify-items: center;
+}
+
+
+
+.step-one,.step-two, .step-three{
+  border: 8px dotted var(--light-green);
+  border-radius: 50%;
+  height: 18.5rem;
+  width: 18.5rem;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  color:rgb(80, 80, 80);
+  
+
+}
+
+.step-img-hat{
+  transform: rotate(-15deg);
+  /* justify-self: start; */
+  padding:1rem;
+}
+.step-img-pot{
+  transform: rotate(20deg);
+  grid-row: 2/3;
+  align-self: end;
+}
+.step-two{
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.step-three{
+  grid-column: 3/4;
+  margin-top: 5rem;
+  height: 20rem;
+  width: 20rem;
+}
+
+.step-one h3,.step-two h3, .step-three h3{
+  color: var(--yellowish);
+  font-size: 4rem;
+  font-weight: bold;
 }
