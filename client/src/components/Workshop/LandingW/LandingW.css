@@ -1,9 +1,13 @@
 
-
-
 .container-homepage{
    display: flex;
-    background-color:#bfede4;
+   background-color:#bfede4;
+   margin-right: -15px;
+   margin-bottom: -15px;
+   margin-left: -15px;
+   flex-wrap: wrap;
+
+
 
 }
 
@@ -49,10 +53,6 @@
 
 }
 
-
-.container-aboutus{
-  background-image: url('../image/bg5.png');
-}
 
 
 .wrapper-cooking{
