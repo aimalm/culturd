@@ -1,0 +1,9 @@
+.products-wrapper{
+    border:3px solid brown;
+    margin-top: 6rem;
+    padding: 3rem 7rem;
+}
+
+.back-button{
+    font-size: 2rem;
+}
