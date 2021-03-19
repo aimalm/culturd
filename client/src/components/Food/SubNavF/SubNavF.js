@@ -1,37 +1,56 @@
+import "./SubNavF.css";
+
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import React from "react";
-import './SubNavF.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { LinkContainer } from "react-router-bootstrap";
+import { Button } from "react-bootstrap";
 
-import {Link} from "react-router-dom"
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-
-function SubnavF() {
+function SubNavF() {
   return (
-    <div className='sub-nav'>
-      <ul >
-        <li>
-          <Link to ="/food/search_by_date">
-          <h4>Search by Date</h4>
-          </Link>
-        </li>
-        <li>
-          <Link to="/food/search_by_location">
-          <h4>Search by location</h4>
-          </Link>
-        </li>
-        <li>
-          <Link to="/food/profile">
-          <h4>profile</h4>
-          </Link>
-        </li>
-        <li className="sub-nav-basket">
-          
-          <ShoppingBasketIcon className="basket-icon"/>
-          <p>0</p>
-          
-        </li>
-      </ul>
+    <div className="container-navbar">
+      <Navbar bg="white fixed-top" expand="lg">
+        <LinkContainer to="/">
+          <Navbar.Brand className="logo">CULTURD</Navbar.Brand>
+        </LinkContainer>
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <Nav className="ml-auto navbar">
+            <LinkContainer to="/">
+              <Nav.Link className="nav-color">Home</Nav.Link>
+            </LinkContainer>
+            <NavDropdown className="nav-color" title="Worskhops">
+              <LinkContainer to="/workshop">
+                <NavDropdown.Item className="nav-color">
+                  CULTURD WORKSHOP
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/food">
+                <NavDropdown.Item className="nav-color" to="/food">
+                  CULTURD KITCHING
+                </NavDropdown.Item>
+              </LinkContainer>
+            </NavDropdown>
+            <LinkContainer to="/food/search_by_date">
+              <Nav.Link className="nav-color">Search By Date</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/food/search_by_location">
+              <Nav.Link className="nav-color">Search By Location</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/food/Profile">
+              <Nav.Link className="nav-color">Your Profile</Nav.Link>
+            </LinkContainer>
+
+            <Button variant="outline-warning">
+              <ShoppingBasketIcon /> 0
+            </Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   );
 }
-
-export default SubnavF;
+export default SubNavF;

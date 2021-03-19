@@ -1,3 +1,7 @@
+.food-home *{
+  margin:0;
+  padding:0;
+}
 .home-container {
     background-color: rgba(240, 201, 41, 0.3);
     width: 80%;
@@ -28,22 +32,135 @@
       border-radius: 20px;
       padding: 1rem;
   }
+
+  .food-new{
+    background-color: var(--beige);
+    padding: 5rem 0;
+
+  }
+
+  .food-title-new{
+    font-family: var(--font);
+    font-size: 3rem;
+    padding: 0 7rem;
+    color: white;
+    font-weight: bold;
+  }
+  .breakline{
+    border-bottom: 3px solid white;
+
+  margin: 0 7rem;
+  padding-bottom: .5rem;
+
+  }
   .random-container{
-      width: 80%;
-      margin: auto;
+    padding: 3rem 0;
+      width: 90%;
+      margin:  auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, 20rem);
-      grid-gap: 3rem;
+      grid-template-columns: repeat(4, 18rem);
+      grid-gap: 2rem;
+      justify-content: center;
   }
   
-  .product{
-      display: flex;
-      flex-direction: column;
-      border: 1px solid rgb(204, 204, 204);
-      border-radius: 20px;
-      padding: 1.5rem;
-  
-  }
+ 
   .product-image{
-      max-width: 20rem;
+      height: 18rem;
+      width: 18rem;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      color: rgba(255, 255, 255, 0.7);
   }
+  .food-info{
+    background-color: white; 
+    width: 18rem;
+    border-radius: 0 0 10px 10px ;
+    padding: 1rem;
+    color: rgb(80, 80, 80);
+   }
+   .dish-name{
+     font-weight: bolder;
+     text-transform: capitalize;
+   }
+.star{
+  color:var(--yellowish)  !important;
+}
+.more-button{
+  background-color: transparent;
+  border:none;
+}
+.more-icon{
+  color:var(--beige);
+  font-size: 2.5rem !important;
+ 
+}
+.more-button-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.how-it-works-border{
+  margin: 1.5rem;
+  border: 3px solid var(--yellowish);
+  border-radius: 8px;
+  max-height: 70vh;
+}
+.how-it-works-title{
+  font-family: var(--font);
+  font-size: 3rem;
+  color: var(--yellowish);
+  font-weight: bold;
+  padding:3rem 7rem;
+}
+.how-it-works{
+  display: grid;
+  grid-template-columns: repeat(3,33%);
+  grid-template-rows: 40% 35%;
+  width: 80%;
+  margin: auto;
+  justify-items: center;
+}
+
+
+
+.step-one,.step-two, .step-three{
+  border: 8px dotted var(--light-green);
+  border-radius: 50%;
+  height: 18.5rem;
+  width: 18.5rem;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  color:rgb(80, 80, 80);
+  
+
+}
+
+.step-img-hat{
+  transform: rotate(-15deg);
+  /* justify-self: start; */
+  padding:1rem;
+}
+.step-img-pot{
+  transform: rotate(20deg);
+  grid-row: 2/3;
+  align-self: end;
+}
+.step-two{
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.step-three{
+  grid-column: 3/4;
+  margin-top: 5rem;
+  height: 20rem;
+  width: 20rem;
+}
+
+.step-one h3,.step-two h3, .step-three h3{
+  color: var(--yellowish);
+  font-size: 4rem;
+  font-weight: bold;
+}
