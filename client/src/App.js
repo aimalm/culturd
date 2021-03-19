@@ -18,6 +18,7 @@ import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 import Footer from "./components/ShareComponents/Footer/Footer";
 import ProductsF from "./components/Food/ProductsF/ProductsF";
 
+
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
           <Route path="/workshop/pricing">
             <SubNavW />
             <PricingW />
+         
           </Route>
           <Route path="/workshop/list">
             <SubNavW />

@@ -2,12 +2,7 @@
 .container-homepage{
    display: flex;
    background-color:#bfede4;
-   margin-right: -15px;
-   margin-bottom: -15px;
-   margin-left: -15px;
-   flex-wrap: wrap;
-
-
+   flex-direction: column;
 
 }
 
@@ -78,6 +73,12 @@
   margin-top: 100px;
   margin-left: 150px;
 
+}
+
+
+.dummy-text{
+  text-align: center;
+  align-items: center;
 }
 
 

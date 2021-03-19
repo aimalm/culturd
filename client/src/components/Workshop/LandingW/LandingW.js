@@ -16,9 +16,8 @@ function LandingW() {
             <img className="img-class" src={logo} alt="Logo" />
          </div>
         <div className="dummy-text">
-             <h1>CULTURD WORKSHOP</h1><br></br><br></br>
-            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br></br>Aenean commodo ligula eget dolor. Aenean massa.<br></br> Cum sociis natoque penatibus et magnis dis<br></br> parturient montes, nascetur ridiculus mus. 
-            <br></br>Donec quam felis, ultricies nec.</h4>
+             <h1>CULTURD WORKSHOP</h1><br></br>
+            <h4>We bring our Culture to you.</h4>
             <br></br>
             <button className="btn-one"   onclick="" type="button">
               Discover More</button>

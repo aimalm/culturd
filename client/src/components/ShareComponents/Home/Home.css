@@ -1,7 +1,9 @@
-
+.container-productMain{
+    background-color: white;
+}
 
 .container-homeMain{
-    background-color: rgba(248, 248, 247, 0.829);
+    background-color: rgba(219, 219, 150, 0.829);
   
 }
 
