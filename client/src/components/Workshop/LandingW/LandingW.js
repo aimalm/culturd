@@ -13,7 +13,7 @@ function LandingW() {
     <>
      <div className="container-homepage" >
          <div className="image-logo">
-            <img c src={logo} alt="Logo" />
+            <img className="img-class" src={logo} alt="Logo" />
          </div>
         <div className="dummy-text">
              <h1>CULTURD WORKSHOP</h1><br></br><br></br>
@@ -30,19 +30,19 @@ function LandingW() {
 
     <div className="container-aboutus">
         <div className="text-aboutUS">
-            <h1>WONDERFUL TEAM</h1><br></br>
+            <h1>WORKSHOP TEAM</h1><br></br>
              <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br></br>Aenean commodo ligula eget dolor. Aenean massa.<br></br> Cum sociis natoque penatibus et magnis dis<br></br> parturient montes, nascetur ridiculus mus. 
             <br></br>Donec quam felis, ultricies nec.</h4>
         </div>
         <div className="image-aboutusW">
-            <img src={team} alt="team"/>
+            <img className="img-class" src={team} alt="team"/>
         </div>
     </div>
     <div className="container-ourservice">
         <h1 className="text-ourservise">OUR WORKSHOP</h1>
     <div className="wrapper-cooking">
         <div className="img-cooking" >
-            <img src={cooking} alt="cooking"/>
+            <img  className="img-class" src={cooking} alt="cooking"/>
         </div>
         <div className="text-cooking">
              <h2>Cooking Workshop </h2>
@@ -60,12 +60,12 @@ function LandingW() {
           </p>
         </div>
         <div className="img-dance">
-        <img src={dance} alt="dance"/>
+        <img className="img-class" src={dance} alt="dance"/>
       </div>
     </div>
     <div className="wrapper-art">
         <div className="img-art">
-            <img src={art} alt="art"/>
+            <img className="img-class" src={art}  alt="art"/>
         </div>
         <div className="text-cooking">
              <h2>Art Workshop </h2>
