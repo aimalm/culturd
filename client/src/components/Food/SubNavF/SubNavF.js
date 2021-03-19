@@ -12,7 +12,7 @@ import { Button } from "react-bootstrap";
 function SubNavF() {
   return (
     <div className="container-navbar">
-      <Navbar bg="light fixed-top" expand="lg">
+      <Navbar bg="white fixed-top" expand="lg">
         <LinkContainer to="/">
           <Navbar.Brand className="logo">CULTURD</Navbar.Brand>
         </LinkContainer>

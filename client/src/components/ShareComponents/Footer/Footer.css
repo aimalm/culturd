@@ -24,20 +24,20 @@
 }
 .footer-icon,
 .footer-copyright {
-  color: var(--greenish);
+  color: var(--dark-beige);
 }
 .footer-icon:hover {
   color: var(--beige);
 }
-/* .footer-line {
+.footer-line {
   color: var(--dark-turquiose);
   font-size: 5rem;
   line-height: .5;
-} */
-.footer-line-img{
+}
+/* .footer-line-img{
   padding-top: 1rem;
   width: 3rem;
-}
+} */
 
 @media only screen and (max-width: 376px) {
     .footer{

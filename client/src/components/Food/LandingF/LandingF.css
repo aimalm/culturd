@@ -35,7 +35,8 @@
 
   .food-new{
     background-color: var(--beige);
-    padding: 5rem;
+    padding: 5rem 0;
+
   }
 
   .food-title-new{
@@ -59,6 +60,7 @@
       display: grid;
       grid-template-columns: repeat(4, 18rem);
       grid-gap: 2rem;
+      justify-content: center;
   }
   
  
@@ -101,7 +103,7 @@
   margin: 1.5rem;
   border: 3px solid var(--yellowish);
   border-radius: 8px;
-  max-height: 100vh;
+  max-height: 70vh;
 }
 .how-it-works-title{
   font-family: var(--font);

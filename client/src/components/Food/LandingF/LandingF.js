@@ -8,6 +8,8 @@ import AddCircleSharpIcon from "@material-ui/icons/AddCircleSharp";
 import chefHat from "../images/chef_hat.png";
 import pot from "../images/kitchen-pack.png";
 
+import {Link} from "react-router-dom"
+
 function LandingF() {
   return (
     <div className="food-home">
@@ -28,6 +30,7 @@ function LandingF() {
         <div className="breakline"></div>
         <div className="random-container">
           {FoodTable.map((dish) => (
+            <Link to="/food/products">
             <div key={dish.key}>
               <img className="product-image" src={dish.imageUrl} alt="" />
               <div className="food-info">
@@ -45,6 +48,7 @@ function LandingF() {
                 </p>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>

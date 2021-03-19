@@ -17,6 +17,7 @@ import EventComingUpW from "./components/Workshop/EventComingUpW/EventComingUpW"
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 import Footer from "./components/ShareComponents/Footer/Footer";
+import ProductsF from "./components/Food/ProductsF/ProductsF";
 
 function App() {
   return (
@@ -48,6 +49,11 @@ function App() {
             <ProfileF />
           </Route>
 
+          <Route path="/food/products">
+            <SubnavF />
+            <ProductsF/>
+          </Route>
+
           <Route path="/food/search_by_location">
             <SubnavF />
             <SearchByLocationF />
@@ -61,7 +67,6 @@ function App() {
           <Route path="/about_us">
             {/* change the Nav to Nav_Logout when the user is login */}
             <MainNav />
-
             <AboutUs />
             <Footer/>
           </Route>
@@ -81,7 +86,6 @@ function App() {
           <Route path="/">
             {/* change the Nav to Nav_Logout when the user is login */}
             <MainNav />
-
             <Home />
             <Footer />
           </Route>
