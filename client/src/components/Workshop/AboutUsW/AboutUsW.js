@@ -16,7 +16,7 @@ function AboutUsW() {
          
         }} >
         <div className="text-aboutUS">
-            <h1>WONDERFUL TEAM</h1><br></br>
+            <h1 className="h1-aboutus">WONDERFUL TEAM</h1><br></br>
              <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br></br>Aenean commodo ligula eget dolor. Aenean massa.<br></br> Cum sociis natoque penatibus et magnis dis<br></br> parturient montes, nascetur ridiculus mus. 
             <br></br>Donec quam felis, ultricies nec.</h4>
         </div>

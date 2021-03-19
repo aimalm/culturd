@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+
 .pricing__section {
     padding: 100px 0 160px;
     display: flex;
@@ -8,7 +10,7 @@
   
   .pricing__container-card {
     background-color: #f5e3b1;
-    box-shadow: 0 6px 20px rgba(100, 179, 179, 0.2);
+    box-shadow: 0 6px 20px rgba(100, 97, 59, 0.459);
     width: 280px;
     height: 500px;
     text-decoration: none;
@@ -16,13 +18,20 @@
   }
   
   .pricing__container-card:nth-child(2) {
-    background-color: #f5d6cb;;
+    background-color: #f5d6cb;
+  }
+
+
+
+  .pricing__container-card:nth-child(3) {
+    background-color:#bfede4;
   }
   
   .pricing__container-card:hover {
     transform: scale(1.06);
     transition: all 0.3s ease-out;
-    color:#63dbc4;
+    color:#556a3b;
+    background-color:#f5d98e;
   }
   
   .pricing__container-card:nth-child(2) {
@@ -33,18 +42,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top:2rem;
   }
   
   .pricing__wrapper {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    margin: 0 auto;
+    margin: 30px auto;
   }
   
   .pricing__heading {
-    color: #1f2918;
-    margin-bottom: 24px;
+    color:#3aab95;
+    font-family: 'Roboto Slab', serif;
+  
+    
   }
   
   .pricing__container-cardInfo {
@@ -53,7 +64,8 @@
     height: 500px;
     padding: 24px;
     align-items: center;
-    color:#556a3b;
+    color:#b48e26;
+    font-family: var(--font);
   }
   
   .pricing__container-cardInfo h3 {
@@ -68,6 +80,7 @@
   .pricing__container-cardInfo p {
     font-size: 14px;
     margin-bottom: 24px;
+    font-family: var(--font);
   }
   
   .pricing__container-features {
@@ -87,7 +100,46 @@
   
   .icon {
     margin: 24px 0;
+    
   }
+
+
+.euro{
+    max-width: 100%;
+    height: 100%;
+  
+}
+
+
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+  }
+  
+  @keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+  }
+  
+  .euro{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 2s ease-in-out forwards infinite;
+    animation: swinging 2s ease-in-out forwards infinite;
+  }
+  
+ .euro-logo{
+     display: flex;
+     height: 50px;   
+ }
+
+
+ 
+
+
+  /* mobile site */
   
   @media screen and (max-width: 960px) {
     .pricing__container {
@@ -111,7 +163,6 @@
   
     .pricing__container-card:nth-child(2) {
       transform: scale(1);
-      background: #242424;
       margin: 24px;
     }
   

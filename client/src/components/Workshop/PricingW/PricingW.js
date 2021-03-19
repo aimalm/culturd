@@ -1,18 +1,22 @@
 import React from 'react';
 import { FaFire } from 'react-icons/fa';
-import { BsXDiamondFill } from 'react-icons/bs';
-import { GiCrystalize } from 'react-icons/gi';
+import { GiCook } from 'react-icons/gi';
+import { FaItunesNote } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import {LinkContainer} from 'react-router-bootstrap'
 import { Button } from 'react-bootstrap';
+import euro1 from "../image/euro2.png";
 import './PricingW.css'
 
 function PricingW() {
     return (
-        <IconContext.Provider value={{ color: '#fff', size: 54 }}>
+        <IconContext.Provider value={{ color: '#fff', size: 64 }}>
         <div className='pricing__section'>
           <div className='pricing__wrapper'>
-            <h1 className='pricing__heading'>Pricing</h1>
+            <div className="euro-logo" > 
+                <img src={euro1} className="euro" alt="euro" />
+                <h1 className='pricing__heading'>Pricing</h1>
+            </div>
             <div className='pricing__container'>
               <LinkContainer to='/sign-up' className='pricing__container-card'>
                 <div className='pricing__container-cardInfo'>
@@ -37,7 +41,7 @@ function PricingW() {
               <LinkContainer to='/sign-up' className='pricing__container-card'>
                 <div className='pricing__container-cardInfo'>
                   <div className='icon'>
-                    <BsXDiamondFill />
+                    <GiCook />
                   </div>
                   <h3>Cooking Workshop</h3>
                   <h4>€29.99</h4>
@@ -57,7 +61,7 @@ function PricingW() {
               <LinkContainer to='/sign-up' className='pricing__container-card'>
                 <div className='pricing__container-cardInfo'>
                   <div className='icon'>
-                    <GiCrystalize />
+                    <FaItunesNote />
                   </div>
                   <h3>Dance Workshop</h3>
                   <h4>€18.99</h4>

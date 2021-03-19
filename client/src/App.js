@@ -13,7 +13,6 @@ import SearchByLocationF from "./components/Food/SearchByLocationF/SearchByLocat
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
 import PricingW from "./components/Workshop/PricingW/PricingW";
-import EventComingUpW from "./components/Workshop/EventComingUpW/EventComingUpW";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 import Footer from "./components/ShareComponents/Footer/Footer";
@@ -28,12 +27,6 @@ function App() {
             <SubNavW />
             <PricingW />
           </Route>
-
-          <Route path="/workshop/event_coming_up">
-            <SubNavW />
-            <EventComingUpW />
-          </Route>
-
           <Route path="/workshop/list">
             <SubNavW />
             <ListW />
@@ -42,6 +35,7 @@ function App() {
           <Route path="/workshop/about_us">
             <SubNavW />
             <AboutUsW />
+            <Footer />
           </Route>
 
           <Route path="/food/profile">

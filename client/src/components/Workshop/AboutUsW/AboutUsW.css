@@ -13,7 +13,7 @@ body {
 
   }
   
-  h1{
+  .h1-aboutus{
     margin-top: 10rem;
     color:var( --FontColor);
     font-family: 'Alfa Slab One', cursive;
