@@ -3,7 +3,7 @@ import mainImage from "../image/test2.png";
 import "./Home.css";
 import { Button } from "react-bootstrap";
 import workshop from "../image/workshop.png";
-import foodie from "../image/foodie.png";
+// import foodie from "../image/foodie.png";
 import { Link } from "react-router-dom";
 
 function Home() {
