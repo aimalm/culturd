@@ -22,11 +22,6 @@ function SubNavW() {
              </NavDropdown>
                 <LinkContainer to="/workshop/about_us"><Nav.Link className="nav-color">About Us</Nav.Link></LinkContainer>
                 <LinkContainer to="/workshop/Pricing"><Nav.Link className="nav-color">Pricing</Nav.Link></LinkContainer>
-                <LinkContainer to="/workshop">
-                <Button>
-                  <span>SIGN UP</span>
-                </Button>
-              </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
