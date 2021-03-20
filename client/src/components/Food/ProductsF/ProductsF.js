@@ -45,9 +45,9 @@ function ProductsF({
               />
               <div className="products-ingredients-container">
                 {selectedDish.ingredients.map((ingredient) => (
-                  <span key={ingredient} className="ingredient-lable">
+                  <p key={ingredient} className="ingredient-lable">
                     {ingredient}
-                  </span>
+                  </p>
                 ))}
 
                 {selectedDish.vegetarian ? (

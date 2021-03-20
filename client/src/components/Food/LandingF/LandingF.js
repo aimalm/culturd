@@ -23,17 +23,18 @@ function LandingF({setSelectedDish, shoppingCart, setShoppingCart}) {
   return (
     <div className="food-home">
       {/* search box start here */}
-      <div className="home-container">
-        <div className="food-image-div">
-          <img className="food-image" src="" alt="" />
-        </div>
+      <div className="home-search-container">
+        <h2 className="home-search-title">Getting your <br></br>
+        <strong>home food takeaway</strong></h2>
         <div className="search-bar">
-          <input className="search-input" type="text" />
-          <SearchIcon className="search-button" />
+          <input className="search-input" type="text" placeholder="Home dishes..." />
+          <button className="search-button"><SearchIcon className="search-button-icon" /></button>
         </div>
       </div>
 
-      {/* new food post start here */}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5d98e"  d="M0,224L720,288L1440,192L1440,320L720,320L0,320Z"></path></svg>
+      
+            {/* new food post start here */}
       <div className="food-new">
         <h3 className="food-title-new">New In!</h3>
         <div className="breakline"></div>
@@ -41,7 +42,7 @@ function LandingF({setSelectedDish, shoppingCart, setShoppingCart}) {
           {FoodTable.map((dish) => (
             
             <Link key={dish.dishID} to={'/food/products/'+ dish.dishID}>
-            <div onClick={()=>selectHandler(dish)}>
+            <div className="food-card"onClick={()=>selectHandler(dish)}>
               <img className="product-image" src={dish.imageUrl} alt="" />
               <div className="food-info">
                 <div className="more-button-wrapper">

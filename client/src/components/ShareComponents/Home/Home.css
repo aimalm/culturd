@@ -68,21 +68,25 @@
     border-radius: 8px;
 }
 .home-section-button{
-    text-decoration: none;
-    color:var(--NavbarColor);
     background-color: var(--carol);
     width: 40%;
-    padding: .9rem 1rem 0 1rem;
+    padding:  1rem;
     border-radius: 30px;
     text-align: center;
     font-family: var(--font);
-    font-weight: 600;
     color: white;
+    border: 2px solid var(--carol);
     text-transform: uppercase;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    display:flex;
 }
 .home-section-button:hover{
     text-decoration: none;
     color: var(--carol);
     background-color: white;
+    border: 2px solid var(--carol);
+
 
 }
