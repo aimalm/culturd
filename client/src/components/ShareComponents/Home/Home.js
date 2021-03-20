@@ -19,7 +19,7 @@ function Home() {
            Donec quam felis,.</h4><br></br>
           <Link to="/aboutus">
                 <Button>
-                  <span>Discover now</span>
+                  Discover now
                 </Button>
               </Link>
          </div>
@@ -37,7 +37,7 @@ function Home() {
                      </p>
                      <Link to="/workshop">
                         <Button>
-                        <span>Discover now</span>
+                      Discover now
                          </Button>
                      </Link>
                 </div>
@@ -52,7 +52,7 @@ function Home() {
                      </p>
                      <Link to="/food">
                         <Button>
-                            <span>Discover now</span>
+                            Discover now
                          </Button>
                     </Link>
                  </div>

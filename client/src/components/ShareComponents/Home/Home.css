@@ -2,14 +2,12 @@
     background-color: white;
 }
 
-.container-homeMain{
-    background-color: rgba(219, 219, 150, 0.829);
-  
-}
+
 
 .image-logo{
     margin-left: 50px;
     border-image: round;
+    height: 70%;
 }
 
 .text-homeMain{

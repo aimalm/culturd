@@ -25,9 +25,9 @@ function footer() {
           <MailOutlineIcon className="footer-icon" />
         </a>
       </div>
-      <span className="footer-copyright">
+      <p className="footer-copyright">
         &copy; Copyright 2021 - CULTURD - All rights reserved.
-      </span>
+      </p>
     </div>
   );
 }

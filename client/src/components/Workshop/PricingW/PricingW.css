@@ -5,11 +5,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:#cfd7bd;
+    background-color:#bfede4;
+   
   }
   
   .pricing__container-card {
-    background-color: #f5e3b1;
+    background-color: #d8f5b1;
     box-shadow: 0 6px 20px rgba(100, 97, 59, 0.459);
     width: 280px;
     height: 500px;
@@ -24,7 +25,7 @@
 
 
   .pricing__container-card:nth-child(3) {
-    background-color:#bfede4;
+    background-color: #f5e3b1;
   }
   
   .pricing__container-card:hover {
@@ -54,7 +55,6 @@
   .pricing__heading {
     color:#3aab95;
     font-family: 'Roboto Slab', serif;
-  
     
   }
   

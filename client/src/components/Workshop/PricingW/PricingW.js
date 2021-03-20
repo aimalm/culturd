@@ -15,7 +15,7 @@ function PricingW() {
           <div className='pricing__wrapper'>
             <div className="euro-logo" > 
                 <img src={euro1} className="euro" alt="euro" />
-                <h1 className='pricing__heading'>Pricing</h1>
+                <h1 className='pricing__heading'>Worskhop Pricing</h1>
             </div>
             <div className='pricing__container'>
               <LinkContainer to='/sign-up' className='pricing__container-card'>
@@ -23,7 +23,7 @@ function PricingW() {
                   <div className='icon'>
                     <FaFire />
                   </div>
-                  <h3>Workshop Art</h3>
+                  <h3> Art</h3>
                   <h4>€8.99</h4>
                   <p>per person</p>
                   <ul className='pricing__container-features'>
@@ -33,7 +33,7 @@ function PricingW() {
                   </ul>
                   <LinkContainer to="/workshop">
                     <Button>
-                        <span>SIGN UP</span>
+                        SIGN UP
                         </Button>
                  </LinkContainer>
                 </div>
@@ -43,7 +43,7 @@ function PricingW() {
                   <div className='icon'>
                     <GiCook />
                   </div>
-                  <h3>Cooking Workshop</h3>
+                  <h3>Cooking</h3>
                   <h4>€29.99</h4>
                   <p>per person</p>
                   <ul className='pricing__container-features'>
@@ -53,7 +53,7 @@ function PricingW() {
                   </ul>
                   <LinkContainer to="/workshop">
                 <Button>
-                  <span>SIGN UP</span>
+                  SIGN UP
                 </Button>
               </LinkContainer>
                 </div>
@@ -63,7 +63,7 @@ function PricingW() {
                   <div className='icon'>
                     <FaItunesNote />
                   </div>
-                  <h3>Dance Workshop</h3>
+                  <h3>Dance</h3>
                   <h4>€18.99</h4>
                   <p>per 5hours</p>
                   <ul className='pricing__container-features'>
@@ -73,7 +73,7 @@ function PricingW() {
                   </ul>
                   <LinkContainer to="/workshop">
                 <Button>
-                  <span>SIGN UP</span>
+                 SIGN UP
                 </Button>
               </LinkContainer>
                 </div>
