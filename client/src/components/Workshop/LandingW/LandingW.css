@@ -15,10 +15,9 @@
 }
 
 
-.img-class {
-
-    display: block;
-     max-width: 100%;
+  .img-class {
+     display: block;
+     width: 150px;
      height: auto;
      opacity: 0.6;
      margin-right:40px;
@@ -26,10 +25,21 @@
    }
 
 
-   .bgwhite {
-     background-color: white;
+   .img-team{
+     width: 200px;
+     display: block;
    }
 
+
+   .container-aboutus{
+     border:4px solid #f5e3b1;
+     height: 500px;
+     width: 1200px;
+     align-items: center;
+     margin-left: 100px;
+     margin-bottom: 100px;
+   }
+   
 
 
 .text-ourservise{
@@ -41,44 +51,18 @@
 
 .container-ourservice{
   background-color: #ffe7d9;
-  height: 170vh;
+  height: 140vh;
   margin: 80px;
-  padding: 2px;
-
-
 }
 
 
 
-.wrapper-cooking{
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-top: 100px;
-  margin-left: 150px;
-
-}
-
-.wrapper-dance{
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-top: 100px;
-  margin-left: 150px;
-
-}
-
-
-.wrapper-art{
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-top: 100px;
-  margin-left: 150px;
-
-}
 
 
 .dummy-text{
   text-align: center;
   align-items: center;
+  margin-top: 200px;
 }
 
 
