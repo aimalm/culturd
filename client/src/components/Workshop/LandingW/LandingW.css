@@ -1,9 +1,128 @@
 
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  flex-direction: column;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: white;
+  padding: 5% 10%;
+}
+.header {
+  flex-direction: column;
+}
+
+h1,
+h3 {
+  color: hsl(234, 12%, 34%);
+}
+
+.top-heading {
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.sub-heading {
+  max-width: 40%;
+}
+
+.container {
+  position: relative;
+  flex-flow: row;
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card h3,
+.card p {
+  text-align: left;
+}
+
+
+.card {
+  margin: 2em;
+  padding: 2em 2em;
+  border-radius: 10px;
+  box-shadow: 0.15em 0.15em 0.15em 0.15em hsla(229, 6%, 66%, 0.205);
+}
+
+.card1 {
+  background-color: #bfede4 ;
+  
+}
+
+
+.column .card2 {
+  background-color: #f5e3b1;
+ 
+}
+
+.column .card3 {
+  background-color: #f59d87;
+  
+
+}
+
+
+.column .card4 {
+  background-color: #cfd7bd;
+ 
+}
+
+
+@media (max-width: 640px) {
+  .top-heading {
+    font-size: 1.8rem;
+  }
+  .sub-heading {
+    max-width: 80%;
+  }
+
+
+  .main {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color:#dfcc99;
+  }
+  .container {
+    position: relative;
+    flex-direction: column;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 .container-homepage{
    display: flex;
    background-color:#bfede4;
    flex-direction: column;
-
+   background-image: url(../image/bg.png);
+   background-repeat: no-repeat;
+   background-size: cover
 }
 
 .image-logo{
@@ -13,16 +132,6 @@
   margin-right:40px;
 
 }
-
-
-  .img-class {
-     display: block;
-     width: 150px;
-     height: auto;
-     opacity: 0.6;
-     margin-right:40px;
-   
-   }
 
 
    .img-team{
@@ -40,24 +149,6 @@
      margin-bottom: 100px;
    }
    
-
-
-.text-ourservise{
-  text-align: center;
-  font-size: 2rem;
-  justify-content: center;
-}
-
-
-.container-ourservice{
-  background-color: #ffe7d9;
-  height: 140vh;
-  margin: 80px;
-}
-
-
-
-
 
 .dummy-text{
   text-align: center;
