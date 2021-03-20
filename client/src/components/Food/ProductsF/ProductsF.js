@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./ProductsF.css";
 import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
@@ -7,66 +7,88 @@ import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
 
 import { Link } from "react-router-dom";
 
-function ProductsF({ selectedDish, setSelectedDish,shoppingCart, setShoppingCart }) {
-
-   const addCart = () => {
-
-    setShoppingCart([...shoppingCart, {
+function ProductsF({
+  selectedDish,
+  setSelectedDish,
+  shoppingCart,
+  setShoppingCart,
+}) {
+  const addCart = () => {
+    setShoppingCart([
+      ...shoppingCart,
+      {
         dish: selectedDish.dishName,
         cooker: selectedDish.cooker,
         price: selectedDish.price,
         pickUpDate: selectedDish.pickUpDate,
-        address: selectedDish.address
-    }])
-   }
-
-  
+        address: selectedDish.address,
+      },
+    ]);
+  };
 
   return (
     <div>
-        <div className="products-wrapper">
+      <div className="products-wrapper">
+        <Link to="/food">
+          <button className="back-button" onClick={() => setSelectedDish([])}>
+            <IoMdArrowBack className="back-button-icon" />
+          </button>
+        </Link>
 
-      <Link to="/food">
-        <button onClick={() => setSelectedDish([])}>
-          <IoMdArrowBack className="back-button" />
-        </button>
-      </Link>
+        {typeof selectedDish.dishName != "undefined" ? (
+          <div className="products-container">
+            <div className="products-info">
+              <img
+                className="products-img-food"
+                src={selectedDish.imageUrl}
+                alt=""
+              />
+              <div className="products-ingredients-container">
+                {selectedDish.ingredients.map((ingredient) => (
+                  <span key={ingredient} className="ingredient-lable">
+                    {ingredient}
+                  </span>
+                ))}
 
-      {typeof selectedDish.dishName != "undefined" ? (
-          <div>
-          <div className="products-info">
-            <img src={selectedDish.imageUrl} alt="" />
-            {selectedDish.ingredients.map((ingredient) => (
-              <span key={ingredient} className="ingredient-lable">
-                {ingredient}
-              </span>
-            ))}
-            {selectedDish.vegetarian ? <FaLeaf /> : ""}
-            <h3>{selectedDish.dishName}</h3>
-            <p>{selectedDish.dishDescription}</p>
-            <p>
-              {selectedDish.price} <EuroSymbolIcon />
-            </p>
+                {selectedDish.vegetarian ? (
+                  <FaLeaf className="ingredient-vegetarian" />
+                ) : (
+                  ""
+                )}
+              </div>
+              <h2 className="products-dishname">{selectedDish.dishName}</h2>
+              <h3 className="products-price">
+                <EuroSymbolIcon /> <strong>{selectedDish.price}</strong>
+              </h3>
+              <p className="products-description">{selectedDish.dishDescription}</p>
+              <p><strong>Pick Up Date:</strong> {selectedDish.pickupDate}</p>
+              <p><strong>Pick Up Address:</strong> {selectedDish.address}</p>
+            </div>
+
+            <div className="cooker-info">
+              <img
+                className="products-img-cook"
+                src={selectedDish.cookerImage}
+                alt=""
+              />
+              <p>{selectedDish.cooker}</p>
+              <div className="products-cooker-score">
+                {selectedDish.cookerScore.map((score, index) => (
+                  <StarIcon key={index} className="star" />
+                ))}
+              </div>
+              
+            </div>
+            <button className="products-add-button" onClick={addCart}>
+              Add to cart
+            </button>
+            
           </div>
-
-          <div className="cooker-info">
-            <img src={selectedDish.cookerImage} alt="" />
-            {selectedDish.cooker}
-            {selectedDish.cookerScore.map((score, index) => (
-              <StarIcon key={index} className="star" />
-            ))}
-          </div>
-
-          <button onClick={addCart}>Add to cart</button>
-          </div>
-
-      ) : (
-        <h1>Go back to check out the delicious HOME DISHES</h1>
-      )}
-
+        ) : (
+          <h1>Go back to check out the delicious HOME DISHES</h1>
+        )}
+      </div>
     </div>
-    </div>
-
   );
 }
 

@@ -1,9 +1,114 @@
 .products-wrapper{
-    border:3px solid brown;
     margin-top: 6rem;
     padding: 3rem 7rem;
+    
+}
+.products-wrapper h2,.products-wrapper h3,.products-wrapper p{
+    color: var(--NavbarColor);
 }
 
 .back-button{
-    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: var(--yellowish);
+    font-size: 3rem ;
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+}
+
+
+
+.products-container{
+    
+    width: 80%;
+    margin: 1rem auto;
+    display:grid;
+    grid-template-columns: 80% 20%;
+}
+.products-img-food{
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.products-ingredients-container{
+    padding:  1rem 0;
+}
+.ingredient-lable {
+    margin: .3rem;
+    border: 1px solid var(--NavbarColor);
+    padding: .1rem .5rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--NavbarColor);
+
+}
+.ingredient-vegetarian{
+    color: var(--dark-turquiose);
+    margin: .6rem .5rem; 
+
+}
+.products-dishname{
+    text-transform: uppercase;
+}
+.products-description{
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+.cooker-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid var(--light-yellow);
+    margin-bottom: 10rem;
+    padding-left: 5rem;
+}
+.products-img-cook{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    padding: 1rem;
+
+}
+.products-cooker-score{
+    display: flex;
+    flex-direction: row;
+}
+
+.products-add-button{
+    text-decoration: none;
+    color:var(--NavbarColor);
+    background-color: var(--yellowish);
+    border: none;
+    width: 15rem;
+    padding: .8rem 1rem ;
+    border-radius: 30px;
+    text-align: center;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    grid-column: 1/3;
+    justify-self: end;
+  
+}
+
+
+.products-add-button:hover{
+    text-decoration: none;
+    color: white;
+    background-color: var(--light-yellow);
+
 }

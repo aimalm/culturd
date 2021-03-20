@@ -78,6 +78,7 @@ function App() {
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
             />
+            <Footer/>
           </Route>
 
           <Route path="/food/search_by_location">
