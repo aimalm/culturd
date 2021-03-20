@@ -21,52 +21,10 @@ function Home() {
           </h4>
           <br></br>
           <Link to="/aboutus">
-<<<<<<< HEAD
-                <Button>
-                  Discover now
-                </Button>
-              </Link>
-         </div>
-         <div className="container-productMain">
-            <h1 className="text-h1Main">OUR PRODUCT</h1>
-            <div className="cards-prouductsMain">
-             <div className="workshop-page">
-                 <div className="workshop-image">
-                     <img src={workshop} alt="workshop" />
-                </div>
-                     <h1>CULTURD WORKSHOP</h1>
-                    <p>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                     </p>
-                     <Link to="/workshop">
-                        <Button>
-                      Discover now
-                         </Button>
-                     </Link>
-                </div>
-                <div className="foodie-page">
-                    <div className="foodie-image">
-                       <img src={foodie} alt="foodie" />
-                     </div>
-                     <h1>CULTURD FOODIE</h1>
-                    <p>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                     </p>
-                     <Link to="/food">
-                        <Button>
-                            Discover now
-                         </Button>
-                    </Link>
-                 </div>
-            </div>
-=======
             <Button>
               <span>Discover now</span>
             </Button>
           </Link>
->>>>>>> origin/main
         </div>
         <div className="home-section-wrapper">
         <div className="home-section-container">
