@@ -28,6 +28,7 @@
   border-radius: 30px ;
   border: 4px solid var(--carol);
   height: 3rem;
+  text-transform: capitalize;
 }
 .search-input:focus{
   outline:none;

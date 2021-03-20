@@ -4,6 +4,8 @@ import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import StarIcon from "@material-ui/icons/Star";
 import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
+import { CgArrowLongUp } from "react-icons/cg";
+import { ShoppingCartF } from "../ShoppingCartF/ShoppingCartF";
 
 import { Link } from "react-router-dom";
 
@@ -12,6 +14,10 @@ function ProductsF({
   setSelectedDish,
   shoppingCart,
   setShoppingCart,
+  addingCart,
+  setAddingCart,
+  viewingCart,
+  setViewingCart,
 }) {
   const addCart = () => {
     setShoppingCart([
@@ -24,10 +30,30 @@ function ProductsF({
         address: selectedDish.address,
       },
     ]);
+
+    setAddingCart(true);
+
+    setTimeout(() => {
+      setAddingCart(false);
+    }, 3000);
   };
 
   return (
     <div>
+      {addingCart ? (
+        <div className="add-cart-alert" onClick={() => setViewingCart(true)}>
+          <p>
+            The dish is now <br></br>in your shopping cart!
+            <CgArrowLongUp />
+            <CgArrowLongUp />
+          </p>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {viewingCart ? <ShoppingCartF /> : ""}
+
       <div className="products-wrapper">
         <Link to="/food">
           <button className="back-button" onClick={() => setSelectedDish([])}>
@@ -60,9 +86,15 @@ function ProductsF({
               <h3 className="products-price">
                 <EuroSymbolIcon /> <strong>{selectedDish.price}</strong>
               </h3>
-              <p className="products-description">{selectedDish.dishDescription}</p>
-              <p><strong>Pick Up Date:</strong> {selectedDish.pickupDate}</p>
-              <p><strong>Pick Up Address:</strong> {selectedDish.address}</p>
+              <p className="products-description">
+                {selectedDish.dishDescription}
+              </p>
+              <p>
+                <strong>Pick Up Date:</strong> {selectedDish.pickupDate}
+              </p>
+              <p>
+                <strong>Pick Up Address:</strong> {selectedDish.address}
+              </p>
             </div>
 
             <div className="cooker-info">
@@ -77,12 +109,10 @@ function ProductsF({
                   <StarIcon key={index} className="star" />
                 ))}
               </div>
-              
             </div>
             <button className="products-add-button" onClick={addCart}>
               Add to cart
             </button>
-            
           </div>
         ) : (
           <h1>Go back to check out the delicious HOME DISHES</h1>

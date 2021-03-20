@@ -44,7 +44,7 @@ function SubNavF({shoppingCart}) {
               <Nav.Link className="nav-color">Your Profile</Nav.Link>
             </LinkContainer>
 
-            <Button variant="outline-warning">
+            <Button variant="outline-warning" >
               <ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}
             </Button>
           </Nav>

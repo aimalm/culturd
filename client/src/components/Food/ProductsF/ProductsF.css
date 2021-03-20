@@ -1,114 +1,120 @@
-.products-wrapper{
-    margin-top: 6rem;
-    padding: 3rem 7rem;
-    
+.products-wrapper {
+  margin-top: 6rem;
+  padding: 3rem 7rem;
 }
-.products-wrapper h2,.products-wrapper h3,.products-wrapper p{
-    color: var(--NavbarColor);
-}
-
-.back-button{
-    background-color: transparent;
-    border: none;
-    color: var(--yellowish);
-    font-size: 3rem ;
-    position: absolute;
-    top: 6rem;
-    left: 1rem;
+.add-cart-alert p,
+.products-wrapper h2,
+.products-wrapper h3,
+.products-wrapper p {
+  color: var(--NavbarColor);
 }
 
-
-
-.products-container{
-    
-    width: 80%;
-    margin: 1rem auto;
-    display:grid;
-    grid-template-columns: 80% 20%;
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: var(--yellowish);
+  font-size: 3rem;
+  position: absolute;
+  top: 6rem;
+  left: 1rem;
 }
-.products-img-food{
-    height: 20rem;
-    width: 20rem;
-    object-fit: cover;
-    border-radius: 20px;
+
+.add-cart-alert {
+  position: fixed;
+  right: 1rem;
+  border-radius: 18px;
+  border: 3px solid var(--carol);
+  padding: 1rem 2rem;
+  animation: appear 3s ease-in-out 1;
 }
-.products-ingredients-container{
-    padding:  1rem 0;
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.products-container {
+  width: 80%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+.products-img-food {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.products-ingredients-container {
+  padding: 1rem 0;
 }
 .ingredient-lable {
-    margin: .3rem;
-    border: 1px solid var(--NavbarColor);
-    padding: .1rem .5rem;
-    border-radius: 8px;
-    text-transform: capitalize;
-    display: inline-block;
-    color: var(--NavbarColor);
-
+  margin: 0.3rem;
+  border: 1px solid var(--NavbarColor);
+  padding: 0.1rem 0.5rem;
+  border-radius: 8px;
+  text-transform: capitalize;
+  display: inline-block;
+  color: var(--NavbarColor);
 }
-.ingredient-vegetarian{
-    color: var(--dark-turquiose);
-    margin: .6rem .5rem; 
-
+.ingredient-vegetarian {
+  color: var(--dark-turquiose);
+  margin: 0.6rem 0.5rem;
 }
-.products-dishname{
-    text-transform: uppercase;
+.products-dishname {
+  text-transform: uppercase;
 }
-.products-description{
-    text-transform: capitalize;
+.products-description {
+  text-transform: capitalize;
 }
 
-
-
-
-
-
-
-
-
-.cooker-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-left: 1px solid var(--light-yellow);
-    margin-bottom: 10rem;
-    padding-left: 5rem;
+.cooker-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid var(--dark-turquiose);
+  margin-bottom: 10rem;
+  padding-left: 5rem;
 }
-.products-img-cook{
-    border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
-    object-fit: cover;
-    padding: 1rem;
-
+.products-img-cook {
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  padding: 1rem;
 }
-.products-cooker-score{
-    display: flex;
-    flex-direction: row;
+.products-cooker-score {
+  display: flex;
+  flex-direction: row;
 }
 
-.products-add-button{
-    text-decoration: none;
-    color:var(--NavbarColor);
-    background-color: var(--yellowish);
-    border: none;
-    width: 15rem;
-    padding: .8rem 1rem ;
-    border-radius: 30px;
-    text-align: center;
-    font-family: var(--font);
-    font-weight: 600;
-    font-size: 1rem;
-    color: white;
-    text-transform: uppercase;
-    grid-column: 1/3;
-    justify-self: end;
-  
+.products-add-button {
+  text-decoration: none;
+  color: var(--NavbarColor);
+  background-color: var(--yellowish);
+  border: none;
+  width: 15rem;
+  padding: 0.8rem 1rem;
+  border-radius: 30px;
+  text-align: center;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  grid-column: 1/3;
+  justify-self: end;
 }
 
-
-.products-add-button:hover{
-    text-decoration: none;
-    color: white;
-    background-color: var(--light-yellow);
-
+.products-add-button:hover {
+  text-decoration: none;
+  color: white;
+  background-color: var(--light-yellow);
 }

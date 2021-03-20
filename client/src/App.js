@@ -25,9 +25,13 @@ import SearchByDateF from "./components/Food/SearhByDateF/SearchByDateF";
 import SearchByLocationF from "./components/Food/SearchByLocationF/SearchByLocationF";
 
 
+
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
+  const [addingCart, setAddingCart] = useState(false);
+  const [viewingCart, setViewingCart] = useState(false);
+
 
   const LSKEY = "culturd";
   useEffect(() => {
@@ -45,6 +49,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+
+
           <Route path="/workshop/pricing">
             <SubNavW />
             <PricingW />
@@ -73,6 +79,10 @@ function App() {
               setSelectedDish={setSelectedDish}
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
+              addingCart={addingCart}
+              setAddingCart={setAddingCart}
+              viewingCart={viewingCart}
+              setViewingCart={setViewingCart}
             />
             <Footer/>
           </Route>
@@ -117,6 +127,8 @@ function App() {
             <Home />
             <Footer />
           </Route>
+
+          
         </Switch>
       </Router>
     </div>
