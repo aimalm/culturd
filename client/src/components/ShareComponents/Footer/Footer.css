@@ -28,6 +28,9 @@
 .footer-icon:hover {
   color: var(--beige);
 }
+.footer-icon:focus {
+  outline:none;
+}
 .footer-line {
   color: var(--dark-turquiose);
   font-size: 5rem;

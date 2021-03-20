@@ -1,25 +1,46 @@
 import "./App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// share components
 import MainNav from "./components/ShareComponents/Nav/MainNav";
 import Home from "./components/ShareComponents/Home/Home";
 import AboutUs from "./components/ShareComponents/AboutUs/AboutUs";
-import SubnavF from "./components/Food/SubNavF/SubNavF";
-import LandingF from "./components/Food/LandingF/LandingF";
-import ProfileF from "./components/Food/ProfileF/ProfileF";
-import SearchByDateF from "./components/Food/SearhByDateF/SearchByDateF";
-import SearchByLocationF from "./components/Food/SearchByLocationF/SearchByLocationF";
+import Footer from "./components/ShareComponents/Footer/Footer";
+
+//workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
 import PricingW from "./components/Workshop/PricingW/PricingW";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
-import Footer from "./components/ShareComponents/Footer/Footer";
+
+//food components
 import ProductsF from "./components/Food/ProductsF/ProductsF";
+import SubnavF from "./components/Food/SubNavF/SubNavF";
+import LandingF from "./components/Food/LandingF/LandingF";
+import ProfileF from "./components/Food/ProfileF/ProfileF";
+import SearchByDateF from "./components/Food/SearhByDateF/SearchByDateF";
+import SearchByLocationF from "./components/Food/SearchByLocationF/SearchByLocationF";
 
 
 function App() {
+  const [selectedDish, setSelectedDish] = useState([]);
+  const [shoppingCart, setShoppingCart] = useState([]);
+
+  const LSKEY = "culturd";
+  useEffect(() => {
+    let localShoppingCart = JSON.parse(localStorage.getItem(LSKEY));
+    if (localShoppingCart) {
+      setShoppingCart(localShoppingCart);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
+  }, [shoppingCart]);
+
   return (
     <div className="App">
       <Router>
@@ -41,22 +62,28 @@ function App() {
           </Route>
 
           <Route path="/food/profile">
-            <SubnavF />
+            <SubnavF shoppingCart={shoppingCart} />
             <ProfileF />
           </Route>
 
           <Route path="/food/products">
-            <SubnavF />
-            <ProductsF/>
+            <SubnavF shoppingCart={shoppingCart} />
+            <ProductsF
+              selectedDish={selectedDish}
+              setSelectedDish={setSelectedDish}
+              shoppingCart={shoppingCart}
+              setShoppingCart={setShoppingCart}
+            />
+            <Footer/>
           </Route>
 
           <Route path="/food/search_by_location">
-            <SubnavF />
+            <SubnavF shoppingCart={shoppingCart} />
             <SearchByLocationF />
           </Route>
 
           <Route path="/food/search_by_date">
-            <SubnavF />
+            <SubnavF shoppingCart={shoppingCart} />
             <SearchByDateF />
           </Route>
 
@@ -64,12 +91,17 @@ function App() {
             {/* change the Nav to Nav_Logout when the user is login */}
             <MainNav />
             <AboutUs />
-            <Footer/>
+            <Footer />
           </Route>
 
           <Route path="/food">
-            <SubnavF />
-            <LandingF />
+            <SubnavF shoppingCart={shoppingCart} />
+            <LandingF
+              setSelectedDish={setSelectedDish}
+              selectedDish={selectedDish}
+              shoppingCart={shoppingCart}
+              setShoppingCart={setShoppingCart}
+            />
             <Footer />
           </Route>
 

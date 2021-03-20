@@ -9,7 +9,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
 import { Button } from "react-bootstrap";
 
-function SubNavF() {
+function SubNavF({shoppingCart}) {
   return (
     <div className="container-navbar">
       <Navbar bg="white fixed-top" expand="lg">
@@ -45,7 +45,7 @@ function SubNavF() {
             </LinkContainer>
 
             <Button variant="outline-warning">
-              <ShoppingBasketIcon /> 0
+              <ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}
             </Button>
           </Nav>
         </Navbar.Collapse>

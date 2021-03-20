@@ -1,6 +1,6 @@
 import React from "react";
-// import cookingPic from "../Assets/cooking.png";
 import "./LandingF.css";
+
 import SearchIcon from "@material-ui/icons/Search";
 import { FoodTable } from "../Template";
 import StarIcon from "@material-ui/icons/Star";
@@ -8,9 +8,18 @@ import AddCircleSharpIcon from "@material-ui/icons/AddCircleSharp";
 import chefHat from "../images/chef_hat.png";
 import pot from "../images/kitchen-pack.png";
 
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
-function LandingF() {
+
+function LandingF({setSelectedDish, shoppingCart, setShoppingCart}) {
+
+
+  const selectHandler = (dish) =>{
+    setSelectedDish(dish)  
+  }
+
+
+
   return (
     <div className="food-home">
       {/* search box start here */}
@@ -30,8 +39,9 @@ function LandingF() {
         <div className="breakline"></div>
         <div className="random-container">
           {FoodTable.map((dish) => (
-            <Link to="/food/products">
-            <div key={dish.key}>
+            
+            <Link key={dish.dishID} to={'/food/products/'+ dish.dishID}>
+            <div onClick={()=>selectHandler(dish)}>
               <img className="product-image" src={dish.imageUrl} alt="" />
               <div className="food-info">
                 <div className="more-button-wrapper">
@@ -42,13 +52,13 @@ function LandingF() {
                 </div>
                 <p className="cook-score">
                   {dish.cooker}
-                  {dish.cookerScore.map((star) => (
-                    <StarIcon className="star" />
+                  {dish.cookerScore.map((star, index) => (
+                    <StarIcon key={index} className="star" />
                   ))}
                 </p>
               </div>
             </div>
-            </Link>
+             </Link>
           ))}
         </div>
       </div>
