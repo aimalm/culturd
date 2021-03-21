@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
 
 .pricing__section {
     padding: 100px 0 160px;
@@ -110,6 +109,7 @@
   
 }
 
+/* Animation Euro sign */
 
 @-webkit-keyframes swinging{
     0%{-webkit-transform: rotate(10deg);}

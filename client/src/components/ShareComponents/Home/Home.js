@@ -2,7 +2,7 @@ import React from "react";
 import mainImage from "../image/test2.png";
 import "./Home.css";
 import workshop from "../image/workshop.png";
-// import foodie from "../image/foodie.png";
+ import foodie from "../image/foodie.png";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -30,14 +30,15 @@ function Home() {
 
           </div>
           <div className="home-section">
-            <img classname="image-section"src={workshop} alt="workshop" />
+            <img src={workshop} alt="workshop" />
             <h5>
               Experience difficult cultures with the guidance of the native
             </h5>
             <Link className="home-section-button" to="/workshop">More Info</Link>{" "}
           </div>
           <div className="home-section">
-            <img classname="image-section" src="https://images.unsplash.com/photo-1570604127008-f644337cfb8b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="food" />
+          <img src={foodie} alt="foodie" />
+         
             <h5>
               To get some home food instead of boring delivery for your dinner tonight?
             </h5>

@@ -18,7 +18,7 @@ function MainNav() {
                 <LinkContainer to="/about_us"><Nav.Link className="nav-color">About Us</Nav.Link></LinkContainer>
                 <LinkContainer to="/workshop">
                 <Button>
-                  <span>SIGN UP</span>
+                  SIGN UP
                 </Button>
               </LinkContainer>
           </Nav>
