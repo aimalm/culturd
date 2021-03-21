@@ -9,7 +9,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
 import { Button } from "react-bootstrap";
 
-function SubNavF({shoppingCart}) {
+function SubNavF({shoppingCart, setViewingCart}) {
   return (
     <div className="container-navbar">
       <Navbar bg="white fixed-top" expand="lg">
@@ -19,7 +19,7 @@ function SubNavF({shoppingCart}) {
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="ml-auto navbar">
-            <LinkContainer to="/">
+            <LinkContainer to="/food">
               <Nav.Link className="nav-color">Home</Nav.Link>
             </LinkContainer>
             <NavDropdown className="nav-color" title="Worskhops">
@@ -34,17 +34,15 @@ function SubNavF({shoppingCart}) {
                 </NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>
-            <LinkContainer to="/food/search_by_date">
-              <Nav.Link className="nav-color">Search By Date</Nav.Link>
+            <LinkContainer to="/food/search">
+              <Nav.Link className="nav-color">Search</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/food/search_by_location">
-              <Nav.Link className="nav-color">Search By Location</Nav.Link>
-            </LinkContainer>
+
             <LinkContainer to="/food/Profile">
               <Nav.Link className="nav-color">Your Profile</Nav.Link>
             </LinkContainer>
 
-            <Button variant="outline-warning" >
+            <Button variant="outline-warning" onClick={() => setViewingCart(true)} >
               <ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}
             </Button>
           </Nav>

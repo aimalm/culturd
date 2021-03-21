@@ -21,8 +21,7 @@ import ProductsF from "./components/Food/ProductsF/ProductsF";
 import SubnavF from "./components/Food/SubNavF/SubNavF";
 import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
-import SearchByDateF from "./components/Food/SearhByDateF/SearchByDateF";
-import SearchByLocationF from "./components/Food/SearchByLocationF/SearchByLocationF";
+import SearchProductsF from "./components/Food/SearchProductsF/SearchProductsF";
 
 
 
@@ -68,12 +67,12 @@ function App() {
           </Route>
 
           <Route path="/food/profile">
-            <SubnavF shoppingCart={shoppingCart} />
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
             <ProfileF />
           </Route>
 
           <Route path="/food/products">
-            <SubnavF shoppingCart={shoppingCart} />
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
             <ProductsF
               selectedDish={selectedDish}
               setSelectedDish={setSelectedDish}
@@ -87,15 +86,12 @@ function App() {
             <Footer/>
           </Route>
 
-          <Route path="/food/search_by_location">
-            <SubnavF shoppingCart={shoppingCart} />
-            <SearchByLocationF />
+          <Route path="/food/search">
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
+            <SearchProductsF />
           </Route>
 
-          <Route path="/food/search_by_date">
-            <SubnavF shoppingCart={shoppingCart} />
-            <SearchByDateF />
-          </Route>
+  
 
           <Route path="/about_us">
             {/* change the Nav to Nav_Logout when the user is login */}
@@ -105,12 +101,13 @@ function App() {
           </Route>
 
           <Route path="/food">
-            <SubnavF shoppingCart={shoppingCart} />
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
             <LandingF
               setSelectedDish={setSelectedDish}
               selectedDish={selectedDish}
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
+              viewingCart={viewingCart}
             />
             <Footer />
           </Route>
