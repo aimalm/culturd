@@ -5,17 +5,16 @@ import { IoMdArrowBack } from "react-icons/io";
 import StarIcon from "@material-ui/icons/Star";
 import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
 import { CgArrowLongUp } from "react-icons/cg";
-import { ShoppingCartF } from "../ShoppingCartF/ShoppingCartF";
 
 import { Link } from "react-router-dom";
+import { ShoppingCartF } from "../ShoppingCartF/ShoppingCartF";
 
 function ProductsF({
   selectedDish,
   setSelectedDish,
   shoppingCart,
   setShoppingCart,
-  addingCart,
-  setAddingCart,
+ 
   viewingCart,
   setViewingCart,
 }) {
@@ -26,33 +25,23 @@ function ProductsF({
         dish: selectedDish.dishName,
         cooker: selectedDish.cooker,
         price: selectedDish.price,
-        pickUpDate: selectedDish.pickUpDate,
+        pickupDate: selectedDish.pickupDate,
         address: selectedDish.address,
+        imageUrl: selectedDish.imageUrl,
       },
     ]);
 
-    setAddingCart(true);
-
-    setTimeout(() => {
-      setAddingCart(false);
-    }, 3000);
+    setViewingCart(true);
   };
 
   return (
     <div>
-      {addingCart ? (
-        <div className="add-cart-alert" onClick={() => setViewingCart(true)}>
-          <p>
-            The dish is now <br></br>in your shopping cart!
-            <CgArrowLongUp />
-            <CgArrowLongUp />
-          </p>
-        </div>
+      {viewingCart ? (
+        <ShoppingCartF shoppingCart={shoppingCart}/>
       ) : (
         ""
       )}
 
-      {viewingCart ? <ShoppingCartF /> : ""}
 
       <div className="products-wrapper">
         <Link to="/food">
@@ -115,7 +104,7 @@ function ProductsF({
             </button>
           </div>
         ) : (
-          <h1>Go back to check out the delicious HOME DISHES</h1>
+          <h3>Go back to check out the delicious HOME DISHES</h3>
         )}
       </div>
     </div>

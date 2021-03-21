@@ -9,16 +9,14 @@ import chefHat from "../images/chef_hat.png";
 import pot from "../images/kitchen-pack.png";
 
 import { Link } from "react-router-dom";
-import { ShoppingCartF } from "../ShoppingCartF/ShoppingCartF";
 
-function LandingF({ setSelectedDish, viewingCart }) {
+function LandingF({ setSelectedDish, shoppingCart, viewingCart }) {
   const selectHandler = (dish) => {
     setSelectedDish(dish);
   };
 
   return (
     <div className="food-home">
-      {viewingCart ? <ShoppingCartF /> : ""}
 
       {/* search box start here */}
       <div className="home-search-container">
@@ -36,6 +34,7 @@ function LandingF({ setSelectedDish, viewingCart }) {
             <SearchIcon className="search-button-icon" />
           </button>
         </div>
+       <a href="#how-it-works-border">How it works?</a>
       </div>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
