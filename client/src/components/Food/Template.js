@@ -8,7 +8,7 @@ export const FoodTable = [
     cooker: "Aluka",
     cookerImage:"https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hlZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     cookerScore: ["star"],
-    price: "10",
+    price: 10,
     pickupDate: "30_03_2020",
     address: "Place Poelaert 1, 1000 Bruxelles",
     imageUrl:
@@ -23,7 +23,7 @@ export const FoodTable = [
     cooker: "John Ahg",
     cookerImage:"https://images.unsplash.com/photo-1543716627-839b54c40519?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZWZ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     cookerScore: ["star", "star", "star"],
-    price: "12",
+    price: 12,
     pickupDate: "29_03_2020",
     address: "Rue de Namur 28, 1000 Bruxelles",
     imageUrl:
@@ -40,7 +40,7 @@ export const FoodTable = [
     cooker: "Alice Julia",
     cookerImage:"https://images.unsplash.com/photo-1534818113099-dbe2b2e800ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80",
     cookerScore: ["star", "star", "star", "star"],
-    price: "3",
+    price: 3,
     pickupDate: "19_03_2020",
     address: "Rue Royale 236, 1210 Saint-Josse-ten-Noode",
     imageUrl:
@@ -56,7 +56,7 @@ export const FoodTable = [
     cooker: "Annie Chu",
     cookerImage:"https://images.unsplash.com/photo-1614427855823-fc9eca8a5e2e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     cookerScore: ["star", "star"],
-    price: "7",
+    price: 4,
     pickupDate: "20_03_2020",
     address: "Rue de Namur 28, 1000 Bruxelles",
     imageUrl:

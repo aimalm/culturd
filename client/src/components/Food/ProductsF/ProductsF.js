@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./ProductsF.css";
 import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";

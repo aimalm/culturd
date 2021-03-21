@@ -2,3 +2,10 @@
    margin-top: 6rem;
 }
 
+
+
+.cart-breakline {
+  border-bottom: 3px solid var(--dark-turquiose);
+  margin: 0 7rem;
+  padding-bottom: 0.5rem;
+}
