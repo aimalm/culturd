@@ -1,23 +1,26 @@
-.container-productMain{
-    background-color: white;
+
+
+.header-HomeMain{
+   align-items: flex-start;
+   background-color:#ffeedc;
+
 }
 
-
-
-.image-logo{
-    margin-left: 50px;
-    border-image: round;
-    height: 70%;
+.image-homeMain{
+    max-width: 65%;
+    margin-left: 200px;
+    
 }
 
 .text-homeMain{
-    width: 60%;
-    color: rgb(66, 77, 129);
-    text-align:center;
+    max-width: 50rem;
+    text-align: center;
     margin-top: -200px;
-    margin-left: 240px;
-    font-size: 1.6rem;
+    margin-left: 300px;
+
 }
+
+
 
 
 /* sections part css start here */
@@ -29,13 +32,13 @@
     text-transform: uppercase;
 }
 .home-section img{
-    width:25rem;
+    width:20rem;
     height:20rem;
     object-fit: cover;
     border-radius: 8px;
 }
 .home-section-wrapper{
-    background-color: var(--light-turquiose);
+    background-color:white;
     padding: 3rem; 
     min-height: 60vh;
     padding-bottom: 6rem;

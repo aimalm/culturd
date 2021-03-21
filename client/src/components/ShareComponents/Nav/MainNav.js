@@ -9,7 +9,7 @@ import './Nav.css'
 function MainNav() {
     return (
     <div className="container-header">
-      <Navbar Navbar bg="transparent  fixed-top"  expand="lg">
+      <Navbar Navbar bg="white  fixed-top"  expand="lg">
           <LinkContainer to="/"><Navbar.Brand className="logo">CULTURD</Navbar.Brand></LinkContainer>
         <Navbar.Toggle />
         <Navbar.Collapse>

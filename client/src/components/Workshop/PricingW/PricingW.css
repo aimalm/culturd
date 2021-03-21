@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:#bfede4;
+    background-color:var(--light-turquiose);
    
   }
   
@@ -19,20 +19,20 @@
   }
   
   .pricing__container-card:nth-child(2) {
-    background-color: #f5d6cb;
+    background-color:var(--carol);
   }
 
 
 
   .pricing__container-card:nth-child(3) {
-    background-color: #f5e3b1;
+    background-color:var(--light-yellow);
   }
   
   .pricing__container-card:hover {
     transform: scale(1.06);
     transition: all 0.3s ease-out;
-    color:#556a3b;
-    background-color:#f5d98e;
+    color:var(--dark-green);
+    background-color:var(--beige);
   }
   
   .pricing__container-card:nth-child(2) {
@@ -53,7 +53,7 @@
   }
   
   .pricing__heading {
-    color:#3aab95;
+    color:var(--dark-turquiose);
     font-family: 'Roboto Slab', serif;
     
   }
@@ -64,7 +64,7 @@
     height: 500px;
     padding: 24px;
     align-items: center;
-    color:#b48e26;
+    color:val(--dark-yellow);
     font-family: var(--font);
   }
   

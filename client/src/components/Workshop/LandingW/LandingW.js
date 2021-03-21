@@ -4,6 +4,7 @@ import { AiFillEnvironment } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
 import { FaRegSmileWink } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import { Link } from "react-router-dom";
 import team from '../image/bg2.png'
 
 
@@ -15,10 +16,9 @@ function LandingW() {
      <div className="container-homepage" >
         <div className="dummy-text">
         <h2 className="h1-animation"><span>CULTURD</span><span>WORKSHOP</span></h2><br></br>
-            <h4>We bring our Culture to you.</h4>
+            <h4 className="h4-homeW"> " We bring our Culture to you "</h4>
             <br></br>
-            <button className="btn-one"   onclick="" type="button">
-              Discover More</button>    
+            <Link className="landing_main-button" to="/workshop/about_us">Discover More</Link>{" "}
         </div>
     </div>
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,192L480,224L960,256L1440,160L1440,0L960,0L480,0L0,0Z"></path>
@@ -33,7 +33,8 @@ function LandingW() {
             <img className="img-team" src={team} alt="team"/>
         </div>
     </div>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #bfede4" fill-opacity="1" d="M0,64L720,160L1440,0L1440,320L720,320L0,320Z"></path>
+    </svg>
    <div className="wrapper-service__home">
     <IconContext.Provider value={{ color: '#f59d87', size: 30 }}>
      <h1 className="h1-icon" > Why Choose Culturd Workshop ?</h1>
@@ -65,6 +66,7 @@ function LandingW() {
       </div>
       </IconContext.Provider>
     </div>
+   
 
    
 

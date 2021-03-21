@@ -1,12 +1,12 @@
 
 
 .logo{
-  font-size: 2rem;
-  font-family: 'Monoton', cursive;
-  text-transform: uppercase;
-  background: linear-gradient(to right, #63DBC4 0%, #F5C133 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+font-size: 2rem;
+font-family: 'Monoton', cursive;
+text-transform: uppercase;
+ background: linear-gradient(to right, #63DBC4 0%, #F5C133 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
   
 }
 
