@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./ProductsF.css";
 import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
@@ -7,14 +7,12 @@ import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
 import { CgArrowLongUp } from "react-icons/cg";
 
 import { Link } from "react-router-dom";
-import { ShoppingCartF } from "../ShoppingCartF/ShoppingCartF";
 
 function ProductsF({
   selectedDish,
   setSelectedDish,
   shoppingCart,
   setShoppingCart,
- 
   viewingCart,
   setViewingCart,
 }) {
@@ -22,6 +20,7 @@ function ProductsF({
     setShoppingCart([
       ...shoppingCart,
       {
+        id: Math.random()*1000, 
         dish: selectedDish.dishName,
         cooker: selectedDish.cooker,
         price: selectedDish.price,
@@ -32,16 +31,20 @@ function ProductsF({
     ]);
 
     setViewingCart(true);
+    setTimeout(() => {
+      setViewingCart(false);
+    }, 3000);
   };
+
+
 
   return (
     <div>
-      {viewingCart ? (
-        <ShoppingCartF shoppingCart={shoppingCart}/>
-      ) : (
-        ""
-      )}
-
+      {viewingCart?(
+        <div className="add-cart-alert">
+         <p> <CgArrowLongUp/>The dish is now in your cart! <CgArrowLongUp/></p>
+        </div>
+      ):""}
 
       <div className="products-wrapper">
         <Link to="/food">

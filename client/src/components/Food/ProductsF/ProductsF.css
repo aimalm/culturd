@@ -23,7 +23,7 @@
   position: fixed;
   right: 1rem;
   border-radius: 18px;
-  border: 3px solid var(--carol);
+  border: 3px solid var(--dark-yellow);
   padding: 1rem 2rem;
   animation: appear 3s ease-in-out 1;
 }

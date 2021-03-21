@@ -1,18 +1,4 @@
 .shopping-cart-wrapper{
-    position: fixed;
-    right: 0;
-    background-color: white;
-    z-index: 1;
-    animation: come 3s ease-in-out 1;
-}
-
-@keyframes come {
-  0% {
-    opacity: 0;
-  }
-  
-  100% {
-    opacity: 1;
-  }
+   margin-top: 6rem;
 }
 

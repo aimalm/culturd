@@ -34,7 +34,6 @@ function LandingF({ setSelectedDish, shoppingCart, viewingCart }) {
             <SearchIcon className="search-button-icon" />
           </button>
         </div>
-       <a href="#how-it-works-border">How it works?</a>
       </div>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -74,7 +73,6 @@ function LandingF({ setSelectedDish, shoppingCart, viewingCart }) {
       </div>
 
       {/* How it works start here */}
-      <div className="how-it-works-border">
         <h3 className="how-it-works-title">How it works?</h3>
         <div className="how-it-works">
           <div className="step-one">
@@ -111,7 +109,7 @@ function LandingF({ setSelectedDish, shoppingCart, viewingCart }) {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 

@@ -22,7 +22,7 @@ import SubnavF from "./components/Food/SubNavF/SubNavF";
 import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import SearchProductsF from "./components/Food/SearchProductsF/SearchProductsF";
-import { ShoppingCartF } from "./components/Food/ShoppingCartF/ShoppingCartF";
+import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 
 
 
@@ -66,16 +66,19 @@ function App() {
             <Footer />
           </Route>
 
+          <Route path="/food/shopping_cart">
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
+            <ShoppingCartF shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>
+          </Route>
+
           <Route path="/food/profile">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
-            {viewingCart ? <ShoppingCartF shoppingCart={shoppingCart} setViewingCart={setViewingCart} /> : ""}
 
             <ProfileF />
           </Route>
 
           <Route path="/food/products">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
-            {viewingCart ? <ShoppingCartF shoppingCart={shoppingCart} setViewingCart={setViewingCart} /> : ""}
 
             <ProductsF
               selectedDish={selectedDish}
@@ -90,7 +93,6 @@ function App() {
 
           <Route path="/food/search">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
-            {viewingCart ? <ShoppingCartF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/> : ""}
             <SearchProductsF />
           </Route>
 
@@ -105,7 +107,6 @@ function App() {
 
           <Route path="/food">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
-            {viewingCart ? <ShoppingCartF shoppingCart={shoppingCart} setViewingCart={setViewingCart} /> : ""}
 
             <LandingF
               setSelectedDish={setSelectedDish}

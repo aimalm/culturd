@@ -121,12 +121,7 @@
   justify-content: space-between;
 }
 
-.how-it-works-border {
-  margin: 1.5rem;
-  /* border: 3px solid var(--yellowish); */
-  border-radius: 8px;
-  max-height: 90vh;
-}
+
 .how-it-works-title {
   font-family: var(--font);
   font-size: 3rem;
@@ -139,6 +134,7 @@
   grid-template-columns: repeat(3, 33%);
   grid-template-rows: 30% 35%;
   width: 80%;
+  height: 600px;
   margin: auto;
   justify-items: center;
 }
