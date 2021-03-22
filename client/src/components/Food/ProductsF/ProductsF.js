@@ -48,10 +48,12 @@ function ProductsF({
 
       <div className="products-wrapper">
         <Link to="/food">
-          <button className="back-button" onClick={() => setSelectedDish([])}>
+          <button className="back-button" >
             <IoMdArrowBack className="back-button-icon" />
           </button>
         </Link>
+
+
 
         {typeof selectedDish.dishName != "undefined" ? (
           <div className="products-container">
