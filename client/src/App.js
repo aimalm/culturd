@@ -12,9 +12,10 @@ import Footer from "./components/ShareComponents/Footer/Footer";
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
-import PricingW from "./components/Workshop/PricingW/PricingW";
+import BookForm from "./components/Workshop/Booking/BookForm";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+
 
 //food components
 import ProductsF from "./components/Food/ProductsF/ProductsF";
@@ -23,6 +24,7 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import SearchByDateF from "./components/Food/SearhByDateF/SearchByDateF";
 import SearchByLocationF from "./components/Food/SearchByLocationF/SearchByLocationF";
+
 
 
 function App() {
@@ -45,9 +47,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/workshop/pricing">
+          <Route path="/workshop/bookform">
             <SubNavW />
-            <PricingW />
+            <BookForm />
          
           </Route>
           <Route path="/workshop/list">

@@ -18,6 +18,7 @@
     "react-calendar": "^3.3.1",
     "react-dom": "^17.0.1",
     "react-file-base64": "^1.0.3",
+    "react-form-elements": "^4.14.0",
     "react-icons": "^4.2.0",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.2.0",

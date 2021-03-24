@@ -23,6 +23,7 @@ function LandingW() {
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,128L720,256L1440,96L1440,0L720,0L0,0Z"></path>
     </svg>
+
       <div className="container-aboutus">
         <div className="text-aboutUS">
             <h1 className="h1-aboutus">Meet The Team</h1><br></br>
