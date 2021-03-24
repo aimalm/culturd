@@ -11,7 +11,24 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
     setShoppingCart(newShoppingCart);
   };
 
-  const subTotal = shoppingCart.reduce((a, b) => a + b.price, 0);
+  const subTotal = shoppingCart.reduce((a, b) => (a + b.price)*b.quantity, 0);
+
+  const changeQuanityHandler = (e) =>{
+
+    switch (e.currentTarget.value) {
+      case "plus":
+        setShoppingCart(shoppingCart.filter((food) => food.quantity ++));
+        break;
+
+      case "minus":
+        setShoppingCart(shoppingCart.filter((food) => food.quantity --));
+        break;
+
+      default:
+        setShoppingCart(shoppingCart)
+        break;
+  }
+}
 
   return (
     <div className="shopping-cart-wrapper">
@@ -39,10 +56,10 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
               </div>
 
               <div className="cart-quantity">
-                <button><BsPlus/>
+                <button onClick={(e)=>changeQuanityHandler(e)} value="plus"><BsPlus/>
                 </button>
-                <input type="text" name="name" value={food.quantity}/>
-                <button><BiMinus/>
+                <input type="text" name="name" value={food.quantity} disabled/>
+                <button onClick={(e)=>changeQuanityHandler(e)} value="minus"><BiMinus/>
                 </button>
          
               </div>
