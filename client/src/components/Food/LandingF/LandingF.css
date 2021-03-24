@@ -122,12 +122,37 @@
 }
 
 
+.carousel{
+  width: 90%;
+  margin: auto;
+  padding-bottom: 3%;
+}
+
+.carousel-inner{
+  border-radius: 8px;
+}
+.carousel-inner, .carousel-item{
+  height: 50vh;
+
+}
+
+.carousel-item img{
+    opacity: .8;
+  object-fit: cover;
+    object-position: center;
+    height: 50vh;
+}
+.carousel-caption{
+ bottom: 10%;
+}
+
+
 .how-it-works-title {
   font-family: var(--font);
   font-size: 3rem;
   color: var(--yellowish);
   font-weight: bold;
-  padding: 3rem 7rem;
+  padding: 5% 7rem;
 }
 .how-it-works {
   display: grid;
