@@ -16,44 +16,63 @@ function ProductsF({
   viewingCart,
   setViewingCart,
 }) {
-  const addCart = () => {
-    setShoppingCart([
-      ...shoppingCart,
-      {
-        id: Math.random()*1000, 
-        dish: selectedDish.dishName,
-        cooker: selectedDish.cooker,
-        price: selectedDish.price,
-        pickupDate: selectedDish.pickupDate,
-        address: selectedDish.address,
-        imageUrl: selectedDish.imageUrl,
-      },
-    ]);
+  const addCart = (dishName) => {
+    let dishArray = shoppingCart.map((food) => food.dish);
+    let newArray = [...shoppingCart];
+
+    if (dishArray.includes(dishName) == true) {
+
+      newArray.map((item) => {
+        if (item.dish == dishName) {
+          item.quantity++;
+        }
+      });
+
+      setShoppingCart(newArray);
+    } else {
+      
+      setShoppingCart([
+        ...shoppingCart,
+        {
+          id: Math.random() * 1000,
+          dish: selectedDish.dishName,
+          cooker: selectedDish.cooker,
+          price: selectedDish.price,
+          pickupDate: selectedDish.pickupDate,
+          address: selectedDish.address,
+          imageUrl: selectedDish.imageUrl,
+          quantity: 1,
+        },
+      ]);
+    }
 
     setViewingCart(true);
     setTimeout(() => {
       setViewingCart(false);
     }, 3000);
   };
-
-
+  
 
   return (
     <div>
-      {viewingCart?(
+      {viewingCart ? (
         <div className="add-cart-alert">
-         <p> <CgArrowLongUp/>The dish is now in your cart! <CgArrowLongUp/></p>
+          <p>
+            {" "}
+            <CgArrowLongUp />
+            The dish is now in your cart! <CgArrowLongUp />
+          </p>
         </div>
-      ):""}
+      ) : (
+        ""
+      )}
 
       <div className="products-wrapper">
         <Link to="/food">
-          <button className="back-button" >
+          <button className="back-button">
             <IoMdArrowBack className="back-button-icon" />
           </button>
         </Link>
-
-
 
         {typeof selectedDish.dishName != "undefined" ? (
           <div className="products-container">
@@ -104,7 +123,10 @@ function ProductsF({
                 ))}
               </div>
             </div>
-            <button className="products-add-button" onClick={addCart}>
+            <button
+              className="products-add-button"
+              onClick={() => addCart(selectedDish.dishName)}
+            >
               Add to cart
             </button>
           </div>
