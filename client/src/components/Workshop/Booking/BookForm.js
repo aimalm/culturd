@@ -37,31 +37,27 @@ function BookForm() {
           />
          
           <DropDown
-            label="My Drop Down"
+            label="Country"
+            initialValue=""
+            data-testid=""
+            name="myDropDownCountry"
+          >
+            <OptionGroup label="Country">
+              <Option initialValue="Indonesia">Indonesia</Option>
+              <Option initialValue="Congo">Congo</Option>
+              <Option initialValue="Chinese">Chinese</Option>
+              <Option initialValue="Afganistan">Afganistan</Option>
+            </OptionGroup>
+          </DropDown>
+
+          <DropDown
+            label="Workshop"
             initialValue=""
             data-testid="dd1"
-            name="Country"
+            name="myDropDownWorkshop"
           >
-            <OptionGroup label="Indonesia">
+            <OptionGroup label="Workshop">
               <Option initialValue="Cooking">Cooking</Option>
-              <Option initialValue="Dance">Dance</Option>
-              <Option initialValue="Art">Art</Option>
-     
-     
-            </OptionGroup>
-            <OptionGroup label="Congo">
-            <Option initialValue="Cooking">Cooking</Option>
-              <Option initialValue="Dance">Dance</Option>
-              <Option initialValue="Art">Art</Option>
-             
-            </OptionGroup>
-            <OptionGroup label="Chinese">
-            <Option initialValue="Cooking">Cooking</Option>
-              <Option initialValue="Dance">Dance</Option>
-              <Option initialValue="Art">Art</Option>
-            </OptionGroup>
-            <OptionGroup label="Afganistan">
-            <Option initialValue="Cooking">Cooking</Option>
               <Option initialValue="Dance">Dance</Option>
               <Option initialValue="Art">Art</Option>
             </OptionGroup>
@@ -70,11 +66,11 @@ function BookForm() {
         </Form>
         <div data-testid="ref-out">
           <ul>
-       
             <li>Telephone : {values.myTelephone}</li>
             <li>Number of person: {values.myDateTime}</li>
             <li> Date & Time booking: {values.myDateTimeLocal}</li>
-            <li>Country: {values.myDropDown}</li>
+            <li>Country: {values.myDropDownCountry}</li>
+            <li>Workshop: {values.myDropDownWorkshop}</li>
           </ul>
         </div>
       </div>
