@@ -1,0 +1,20 @@
+.Booking-container{
+    margin-top:300px;
+    background-color: bisque;
+    max-width: 60%;
+
+}
+
+
+.form-input{
+  font-size: 25px;
+  border-radius: 5px;
+  width: 60%;
+  border:none;
+  font-family: 'Acme', sans-serif;
+  background-color: rgba(253, 250, 185, 0.753);
+  padding: 14px 32px 14px 16px;
+ 
+  
+
+}

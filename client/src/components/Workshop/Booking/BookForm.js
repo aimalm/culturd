@@ -1,7 +1,10 @@
 
 import React, { useState } from 'react'
+import './BookForm.css'
 
 import {
+  TextBox,
+  EmailInput,
   DateTime,
   Telephone,
   DropDown,
@@ -12,24 +15,38 @@ import {
 
 function BookForm() {
 
-
-      const [values, setValues] = useState({})
+    const [values, setValues] = useState({})
 
     return (
-        <div>
-        <h1>React Form Elements</h1>
+
+    <>
+        <div className="Booking-container">
+        <h1>Request your price quote here</h1>
         <Form
+          className="form-input"
           name="testForm"
           onSubmit={data => {
             // data[form element name]
             setValues(data)
             // do something with values
-          }}
+         }}
+
+     
         >
+         <TextBox label="My Label" name="myTextBox" />
+        <TextBox
+          label="Name"
+          name="myName"
+          required
+          placeholder="Enter your name"
+        />
+         <EmailInput
+          name="emailbox"
+          label="Email"
+          initialValue=""
+        />
          
-          <DateTime label="My Date" name="myDate" />
           <Telephone label="Telephone" name="myTelephone" />
-          <DateTime label="Number of participants" type="datetime" name="myDateTime" />
           <DateTime
             label="My DateTime"
             type="datetime-local"
@@ -62,10 +79,15 @@ function BookForm() {
               <Option initialValue="Art">Art</Option>
             </OptionGroup>
           </DropDown>
+          <DateTime label="Number of participants" type="datetime" name="myDateTime" />
+         
           <button onClick={e => {}}>Save</button>
         </Form>
+     </div>
         <div data-testid="ref-out">
           <ul>
+            <li>Name: {values.myName}</li> 
+            <li>Email Address : {values.emailbox}</li> 
             <li>Telephone : {values.myTelephone}</li>
             <li>Number of person: {values.myDateTime}</li>
             <li> Date & Time booking: {values.myDateTimeLocal}</li>
@@ -73,7 +95,7 @@ function BookForm() {
             <li>Workshop: {values.myDropDownWorkshop}</li>
           </ul>
         </div>
-      </div>
+   </>
     )
   }
   
