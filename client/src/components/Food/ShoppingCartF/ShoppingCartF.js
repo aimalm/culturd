@@ -2,6 +2,8 @@ import React from "react";
 import "./ShoppingCartF.css";
 import { IoMdArrowBack } from "react-icons/io";
 import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
+import {BsPlus} from 'react-icons/bs'
+import {BiMinus} from 'react-icons/bi'
 
 function ShoppingCartF({ shoppingCart, setShoppingCart }) {
   const deleteFromCart = (id) => {
@@ -34,6 +36,15 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
                 <h5>
                   <EuroSymbolIcon /> {food.price}
                 </h5>
+              </div>
+
+              <div className="cart-quantity">
+                <button><BsPlus/>
+                </button>
+                <input type="text" name="name" value={food.quantity}/>
+                <button><BiMinus/>
+                </button>
+         
               </div>
               <button onClick={() => deleteFromCart(food.id)}>Delete</button>
             </div>
