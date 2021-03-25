@@ -9,12 +9,12 @@ function SubNavW() {
 
     return (
       <div className="container-navbar">
-      <Navbar bg="transparent fixed-top" expand="lg">
+      <Navbar bg="white fixed-top" expand="lg">
       <LinkContainer to="/"><Navbar.Brand className="logo">CULTURD</Navbar.Brand></LinkContainer>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="ml-auto navbar">
-              <LinkContainer to="/"><Nav.Link className="nav-color">Home</Nav.Link></LinkContainer>
+              <LinkContainer to="/workshop"><Nav.Link className="nav-color">Home</Nav.Link></LinkContainer>
               <NavDropdown className="nav-color" title="Worskhops" >
                 <LinkContainer to="/food"><NavDropdown.Item className="nav-color" to="/food" >Congo</NavDropdown.Item></LinkContainer>
                 <LinkContainer to="/food"><NavDropdown.Item className="nav-color" to="/food" >Indonesia</NavDropdown.Item></LinkContainer>

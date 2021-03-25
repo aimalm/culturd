@@ -18,7 +18,7 @@ function PricingW() {
                 <h1 className='pricing__heading'>Worskhop Pricing</h1>
             </div>
             <div className='pricing__container'>
-              <LinkContainer to='/sign-up' className='pricing__container-card'>
+            <LinkContainer to='/sign-up' className='pricing__container-card'>
                 <div className='pricing__container-cardInfo'>
                   <div className='icon'>
                     <FaFire />
