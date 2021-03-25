@@ -89,7 +89,7 @@ function BookForm() {
           </DropDown>
           <DateTime label="Number of participants" type="datetime" name="myDateTime" />
          <br></br>
-          <buttonc className="landing_main-button" onClick={e => {}}>Save</buttonc>
+          <button className="landing_main-button" onClick={e => {}}>Save</button>
         </Form>
      </div>
         <div data-testid="ref-out">

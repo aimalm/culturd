@@ -36,19 +36,32 @@ body {
 .worskhop {
   background-color:var(--light-turquiose);
   color:(--light-yellow);
+ 
+  
 }
 .kitching {
   background-color:var(--light-yellow);
-  color:var(--light-turquiose);
+  background-size:cover;
+ 
 }
 .kitching .example-item {
   background:var(--light-turquiose);
   color: #fff;
+
 }
 
 .worskhop .example-item {
-  
   background:var(--light-yellow);
   color:#000;
 
+
+}
+
+.img-worskhop{
+  max-width: 250%;
+  
+}
+
+.img-culturd{
+  max-width: 220%;
 }
