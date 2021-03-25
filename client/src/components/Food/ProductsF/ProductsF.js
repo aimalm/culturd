@@ -25,7 +25,8 @@ function ProductsF({
 
     
     if (dishIDArray.includes(id) === true) {
-      console.log('include')
+      
+      
       newArray.map((item) => {
         if (item.id === id) {
           item.quantity++;
@@ -34,7 +35,6 @@ function ProductsF({
 
        setShoppingCart(newArray);
     } else {
-      console.log('not incl')
 
       setShoppingCart([
         ...shoppingCart,

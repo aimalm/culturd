@@ -13,15 +13,30 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
   const subTotal = shoppingCart.reduce((a, b) => (a + b.price)*b.quantity, 0);
 
-  const changeQuanityHandler = (e) =>{
-
+  const changeQuanityHandler = (e, id) =>{
+  
     switch (e.currentTarget.value) {
       case "plus":
-        setShoppingCart(shoppingCart.filter((food) => food.quantity ++));
+      const plusArray = [...shoppingCart];
+      shoppingCart.map((item) => {
+      if (item.id === id) {
+        item.quantity ++
+      }
+    })
+    setShoppingCart(plusArray);
         break;
 
       case "minus":
-        setShoppingCart(shoppingCart.filter((food) => food.quantity --));
+        let minusArray = [...shoppingCart];
+      shoppingCart.map((item) => {
+      if (item.id === id && item.quantity > 0) {
+        item.quantity --
+      } else {
+        minusArray = shoppingCart.filter((item) => item.id !== id);
+    
+        }
+    })
+    setShoppingCart(minusArray);
         break;
 
       default:
@@ -56,10 +71,10 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
               </div>
 
               <div className="cart-quantity">
-                <button onClick={(e)=>changeQuanityHandler(e)} value="plus"><BsPlus/>
+                <button onClick={(e)=>changeQuanityHandler(e, food.id)} value="plus"><BsPlus/>
                 </button>
                 <input type="text" name="name" value={food.quantity} disabled/>
-                <button onClick={(e)=>changeQuanityHandler(e)} value="minus"><BiMinus/>
+                <button onClick={(e)=>changeQuanityHandler(e,  food.id)} value="minus"><BiMinus/>
                 </button>
          
               </div>
