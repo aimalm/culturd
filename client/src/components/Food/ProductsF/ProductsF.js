@@ -56,8 +56,7 @@ function ProductsF({
       setViewingCart(false);
     }, 3000);
   };
-  console.log(selectedDish.map(dish=>dish.dishName) )
-  console.log(selectedDish.length)
+
   return (
     <div>
       {/* shopping cart alert here */}
@@ -81,8 +80,7 @@ function ProductsF({
           </button>
         </Link>
 
-        {selectedDish.length >0 ? (
-          
+        {typeof selectedDish.dishName != "undefined" ? (
           <div className="products-container">
             <div className="products-info">
               <img

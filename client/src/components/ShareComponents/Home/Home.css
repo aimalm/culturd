@@ -3,6 +3,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-gap: 0 2rem;
     grid-template-rows: 80% 20%;
 }
 .home-wrapper h3,.home-wrapper h5{

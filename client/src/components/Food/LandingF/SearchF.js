@@ -6,19 +6,20 @@ import { Link } from "react-router-dom";
 function SearchF({ setSelectedDish, selectedDish }) {
   //useRef can take the entry of the input
   const inputRef = useRef();
-
+  console.log(selectedDish)
   const searchHandler = (e) => {
     e.preventDefault();
     const foodName = inputRef.current.value.toLowerCase();
 
     if (foodName === "") return;
 
-    //let dishArray = FoodTable.map((food) => food.dishName);
     console.log(foodName);
 
-    setSelectedDish(
-      FoodTable.filter((food) => food.keywords.includes(foodName))
-    );
+    let keywordArray = FoodTable.map(food=>{food.keywords.map(keyword=> keyword == foodName)})
+    console.log(keywordArray)
+    // setSelectedDish(
+    //   FoodTable.filter((food) => food.keywords.includes(foodName))
+    // );
   };
 
   return (
