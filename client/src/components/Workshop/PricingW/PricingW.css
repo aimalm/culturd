@@ -1,0 +1,172 @@
+
+.pricing__section {
+    padding: 100px 0 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:var(--light-turquiose);
+   
+  }
+  
+  .pricing__container-card {
+    background-color: #d8f5b1;
+    box-shadow: 0 6px 20px rgba(100, 97, 59, 0.459);
+    width: 280px;
+    height: 500px;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .pricing__container-card:nth-child(2) {
+    background-color:var(--carol);
+  }
+
+
+
+  .pricing__container-card:nth-child(3) {
+    background-color:var(--light-yellow);
+  }
+  
+  .pricing__container-card:hover {
+    transform: scale(1.06);
+    transition: all 0.3s ease-out;
+    color:var(--dark-green);
+    background-color:var(--beige);
+  }
+  
+  .pricing__container-card:nth-child(2) {
+    margin: 0 24px;
+  }
+  
+  .pricing__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+  }
+  
+  .pricing__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+  }
+  
+  .pricing__heading {
+    color:var(--dark-turquiose);
+    font-family: 'Roboto Slab', serif;
+    
+  }
+  
+  .pricing__container-cardInfo {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 24px;
+    align-items: center;
+    color:val(--dark-yellow);
+    font-family: var(--font);
+  }
+  
+  .pricing__container-cardInfo h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+  
+  .pricing__container-cardInfo h4 {
+    font-size: 40px;
+  }
+  
+  .pricing__container-cardInfo p {
+    font-size: 14px;
+    margin-bottom: 24px;
+    font-family: var(--font);
+  }
+  
+  .pricing__container-features {
+    margin: 16px 0 32px;
+    list-style: none;
+  }
+  
+  .pricing__container-features li {
+    margin-bottom: 10px;
+  }
+  
+  .pricing__container-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon {
+    margin: 24px 0;
+    
+  }
+
+
+.euro{
+    max-width: 100%;
+    height: 100%;
+  
+}
+
+/* Animation Euro sign */
+
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+  }
+  
+  @keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+  }
+  
+  .euro{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 2s ease-in-out forwards infinite;
+    animation: swinging 2s ease-in-out forwards infinite;
+  }
+  
+ .euro-logo{
+     display: flex;
+     height: 50px;   
+ }
+
+
+ 
+
+
+  /* mobile site */
+  
+  @media screen and (max-width: 960px) {
+    .pricing__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .pricing__container-card {
+      width: 90%;
+    }
+  
+    .pricing__wrapper {
+      margin: 0 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pricing__container-card:nth-child(2) {
+      transform: scale(1);
+      margin: 24px;
+    }
+  
+    .pricing__container-card:hover {
+      transform: none;
+    }
+  }

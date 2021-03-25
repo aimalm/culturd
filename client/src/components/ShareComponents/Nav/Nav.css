@@ -1,14 +1,12 @@
 
 
-
-
 .logo{
-  font-size: 2rem;
-  font-family: 'Monoton', cursive;
-  text-transform: uppercase;
-  background: linear-gradient(to right, #63DBC4 0%, #F5C133 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+font-size: 2rem;
+font-family: 'Monoton', cursive;
+text-transform: uppercase;
+ background: linear-gradient(to right, #63DBC4 0%, #F5C133 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
   
 }
 
@@ -28,11 +26,40 @@
 }
 	
 
-
-
 .nav-color:hover{
-  color: var( --secondColor ) !important;
+  background-color:#eef5b1;
+  background-size: 50% 50%;
+  border-radius: 5%;
+  animation: spring 300ms ease-out;
+  font-weight: bold;
+  
 }
+.nav-color:active{
+  transform: translateY(4px);
+  
+}
+
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
 
 .container-homepage{
   display: grid;
