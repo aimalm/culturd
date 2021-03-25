@@ -1,9 +1,10 @@
 export const FoodTable = [
   {
     id: 1,
-    dishName: "Chicken Satay",
+    dishName: "chicken satay",
     ingredients: ["Chicken", "peanut", "coconut milk", "chili"],
     vegetarian: 0,
+    keywords: ["chicken", "satay"],
     dishDescription: "Delicious home made chicken satay in Malaysian style",
     cooker: "Aluka",
     cookerImage:"https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hlZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
@@ -19,6 +20,7 @@ export const FoodTable = [
     dishName: "beef bugolgi",
     ingredients: ["beef", "rice", "spring onion", "seasame"],
     vegetarian: 0,
+    keywords: ["beef", "bugolgi", "rice"],
     dishDescription: "Ever try the authentic Korean beef Bugogli?",
     cooker: "John Ahg",
     cookerImage:"https://images.unsplash.com/photo-1543716627-839b54c40519?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoZWZ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
@@ -31,12 +33,12 @@ export const FoodTable = [
   },
   {
     id: 3,
-    dishName: "Matcha cookies",
+    dishName: "matcha cookies",
     ingredients: ["egg", "milk", "flour", "butter", "matcha"],
+    keywords: ["matcha", "cookies"],
     vegetarian: 1,
     dishDescription:
       "What can be better with a piece of Matcha Cookies to kick start of your weekend?",
-
     cooker: "Alice Julia",
     cookerImage:"https://images.unsplash.com/photo-1534818113099-dbe2b2e800ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80",
     cookerScore: ["star", "star", "star", "star"],
@@ -50,6 +52,7 @@ export const FoodTable = [
     id: 4,
     dishName: "chow mein",
     ingredients: ["noodles", "carrot", "zucchini", "spring onion", "chili"],
+    keywords: ["mein", "noodles"],
     vegetarian: 1,
     dishDescription:
       "not the usually chow mein you find in 'Chinese restaurant'",
@@ -66,6 +69,7 @@ export const FoodTable = [
     id: 5,
     dishName: "pork and cabbage dumpling",
     ingredients: ["pork", "cabbage", "flour", "spring onion", "chili"],
+    keywords: ["pork", "dumpling", "cabbage"],
     vegetarian: 0,
     dishDescription:
       "what can you find to compare with home made dumplings?",
@@ -82,6 +86,7 @@ export const FoodTable = [
     id: 6,
     dishName: "coffee muffin",
     ingredients: ["egg", "flour", "butter", "coffee"],
+    keywords:["coffee","muffin"],
     vegetarian: 0,
     dishDescription:
       "i hope you like coffee too",
@@ -92,12 +97,13 @@ export const FoodTable = [
     pickupDate: "27_03_2020",
     address: "Rue de la Montagne 16, 1000 Bruxelles",
     imageUrl:
-      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      "https://images.unsplash.com/photo-1557925923-6982bd9650ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80",
   },
   {
     id: 7,
     dishName: "spinach pasta",
     ingredients: ["mushroom", "soba noodles"],
+    keywords:["spinach","pasta"],
     vegetarian: 1,
     dishDescription:
       "vegetarian and health choice for your lunch",
@@ -114,6 +120,7 @@ export const FoodTable = [
     id: 8,
     dishName: "nasi lemak",
     ingredients: ["fish", "beef", "cucumber", "carrot", "rice"],
+    keywords:["nasi","lemak", "rice"],
     vegetarian: 0,
     dishDescription:
       "malaysian twist",
@@ -130,6 +137,7 @@ export const FoodTable = [
     id: 9,
     dishName: "spicy noodles",
     ingredients: ["sping onion", "noodles", "peanuts", "pork", "chili"],
+    keywords:["spicy","noodles"],
     vegetarian: 0,
     dishDescription:
       "nice and spicy!",

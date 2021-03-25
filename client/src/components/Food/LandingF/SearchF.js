@@ -1,22 +1,24 @@
 import React, { useRef } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import { FoodTable } from "../Template";
+import { Link } from "react-router-dom";
 
-function SearchF({setSelectedDish}) {
+function SearchF({ setSelectedDish, selectedDish }) {
   //useRef can take the entry of the input
   const inputRef = useRef();
 
   const searchHandler = (e) => {
-    e.preventDefault()
-    const foodName = inputRef.current.value;
+    e.preventDefault();
+    const foodName = inputRef.current.value.toLowerCase();
 
     if (foodName === "") return;
 
     //let dishArray = FoodTable.map((food) => food.dishName);
     console.log(foodName);
-      setSelectedDish(FoodTable.filter(food=>food.dishName.includes(foodName)))
-    
 
+    setSelectedDish(
+      FoodTable.filter((food) => food.keywords.includes(foodName))
+    );
   };
 
   return (
@@ -37,6 +39,17 @@ function SearchF({setSelectedDish}) {
         <button className="search-button" onClick={searchHandler}>
           <SearchIcon className="search-button-icon" />
         </button>
+        <div className="search-suggestion">
+          {selectedDish.length > 0 ? (
+            <div>{selectedDish.map((food) => 
+              <Link key={food.id} to={"/food/products/" + food.id}>
+            <p key={food.id} >{food.dishName}</p>
+            </Link>
+            )}</div>
+          ) : (
+            "no its nothing"
+          )}
+        </div>
       </form>
     </div>
   );

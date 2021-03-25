@@ -17,26 +17,25 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
   
     switch (e.currentTarget.value) {
       case "plus":
-      const plusArray = [...shoppingCart];
-      shoppingCart.map((item) => {
-      if (item.id === id) {
-        item.quantity ++
-      }
-    })
-    setShoppingCart(plusArray);
+        const plusArray = [...shoppingCart];
+        shoppingCart.map((item) => {
+          if (item.id === id) {
+            item.quantity ++
+          }
+        })
+        setShoppingCart(plusArray);
         break;
 
       case "minus":
         let minusArray = [...shoppingCart];
-      shoppingCart.map((item) => {
-      if (item.id === id && item.quantity > 0) {
-        item.quantity --
-      } else {
-        minusArray = shoppingCart.filter((item) => item.id !== id);
-    
-        }
-    })
-    setShoppingCart(minusArray);
+        shoppingCart.map((item) => {
+          if (item.id === id && item.quantity > 0) {
+            item.quantity --
+          } else {
+            minusArray = shoppingCart.filter((item) => item.id !== id);
+          }
+        })
+        setShoppingCart(minusArray);
         break;
 
       default:

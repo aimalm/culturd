@@ -56,10 +56,11 @@ function ProductsF({
       setViewingCart(false);
     }, 3000);
   };
-  
-
+  console.log(selectedDish.map(dish=>dish.dishName) )
+  console.log(selectedDish.length)
   return (
     <div>
+      {/* shopping cart alert here */}
       {viewingCart ? (
         <div className="add-cart-alert">
           <p>
@@ -72,14 +73,16 @@ function ProductsF({
         ""
       )}
 
+      {/* go back button here */}
       <div className="products-wrapper">
-        <Link to="/food">
+        <Link to="/food/search">
           <button className="back-button">
             <IoMdArrowBack className="back-button-icon" />
           </button>
         </Link>
 
-        {typeof selectedDish.dishName != "undefined" ? (
+        {selectedDish.length >0 ? (
+          
           <div className="products-container">
             <div className="products-info">
               <img

@@ -9,13 +9,13 @@ import SearchF from "./SearchF";
 import NewInCardF from "./NewInCardF";
 
 
-function LandingF({ setSelectedDish, shoppingCart, viewingCart }) {
+function LandingF({ selectedDish, setSelectedDish, shoppingCart, viewingCart }) {
 
 
   return (
     <div className="food-home">
       {/* search for food start here */}
-      <SearchF setSelectedDish={setSelectedDish}/>
+      <SearchF selectedDish={selectedDish} setSelectedDish={setSelectedDish}/>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path

@@ -7,9 +7,27 @@ import workshop from "../image/workshop.png";
 import { Link } from "react-router-dom";
 
 function Home() {
+
   return (
-    <>
-      <div className="container-homeMain">
+    
+       <div className="home-wrapper">
+         <div className="home-workshop-section">
+           img here
+         </div>
+         <div className="home-food-section">
+           img here
+         </div>
+         <div className="home-workshop-text">
+          <h3>culturd workshop</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab enim, repudiandae quidem odit laborum similique velit perspiciatis aliquid inventore, impedit cum labore officiis dolorum! Fuga dicta qui consectetur distinctio vel.</p>
+         </div>
+         <div className="home-food-text">
+          <h3>culturd home food</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab enim, repudiandae quidem odit laborum similique velit perspiciatis aliquid inventore, impedit cum labore officiis dolorum! Fuga dicta qui consectetur distinctio vel.</p>
+         </div>
+
+
+      {/* <div className="container-homeMain">
         <img className="image-logo" src={mainImage} alt="Logo" />
         <div className="text-homeMain">
           <h4 className="h4-homeMain">
@@ -50,8 +68,10 @@ function Home() {
         </div>
         </div>
  
-      </div>
-    </>
+      </div> */}
+       </div>
+
+    
   );
 }
 

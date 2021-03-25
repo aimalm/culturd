@@ -93,7 +93,7 @@ function App() {
 
           <Route path="/food/search">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
-            <SearchProductsF />
+            <SearchProductsF  setSelectedDish={setSelectedDish} />
           </Route>
 
   
@@ -109,6 +109,7 @@ function App() {
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
             <LandingF
+            selectedDish={selectedDish}
               setSelectedDish={setSelectedDish}
               selectedDish={selectedDish}
               shoppingCart={shoppingCart}
