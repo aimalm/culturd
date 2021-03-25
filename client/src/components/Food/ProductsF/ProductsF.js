@@ -16,25 +16,30 @@ function ProductsF({
   viewingCart,
   setViewingCart,
 }) {
-  const addCart = (dishName) => {
-    let dishArray = shoppingCart.map((food) => food.dish);
+  const addCart = (id) => {
+
+    console.log(id)
+    //console.log(shoppingCart)
+    let dishIDArray = shoppingCart.map((food) => food.id);
     let newArray = [...shoppingCart];
 
-    if (dishArray.includes(dishName) == true) {
-
+    
+    if (dishIDArray.includes(id) === true) {
+      console.log('include')
       newArray.map((item) => {
-        if (item.dish == dishName) {
+        if (item.id === id) {
           item.quantity++;
         }
       });
 
-      setShoppingCart(newArray);
+       setShoppingCart(newArray);
     } else {
-      
+      console.log('not incl')
+
       setShoppingCart([
         ...shoppingCart,
         {
-          id: Math.random() * 1000,
+          id: id,
           dish: selectedDish.dishName,
           cooker: selectedDish.cooker,
           price: selectedDish.price,
@@ -125,7 +130,7 @@ function ProductsF({
             </div>
             <button
               className="products-add-button"
-              onClick={() => addCart(selectedDish.dishName)}
+              onClick={() => addCart(selectedDish.id)}
             >
               Add to cart
             </button>

@@ -6,18 +6,33 @@ import StarIcon from "@material-ui/icons/Star";
 
 
 
+let newInArray = FoodTable.slice(Math.max(FoodTable.length - 4, 1))
+
+
 function NewInCardF({setSelectedDish}) {
     const selectHandler = (dish) => {
         setSelectedDish(dish);
       };
+    
+  
+
+// const groups = FoodTable.map((e, i) => { 
+//      return i % 4 === 0 ? FoodTable.slice(i, i + 4) : null; 
+// }).filter(e => { return e; });
+// console.log(groups)
+
+
+// const index = groups.length -1
+
+// console.log(groups[index])
 
     return (
         <div className="food-new">
             <h3 className="food-title-new">New In!</h3>
         <div className="breakline"></div>
         <div className="random-container">
-          {FoodTable.map((dish) => (
-            <Link key={dish.dishID} to={"/food/products/" + dish.dishID}>
+          {newInArray.map((dish) => (
+            <Link key={dish.id} to={"/food/products/" + dish.id}>
               <div className="food-card" onClick={() => selectHandler(dish)}>
                 <img className="product-image" src={dish.imageUrl} alt="" />
                 <div className="food-info">
@@ -37,7 +52,14 @@ function NewInCardF({setSelectedDish}) {
               </div>
             </Link>
           ))}
+          <Link to="/food/search">
+          see more
+          </Link>
+         
         </div>
+
+
+       
         </div>
     )
 }
