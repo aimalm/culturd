@@ -23,7 +23,6 @@ function BookForm() {
         <div className="Booking-container">
         <h1>Request your price quote here</h1>
         <Form
-          className="form-input"
           name="testForm"
           onSubmit={data => {
             // data[form element name]
@@ -31,23 +30,32 @@ function BookForm() {
             // do something with values
          }}
 
-     
         >
-         <TextBox label="My Label" name="myTextBox" />
+            
+         <TextBox
+        label="Firstname" 
+        required
+        name="firstname"
+           />
+
         <TextBox
-          label="Name"
-          name="myName"
+
+          label="Lastname"
+          name="lastame"
           required
-          placeholder="Enter your name"
+         
         />
          <EmailInput
+           
+
           name="emailbox"
           label="Email"
           initialValue=""
         />
          
-          <Telephone label="Telephone" name="myTelephone" />
+          <Telephone className="input" label="Telephone" name="myTelephone" />
           <DateTime
+           
             label="My DateTime"
             type="datetime-local"
             name="myDateTimeLocal"
@@ -80,8 +88,8 @@ function BookForm() {
             </OptionGroup>
           </DropDown>
           <DateTime label="Number of participants" type="datetime" name="myDateTime" />
-         
-          <button onClick={e => {}}>Save</button>
+         <br></br>
+          <buttonc className="landing_main-button" onClick={e => {}}>Save</buttonc>
         </Form>
      </div>
         <div data-testid="ref-out">

@@ -1,20 +1,30 @@
 .Booking-container{
-    margin-top:300px;
-    background-color: bisque;
-    max-width: 60%;
+    margin:100px 200px;
+    max-width: 800%;
+    padding: 0 50px;
+    border:4px solid #f5e3b1;
+    border-top:4px solid #f59d87;
+    border-bottom: 4px solid #f59d87;
+    background-color:var(--light-turquiose);
 
 }
 
 
-.form-input{
-  font-size: 25px;
-  border-radius: 5px;
-  width: 60%;
-  border:none;
-  font-family: 'Acme', sans-serif;
-  background-color: rgba(253, 250, 185, 0.753);
-  padding: 14px 32px 14px 16px;
- 
-  
 
-}
+
+.rfe-form__row input{
+    padding: 10px 10px;
+    width: 100%;
+    display: block;
+    border: none;
+    border-radius: 10px;
+}   
+
+
+.rfe-form__row select{
+    padding: 10px 10px;
+    width: 100%;
+    display: block;
+    border: none;
+    border-radius: 10px;
+}   
