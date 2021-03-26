@@ -6,13 +6,14 @@ import {BsPlus} from 'react-icons/bs'
 import {BiMinus} from 'react-icons/bi'
 
 function ShoppingCartF({ shoppingCart, setShoppingCart }) {
+  
+  const subTotal = shoppingCart.reduce((a, b) => (a + b.price)*b.quantity, 0);
+
   const deleteFromCart = (id) => {
     let newShoppingCart = shoppingCart.filter((food) => food.id !== id);
     setShoppingCart(newShoppingCart);
   };
-
-  const subTotal = shoppingCart.reduce((a, b) => (a + b.price)*b.quantity, 0);
-
+  
   const changeQuanityHandler = (e, id) =>{
   
     switch (e.currentTarget.value) {

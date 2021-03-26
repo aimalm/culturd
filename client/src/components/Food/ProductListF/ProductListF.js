@@ -1,12 +1,12 @@
 import React from 'react';
-import './SearchProductsF.css';
+import './ProductListF.css';
 import {FoodTable} from '../Template'
 import { Link } from "react-router-dom";
 import AddCircleSharpIcon from "@material-ui/icons/AddCircleSharp";
 import StarIcon from "@material-ui/icons/Star";
 
 
-function SearchProductsF({setSelectedDish}) {
+function ProductListF({setSelectedDish}) {
     const selectHandler = (dishID) => {
         
       setSelectedDish(FoodTable.filter((item) => item.id == dishID))
@@ -53,4 +53,4 @@ function SearchProductsF({setSelectedDish}) {
     )
 }
 
-export default SearchProductsF
+export default ProductListF

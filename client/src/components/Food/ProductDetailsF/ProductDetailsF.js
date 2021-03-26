@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProductsF.css";
+import "./ProductDetailsF.css";
 import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import StarIcon from "@material-ui/icons/Star";
@@ -9,7 +9,7 @@ import { CgArrowLongUp } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { DialogContent } from "@material-ui/core";
 
-function ProductsF({
+function ProductDetailsF({
   selectedDish,
   setSelectedDish,
   shoppingCart,
@@ -131,4 +131,4 @@ function ProductsF({
   );
 }
 
-export default ProductsF;
+export default ProductDetailsF;
