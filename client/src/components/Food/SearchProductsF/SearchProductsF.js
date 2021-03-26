@@ -7,9 +7,11 @@ import StarIcon from "@material-ui/icons/Star";
 
 
 function SearchProductsF({setSelectedDish}) {
-    const selectHandler = (dish) => {
-        setSelectedDish(dish);
+    const selectHandler = (dishID) => {
+        
+      setSelectedDish(FoodTable.filter((item) => item.id == dishID))
       };
+
     return (
         <div>
            <div className="search-button-container">
@@ -22,7 +24,7 @@ function SearchProductsF({setSelectedDish}) {
             {FoodTable.map(dish => (
               
                 <Link key={dish.id} to={"/food/products/" + dish.id}>
-                  <div className="food-card" onClick={() => selectHandler(dish)}>
+                  <div className="food-card" onClick={() => selectHandler(dish.id)}>
                     <img className="product-image" src={dish.imageUrl} alt="" />
                     <div className="food-info">
                       <div className="more-button-wrapper">
