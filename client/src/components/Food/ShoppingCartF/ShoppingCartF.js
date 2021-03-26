@@ -28,14 +28,15 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
       case "minus":
         let minusArray = [...shoppingCart];
+
         shoppingCart.map((item) => {
           if (item.id === id && item.quantity > 0) {
             item.quantity --
-          } else {
-            minusArray = shoppingCart.filter((item) => item.id !== id);
-          }
+            setShoppingCart(minusArray);
+          } else if (item.id === id && item.quantity === 0) {
+            deleteFromCart(id)
+          } 
         })
-        setShoppingCart(minusArray);
         break;
 
       default:
@@ -59,7 +60,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
             <div key={food.id} className="shopping-cart-item">
               <img className="cart-img" src={food.imageUrl} alt="" />
               <div className="cart-food-info">
-                <h4>{food.dish}</h4>
+                <h4>{food.dishName}</h4>
                 <p>pick up date: {food.pickupDate}</p>
                 <p>pick up address: {food.address}</p>
               </div>
