@@ -59,7 +59,7 @@
   padding-bottom: .5rem;
   padding-left: 1.5rem;
   width: 100%;
-  animation: slidein 1s 1; 
+  animation: slidein 1.3s 1; 
   justify-self: center;
   text-transform: capitalize;
   border-radius: 0px 0px 30px 30px;
@@ -70,6 +70,9 @@
   text-decoration: none;
   color: var(--dark-carol);
 }
+.search-suggestion a:hover{
+  color: var(--yellowish);
+}
 
 
 @keyframes slidein {
@@ -79,7 +82,7 @@
   }
 
   to {
-    transform: translateY(30%);
+    transform: translateY(0%);
     opacity: 1;
   }
 }

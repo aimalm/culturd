@@ -30,7 +30,9 @@ function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
+  const [searchResult, setSearchResult] = useState([]);
 
+  console.log(searchResult)
 
   const LSKEY = "culturd";
   useEffect(() => {
@@ -109,7 +111,8 @@ function App() {
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
             <LandingF
-            selectedDish={selectedDish}
+            searchResult={searchResult}
+            setSearchResult={setSearchResult}
               setSelectedDish={setSelectedDish}
               selectedDish={selectedDish}
               shoppingCart={shoppingCart}

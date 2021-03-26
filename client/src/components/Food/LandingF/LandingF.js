@@ -9,13 +9,13 @@ import SearchF from "./SearchF";
 import NewInCardF from "./NewInCardF";
 
 
-function LandingF({ selectedDish, setSelectedDish, shoppingCart, viewingCart }) {
+function LandingF({ selectedDish, setSelectedDish, shoppingCart, viewingCart,searchResult, setSearchResult }) {
 
 
   return (
     <div className="food-home">
       {/* search for food start here */}
-      <SearchF selectedDish={selectedDish} setSelectedDish={setSelectedDish}/>
+      <SearchF selectedDish={selectedDish} setSelectedDish={setSelectedDish} searchResult={searchResult} setSearchResult={setSearchResult}/>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -25,7 +25,7 @@ function LandingF({ selectedDish, setSelectedDish, shoppingCart, viewingCart }) 
       </svg>
 
       {/* new food post start here */}
-      <NewInCardF setSelectedDish={setSelectedDish}/>
+      <NewInCardF setSelectedDish={setSelectedDish} />
       
       {/* How it works start here */}
       <h3 className="how-it-works-title">How it works?</h3>
