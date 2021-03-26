@@ -1,0 +1,17 @@
+event: {
+    "User_Id": "",
+    "Event_Title": "cook indian",
+    "Event_Description": "We will cook indian today for everyone",
+    "Event_Location": "drootbeekstraat 18, 1025 Brussel",
+    "Event_Date": "2021-05-28",
+    "Event_Duration": "2",
+    "Total_Num_Participants": "15",
+    "Nationality": "Indian",
+    "Ticket_Price": "20"
+}
+
+booking
+{
+    "amount_of_tickets": "5",
+    "Payment": "yes"
+}
