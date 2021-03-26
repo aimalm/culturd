@@ -15,3 +15,18 @@ booking
     "amount_of_tickets": "5",
     "Payment": "yes"
 }
+
+food
+{
+      "dishName": "piza",
+    "ingredients": ["onion", "mashroom"],
+    "vegetarian": "yes",
+    "keywords": ["pizza", "vegetarian"],
+    "dishDescription": "Very good Pizaa. Believe me",
+    "cooker": "Wing",
+    "cookerImage": "www.yahoo.com",
+    "cookerScore": ["star"],
+    "price": "12.5",
+    "pickupDate": "2021-5-25",
+    "address": "Drootbeekstraat 555, Brussels"
+}

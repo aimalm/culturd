@@ -30,21 +30,21 @@ export const getAllFoods = async (req, res) => {
 //     }
 // }
 
-// export const bookAnEvent = async (req, res) => {
-//     //const { title, message, selectedFile, creator, tags } = req.body;
+export const createFoodPost = async (req, res) => {
+    //const { title, message, selectedFile, creator, tags } = req.body;
     
-//     try {
-//         const bookEvent = new Booking(req.body)
+    try {
+        const createFoodPost = new Food(req.body)
 
-//         await bookEvent.save();
+        await createFoodPost.save();
 
-//         res.status(201).json(bookEvent);
-//         //res.send("create")
+        res.status(201).json(createFoodPost);
+        //res.send("create")
 
-//     } catch (error) {
-//         res.status(409).json({ message: error.message });
-//     }
-// }
+    } catch (error) {
+        res.status(409).json({ message: error.message });
+    }
+}
 
 //  export const updateBooking = async (req, res) => {
 
