@@ -7,7 +7,6 @@ import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
 import { CgArrowLongUp } from "react-icons/cg";
 
 import { Link } from "react-router-dom";
-import { DialogContent } from "@material-ui/core";
 
 function ProductDetailsF({
   selectedDish,
@@ -17,6 +16,9 @@ function ProductDetailsF({
   viewingCart,
   setViewingCart,
 }) {
+
+  
+
   const addCart = (dishID) => {
  
     let dishIDArray = shoppingCart.map((food) => food.id);
@@ -45,6 +47,7 @@ function ProductDetailsF({
 
   return (
     <div>
+      
       {/* shopping cart alert here */}
       {viewingCart ? (
         <div className="add-cart-alert">
@@ -127,6 +130,7 @@ function ProductDetailsF({
           <h3>Go back to check out the delicious HOME DISHES</h3>
         )}
       </div>
+    
     </div>
   );
 }
