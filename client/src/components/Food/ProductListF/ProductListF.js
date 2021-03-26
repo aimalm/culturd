@@ -13,10 +13,11 @@ function ProductListF({ setSelectedDish }) {
   };
 
   const filterHandler = (e) => {
-    console.log(e.target.value);
+  
     switch (e.target.value) {
       case "main":
         setFilteredDish(FoodTable.filter((food) => food.category === "main"));
+        
         break;
 
       case "side":
@@ -40,25 +41,28 @@ function ProductListF({ setSelectedDish }) {
   return (
     <div>
       <div className="search-button-container">
-        <button value="all" onClick={(e) => filterHandler(e)}>
+        
+        <button className="search-filter-button" value="all" onClick={(e) => filterHandler(e)}>
           See All
         </button>
-
-        <button value="main" onClick={(e) => filterHandler(e)}>
+     
+     
+        <button className="search-filter-button" value="main" onClick={(e) => filterHandler(e)}>
           main dish
         </button>
-        <button value="side" onClick={(e) => filterHandler(e)}>
+
+        <button className="search-filter-button" value="side" onClick={(e) => filterHandler(e)}>
           side dish
         </button>
-        <button value="dessert" onClick={(e) => filterHandler(e)}>
+        <button className="search-filter-button" value="dessert" onClick={(e) => filterHandler(e)}>
           desserts
         </button>
-        <button value="veg" onClick={(e) => filterHandler(e)}>
+        <button className="search-filter-button" value="veg" onClick={(e) => filterHandler(e)}>
           Vegetarian
         </button>
       </div>
 
-      <div className="search-all">
+      <div className="search-list">
         {filteredDish.map((dish) => (
           <Link key={dish.id} to={"/food/products/" + dish.id}>
             <div className="food-card" onClick={() => selectHandler(dish.id)}>
