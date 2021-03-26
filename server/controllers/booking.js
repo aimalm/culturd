@@ -17,19 +17,19 @@ export const getAllBookedEvents = async (req, res) => {
     }
 }
 
-// export const getEvent = async (req, res) => { 
+export const getAnEvent = async (req, res) => { 
 
-//     const id = req.params._id;
+    const id = req.params._id;
 
-//     try {
-//         const post = await Events.findById(id);
+    try {
+        const bookedEvent = await Booking.findById(id);
         
-//         res.status(200).json(post);
+        res.status(200).json(bookedEvent);
         
-//     } catch (error) {
-//         res.status(404).json({ message: error.message });
-//     }
-// }
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
 
 export const bookAnEvent = async (req, res) => {
     //const { title, message, selectedFile, creator, tags } = req.body;

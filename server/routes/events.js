@@ -1,7 +1,7 @@
 import express from 'express';
 
 import { getEvents, getEvent, createEvent, updateEvent, deleteEvent } from '../controllers/events.js';
-import { getAllBookedEvents, bookAnEvent } from '../controllers/booking.js';
+import { getAllBookedEvents, getAnEvent, bookAnEvent } from '../controllers/booking.js';
 
 
  const router = express.Router();
@@ -19,9 +19,9 @@ router.delete('/event/:_id', deleteEvent);
 // ---------------------------------------------------------
 
 //routes for the booked events
- router.get('/booked_events', getAllBookedEvents);
- router.post('/booked_events', bookAnEvent);
-// router.get('/event/:_id', getEvent);
+ router.get('/booked_event', getAllBookedEvents);
+ router.post('/booked_event', bookAnEvent);
+ router.get('/booked_event/:_id', getAnEvent);
 // router.patch('/event/:_id', updateEvent);
 // router.delete('/event/:_id', deleteEvent);
 
