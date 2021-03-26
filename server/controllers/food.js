@@ -16,19 +16,19 @@ export const getAllFoods = async (req, res) => {
     }
 }
 
-// export const getAnEvent = async (req, res) => { 
+export const getFood = async (req, res) => { 
 
-//     const id = req.params._id;
+    const id = req.params._id;
 
-//     try {
-//         const bookedEvent = await Booking.findById(id);
+    try {
+        const showFood = await Food.findById(id);
         
-//         res.status(200).json(bookedEvent);
+        res.status(200).json(showFood);
         
-//     } catch (error) {
-//         res.status(404).json({ message: error.message });
-//     }
-// }
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
 
 export const createFoodPost = async (req, res) => {
     //const { title, message, selectedFile, creator, tags } = req.body;

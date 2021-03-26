@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import eventRoutes from './routes/events.js';
+import Routes from './routes/routes.js';
 
 
 
@@ -16,7 +16,7 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
-app.use('/api', eventRoutes);
+app.use('/api', Routes);
 
 
 const CONNECTION_URL = "mongodb+srv://cuturd:culturd123@cluster0.adry7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
