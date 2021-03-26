@@ -17,10 +17,10 @@ function SearchF({ setSelectedDish, selectedDish }) {
 
     let searchResult = FoodTable.filter((food) => food.keywords.includes(foodName))
     
-    //setSelectedDish(searchResult)
+    setSelectedDish(searchResult)
 
 
-    //console.log(searchResult)
+   
     // let keywordArray = FoodTable.map(food=>{
     //   food.keywords.map(keyword=> keyword == foodName)})
     // console.log(keywordArray)
