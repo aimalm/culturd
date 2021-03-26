@@ -32,8 +32,7 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
 
-  console.log(searchResult)
-
+  
   const LSKEY = "culturd";
   useEffect(() => {
     let localShoppingCart = JSON.parse(localStorage.getItem(LSKEY));

@@ -14,6 +14,7 @@ export const FoodTable = [
     address: "Place Poelaert 1, 1000 Bruxelles",
     imageUrl:
       "https://i.pinimg.com/originals/2c/f9/7a/2cf97a3e507f406a700445e56e5a9507.jpg",
+      quantity:1
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ export const FoodTable = [
     address: "Rue de Namur 28, 1000 Bruxelles",
     imageUrl:
       "https://www.dinneratthezoo.com/wp-content/uploads/2019/06/beef-bulgogi-4.jpg",
+      quantity:1
   },
   {
     id: 3,
@@ -47,6 +49,7 @@ export const FoodTable = [
     address: "Rue Royale 236, 1210 Saint-Josse-ten-Noode",
     imageUrl:
       "http://www.ahueats.com/wp-content/uploads/2016/03/Matcha-Cookies-2.jpg",
+      quantity:1
   },
   {
     id: 4,
@@ -64,6 +67,7 @@ export const FoodTable = [
     address: "Rue de Namur 28, 1000 Bruxelles",
     imageUrl:
       "https://tastesbetterfromscratch.com/wp-content/uploads/2019/03/Chicken-Chow-Mein-4.jpg",
+      quantity:1
   },
   {
     id: 5,
@@ -81,7 +85,8 @@ export const FoodTable = [
     address: "Rue de la Montagne 16, 1000 Bruxelles",
     imageUrl:
       "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-  },
+      quantity:1
+    },
   {
     id: 6,
     dishName: "coffee muffin",
@@ -98,7 +103,8 @@ export const FoodTable = [
     address: "Rue de la Montagne 16, 1000 Bruxelles",
     imageUrl:
       "https://images.unsplash.com/photo-1557925923-6982bd9650ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80",
-  },
+      quantity:1
+    },
   {
     id: 7,
     dishName: "spinach pasta",
@@ -115,7 +121,8 @@ export const FoodTable = [
     address: "Rue de la Montagne 16, 1000 Bruxelles",
     imageUrl:
       "https://images.unsplash.com/photo-1587740908075-9e245070dfaa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
-  },
+      quantity:1
+    },
   {
     id: 8,
     dishName: "nasi lemak",
@@ -132,7 +139,8 @@ export const FoodTable = [
     address: "Rue de la Montagne 16, 1000 Bruxelles",
     imageUrl:
       "https://images.unsplash.com/photo-1570275239925-4af0aa93a0dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80",
-  },
+      quantity:1
+    },
   {
     id: 9,
     dishName: "spicy noodles",
@@ -149,6 +157,7 @@ export const FoodTable = [
     address: "Rue de la Montagne 16, 1000 Bruxelles",
     imageUrl:
       "https://images.unsplash.com/photo-1540138279543-b3728f037467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80",
-  },
+      quantity:1
+    },
 ];
 

@@ -17,34 +17,24 @@ function ProductsF({
   viewingCart,
   setViewingCart,
 }) {
-  const addCart = (id) => {
-    console.log(id);
-    //console.log(shoppingCart)
+  const addCart = (dishID) => {
+ 
     let dishIDArray = shoppingCart.map((food) => food.id);
     let newArray = [...shoppingCart];
 
-    if (dishIDArray.includes(id) === true) {
+    if (dishIDArray.includes(dishID) === true) {
+
       newArray.map((item) => {
-        if (item.id === id) {
+        if (item.id === dishID) {
           item.quantity++;
         }
       });
+      setShoppingCart(newArray)
 
-      setShoppingCart(newArray);
     } else {
-      setShoppingCart([
-        ...shoppingCart,
-        {
-          id: id,
-          dish: selectedDish.dishName,
-          cooker: selectedDish.cooker,
-          price: selectedDish.price,
-          pickupDate: selectedDish.pickupDate,
-          address: selectedDish.address,
-          imageUrl: selectedDish.imageUrl,
-          quantity: 1,
-        },
-      ]);
+
+      setShoppingCart([...shoppingCart, ...selectedDish]);
+      
     }
 
     setViewingCart(true);
@@ -126,7 +116,7 @@ function ProductsF({
                 </div>
                 <button
                   className="products-add-button"
-                  onClick={() => addCart(selectedDish.id)}
+                  onClick={() => addCart(dish.id)}
                 >
                   Add to cart
                 </button>
@@ -135,7 +125,6 @@ function ProductsF({
           </div>
         ) : (
           <h3>Go back to check out the delicious HOME DISHES</h3>
-
         )}
       </div>
     </div>
