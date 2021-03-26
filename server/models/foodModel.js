@@ -15,6 +15,6 @@ const foodSchema = mongoose.Schema({
     "imageUrl": { type: String},
 })
 
-var food = mongoose.model('foods', foodSchema);
+var Food = mongoose.model('Foods', foodSchema);
 
-export default food;
+export default Food;
