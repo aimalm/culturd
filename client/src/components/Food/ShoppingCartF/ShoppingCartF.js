@@ -31,10 +31,10 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
         let minusArray = [...shoppingCart];
 
         shoppingCart.map((item) => {
-          if (item.id === id && item.quantity > 0) {
+          if (item.id === id && item.quantity > 1) {
             item.quantity --
             setShoppingCart(minusArray);
-          } else if (item.id === id && item.quantity === 0) {
+          } else  {
             deleteFromCart(id)
           } 
         })
@@ -48,7 +48,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
   return (
     <div className="shopping-cart-wrapper">
-      <a href="/food" className="back-button">
+      <a href="/food/product_list" className="back-button">
         <IoMdArrowBack className="back-button-icon" />
       </a>
       <h1 className="shopping-cart-title">My Order</h1>
@@ -59,6 +59,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
         <div>
           {shoppingCart.map((food) => (
             <div key={food.id} className="shopping-cart-item">
+              
               <img className="cart-img" src={food.imageUrl} alt="" />
               <div className="cart-food-info">
                 <h4>{food.dishName}</h4>

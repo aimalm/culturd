@@ -11,7 +11,7 @@ import stove from "../images/stove.jpg";
 function CarouselF() {
     return (
         <div className="carousel">
-             <Carousel fade keyboard={false}>
+             <Carousel slide={false} fade={false} interval={1500}>
           <Carousel.Item>
             <img className="d-block w-100" src={dumplings} alt="First slide" />
             <Carousel.Caption>

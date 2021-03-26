@@ -9,7 +9,7 @@ function ProductListF({ setSelectedDish }) {
   const [filteredDish, setFilteredDish] = useState(FoodTable);
 
   const selectHandler = (dishID) => {
-    setSelectedDish(FoodTable.filter((item) => item.id == dishID));
+    setSelectedDish(FoodTable.filter((item) => item.id === dishID));
   };
 
   const filterHandler = (e) => {

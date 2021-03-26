@@ -1,0 +1,42 @@
+.profile-wrapper{
+    
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.profile-wrapper h3,.profile-wrapper h5, .profile-wrapper p {
+    color: var(--NavbarColor);
+    margin: 0;
+}
+.profile-menu{
+    padding: 0 2rem;
+        padding-top: 6rem;
+    height: 100vh;
+    background-color: var(--beige);
+    display: grid; 
+    grid-template-rows: 30% 70%;
+    justify-items: center;
+}
+.profile-user-pic{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    justify-content: center;
+}
+.profile-menu ul{
+    list-style-type: none;
+    padding:0;
+}
+.profile-menu li{
+    padding: 1.5rem 0.5rem;
+    text-transform: capitalize;
+    border-bottom: .5px solid var(--NavbarColor);
+
+}
+
+.profile-info{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

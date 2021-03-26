@@ -3,11 +3,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import { FoodTable } from "../Template";
 import { Link } from "react-router-dom";
 
-function SearchF({ setSelectedDish, selectedDish, searchResult, setSearchResult }) {
-  //useRef can take the entry of the input
+function SearchF({ setSelectedDish, searchResult, setSearchResult }) {
   const inputRef = useRef();
-
-  console.log(searchResult)
 
   const searchHandler = (e) => {
     e.preventDefault();
@@ -23,9 +20,9 @@ function SearchF({ setSelectedDish, selectedDish, searchResult, setSearchResult 
 
   const resultHandler = (searchID)=>{
   
-    setSelectedDish(FoodTable.filter((item) => item.id == searchID))
-
+    setSelectedDish(FoodTable.filter((item) => item.id === searchID))
   }
+
   return (
     <div className="home-search-container">
       <h2 className="home-search-title">

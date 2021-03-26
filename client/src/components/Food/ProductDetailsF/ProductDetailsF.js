@@ -8,6 +8,7 @@ import { CgArrowLongUp } from "react-icons/cg";
 
 import { Link } from "react-router-dom";
 
+
 function ProductDetailsF({
   selectedDish,
   setSelectedDish,
@@ -22,9 +23,11 @@ function ProductDetailsF({
   const addCart = (dishID) => {
  
     let dishIDArray = shoppingCart.map((food) => food.id);
-    let newArray = [...shoppingCart];
+    
 
     if (dishIDArray.includes(dishID) === true) {
+
+      let newArray = [...shoppingCart];
 
       newArray.map((item) => {
         if (item.id === dishID) {

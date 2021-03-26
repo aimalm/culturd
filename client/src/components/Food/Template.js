@@ -171,3 +171,13 @@ export const FoodTable = [
     },
 ];
 
+export const User = 
+  {name: "Aimal", 
+  password: "Pa$$w0rd!", 
+  reConfirmPassword: "Pa$$w0rd!", 
+  email: "liwe@mailinator.com", 
+  phone: "+1 (869) 338-9624",
+  profilePic:"https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+
+};
+
