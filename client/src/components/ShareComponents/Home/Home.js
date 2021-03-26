@@ -1,29 +1,48 @@
 import React from "react";
+// import mainImage from "../image/test2.png";
 import "./Home.css";
+// import { Button } from "react-bootstrap";
+// import workshop from "../image/workshop.png";
+// import foodie from "../image/foodie.png";
 import { Link } from "react-router-dom";
-import culturd from '../image/food.png'
-import workshop from '../image/workshop.png'
 
 function Home() {
   return (
-  <>
-     <div class="l-flex-fix">
-        <div class="l-flex-parent">
-           <div class="worskhop l-flex-child l-grid-half">
-              <div class="culturd-item">
-              <img className="img-worskhop" src={workshop} alt="workshop"/>
-              <Link to="/workshop"> CULTURD WORSHOP</Link>
-               </div>
-               </div>
-              <div class="kitching l-flex-child l-grid-half">
-              <div class="culturd-item">
-              <img className="img-culturd" src={culturd} alt="culturd"/>
-              <Link to="/food"> CULTURD KITCHING </Link>
-               </div>
-             </div>
-         </div>
-      </div>
-  </>
+    <div className="home-wrapper">
+      
+      <Link to="/workshop" className="home-workshop-section">
+       
+          <p>img here</p>
+          <h5 className="home-workshop-button">click to see more</h5>
+
+      </Link>
+      <Link to="/food" className="home-food-section">
+        
+          <p>img here</p>
+          <h5 className="home-food-button">click to see more</h5>
+        
+      </Link>
+      <Link to="/workshop" className="home-workshop-text">
+        
+          <h3>culturd workshop</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            labore.
+          </p>
+        
+      </Link>
+      <Link to="/food" className="home-food-text">
+     
+          <h3>culturd home food</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            labore.
+          </p>
+        
+      </Link>
+
+      
+    </div>
   );
 }
 

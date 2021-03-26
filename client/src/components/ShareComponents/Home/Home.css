@@ -1,65 +1,48 @@
 
-body {
-
-  font-size:100%;
-  line-height:1.5;
+.home-wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0 2rem;
+    grid-template-rows: 80% 20%;
 }
-* {
-  box-sizing: border-box;
+.home-wrapper h3,.home-wrapper h5{
+    color: var(--NavbarColor);
+    margin: 0;
+    text-transform: uppercase;
+    text-align:center;
 }
-
-.culturd-item {
-  padding:1em;
-  border-radius:5px;
-  max-width:15em;
-}
-
-.l-grid-half {
-  width: 50%;
-}
-
-.l-flex-parent {
-  
-  display:flex;
-  flex-direction:row;
-  
-}
-.l-flex-child {
-  padding:1em;
-  min-height: 100vh;
-  align-items: center;
-  display:flex; 
-  justify-content: center;
-  flex-direction: column;
-  
-}
-.worskhop {
-  background-color:var(--light-turquiose);
-  color:(--light-yellow);
- 
-  
-}
-.kitching {
-  background-color:var(--light-yellow);
-  background-size:cover;
- 
-}
-.kitching .example-item {
-  background:var(--light-turquiose);
-  color: #fff;
-
+.home-wrapper a{
+    text-decoration: none;
+    color: var(--NavbarColor);
 }
 
-.worskhop .example-item {
-  background:var(--light-yellow);
-  color:#000;
-
-
+.home-workshop-section{
+    background-color: var(--light-turquiose);
+    display: grid;
+}
+.home-food-section{
+    background-color: var(--light-yellow);
+    display: grid;
 }
 
-.img-worskhop{
-  max-width: 250%;
-  
+.home-workshop-text, .home-food-text{
+    width: 70%;
+    justify-self: center;  
+    align-self: center;
+}
+
+.home-food-button, .home-workshop-button{
+    background-color: var(--carol);
+    align-self: flex-end;
+    padding: 1rem 0;
+    display: none;
+}
+.home-food-section:hover .home-food-button{
+    display: inline;
+}
+.home-workshop-section:hover .home-workshop-button{
+    display: inline;
 }
 
 .img-culturd{

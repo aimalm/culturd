@@ -6,7 +6,7 @@
   background-image: url(../image/bg.png);
   background-repeat: no-repeat;
   background-size: 95% ;
-  height: 600px;
+  height: 650px;
   margin-top: -50px;
   
 }
@@ -25,33 +25,25 @@
     display: block;
   }
 
-  .h4-aboutus{
-    font-size: 1.3rem;
-  }
-
-  .container-aboutus{
+  .alice-carousel ul li img{
+    margin:0 80px;
     border:4px solid #f5e3b1;
     border-top:4px solid #bfede4;
     border-bottom: 4px solid #f59d87;
-    height: 500px;
-    width: 1200px;
-    align-items: center;
-    margin-bottom: 100px;
-    margin: 100px 100px;
-    display: grid;
-   grid-template-columns: auto auto;
-  }
+    height: 600px;
+    width: 90%;
+    object-fit: cover;
+    
   
+  }
 
- .text-aboutUS{
-     margin-left: 50px;
- }
- 
+
+  
 
 .dummy-text{
   text-align: center;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 200px;
 }
 
 /* h1 animation */
@@ -143,17 +135,12 @@ align-items: center;
 
 
 
-.h1-aboutus{
-  color:var(--carol);
-
-}
 
 .landing_main-button{
 display:inline-block;
 padding: 20px 50px;
 border:0.1em solid #be7979;
-margin:0 10px 10px 0;
-border-radius: 5%;
+border-radius: 50px;
 box-sizing: border-box;
 text-decoration:none;
 color:#0b523a;
@@ -165,6 +152,7 @@ box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
 font-size: 1rem;
 text-transform: uppercase;
 font-weight: bold;
+margin:0 550px;
 
 
 }
@@ -214,3 +202,58 @@ border-radius: 30px;
   text-decoration: none;
   
   }
+
+
+  .calender-homepage{
+    width: 30%;  
+  }
+
+  .Dropdown-homepage{
+    background-color:#f5f1b8;
+    display: flex;
+    height: 100px;
+    width: 80%;
+    margin: 40px 150px;
+    padding: 5px 20px;
+    margin-top: -100px;
+  }
+
+
+  .Dropdown-container{
+    display: flex;
+    width: 90%;
+  
+
+  }
+
+  .button-dropdown{
+    width: 10%;
+    background-color: var(--carol);
+    height: 40px;
+    align-items: center;
+    margin: 30px;
+    border:0.1em solid #be7979;
+    border-radius: 20px;
+
+  }
+
+  .button-dropdown:hover{
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color:#FFFFFF;
+    border-color:#FFFFFF;
+    text-decoration: none;
+
+ 
+    
+    }
+
+  .rfe-form__row{
+    display:block;
+    margin: 10px 10px;
+    row-gap: 50px;
+    font-size: 1rem;
+
+}
+
+
+  
