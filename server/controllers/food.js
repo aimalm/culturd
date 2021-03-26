@@ -46,19 +46,19 @@ export const createFoodPost = async (req, res) => {
     }
 }
 
-//  export const updateBooking = async (req, res) => {
+ export const updateFood = async (req, res) => {
 
-//          const id = req.params._id;
-//         //const { eventTitle, description } = req.body;
+         const id = req.params._id;
+        //const { eventTitle, description } = req.body;
         
-//          if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+         if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
     
-//          const updateABooking = req.body;
+         const updateFood = req.body;
     
-//          await Booking.findByIdAndUpdate(id, updateABooking, { new: true });
+         await Food.findByIdAndUpdate(id, updateFood, { new: true });
     
-//         res.json(updateABooking);
-// }
+        res.json(updateFood);
+}
 
 // export const deleteBooking = async (req, res) => {
 //     const id = req.params._id;
