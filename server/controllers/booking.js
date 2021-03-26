@@ -1,5 +1,5 @@
 import express from 'express';
-//import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 import Booking from '../models/BookedEvents.js';
 
@@ -47,19 +47,19 @@ export const bookAnEvent = async (req, res) => {
     }
 }
 
-// export const updateEvent = async (req, res) => {
+ export const updateBooking = async (req, res) => {
 
-//          const id = req.params._id;
-//         //const { eventTitle, description } = req.body;
+         const id = req.params._id;
+        //const { eventTitle, description } = req.body;
         
-//          if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+         if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
     
-//          const updatedEvent = req.body;
+         const updateABooking = req.body;
     
-//          await Events.findByIdAndUpdate(id, updatedEvent, { new: true });
+         await Booking.findByIdAndUpdate(id, updateABooking, { new: true });
     
-//         res.json(updateEvent);
-// }
+        res.json(updateABooking);
+}
 
 // export const deleteEvent = async (req, res) => {
 //     const id = req.params._id;
