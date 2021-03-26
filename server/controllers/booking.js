@@ -61,15 +61,15 @@ export const bookAnEvent = async (req, res) => {
         res.json(updateABooking);
 }
 
-// export const deleteEvent = async (req, res) => {
-//     const id = req.params._id;
+export const deleteBooking = async (req, res) => {
+    const id = req.params._id;
 
-//     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
 
-//     await Events.findByIdAndRemove(id);
+    await Booking.findByIdAndRemove(id);
 
-//     res.json({ message: "Post deleted successfully." });
-// }
+    res.json({ message: "Post deleted successfully." });
+}
 
 
 

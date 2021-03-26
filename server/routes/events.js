@@ -1,7 +1,7 @@
 import express from 'express';
 
 import { getEvents, getEvent, createEvent, updateEvent, deleteEvent } from '../controllers/events.js';
-import { getAllBookedEvents, getAnEvent, bookAnEvent, updateBooking } from '../controllers/booking.js';
+import { getAllBookedEvents, getAnEvent, bookAnEvent, updateBooking, deleteBooking } from '../controllers/booking.js';
 
 
  const router = express.Router();
@@ -23,7 +23,7 @@ router.delete('/event/:_id', deleteEvent);
  router.post('/booked_event', bookAnEvent);
  router.get('/booked_event/:_id', getAnEvent);
  router.patch('/booked_event/:_id', updateBooking);
-// router.delete('/event/:_id', deleteEvent);
+ router.delete('/booked_event/:_id', deleteBooking);
 
 
 export default router;
