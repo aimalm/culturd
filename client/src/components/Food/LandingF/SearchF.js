@@ -9,24 +9,14 @@ function SearchF({ setSelectedDish, selectedDish }) {
   console.log(selectedDish)
   const searchHandler = (e) => {
     e.preventDefault();
+
     const foodName = inputRef.current.value.toLowerCase();
 
     if (foodName === "") return;
 
-    console.log(foodName);
-
     let searchResult = FoodTable.filter((food) => food.keywords.includes(foodName))
     
     setSelectedDish(searchResult)
-
-
-   
-    // let keywordArray = FoodTable.map(food=>{
-    //   food.keywords.map(keyword=> keyword == foodName)})
-    // console.log(keywordArray)
-    // setSelectedDish(
-    //   FoodTable.filter((food) => food.keywords.includes(foodName))
-    // );
   };
 
   return (
@@ -47,17 +37,17 @@ function SearchF({ setSelectedDish, selectedDish }) {
         <button className="search-button" onClick={searchHandler}>
           <SearchIcon className="search-button-icon" />
         </button>
-        <div className="search-suggestion">
+        
           {selectedDish.length > 0 ? (
-            <div>{selectedDish.map((food) => 
+            <div className="search-suggestion">{selectedDish.map((food) => 
               <Link key={food.id} to={"/food/products/" + food.id}>
             <p key={food.id} >{food.dishName}</p>
             </Link>
             )}</div>
           ) : (
-            "no its nothing"
+            ""
           )}
-        </div>
+        
       </form>
     </div>
   );

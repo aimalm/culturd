@@ -19,9 +19,12 @@
 }
 .search-bar{
   margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 60%;
+  margin: auto;
 }
 .search-input {
-  width: 40%;
   padding: .5rem 1.5rem;
   font-size: var(--font);
   color: var(--NavbarColor);
@@ -36,12 +39,10 @@
 .search-button{
   background-color: transparent;
   border:none;
-
-
+  justify-self: start;
 }
 .search-button:hover{
   transform: scale(1.2);
-
 }
 
 .search-button-icon{
@@ -51,10 +52,37 @@
 }
 .search-button-icon:hover{
   color: var(--yellowish);
+}
+.search-suggestion{
+  border: .5px solid var(--carol);
+  border-top: none;
+  padding-bottom: .5rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  animation: slidein 1s 1; 
+  justify-self: center;
+  text-transform: capitalize;
+  border-radius: 0px 0px 30px 30px;
+  text-align: left;
 
+}
+.search-suggestion a{
+  text-decoration: none;
+  color: var(--dark-carol);
 }
 
 
+@keyframes slidein {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(30%);
+    opacity: 1;
+  }
+}
 
 
 .food-new {
