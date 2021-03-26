@@ -1,5 +1,5 @@
 import express from 'express';
-//import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 import Events from '../models/eventsModel.js';
 
@@ -63,11 +63,11 @@ export const updateEvent = async (req, res) => {
 }
 
 export const deleteEvent = async (req, res) => {
-    const {id} = req.params;
+    const id = req.params._id;
 
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
 
-    await PostMessage.findByIdAndRemove(id);
+    await Events.findByIdAndRemove(id);
 
     res.json({ message: "Post deleted successfully." });
 }
