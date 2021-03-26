@@ -49,17 +49,16 @@ export const createEvent = async (req, res) => {
 
 export const updateEvent = async (req, res) => {
 
-        // const id = req.params._id;
-        // //req.send(req.params)
-        // //const { eventTitle, description } = req.body;
+         const id = req.params._id;
+        //const { eventTitle, description } = req.body;
         
-        //  if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+         if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
     
-        //  const updatedEvent = req.body;
+         const updatedEvent = req.body;
     
-        //  await Events.findByIdAndUpdate(id, updatedEvent, { new: true });
+         await Events.findByIdAndUpdate(id, updatedEvent, { new: true });
     
-        // res.json(updateEvent);
+        res.json(updateEvent);
 }
 
 export const deleteEvent = async (req, res) => {
