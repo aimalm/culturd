@@ -16,19 +16,19 @@ export const getAllOrders = async (req, res) => {
     }
 }
 
-// export const getFood = async (req, res) => { 
+export const showAnOrder = async (req, res) => { 
 
-//     const id = req.params._id;
+    const id = req.params._id;
 
-//     try {
-//         const showFood = await Food.findById(id);
+    try {
+        const showAnOrder = await Order.findById(id);
         
-//         res.status(200).json(showFood);
+        res.status(200).json(showAnOrder);
         
-//     } catch (error) {
-//         res.status(404).json({ message: error.message });
-//     }
-// }
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
 
 export const createAnOrder = async (req, res) => {
     //const { title, message, selectedFile, creator, tags } = req.body;
