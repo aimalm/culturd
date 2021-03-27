@@ -31,3 +31,14 @@ food
     "openingHours" "10:00 - 16:00"
     "address": "Drootbeekstraat 555, Brussels"
 }
+
+order
+{
+	"user_id": "2000",
+    "product_id": "00033aa7s",
+    "payment": "yes",
+    "amount": "15.20",
+    "delivery_date": "2021-04-21",
+    "Pickup_address": "Ghentstraat 15, 9000"
+	
+}
