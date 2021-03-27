@@ -30,21 +30,20 @@ export const getAllOrders = async (req, res) => {
 //     }
 // }
 
-// export const createFoodPost = async (req, res) => {
-//     //const { title, message, selectedFile, creator, tags } = req.body;
+export const createAnOrder = async (req, res) => {
+    //const { title, message, selectedFile, creator, tags } = req.body;
     
-//     try {
-//         const createFoodPost = new Food(req.body)
+    try {
+        const createAnOrder = new Order(req.body)
 
-//         await createFoodPost.save();
+        await createAnOrder.save();
 
-//         res.status(201).json(createFoodPost);
-//         //res.send("create")
+        res.status(201).json(createAnOrder);
 
-//     } catch (error) {
-//         res.status(409).json({ message: error.message });
-//     }
-// }
+    } catch (error) {
+        res.status(409).json({ message: error.message });
+    }
+}
 
 //  export const updateFood = async (req, res) => {
 
