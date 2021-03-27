@@ -3,7 +3,7 @@ import express from 'express';
 import { getEvents, getEvent, createEvent, updateEvent, deleteEvent } from '../controllers/events.js';
 import { getAllBookedEvents, getAnEvent, bookAnEvent, updateBooking, deleteBooking } from '../controllers/booking.js';
 import { getAllFoods, getFood, createFoodPost, updateFood, deleteFoodPost } from '../controllers/food.js';
-import { getAllOrders, createAnOrder, showAnOrder, updateAnOrder } from '../controllers/order.js';
+import { getAllOrders, createAnOrder, showAnOrder, updateAnOrder, deleteAnOrder } from '../controllers/order.js';
 
 
 
@@ -43,7 +43,7 @@ router.get('/food_order', getAllOrders);
 router.post('/food_order', createAnOrder);
 router.get('/food_order/:_id', showAnOrder);
 router.patch('/food_order/:_id', updateAnOrder);
-// router.delete('/food_order/:_id', deleteFoodPost);
+router.delete('/food_order/:_id', deleteAnOrder);
 
 
 export default router;

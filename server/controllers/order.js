@@ -59,15 +59,15 @@ export const createAnOrder = async (req, res) => {
         res.json(updateAnOrder);
 }
 
-// export const deleteFoodPost = async (req, res) => {
-//     const id = req.params._id;
+export const deleteAnOrder = async (req, res) => {
+    const id = req.params._id;
 
-//     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
 
-//     await Food.findByIdAndRemove(id);
+    await Order.findByIdAndRemove(id);
 
-//     res.json({ message: "Post deleted successfully." });
-// }
+    res.json({ message: "Order deleted successfully." });
+}
 
 
 
