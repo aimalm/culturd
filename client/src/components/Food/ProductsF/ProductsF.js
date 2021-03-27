@@ -4,6 +4,7 @@ import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import StarIcon from "@material-ui/icons/Star";
 import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
+import { CgArrowLongUp } from "react-icons/cg";
 
 import { Link } from "react-router-dom";
 
@@ -12,25 +13,69 @@ function ProductsF({
   setSelectedDish,
   shoppingCart,
   setShoppingCart,
+  viewingCart,
+  setViewingCart,
 }) {
-  const addCart = () => {
-    setShoppingCart([
-      ...shoppingCart,
-      {
-        dish: selectedDish.dishName,
-        cooker: selectedDish.cooker,
-        price: selectedDish.price,
-        pickUpDate: selectedDish.pickUpDate,
-        address: selectedDish.address,
-      },
-    ]);
+  const addCart = (id) => {
+
+    console.log(id)
+    //console.log(shoppingCart)
+    let dishIDArray = shoppingCart.map((food) => food.id);
+    let newArray = [...shoppingCart];
+
+    
+    if (dishIDArray.includes(id) === true) {
+      
+      
+      newArray.map((item) => {
+        if (item.id === id) {
+          item.quantity++;
+        }
+      });
+
+       setShoppingCart(newArray);
+    } else {
+
+      setShoppingCart([
+        ...shoppingCart,
+        {
+          id: id,
+          dish: selectedDish.dishName,
+          cooker: selectedDish.cooker,
+          price: selectedDish.price,
+          pickupDate: selectedDish.pickupDate,
+          address: selectedDish.address,
+          imageUrl: selectedDish.imageUrl,
+          quantity: 1,
+        },
+      ]);
+    }
+
+    setViewingCart(true);
+    setTimeout(() => {
+      setViewingCart(false);
+    }, 3000);
   };
 
   return (
     <div>
+      {/* shopping cart alert here */}
+      {viewingCart ? (
+        <div className="add-cart-alert">
+          <p>
+            {" "}
+            <CgArrowLongUp />
+            The dish is now in your cart! <CgArrowLongUp />
+          </p>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {/* go back button here */}
       <div className="products-wrapper">
-        <Link to="/food">
-          <button className="back-button" onClick={() => setSelectedDish([])}>
+        <Link to="/food/search">
+          <button className="back-button">
             <IoMdArrowBack className="back-button-icon" />
           </button>
         </Link>
@@ -45,9 +90,9 @@ function ProductsF({
               />
               <div className="products-ingredients-container">
                 {selectedDish.ingredients.map((ingredient) => (
-                  <span key={ingredient} className="ingredient-lable">
+                  <p key={ingredient} className="ingredient-lable">
                     {ingredient}
-                  </span>
+                  </p>
                 ))}
 
                 {selectedDish.vegetarian ? (
@@ -60,9 +105,15 @@ function ProductsF({
               <h3 className="products-price">
                 <EuroSymbolIcon /> <strong>{selectedDish.price}</strong>
               </h3>
-              <p className="products-description">{selectedDish.dishDescription}</p>
-              <p><strong>Pick Up Date:</strong> {selectedDish.pickupDate}</p>
-              <p><strong>Pick Up Address:</strong> {selectedDish.address}</p>
+              <p className="products-description">
+                {selectedDish.dishDescription}
+              </p>
+              <p>
+                <strong>Pick Up Date:</strong> {selectedDish.pickupDate}
+              </p>
+              <p>
+                <strong>Pick Up Address:</strong> {selectedDish.address}
+              </p>
             </div>
 
             <div className="cooker-info">
@@ -77,15 +128,16 @@ function ProductsF({
                   <StarIcon key={index} className="star" />
                 ))}
               </div>
-              
             </div>
-            <button className="products-add-button" onClick={addCart}>
+            <button
+              className="products-add-button"
+              onClick={() => addCart(selectedDish.id)}
+            >
               Add to cart
             </button>
-            
           </div>
         ) : (
-          <h1>Go back to check out the delicious HOME DISHES</h1>
+          <h3>Go back to check out the delicious HOME DISHES</h3>
         )}
       </div>
     </div>

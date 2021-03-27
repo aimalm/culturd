@@ -21,13 +21,16 @@ import ProductsF from "./components/Food/ProductsF/ProductsF";
 import SubnavF from "./components/Food/SubNavF/SubNavF";
 import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
-import SearchByDateF from "./components/Food/SearhByDateF/SearchByDateF";
-import SearchByLocationF from "./components/Food/SearchByLocationF/SearchByLocationF";
+import SearchProductsF from "./components/Food/SearchProductsF/SearchProductsF";
+import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
+
 
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
+  const [viewingCart, setViewingCart] = useState(false);
+
 
   const LSKEY = "culturd";
   useEffect(() => {
@@ -45,6 +48,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+
+
           <Route path="/workshop/pricing">
             <SubNavW />
             <PricingW />
@@ -61,31 +66,37 @@ function App() {
             <Footer />
           </Route>
 
+          <Route path="/food/shopping_cart">
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
+            <ShoppingCartF shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>
+          </Route>
+
           <Route path="/food/profile">
-            <SubnavF shoppingCart={shoppingCart} />
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
+
             <ProfileF />
           </Route>
 
           <Route path="/food/products">
-            <SubnavF shoppingCart={shoppingCart} />
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
+
             <ProductsF
               selectedDish={selectedDish}
               setSelectedDish={setSelectedDish}
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
+              viewingCart={viewingCart}
+              setViewingCart={setViewingCart}
             />
             <Footer/>
           </Route>
 
-          <Route path="/food/search_by_location">
-            <SubnavF shoppingCart={shoppingCart} />
-            <SearchByLocationF />
+          <Route path="/food/search">
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
+            <SearchProductsF  setSelectedDish={setSelectedDish} />
           </Route>
 
-          <Route path="/food/search_by_date">
-            <SubnavF shoppingCart={shoppingCart} />
-            <SearchByDateF />
-          </Route>
+  
 
           <Route path="/about_us">
             {/* change the Nav to Nav_Logout when the user is login */}
@@ -95,13 +106,17 @@ function App() {
           </Route>
 
           <Route path="/food">
-            <SubnavF shoppingCart={shoppingCart} />
+            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
+
             <LandingF
+            selectedDish={selectedDish}
               setSelectedDish={setSelectedDish}
               selectedDish={selectedDish}
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
+              viewingCart={viewingCart}
             />
+
             <Footer />
           </Route>
 
@@ -113,10 +128,12 @@ function App() {
 
           <Route path="/">
             {/* change the Nav to Nav_Logout when the user is login */}
-            <MainNav />
+            {/* <MainNav /> */}
             <Home />
             <Footer />
           </Route>
+
+          
         </Switch>
       </Router>
     </div>

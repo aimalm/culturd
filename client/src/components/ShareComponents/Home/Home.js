@@ -1,28 +1,64 @@
 import React from "react";
-import mainImage from "../image/test2.png";
+// import mainImage from "../image/test2.png";
 import "./Home.css";
-import workshop from "../image/workshop.png";
- import foodie from "../image/foodie.png";
+// import { Button } from "react-bootstrap";
+// import workshop from "../image/workshop.png";
+// import foodie from "../image/foodie.png";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <>
-    <div className="container-homeMain">
-      <div className="header-HomeMain">
-            <img className="image-homeMain" src={mainImage} alt="Logo" />
-           <div className="text-homeMain">
-            <h4 className="h4-homeMain">
-              Lorem ipsum dolor sit amet.Aenean commodo ligula eget dolor. 
-            </h4>
-            <br></br>
-            <Link className="landing_main-button" to="/workshop/about_us">Discover More</Link>{" "}
-          </div>
-      </div>
-      <div className="svg-main">
-          <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="bisque" fill-opacity="0.6" d="M0,32L720,320L1440,160L1440,0L720,0L0,0Z"></path></svg>
-     </div> 
-      <div className="home-section-wrapper">
+    <div className="home-wrapper">
+      
+      <Link to="/workshop" className="home-workshop-section">
+       
+          <p>img here</p>
+          <h5 className="home-workshop-button">click to see more</h5>
+
+      </Link>
+      <Link to="/food" className="home-food-section">
+        
+          <p>img here</p>
+          <h5 className="home-food-button">click to see more</h5>
+        
+      </Link>
+      <Link to="/workshop" className="home-workshop-text">
+        
+          <h3>culturd workshop</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            labore.
+          </p>
+        
+      </Link>
+      <Link to="/food" className="home-food-text">
+     
+          <h3>culturd home food</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            labore.
+          </p>
+        
+      </Link>
+
+      {/* <div className="container-homeMain">
+        <img className="image-logo" src={mainImage} alt="Logo" />
+        <div className="text-homeMain">
+          <h4 className="h4-homeMain">
+            Lorem ipsum dolor sit amet.Aenean commodo ligula eget dolor. Aenean
+            massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Donec quam felis, ultricies necLorem ipsum
+            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis Donec quam felis,.
+          </h4>
+          <br></br>
+          <Link to="/aboutus">
+            <Button>
+              <span>Discover now</span>
+            </Button>
+          </Link>
+        </div>
+        <div className="home-section-wrapper">
         <div className="home-section-container">
          <div className="home-section-title">
            <h2>Pick your choice</h2>
@@ -47,8 +83,8 @@ function Home() {
         </div>
         </div>
  
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }
 

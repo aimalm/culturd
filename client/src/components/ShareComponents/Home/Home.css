@@ -1,95 +1,46 @@
-/* Main homepage start here */
 
-.header-HomeMain{
-   align-items: flex-start;
-   background-color:#ffeedc;
-
+.home-wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0 2rem;
+    grid-template-rows: 80% 20%;
 }
-
-.image-homeMain{
-    max-width: 75%;
-    margin-left: 200px;
-    
+.home-wrapper h3,.home-wrapper h5{
+    color: var(--NavbarColor);
+    margin: 0;
+    text-transform: uppercase;
+    text-align:center;
 }
-
-.text-homeMain{
-    max-width: 50rem;
-    text-align: center;
-    margin-top: -200px;
-    margin-left: 300px;
-
-}
-
-
-
-
-/* sections part css start here */
-.home-section-wrapper p,.home-section-wrapper h5{
+.home-wrapper a{
+    text-decoration: none;
     color: var(--NavbarColor);
 }
-.home-section-wrapper h2{
-    color: var(  --dark-turquiose);
-    text-transform: uppercase;
+
+.home-workshop-section{
+    background-color: var(--light-turquiose);
+    display: grid;
 }
-.home-section img{
-    width:25rem;
-    height:20rem;
-    object-fit: cover;
-    border-radius: 8px;
-}
-.home-section-wrapper{
-    background-color:white;
-    padding: 3rem; 
-    min-height: 60vh;
-    padding-bottom: 6rem;
+.home-food-section{
+    background-color: var(--light-yellow);
+    display: grid;
 }
 
+.home-workshop-text, .home-food-text{
+    width: 70%;
+    justify-self: center;  
+    align-self: center;
+}
 
-.home-section-container{
-    width: 80%;
-    margin: auto;
-    display: grid;
-    grid-gap: 2.5rem 5rem;
-    justify-content: space-between;
-}
-.home-section-title{
-    grid-column: 1/3;
-    justify-self: center;
-}
-.home-breakline {
-    border-bottom: 3px solid var(--carol);
-    margin: 0 3rem;
-    padding-bottom: .5rem;
-}
-.home-section *{
-    margin: 1rem;
-}
-.home-section{
-    min-height: 50vh;
-    border:4px solid #f5e3b1;
-    border-top:4px solid #bfede4;
-    border-bottom: 4px solid #f59d87;
-    padding: 1.5rem;
-    display: grid;
-    grid-template-rows: 70% 15% 15%;
-    border-radius: 8px;
-}
-.home-section-button{
-    text-decoration: none;
-    color:var(--NavbarColor);
+.home-food-button, .home-workshop-button{
     background-color: var(--carol);
-    width: 40%;
-    padding: .9rem 1rem 0 1rem;
-    border-radius: 30px;
-    text-align: center;
-    font-family: var(--font);
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
+    align-self: flex-end;
+    padding: 1rem 0;
+    display: none;
 }
-.home-section-button:hover{
-    text-decoration: none;
-    color: var(--carol);
-    background-color: white;
-
+.home-food-section:hover .home-food-button{
+    display: inline;
+}
+.home-workshop-section:hover .home-workshop-button{
+    display: inline;
 }
