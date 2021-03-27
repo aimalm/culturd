@@ -45,19 +45,19 @@ export const createAnOrder = async (req, res) => {
     }
 }
 
-//  export const updateFood = async (req, res) => {
+ export const updateAnOrder = async (req, res) => {
 
-//          const id = req.params._id;
-//         //const { eventTitle, description } = req.body;
+         const id = req.params._id;
+        //const { eventTitle, description } = req.body;
         
-//          if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+         if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
     
-//          const updateFood = req.body;
+         const updateAnOrder = req.body;
     
-//          await Food.findByIdAndUpdate(id, updateFood, { new: true });
+         await Order.findByIdAndUpdate(id, updateAnOrder, { new: true });
     
-//         res.json(updateFood);
-// }
+        res.json(updateAnOrder);
+}
 
 // export const deleteFoodPost = async (req, res) => {
 //     const id = req.params._id;
