@@ -10,11 +10,7 @@ import { getAllUsers, createAnUser, showUser, updateAnUser, deleteAnUser } from 
 
 
 
- const router = express.Router();
-
-//     router.get('/', (req, res) => {
-//         res.send("This Works");
-//     })
+const router = express.Router();
 
 router.get('/event', getEvents);
 router.post('/event', createEvent);
@@ -50,10 +46,10 @@ router.delete('/food_order/:_id', deleteAnOrder);
 
 //routes for the users
 router.get('/user', getAllUsers);
- router.post('/user', createAnUser);
- router.get('/user/:_id', showUser);
- router.patch('/user/:_id', updateAnUser);
- router.delete('/user/:_id', deleteAnUser);
+router.post('/user', createAnUser);
+router.get('/user/:_id', showUser);
+router.patch('/user/:_id', updateAnUser);
+router.delete('/user/:_id', deleteAnUser);
 
 
 export default router;

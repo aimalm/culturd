@@ -7,7 +7,6 @@ const bookingSchema = mongoose.Schema({
     Payment: { type: Boolean, required: true },
     Booking_date_Date: { type: Date, default: Date.now() },   
 })
-
 var Booking = mongoose.model('BookedEvent', bookingSchema);
 
 export default Booking;

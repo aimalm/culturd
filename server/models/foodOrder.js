@@ -9,7 +9,6 @@ const orderSchema = mongoose.Schema({
     "delivery_date": { type: Date, required: true},
     "Pickup_address": { type: String, required: true},
 })
-
 var Order = mongoose.model('Food_Order', orderSchema);
 
 export default Order;

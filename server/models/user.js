@@ -13,7 +13,6 @@ const userSchema = mongoose.Schema({
     "Created_date": { type: Date, default: Date.now()},
     "Update_date": { type: Date},
 })
-
 var User = mongoose.model('Users', userSchema);
 
 export default User;

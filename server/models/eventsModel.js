@@ -13,7 +13,6 @@ const eventSchema = mongoose.Schema({
     Posted_Date: { type: Date, default: Date.now() },
     Updated_date: { type: Date }
 })
-
 var Events = mongoose.model('Events', eventSchema);
 
 export default Events;
