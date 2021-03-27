@@ -53,16 +53,18 @@ function App() {
           <Route path="/workshop/bookform">
             <SubNavW />
             <BookForm />
+            <Footer />
          
           </Route>
-          <Route path="/workshop/list">
+          <Route path="/workshop/listW">
             <SubNavW />
             <ListW />
+            <Footer />
           </Route>
 
           <Route path="/workshop/about_us">
             <SubNavW />
-            <AboutUsW />
+     
             <Footer />
           </Route>
 

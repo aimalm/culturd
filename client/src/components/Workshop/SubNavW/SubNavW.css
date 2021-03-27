@@ -1,0 +1,59 @@
+.logo-icon{
+    width: 13%;
+   
+    
+    }
+    
+    .nav-color{
+      color:var( --FontColor)!important;
+      font-family: 'Montserrat', sans-serif;
+      margin: 5px 10px;
+      font-size: 1.2rem;
+      color:var( --NavbarColor )!important;
+      
+    
+    }
+      
+    
+
+    .nav-color:hover{
+      background-color:#eef5b1;
+      background-size: 50% 50%;
+      border-radius: 5%;
+      animation: spring 300ms ease-out;
+      font-weight: bold;
+      
+    }
+    .nav-color:active{
+      transform: translateY(4px);
+      
+    }
+    
+    
+    @keyframes spring {
+      15% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.2, 1.1);
+      }
+      40% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(0.95, 0.95);
+      }
+      75% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.05, 1);
+      }
+      100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1, 1);
+      }
+    }
+    
+    
+    
+    .container-homepage{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    
+    

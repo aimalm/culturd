@@ -3,9 +3,10 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 0 2rem;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 65% 35%;
+    
 }
+
 .home-wrapper h3,.home-wrapper h5{
     color: var(--NavbarColor);
     margin: 0;
@@ -20,23 +21,38 @@
 .home-workshop-section{
     background-color: var(--light-turquiose);
     display: grid;
+    margin-top: 28px;
+   
 }
 .home-food-section{
     background-color: var(--light-yellow);
     display: grid;
+    margin-top: 28px;
+    
+    
+}
+
+.home-food-section:hover{
+    opacity: 1;
 }
 
 .home-workshop-text, .home-food-text{
     width: 70%;
     justify-self: center;  
     align-self: center;
+    
 }
 
 .home-food-button, .home-workshop-button{
     background-color: var(--carol);
     align-self: flex-end;
-    padding: 1rem 0;
     display: none;
+    vertical-align: center;
+    border:4px solid #f5e3b1;
+    border-top:4px solid #f59d87;
+    border-bottom: 4px solid #98e4c7;
+    height: 120%;
+     
 }
 .home-food-section:hover .home-food-button{
     display: inline;
@@ -45,6 +61,16 @@
     display: inline;
 }
 
-.img-culturd{
-  max-width: 220%;
+.workshop-img{
+  width: 65%;
+  margin: 0 auto;
 }
+
+
+.food-img{
+    width: 67%;
+    margin: 0 auto;
+  }
+
+
+  

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './LandingW.css'
 import { AiFillEnvironment } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
@@ -11,8 +11,7 @@ import image1 from '../image/1.jpg'
 import image2 from '../image/2.jpg'
 import image3 from '../image/3.jpg'
 import image4 from '../image/4.jpg'
-
-
+import SearchDropdown from './SearchDropdown';
 
 
 function LandingW() {
@@ -27,9 +26,9 @@ function LandingW() {
             <Link className="landing_main-button" to="/workshop/about_us">Discover More</Link>{" "}
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,192L1440,0L1440,0L0,0Z"></path>
-    </svg>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,32L1440,288L1440,0L0,0Z"></path></svg>
+    
+    <SearchDropdown/>
     <div className="carousel">
      <AliceCarousel autoPlay autoPlayInterval="1000">
       <img src={image1} className="sliderimg" alt=""/>
@@ -39,6 +38,8 @@ function LandingW() {
 
     </AliceCarousel>
     </div>
+    
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,192L1440,0L1440,320L0,320Z"></path>
     </svg>
    <div className="wrapper-service__home">
@@ -74,7 +75,7 @@ function LandingW() {
       </div>
       </IconContext.Provider>
       <br></br><br></br><br></br>
-      <Link className="button-about" to="/workshop/about_us">Find your ideal workshop</Link>{" "}
+      <Link className="button-about" to="/workshop/listW">Find your ideal workshop</Link>{" "}
     </div>
 
    
