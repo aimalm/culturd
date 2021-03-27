@@ -48,6 +48,7 @@ function ProductDetailsF({
     }, 3000);
   };
 
+
   return (
     <div>
       
@@ -89,11 +90,9 @@ function ProductDetailsF({
                         {ingredient}
                       </p>
                     ))}
-                    {selectedDish.vegetarian ? (
+                    {dish.vegetarian? (
                       <FaLeaf className="ingredient-vegetarian" />
-                    ) : (
-                      ""
-                    )}
+                    ) : "" }
                   </div>
                   <h2 className="products-dishname">{dish.dishName}</h2>
                   <h3 className="products-price">

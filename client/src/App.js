@@ -130,8 +130,8 @@ function App() {
 
           <Route path="/">
             {/* change the Nav to Nav_Logout when the user is login */}
-            <MainNav />
-            <Home />
+            {/* <MainNav /> */}
+            <Home/>
             <Footer />
           </Route>
 
