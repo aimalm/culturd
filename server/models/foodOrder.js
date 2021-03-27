@@ -1,3 +1,6 @@
+import mongoose from 'mongoose';
+
+
 const orderSchema = mongoose.Schema({  
     "user_id    ": { type: String, required: true},
     "product_id    ": { type: String, required: true},
