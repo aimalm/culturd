@@ -12,6 +12,7 @@ const foodSchema = mongoose.Schema({
     "price": { type: Number, required: true},
     "pickupDate": { type: Date, required: true},
     "address": { type: String, required: true},
+    "openingHours": { type: String, required: true},
     "imageUrl": { type: String},
 })
 

@@ -28,5 +28,6 @@ food
     "cookerScore": ["star"],
     "price": "12.5",
     "pickupDate": "2021-5-25",
+    "openingHours" "10:00 - 16:00"
     "address": "Drootbeekstraat 555, Brussels"
 }

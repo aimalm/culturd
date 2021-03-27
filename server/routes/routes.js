@@ -34,6 +34,14 @@ router.post('/food', createFoodPost);
 router.get('/food/:_id', getFood);
 router.patch('/food/:_id', updateFood);
 router.delete('/food/:_id', deleteFoodPost);
+// ------------------------------------------------------------
+
+//routes for the food order
+router.get('/food', getAllFoods);
+// router.post('/food', createFoodPost);
+// router.get('/food/:_id', getFood);
+// router.patch('/food/:_id', updateFood);
+// router.delete('/food/:_id', deleteFoodPost);
 
 
 export default router;
