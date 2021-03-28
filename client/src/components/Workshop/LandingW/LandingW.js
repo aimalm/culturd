@@ -11,6 +11,7 @@ import image1 from '../image/1.jpg'
 import image2 from '../image/2.jpg'
 import image3 from '../image/3.jpg'
 import image4 from '../image/4.jpg'
+import group from '../image/bg2.png'
 import SearchDropdown from './SearchDropdown';
 
 
@@ -26,7 +27,29 @@ function LandingW() {
             <Link className="landing_main-button" to="/workshop/about_us">Discover More</Link>{" "}
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,32L1440,288L1440,0L0,0Z"></path></svg>
+
+    <section className="header-extra-div">
+        <div className="container">
+          <div className="row">
+            <div className="extra-div col-lg-4 col-md-4 col-12">
+              <i class="fa fa-copy fa-2x"></i>
+              <h2 className="text-uppercase">Learning & Fun</h2>
+              <p>A wide variety of activities to stimulate variety workshop, such as arts , cooking and Dancing.</p>
+            </div>
+            <div className="extra-div col-lg-4 col-md-4 col-12">
+              <i class="fa fa-users fa-2x"></i>
+              <h2 className="text-uppercase">Qualified People</h2>
+              <p>Our experienced Workshop encourage people to Learn about our Culture,brings togetherness and creatively.</p>
+            </div>
+            <div className="extra-div col-lg-4 col-md-4 col-12">
+             <i class="fas fa-mug-hot fa-2x"></i>
+              <h2 className="text-uppercase">Fun Cooking</h2>
+              <p>Organic food, variety food, and alot of igredient delivered cooking together brings togetherness.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     
     <SearchDropdown/>
     <div className="carousel">
@@ -38,8 +61,7 @@ function LandingW() {
 
     </AliceCarousel>
     </div>
-    
-    
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,192L1440,0L1440,320L0,320Z"></path>
     </svg>
    <div className="wrapper-service__home">

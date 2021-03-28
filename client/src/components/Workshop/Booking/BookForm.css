@@ -13,16 +13,18 @@
 /* styling id from depencies*/
 
 .rfe-form__row input{
-    padding: 10px 10px;
+    margin: 5px;
+    padding: 15px 10px;
     width: 100%;
     display: block;
     border: none;
-    border-radius: 10px;
+    
 }   
 
 
 .rfe-form__row select{
-    padding: 10px 10px;
+    margin: 5px;
+    padding: 15px 10px;
     width: 100%;
     display: block;
     border: none;

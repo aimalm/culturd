@@ -2,6 +2,9 @@ import React from 'react'
 import './ListW.css'
 import { Link } from "react-router-dom";
 import image1 from '../image/1.jpg'
+import image2 from '../image/2.jpg'
+import image3 from '../image/3.jpg'
+import image4 from '../image/4.jpg'
 
 
 
@@ -24,7 +27,7 @@ function ListW() {
    
 
       <div class="card_content">
-          <div className="card_image"><img className="img-cards" src={image1} alt=""/></div>
+          <div className="card_image"><img className="img-cards" src={image2} alt=""/></div>
           <h2 className="card_title">Congo</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
           <Link className="btn card_btn" to="/workshop">Discover More</Link>{" "}
@@ -32,13 +35,13 @@ function ListW() {
     </div>
     <div className="cards-flex_two">
       <div class="card_content">
-          <div className="card_image"><img className="img-cards" src={image1} alt=""/></div>
+          <div className="card_image"><img className="img-cards" src={image3} alt=""/></div>
           <h2 className="card_title">Chinese</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
           <Link className="btn card_btn" to="/workshop">Discover More</Link>{" "}
       </div>
       <div class="card_content">
-          <div className="card_image"><img className="img-cards" src={image1} alt=""/></div>
+          <div className="card_image"><img className="img-cards" src={image4} alt=""/></div>
           <h2 className="card_title">Afganistan</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
           <Link className="btn card_btn" to="/workshop">Discover More</Link>{" "}

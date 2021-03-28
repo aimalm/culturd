@@ -41,7 +41,7 @@ function BookForm() {
         <TextBox
 
           label="Lastname"
-          name="lastame"
+          name="lastname"
           required
          
         />
@@ -87,20 +87,22 @@ function BookForm() {
               <Option initialValue="Art">Art</Option>
             </OptionGroup>
           </DropDown>
-          <DateTime label="Number of participants" type="datetime" name="myDateTime" />
+          <DateTime label="Number of participants" type="datetime" name="number" />
          <br></br>
-          <button className="landing_main-button" onClick={e => {}}>Save</button>
+          <button className="button-about" onClick={e => {}}>Save</button>
         </Form>
      </div>
         <div data-testid="ref-out">
           <ul>
-            <li>Name: {values.myName}</li> 
+            <li>Firstname: {values.firstname}</li> 
+            <li>Lastn: {values.lastname}</li> 
             <li>Email Address : {values.emailbox}</li> 
             <li>Telephone : {values.myTelephone}</li>
             <li>Number of person: {values.myDateTime}</li>
             <li> Date & Time booking: {values.myDateTimeLocal}</li>
             <li>Country: {values.myDropDownCountry}</li>
             <li>Workshop: {values.myDropDownWorkshop}</li>
+            <li>Number of people: {values.number}</li>
           </ul>
         </div>
    </>

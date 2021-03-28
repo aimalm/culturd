@@ -7,7 +7,11 @@ import food from '../image/food.png'
 
 function Home() {
   return (
+
+   
     <div className="home-wrapper">
+      <div class="back-web">BACK</div>
+  <div class="back-office">BACK</div>
       
       <Link to="/workshop" className="home-workshop-section">
        

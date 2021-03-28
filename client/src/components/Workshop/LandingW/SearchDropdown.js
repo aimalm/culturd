@@ -1,60 +1,55 @@
-import React,{useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown'
+import React, { useState } from 'react'
+
+
+import {
+  TextBox,
+  EmailInput,
+  Form,
+} from 'react-form-elements'
 
 function SearchDropdown() {
-    const [value,setValue]=useState('');
-  const handleSelect=(e)=>{
-    console.log(e);
-    setValue(e)
-  }
+
+    const [setValues] = useState({})
+
     return (
 
-        <>
-        <div className="search-dropdown">
+    <>
+        <div className="Booking-container">
+        <h1>Contact Us to Book Your Workshop</h1>
+        <Form
+          name="testForm"
+          onSubmit={data => {
+            // data[form element name]
+            setValues(data)
+            // do something with values
+         }}
+
+        >
             
-        <DropdownButton
-            className="dropdown-wrapper"
-            alignRight
-            title="Art Workshop"
-            id="dropdown-menu-align-right"
-            onSelect={handleSelect}
-        >
-              <Dropdown.Item eventKey="option-1">option-1</Dropdown.Item>
-              <Dropdown.Item eventKey="option-2">option-2</Dropdown.Item>
-              <Dropdown.Item eventKey="option-3">option 3</Dropdown.Item>
-              <Dropdown.Divider />
-        </DropdownButton>
-        <DropdownButton
-            className="dropdown-wrapper"
-            alignRight
-            title="Cooking Workshop"
-            id="dropdown-menu-align-right"
-            onSelect={handleSelect}
-        >
-              <Dropdown.Item eventKey="option-1">option-1</Dropdown.Item>
-              <Dropdown.Item eventKey="option-2">option-2</Dropdown.Item>
-              <Dropdown.Item eventKey="option-3">option 3</Dropdown.Item>
-              <Dropdown.Divider />
-        </DropdownButton>
-        <DropdownButton
-            className="dropdown-wrapper"
-            alignRight
-            title="Dance Workshop"
-            id="dropdown-menu-align-right"
-            onSelect={handleSelect}
-        >
-              <Dropdown.Item eventKey="option-1">option-1</Dropdown.Item>
-              <Dropdown.Item eventKey="option-2">option-2</Dropdown.Item>
-              <Dropdown.Item eventKey="option-3">option 3</Dropdown.Item>
-              <Dropdown.Divider />
-        </DropdownButton>
-    </div>
-    </>
-  );
-}
+         <TextBox
+        label="Your name" 
+        required
+        name="Your name"
+           />
 
-     
+          <EmailInput
+           name="emailbox"
+           label="Email"
+           initialValue=""
+         /> 
 
+        <TextBox
+
+          label="Message"
+          name="lastname"
+          required
+         
+        />
+          <button className="button-about" onClick={e => {}}>Send Message</button>
+        </Form>
+     </div>
+   </>
+    )
+  }
+  
 export default SearchDropdown
