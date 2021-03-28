@@ -2,6 +2,9 @@ import React from 'react';
 import './Afghanistan.css';
 import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
+import ImageCards from '../compCountries/ImageCards/ImageCards';
+import AfghanFood from '../../image/afghanistan.jpg';
+import FoodInfo from '../compCountries/ImageCards/FoodInfo';
 
 function Afghanistan() {
     return (
@@ -11,6 +14,22 @@ function Afghanistan() {
                 <div className="ticket-info">
                     <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
                     <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
+                </div>
+            </div>
+            <div className="workshop-container">
+                <div className="container-1">
+                    <ImageCards 
+                        imageSrc={AfghanFood} 
+                        foodDes_1={FoodInfo[0].description}
+                        foodTit_1={FoodInfo[0].title}
+                        foodDes_2={FoodInfo[1].description}
+                        foodTit_2={FoodInfo[1].title}
+                        foodDes_3={FoodInfo[2].description}
+                        foodTit_3={FoodInfo[2].title}
+                    />
+                </div>
+                <div className="container-1">
+                    hellloooo
                 </div>
             </div>
         </div>

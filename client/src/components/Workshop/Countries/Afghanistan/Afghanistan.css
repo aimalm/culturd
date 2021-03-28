@@ -6,8 +6,11 @@
 
 .country-container {
     margin: 90px 15px 50px 15px;
-    height: 100vh;
     border: solid red;
+}
+
+.workshop-info {
+    margin-bottom: 10px;
 }
 
 .workshop-info > * {
@@ -17,7 +20,7 @@
 .ticket-info {
     display: flex;
     font-weight: bold;
-    border: solid green;
+    /* border: solid green; */
 }
 
 .ticket-info > * {
@@ -28,3 +31,19 @@
     color: var(--carol);
     font-size: 18px;
 }
+
+.workshop-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workshop-container > * {
+    /* border: solid salmon; */
+    width: 100%;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+}
+
