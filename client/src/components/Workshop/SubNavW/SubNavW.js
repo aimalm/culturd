@@ -16,10 +16,10 @@ function SubNavW() {
           <Nav className="ml-auto navbar">
               <LinkContainer to="/workshop"><Nav.Link className="nav-color">Home</Nav.Link></LinkContainer>
               <NavDropdown className="nav-color" title="Worskhops" >
-                <LinkContainer to="/food"><NavDropdown.Item className="nav-color" to="/food" >Congo</NavDropdown.Item></LinkContainer>
-                <LinkContainer to="/food"><NavDropdown.Item className="nav-color" to="/food" >Indonesia</NavDropdown.Item></LinkContainer>
-                <LinkContainer to="/food"><NavDropdown.Item className="nav-color" to="/food" >Chinese</NavDropdown.Item></LinkContainer>
-                <LinkContainer to="/food"><NavDropdown.Item className="nav-color" to="/food" >Afganistan</NavDropdown.Item></LinkContainer>
+                <LinkContainer to="/workshop/Afghanistan"><NavDropdown.Item className="nav-color" to="/food" >Afghanistan</NavDropdown.Item></LinkContainer>
+                <LinkContainer to="/workshop/Congo"><NavDropdown.Item className="nav-color" to="/food" >Congo</NavDropdown.Item></LinkContainer>
+                <LinkContainer to="/workshop/HongKong"><NavDropdown.Item className="nav-color" to="/food" >Hong Kong</NavDropdown.Item></LinkContainer>
+                <LinkContainer to="/workshop/Indonesia"><NavDropdown.Item className="nav-color" to="/food" >Indonesia</NavDropdown.Item></LinkContainer>
              </NavDropdown>
                 <LinkContainer to="/workshop/about_us"><Nav.Link className="nav-color">About Us</Nav.Link></LinkContainer>
                 <LinkContainer to="/workshop/Pricing"><Nav.Link className="nav-color">Pricing</Nav.Link></LinkContainer>
