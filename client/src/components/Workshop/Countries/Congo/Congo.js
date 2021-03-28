@@ -3,8 +3,10 @@ import './Congo.css';
 import { IoTicketSharp } from 'react-icons/io5';
 import { BsFillLightningFill } from 'react-icons/bs';
 import ImageCards from '../compCountries/ImageCards/ImageCards';
+import Accordeon from '../compCountries/Accordion/Accordion';
 import CongoFood from '../../image/congo.jpg';
 import {CongoFoodInfo} from '../compCountries/ImageCards/FoodInfo';
+import { CongoWorkshopInfo } from '../compCountries/Accordion/WorkshopInfo';
 
 function Congo() {
     return (
@@ -27,6 +29,9 @@ function Congo() {
                         foodDes_3={CongoFoodInfo[2].description}
                         foodTit_3={CongoFoodInfo[2].title}
                     />
+                    <div className="accordeon-container">
+                        <Accordeon content={CongoWorkshopInfo}/>
+                    </div>
                 </div>
                 <div className="container-1">
                     

@@ -1,6 +1,6 @@
 const AfghanWorkshopInfo = [
     {
-        title: 'What We Offer',
+        title: 'What We Offer (Afghanistan)',
         content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec gravida tincidunt euismod. Mauris lacus mi, vulputate eget sem
         vitae, imperdiet consectetur urna. In ante sapien, mattis eu nisi ut,
@@ -36,7 +36,7 @@ const AfghanWorkshopInfo = [
 
 const CongoWorkshopInfo = [
     {
-        title: 'What We Offer',
+        title: 'What We Offer (Congo)',
         content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec gravida tincidunt euismod. Mauris lacus mi, vulputate eget sem
         vitae, imperdiet consectetur urna. In ante sapien, mattis eu nisi ut,
@@ -72,7 +72,7 @@ const CongoWorkshopInfo = [
 
 const HongWorkshopInfo = [
     {
-        title: 'What We Offer',
+        title: 'What We Offer (Hong Kong)',
         content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec gravida tincidunt euismod. Mauris lacus mi, vulputate eget sem
         vitae, imperdiet consectetur urna. In ante sapien, mattis eu nisi ut,
@@ -108,7 +108,7 @@ const HongWorkshopInfo = [
 
 const IndoWorkshopInfo = [
     {
-        title: 'What We Offer',
+        title: 'What We Offer (Indonesia)',
         content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec gravida tincidunt euismod. Mauris lacus mi, vulputate eget sem
         vitae, imperdiet consectetur urna. In ante sapien, mattis eu nisi ut,

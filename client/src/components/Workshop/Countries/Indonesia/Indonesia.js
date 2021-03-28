@@ -3,8 +3,10 @@ import './Indonesia.css';
 import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
 import ImageCards from '../compCountries/ImageCards/ImageCards';
+import Accordeon from '../compCountries/Accordion/Accordion';
 import IndoFood from '../../image/indonesia.jpg';
 import {IndoFoodInfo} from '../compCountries/ImageCards/FoodInfo';
+import { IndoWorkshopInfo } from '../compCountries/Accordion/WorkshopInfo';
 
 function Indonesia() {
     return (
@@ -27,6 +29,9 @@ function Indonesia() {
                         foodDes_3={IndoFoodInfo[2].description}
                         foodTit_3={IndoFoodInfo[2].title}
                     />
+                    <div className="accordeon-container">
+                        <Accordeon content={IndoWorkshopInfo}/>
+                    </div>
                 </div>
                 <div className="container-1">
                     
