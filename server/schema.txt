@@ -1,0 +1,54 @@
+event: {
+    "User_Id": "",
+    "Event_Title": "cook indian",
+    "Event_Description": "We will cook indian today for everyone",
+    "Event_Location": "drootbeekstraat 18, 1025 Brussel",
+    "Event_Date": "2021-05-28",
+    "Event_Duration": "2",
+    "Total_Num_Participants": "15",
+    "Nationality": "Indian",
+    "Ticket_Price": "20"
+}
+
+booking
+{
+    "amount_of_tickets": "5",
+    "Payment": "yes"
+}
+
+food
+{
+      "dishName": "piza",
+    "ingredients": ["onion", "mashroom"],
+    "vegetarian": "yes",
+    "keywords": ["pizza", "vegetarian"],
+    "dishDescription": "Very good Pizaa. Believe me",
+    "cooker": "Wing",
+    "cookerImage": "www.yahoo.com",
+    "cookerScore": ["star"],
+    "price": "12.5",
+    "pickupDate": "2021-5-25",
+    "openingHours" "10:00 - 16:00"
+    "address": "Drootbeekstraat 555, Brussels"
+}
+
+order
+{
+	"user_id": "2000",
+    "product_id": "00033aa7s",
+    "payment": "yes",
+    "amount": "15.20",
+    "delivery_date": "2021-04-21",
+    "Pickup_address": "Ghentstraat 15, 9000"
+	
+}
+
+user
+"Type_of_User": "guest",
+    "User_Name": "aimal.m",
+    "Name": "Valerie",
+    "Last_Name": "Maarij",
+    "Email": "me@gmail.com",
+    "Contact_Number": "0489784513",
+    "Address": "gentstraat 120, 900",
+    "Profile_Picture": "www.photo.com"

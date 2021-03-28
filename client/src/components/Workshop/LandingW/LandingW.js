@@ -5,7 +5,6 @@ import { BiTimeFive } from 'react-icons/bi';
 import { FaRegSmileWink } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { Link } from "react-router-dom";
-import team from '../image/bg2.png'
 
 
 
@@ -21,17 +20,8 @@ function LandingW() {
             <Link className="landing_main-button" to="/workshop/about_us">Discover More</Link>{" "}
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bfede4" fill-opacity="1" d="M0,128L720,256L1440,96L1440,0L720,0L0,0Z"></path>
-    </svg>
-      <div className="container-aboutus">
-        <div className="text-aboutUS">
-            <h1 className="h1-aboutus">Meet The Team</h1><br></br>
-             <h4 className="h4-aboutus">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis disparturient montes, nascetur.</h4>
-        </div>
-        <div className="image-aboutusW">
-            <img className="img-team" src={team} alt="team"/>
-        </div>
-    </div>
+   
+ 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #bfede4" fill-opacity="1" d="M0,64L720,160L1440,0L1440,320L720,320L0,320Z"></path>
     </svg>
    <div className="wrapper-service__home">
