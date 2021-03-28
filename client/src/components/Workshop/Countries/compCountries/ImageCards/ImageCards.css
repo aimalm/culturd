@@ -43,7 +43,7 @@
 
 .image_overlay:hover {
     opacity: 1;
-    background: var(--light-turquiose);
+    background: var(--carol);
 }
 
 .image_overlay > * {

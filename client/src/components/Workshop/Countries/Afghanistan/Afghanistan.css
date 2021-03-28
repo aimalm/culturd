@@ -48,6 +48,31 @@
 }
 
 .accordeon-container {
-    border: solid green;
-    
+    margin-top: 25px;
+}
+
+.info-section {
+    border: solid var(--light-turquiose);
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.section-wrap {
+    padding: 15px;
+    padding-bottom: 8px;
+    background: var(--light-turquiose);
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-wrap > * {
+    font-weight: bold;
+}
+
+.section-wrap > span {
+    color: var(--carol);
+}
+
+.dropDown {
+    padding: 15px;
 }
