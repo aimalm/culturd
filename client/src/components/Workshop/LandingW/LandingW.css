@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   height: 100%;
 	height: 100vh;
-	background-image: linear-gradient(rgba(98, 219, 209, 0.74), rgba(238, 255, 0, 0.336)), url('../image/indo.jpg');
+	background-image: linear-gradient(rgba(98, 219, 209, 0.74), rgba(0, 255, 234, 0.507)), url('../image/indo.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	position: relative;
@@ -50,13 +50,6 @@
 	color:var(--yellowish);
 }
 
-
-
-  
-  
-
-
-
   .alice-carousel ul li img{
     margin:0 80px;
     height: 550px;
@@ -80,9 +73,9 @@
   margin: 40px;
   font-size: 5rem;
   padding: 0;
-  color:var(--dark-turquiose);
-  text-shadow: 0 0.1em 20px rgb(136, 173, 182),
-    -0.03em -0.03em 0 rgb(28, 49, 43), -0.03em 0.08em 0 rgb(49, 160, 132);
+  color:white;
+  text-shadow: 0 0.1em 20px rgb(218, 223, 224),
+    -0.03em -0.03em 0 rgb(52, 129, 107), -0.03em 0.08em 0 rgb(49, 160, 132);
 
 }
 
@@ -169,7 +162,7 @@ border:0.1em solid #be7979;
 border-radius: 50px;
 box-sizing: border-box;
 text-decoration:none;
-color:#0b523a;
+color:#d8e6e1;
 text-align:center;
 transition: all 0.15s;
 background-color: var(--carol);
@@ -192,8 +185,8 @@ text-decoration: none;
 }
 
 .h4-homeW{
-  font-size: 2rem;
-  color:grey;
+  font-size: 3rem;
+  color:white;
 
 }
 
@@ -246,7 +239,6 @@ border-radius: 30px;
     border-top:4px solid #f59d87;
     border-bottom: 4px solid #98e4c7;
     width: 40%;
-
 
 
   }

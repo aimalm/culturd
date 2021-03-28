@@ -70,7 +70,7 @@
 
 }
 
-.btn {
+.btn-listW {
     color: #974141;
     padding: 0.8rem;
     font-size: 14px;
@@ -85,7 +85,7 @@
    
   }
   
-  .btn:hover {
+  .btn-listW:hover {
     background-color: rgb(114, 201, 182);
   }
   
