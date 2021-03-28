@@ -132,6 +132,7 @@ function App() {
             {/* change the Nav to Nav_Logout when the user is login */}
             {/* <MainNav /> */}
             <Home />
+            <MainNav />
             <Footer />
           </Route>
 
