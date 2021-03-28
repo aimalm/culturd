@@ -73,24 +73,26 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
               </div>
 
               <div className="cart-quantity">
-                <button onClick={(e)=>changeQuanityHandler(e, food.id)} value="plus"><BsPlus/>
+                <button className="cart-plus-button" onClick={(e)=>changeQuanityHandler(e, food.id)} value="plus"><BsPlus/>
                 </button>
-                <input type="text" name="name" value={food.quantity} disabled/>
-                <button onClick={(e)=>changeQuanityHandler(e,  food.id)} value="minus"><BiMinus/>
+                <input type="text" name="name" value={food.quantity} className="cart-quantity-input" disabled/>
+                <button className="cart-minus-button" onClick={(e)=>changeQuanityHandler(e,  food.id)} value="minus"><BiMinus/>
                 </button>
          
               </div>
-              <button onClick={() => deleteFromCart(food.id)}>Delete</button>
+              <button  className="cart-delete-button" onClick={() => deleteFromCart(food.id)}>Delete</button>
             </div>
           ))}
 
           <div className="cart-breakline"></div>
           <div className="shopping-cart-item">
               <div></div>
+           
               <h3>Subtotal</h3>
 
             <h3><EuroSymbolIcon /> {subTotal}</h3>
-            <button className="cart-button-checkout">Check Out</button>
+            
+            <button className="home-food-link cart-checkout-button">Check Out</button>
           </div>
         </div>
       )}

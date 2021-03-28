@@ -37,7 +37,7 @@ function NewInCardF({ setSelectedDish }) {
             </div>
           </Link>
         ))}
-        <Link to="/food/search">see more</Link>
+        <Link to="/food/search" className="home-food-link food-list-link">see more</Link>
       </div>
     </div>
   );
