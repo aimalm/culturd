@@ -29,7 +29,7 @@ function Congo() {
                     />
                 </div>
                 <div className="container-1">
-                    hellloooo
+                    
                 </div>
             </div>
         </div>
