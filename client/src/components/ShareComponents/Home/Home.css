@@ -1,64 +1,163 @@
-
-.home-wrapper{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 65% 35%;
-    
+.home-button-container {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+}
+.home-dropdown-button {
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1.3rem;
 }
 
-.home-wrapper h3,.home-wrapper h5{
-    color: var(--NavbarColor);
-    margin: 0;
-    text-transform: uppercase;
-    text-align:center;
+.home-login-link,
+.home-reg-link {
+  color: white;
+  transition: all 0.2s ease-in-out;
 }
-.home-wrapper a{
-    text-decoration: none;
-    color: var(--NavbarColor);
+.home-login-link:hover,
+.home-reg-link:hover {
+  text-decoration: none;
+  color: var(--dark-carol);
 }
-
-.home-workshop-section{
-    background-color: var(--light-turquiose);
-    display: grid;
-    margin-top: 28px;
-   
-}
-.home-food-section{
-    background-color: var(--light-yellow);
-    display: grid;
-    margin-top: 28px;
-    
-    
+.home-dropdown-container p {
+  margin: 0;
+  font-family: var(--font);
+  padding-top: 1rem;
+  font-size: 1.2rem;
 }
 
-.home-food-section:hover{
+.home-section-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.home-section-workshop,
+.home-section-food {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 0 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-section-food {
+  background-image: linear-gradient(
+      rgb(245, 217, 142, 0.9),
+      rgba(245, 217, 142, 0.7)
+    ),
+    url("../image/spices.jfif");
+}
+.home-section-workshop {
+  background-image: linear-gradient(
+      rgb(99, 219, 196, 0.9),
+      rgba(99, 219, 196, 0.8)
+    ),
+    url("../image/indo.jpeg");
+}
+.home-section-title-food,
+.home-section-title-workshop {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.home-section-title-food {
+  animation: rightToLeft 1.5s 1;
+}
+.home-section-title-workshop {
+  animation: leftToRight 1.5s 1;
+}
+.home-workshop-link,
+.home-food-link {
+  display: inline-block;
+  padding: 20px 50px;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: all 0.15s;
+  font-family: var(--font);
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+.home-food-link {
+  border: 0.1em solid var(--yellowish);
+  background-color: var(--yellowish);
+}
+.home-food-link:hover {
+  background-color: var(--dark-yellow);
+  border: 0.1em solid var(--dark-yellow);
+  text-decoration: none;
+  color: white;
+}
+
+.home-workshop-link {
+  border: 0.1em solid var(--dark-turquiose);
+  background-color: var(--dark-turquiose);
+}
+.home-workshop-link:hover {
+  background-color: var(--light-turquiose);
+  border: 0.1em solid var(--light-turquiose);
+  text-decoration: none;
+  color: var(--NavbarColor);
+}
+.home-aboutus-link {
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+  width: 10rem;
+  height: 10rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  align-items: center;
+  justify-items: center;
+}
+
+.home-logo-food,
+.home-logo-workshop {
+  width: 130px;
+}
+.home-logo-food {
+  align-self: end;
+}
+.home-logo-workshop {
+  align-self: start;
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
     opacity: 1;
+  }
 }
 
-.home-workshop-text, .home-food-text{
-    width: 70%;
-    justify-self: center;  
-    align-self: center;
-    
-}
-
-.home-food-button, .home-workshop-button{
-    background-color: var(--carol);
-    align-self: flex-end;
-    display: none;
-    vertical-align: center;
-    border:4px solid #f5e3b1;
-    border-top:4px solid #f59d87;
-    border-bottom: 4px solid #98e4c7;
-    height: 120%;
-     
-}
-.home-food-section:hover .home-food-button{
-    display: inline;
-}
-.home-workshop-section:hover .home-workshop-button{
-    display: inline;
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
 .workshop-img{

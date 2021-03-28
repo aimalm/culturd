@@ -34,8 +34,8 @@ function SubNavF({shoppingCart, setViewingCart}) {
                 </NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>
-            <LinkContainer to="/food/search">
-              <Nav.Link className="nav-color">Search</Nav.Link>
+            <LinkContainer to="/food/product_list">
+              <Nav.Link className="nav-color">List</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/food/Profile">

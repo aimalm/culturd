@@ -18,11 +18,11 @@ import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 
 
 //food components
-import ProductsF from "./components/Food/ProductsF/ProductsF";
+import ProductDetailsF from "./components/Food/ProductDetailsF/ProductDetailsF";
 import SubnavF from "./components/Food/SubNavF/SubNavF";
 import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
-import SearchProductsF from "./components/Food/SearchProductsF/SearchProductsF";
+import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 
 
@@ -32,8 +32,9 @@ function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
+  const [searchResult, setSearchResult] = useState([]);
 
-
+  
   const LSKEY = "culturd";
   useEffect(() => {
     let localShoppingCart = JSON.parse(localStorage.getItem(LSKEY));
@@ -82,7 +83,7 @@ function App() {
           <Route path="/food/products">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
-            <ProductsF
+            <ProductDetailsF
               selectedDish={selectedDish}
               setSelectedDish={setSelectedDish}
               shoppingCart={shoppingCart}
@@ -93,9 +94,9 @@ function App() {
             <Footer/>
           </Route>
 
-          <Route path="/food/search">
+          <Route path="/food/product_list">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
-            <SearchProductsF  setSelectedDish={setSelectedDish} />
+            <ProductListF  setSelectedDish={setSelectedDish} />
           </Route>
 
   
@@ -111,7 +112,8 @@ function App() {
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
             <LandingF
-              selectedDish={selectedDish}
+            searchResult={searchResult}
+            setSearchResult={setSearchResult}
               setSelectedDish={setSelectedDish}
               selectedDish={selectedDish}
               shoppingCart={shoppingCart}
@@ -131,8 +133,7 @@ function App() {
           <Route path="/">
             {/* change the Nav to Nav_Logout when the user is login */}
             {/* <MainNav /> */}
-            <Home />
-            <MainNav />
+            <Home/>
             <Footer />
           </Route>
 
