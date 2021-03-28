@@ -15,6 +15,10 @@ import LandingW from "./components/Workshop/LandingW/LandingW";
 import PricingW from "./components/Workshop/PricingW/PricingW";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+import Afghanistan from "./components/Workshop/Countries/Afghanistan/Afghanistan";
+import Congo from "./components/Workshop/Countries/Congo/Congo";
+import HongKong from "./components/Workshop/Countries/HongKong/HongKong";
+import Indonesia from "./components/Workshop/Countries/Indonesia/Indonesia";
 
 //food components
 import ProductsF from "./components/Food/ProductsF/ProductsF";
@@ -63,6 +67,30 @@ function App() {
           <Route path="/workshop/about_us">
             <SubNavW />
             <AboutUsW />
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/Afghanistan">
+            <SubNavW />
+            <Afghanistan />
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/Congo">
+            <SubNavW />
+            <Congo />
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/HongKong">
+            <SubNavW />
+            <HongKong />
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/Indonesia">
+            <SubNavW />
+            <Indonesia />
             <Footer />
           </Route>
 
