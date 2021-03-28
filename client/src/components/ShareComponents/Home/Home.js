@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import workshop from '../image/WORKSHOP.png'
+import workshop from '../image/workshop.png'
 import food from '../image/food.png'
 
 
