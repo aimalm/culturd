@@ -8,7 +8,6 @@ import { CgArrowLongUp } from "react-icons/cg";
 
 import { Link } from "react-router-dom";
 
-
 function ProductDetailsF({
   selectedDish,
   setSelectedDish,
@@ -17,16 +16,10 @@ function ProductDetailsF({
   viewingCart,
   setViewingCart,
 }) {
-
-  
-
   const addCart = (dishID) => {
- 
     let dishIDArray = shoppingCart.map((food) => food.id);
-    
 
     if (dishIDArray.includes(dishID) === true) {
-
       let newArray = [...shoppingCart];
 
       newArray.map((item) => {
@@ -34,12 +27,9 @@ function ProductDetailsF({
           item.quantity++;
         }
       });
-      setShoppingCart(newArray)
-
+      setShoppingCart(newArray);
     } else {
-
       setShoppingCart([...shoppingCart, ...selectedDish]);
-      
     }
 
     setViewingCart(true);
@@ -48,17 +38,15 @@ function ProductDetailsF({
     }, 3000);
   };
 
-
   return (
     <div>
-      
       {/* shopping cart alert here */}
       {viewingCart ? (
         <div className="add-cart-alert">
           <p>
             {" "}
             <CgArrowLongUp />
-            The dish is now in your cart! <CgArrowLongUp />
+            The dish is now in the cart! <CgArrowLongUp />
           </p>
         </div>
       ) : (
@@ -67,7 +55,7 @@ function ProductDetailsF({
 
       <div className="products-wrapper">
         {/* go back button here */}
-        <Link to="/food/search">
+        <Link to="/food/product_list">
           <button className="back-button">
             <IoMdArrowBack className="back-button-icon" />
           </button>
@@ -90,9 +78,11 @@ function ProductDetailsF({
                         {ingredient}
                       </p>
                     ))}
-                    {dish.vegetarian? (
+                    {dish.vegetarian ? (
                       <FaLeaf className="ingredient-vegetarian" />
-                    ) : "" }
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <h2 className="products-dishname">{dish.dishName}</h2>
                   <h3 className="products-price">
@@ -120,7 +110,7 @@ function ProductDetailsF({
                   </div>
                 </div>
                 <button
-                  className="products-add-button"
+                  className="home-food-link products-add-button"
                   onClick={() => addCart(dish.id)}
                 >
                   Add to cart
@@ -132,7 +122,6 @@ function ProductDetailsF({
           <h3>Go back to check out the delicious HOME DISHES</h3>
         )}
       </div>
-    
     </div>
   );
 }
