@@ -12,9 +12,10 @@ import Footer from "./components/ShareComponents/Footer/Footer";
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
-import PricingW from "./components/Workshop/PricingW/PricingW";
+import BookForm from "./components/Workshop/Booking/BookForm";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+
 
 //food components
 import ProductDetailsF from "./components/Food/ProductDetailsF/ProductDetailsF";
@@ -23,6 +24,7 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
+
 
 
 
@@ -49,21 +51,21 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-
-
-          <Route path="/workshop/pricing">
+          <Route path="/workshop/bookform">
             <SubNavW />
-            <PricingW />
+            <BookForm />
+            <Footer />
          
           </Route>
-          <Route path="/workshop/list">
+          <Route path="/workshop/listW">
             <SubNavW />
             <ListW />
+            <Footer />
           </Route>
 
           <Route path="/workshop/about_us">
             <SubNavW />
-            <AboutUsW />
+     
             <Footer />
           </Route>
 
