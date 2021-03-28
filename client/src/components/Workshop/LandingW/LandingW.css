@@ -1,6 +1,4 @@
-body{
-  
-}
+
 .container-homepage{
   display: flex;
   flex-direction: column;
@@ -249,7 +247,7 @@ border-radius: 30px;
     border-bottom: 4px solid #98e4c7;
     width: 40%;
 
-  
+
 
   }
 
