@@ -14,6 +14,7 @@ const foodSchema = mongoose.Schema({
     "address": { type: String, required: true},
     "openingHours": { type: String, required: true},
     "imageUrl": { type: String},
+    "quantity": {type: Number, default: 1}
 })
 var Food = mongoose.model('Foods', foodSchema);
 
