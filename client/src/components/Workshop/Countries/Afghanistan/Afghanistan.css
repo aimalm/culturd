@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.country-container {
+    margin: 90px 15px 50px 15px;
+    height: 100vh;
+    border: solid red;
+}
+
+.workshop-info > * {
+    font-weight: bold;
+}
+
+.ticket-info {
+    display: flex;
+    font-weight: bold;
+    border: solid green;
+}
+
+.ticket-info > * {
+    margin-right: 20px;
+}
+
+.info-icon {
+    color: var(--carol);
+    font-size: 18px;
+}
