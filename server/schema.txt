@@ -42,3 +42,13 @@ order
     "Pickup_address": "Ghentstraat 15, 9000"
 	
 }
+
+user
+"Type_of_User": "guest",
+    "User_Name": "aimal.m",
+    "Name": "Valerie",
+    "Last_Name": "Maarij",
+    "Email": "me@gmail.com",
+    "Contact_Number": "0489784513",
+    "Address": "gentstraat 120, 900",
+    "Profile_Picture": "www.photo.com"

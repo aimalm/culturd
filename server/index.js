@@ -8,7 +8,6 @@ import cors from 'cors';
 import Routes from './routes/routes.js';
 
 
-
 const app = express();
 //const a = bodyParser
 //app.use(express.json());
@@ -16,7 +15,9 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
-app.use('/api', Routes);
+const key = "Em3Wi5va8is15";
+
+app.use(`/culturd_api/${key}`, Routes);
 
 
 const CONNECTION_URL = "mongodb+srv://cuturd:culturd123@cluster0.adry7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"

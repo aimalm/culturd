@@ -15,7 +15,6 @@ const foodSchema = mongoose.Schema({
     "openingHours": { type: String, required: true},
     "imageUrl": { type: String},
 })
-
 var Food = mongoose.model('Foods', foodSchema);
 
 export default Food;
