@@ -8,13 +8,10 @@ import logoWorkshop from "../image/logoworkshop.png";
 function Home() {
   const [showLogin, setShowLogin] = useState(false);
 
-  const toggleLoginPage = () => {
-    setShowLogin(!showLogin);
-  };
   return (
     <div>
       <div className="home-button-container">
-        <button className="home-dropdown-button" onClick={toggleLoginPage}>
+        <button className="home-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
           Login <AiFillCaretDown />
         </button>
         {showLogin ? (
