@@ -5,12 +5,7 @@
 }
 
 .country-container {
-    margin: 90px 15px 50px 15px;
-    /* border: solid red; */
-}
-
-.workshop-info {
-    margin-bottom: 25px;
+    margin: 85px 15px 80px 15px;
 }
 
 .workshop-info > * {
@@ -20,7 +15,9 @@
 .ticket-info {
     display: flex;
     font-weight: bold;
-    /* border: solid green; */
+    border-bottom: solid var(--light-turquiose);
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 .ticket-info > * {
@@ -35,6 +32,7 @@
 .workshop-container {
     display: flex;
     justify-content: space-between;
+    margin: 0px 10px 0px 10px;
 }
 
 .workshop-container > * {
@@ -42,7 +40,7 @@
     width: 100%;
 }
 
-.container-1 {
+.inner-container {
     display: flex;
     flex-direction: column;
 }
@@ -50,4 +48,7 @@
 .accordeon-container {
     margin-top: 25px;
 }
+
+
+
 
