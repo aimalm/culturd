@@ -43,10 +43,9 @@ function SubNavF({shoppingCart, setViewingCart}) {
             </LinkContainer>
 
             <LinkContainer to="/food/shopping_cart">
-            <Button variant="outline-warning" >
-              <ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}
-            </Button>
+              <Nav.Link className="nav-color"><ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}</Nav.Link>
             </LinkContainer>
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>

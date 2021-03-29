@@ -105,23 +105,23 @@
 }
 .random-container {
   padding: 3rem 0;
-  width: 90%;
+  width: 80%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4, 18rem);
+  grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 2rem;
   justify-content: center;
 }
 .product-image {
   height: 18rem;
-  width: 18rem;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   color: rgba(255, 255, 255, 0.7);
 }
 .food-info {
   background-color: white;
-  width: 18rem;
+  width: 100%;
   border-radius: 0 0 10px 10px;
   padding: 1rem;
   color: rgb(80, 80, 80);
@@ -219,4 +219,52 @@
   color: var(--yellowish);
   font-size: 4rem;
   font-weight: bold;
+}
+
+@media only screen and (max-width : 768px){
+  .home-search-container{
+    padding: 1rem;
+  }
+  .random-container {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-auto-flow: row;
+    width: 90%;
+  }
+  .dish-name{
+    font-size: 1rem;
+  }
+ 
+.how-it-works{
+  grid-template-columns: 100% ;
+  grid-template-rows: 33% 33% 33%;
+  height: 900px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+.step-one,
+.step-three
+{
+  justify-self: start;
+}
+.step-two{
+  justify-self: end;
+}
+}
+
+@media only screen and (max-width : 426px){
+  .home-search-title {
+    font-size: 1.5rem;
+  }
+  .home-search-container{
+    margin-bottom: -3rem;
+  }
+  .random-container {
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1rem;
+    grid-auto-flow: row;
+    width: 90%;
+  }
 }
