@@ -48,7 +48,7 @@ function Home() {
           </Link>
         </div>
         <Link to="/about_us" className="home-aboutus-link">
-          <img className="home-logo-food" src={logoFood} alt="" />
+          <img className="home-logo-food" src={logoFood} alt=""/>
           <img className="home-logo-workshop" src={logoWorkshop} alt="" />
         </Link>
       </div>

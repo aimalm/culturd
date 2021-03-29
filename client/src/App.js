@@ -125,13 +125,18 @@ function App() {
             <ProductListF  setSelectedDish={setSelectedDish} />
           </Route>
 
-  
-
           <Route path="/contact_us">
             <MainNav />
             <AboutUs />
             <Footer />
           </Route>
+
+          <Route path="/about_us">
+            <MainNav />
+            <AboutUs />
+            <Footer />
+          </Route>
+
 
           <Route path="/food">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
