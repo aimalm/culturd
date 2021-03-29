@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Countries.css';
 import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
