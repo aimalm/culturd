@@ -209,9 +209,8 @@ text-decoration: none;
 
 .button-about{
 display:inline-block;
-padding: 20px 50px;
 border:0.1em solid #be7979;
-padding: 10px 50px;
+padding: 10px 30px;
 box-sizing: border-box;
 text-decoration:none;
 color:#0b523a;
@@ -254,6 +253,47 @@ border-radius: 30px;
 
   }
 
-  
 
   
+
+
+/*responsive 
+
+@media (min-width:760px) {
+  
+  .h1-animation{
+    text-align: center;
+    font-size: 3rem;
+    
+  }
+
+  .h4-homeW{
+    font-size: 2rem;
+    
+  }
+
+  .alice-carousel ul li img{
+    height: 300px;
+    width: 80%;
+    object-fit: cover;
+    
+  }
+
+}
+
+
+
+@media (min-width:360px) {
+
+  .h1-animation{
+    margin: -20px;
+    font-size: 4rem;
+  }
+
+  .h4-homeW{
+    font-size: 2rem;
+    
+  }
+
+  
+} */
