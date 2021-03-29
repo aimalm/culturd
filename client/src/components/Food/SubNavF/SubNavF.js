@@ -40,11 +40,11 @@ function SubNavF({shoppingCart, setViewingCart}) {
             </LinkContainer>
 
             <LinkContainer to="/food/Profile">
-              <Nav.Link className="nav-color">Your Profile</Nav.Link>
+              <Nav.Link className="nav-color">Profile</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/food/shopping_cart">
-              <Nav.Link className="nav-color"><ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}</Nav.Link>
+              <Nav.Link className="nav-color"><ShoppingBasketIcon className="nav-basket-icon" />{shoppingCart?shoppingCart.length:0}</Nav.Link>
             </LinkContainer>
 
           </Nav>
