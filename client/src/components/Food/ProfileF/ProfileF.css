@@ -115,3 +115,40 @@
   border: 0.1em solid var(--dark-carol);
   background-color: var(--dark-carol);
 }
+
+@media only screen and (max-width : 768px){
+  .profile-menu h3{
+    font-size: 1.5rem;
+  }
+  .profile-menu-categories{
+    font-size: 1rem;;
+  }
+  .profile-order-container {
+    grid-template-columns: 100%;
+   grid-template-rows: auto auto auto ;
+    grid-gap: 1em;
+}
+.profile-order-img.cart-img{
+  grid-row:1/2;
+  grid-column: 1/2;
+  justify-self: start;
+}
+}
+@media only screen and (max-width : 680px){
+  .profile-wrapper{
+   grid-template-columns: 100%;
+
+  }
+  .profile-content{ 
+    padding: 2rem 0;
+    width: 90%;
+  }
+  .profile-menu{
+    grid-template-rows:70% 10% 10% 10%;
+    height: auto;
+    padding: 6rem 0 3rem 0;
+  }
+  .profile-menu-categories{
+    margin: 1rem 0;
+  }
+}
