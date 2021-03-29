@@ -1,13 +1,13 @@
 import React from 'react';
-import './Congo.css';
+import './Countries.css';
 import { IoTicketSharp } from 'react-icons/io5';
 import { BsFillLightningFill } from 'react-icons/bs';
-import ImageCards from '../compCountries/ImageCards/ImageCards';
-import Accordeon from '../compCountries/Accordion/Accordion';
-import CongoFood from '../../image/congo.jpg';
-import {CongoFoodInfo} from '../compCountries/ImageCards/FoodInfo';
-import { CongoWorkshopInfo } from '../compCountries/Accordion/WorkshopInfo';
-import WorkshopDetails from '../compCountries/WorkshopDetails/WorkshopDetails';
+import ImageCards from './compCountries/ImageCards/ImageCards';
+import Accordeon from './compCountries/Accordion/Accordion';
+import CongoFood from '../image/congo.jpg';
+import {CongoFoodInfo} from './compCountries/ImageCards/FoodInfo';
+import { CongoWorkshopInfo } from './compCountries/Accordion/WorkshopInfo';
+import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 
 function Congo() {
     return (

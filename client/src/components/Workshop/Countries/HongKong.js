@@ -1,13 +1,13 @@
 import React from 'react';
-import './HongKong.css';
+import './Countries.css';
 import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
-import ImageCards from '../compCountries/ImageCards/ImageCards';
-import Accordeon from '../compCountries/Accordion/Accordion';
-import HongFood from '../../image/hongkong.jpg';
-import {HongFoodInfo} from '../compCountries/ImageCards/FoodInfo';
-import { HongWorkshopInfo } from '../compCountries/Accordion/WorkshopInfo';
-import WorkshopDetails from '../compCountries/WorkshopDetails/WorkshopDetails';
+import ImageCards from './compCountries/ImageCards/ImageCards';
+import Accordeon from './compCountries/Accordion/Accordion';
+import HongFood from '../image/hongkong.jpg';
+import {HongFoodInfo} from './compCountries/ImageCards/FoodInfo';
+import { HongWorkshopInfo } from './compCountries/Accordion/WorkshopInfo';
+import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 
 function HongKong() {
     return (

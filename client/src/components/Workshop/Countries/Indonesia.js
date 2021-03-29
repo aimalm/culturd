@@ -1,13 +1,13 @@
 import React from 'react';
-import './Indonesia.css';
+import './Countries.css';
 import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
-import ImageCards from '../compCountries/ImageCards/ImageCards';
-import Accordeon from '../compCountries/Accordion/Accordion';
-import IndoFood from '../../image/indonesia.jpg';
-import {IndoFoodInfo} from '../compCountries/ImageCards/FoodInfo';
-import { IndoWorkshopInfo } from '../compCountries/Accordion/WorkshopInfo';
-import WorkshopDetails from '../compCountries/WorkshopDetails/WorkshopDetails';
+import ImageCards from './compCountries/ImageCards/ImageCards';
+import Accordeon from './compCountries/Accordion/Accordion';
+import IndoFood from '../image/indonesia.jpg';
+import {IndoFoodInfo} from './compCountries/ImageCards/FoodInfo';
+import { IndoWorkshopInfo } from './compCountries/Accordion/WorkshopInfo';
+import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 
 function Indonesia() {
     return (

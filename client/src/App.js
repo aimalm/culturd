@@ -15,10 +15,10 @@ import LandingW from "./components/Workshop/LandingW/LandingW";
 import PricingW from "./components/Workshop/PricingW/PricingW";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
-import Afghanistan from "./components/Workshop/Countries/Afghanistan/Afghanistan";
-import Congo from "./components/Workshop/Countries/Congo/Congo";
-import HongKong from "./components/Workshop/Countries/HongKong/HongKong";
-import Indonesia from "./components/Workshop/Countries/Indonesia/Indonesia";
+import Afghanistan from "./components/Workshop/Countries/Afghanistan";
+import Congo from "./components/Workshop/Countries/Congo";
+import HongKong from "./components/Workshop/Countries/HongKong";
+import Indonesia from "./components/Workshop/Countries/Indonesia";
 
 //food components
 import ProductsF from "./components/Food/ProductsF/ProductsF";
