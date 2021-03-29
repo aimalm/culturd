@@ -9,14 +9,14 @@ import Home from "./components/ShareComponents/Home/Home";
 import AboutUs from "./components/ShareComponents/AboutUs/AboutUs";
 import Footer from "./components/ShareComponents/Footer/Footer";
 
-import {fetchEvents} from "./API/index"
+//import {fetchEvents} from "./API/index"
 
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
 import BookForm from "./components/Workshop/Booking/BookForm";
 import ListW from "./components/Workshop/ListW/ListW";
-import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+//import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 import Afghanistan from "./components/Workshop/Countries/Afghanistan";
 import Congo from "./components/Workshop/Countries/Congo";
 import HongKong from "./components/Workshop/Countries/HongKong";
@@ -30,7 +30,7 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
-import shadows from "@material-ui/core/styles/shadows";
+//import shadows from "@material-ui/core/styles/shadows";
 
 
 
