@@ -1,59 +1,59 @@
-.search-button-container{
-    width: 50%;
-    margin: 0 auto;
- margin-top: 6rem;
- display: flex;
- justify-content: space-between;
+.search-wrapper a{
+    text-decoration: none;
 }
-.search-filter-button{
-    background-color: transparent;
-    color: var(--dark-green);
-    border: none;
-    font-family: var(--font);
-   text-transform: uppercase;
-   padding: .5rem 1.5rem;
+.search-button-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.search-filter-button {
+  background-color: transparent;
+  color: var(--dark-green);
+  border: none;
+  font-family: var(--font);
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
   margin-bottom: 1rem;
-   border-bottom: 1px solid var(--beige);
-   font-weight: bold;
-   font-size: 1rem;
+  border-bottom: 1px solid var(--beige);
+  font-weight: bold;
+  font-size: 1rem;
 }
-.search-filter-button:hover{
-    color: var(--light-yellow);
-    border-bottom: 1px solid var(--dark-turquiose);
-    transition: all .8s ease-in-out;
-}
-
-
-
-.search-list{
-    padding-top: 1%;
-    height: 80vh;
-        width: 95%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 18rem);
-    grid-gap: 2rem;
-    justify-content: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
+.search-filter-button:hover {
+  color: var(--light-yellow);
+  border-bottom: 1px solid var(--dark-turquiose);
+  transition: all 0.8s ease-in-out;
 }
 
+.list-container {
+  transition: all 1s ease-in-out;
+  animation: appear 1.5s 1;
+}
 
-.search-list::-webkit-scrollbar {
-    width: 0.4em;
+@keyframes appear {
+  0% {
+    transform: translateY(-10%);
+
+    opacity: 0;
   }
-  
-.search-list::-webkit-scrollbar-track {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
-  
-.search-list::-webkit-scrollbar-thumb {
-    background-color: var(--dark-beige);
-    height: 10px;
-    border-radius: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-button-container {
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
   }
-  .search-list a{
-      text-decoration: none;
+  .search-filter-button {
+    padding: 0;
+    margin: 0;
   }
-  
+  .all-button {
+    grid-column: 1/3;
+  }
+}
