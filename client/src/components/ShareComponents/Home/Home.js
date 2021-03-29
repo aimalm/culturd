@@ -23,7 +23,7 @@ function Home() {
               <p>Register</p>
             </Link>
             <Link to="/" className="home-about-us-link">
-              <p>About Us</p>
+              <p>Contact Us</p>
             </Link>
           </div>
         ) : (
