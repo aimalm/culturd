@@ -225,7 +225,8 @@
 }
 }
 
-@media only screen and (max-width : 376px){
+@media only screen and (max-width : 768px){
+
   .home-aboutus-link{
     bottom: 35%;
     width: 5rem;
@@ -234,4 +235,5 @@
   .home-logo-food,.home-logo-workshop{
     width:4rem;
   }
+
 }
