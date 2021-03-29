@@ -162,6 +162,8 @@ function App() {
             <Footer />
           </Route>
 
+         
+
           
         </Switch>
       </Router>
