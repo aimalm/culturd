@@ -37,7 +37,7 @@ function WorkshopDetails() {
                     <Link to="/workshop" className="review-link"><p>Write a review!</p></Link>
                 </div>
             </div>
-            <Link to='/workshop' className="booking-button">
+            <Link to='/workshop/bookform' className="booking-button">
                 <p>BOOK NOW</p>
             </Link>
         </div>
