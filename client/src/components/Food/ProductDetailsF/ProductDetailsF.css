@@ -1,5 +1,5 @@
 .products-wrapper {
-  margin-top: 6rem;
+  margin-top: 2rem;
   padding: 3rem 7rem;
 }
 .add-cart-alert p,
@@ -9,45 +9,37 @@
   color: var(--NavbarColor);
 }
 
-.back-button {
-  background-color: transparent;
-  border: none;
-  color: var(--yellowish);
-  font-size: 3rem;
-  position: absolute;
-  top: 6rem;
-  left: 1rem;
-}
-
 .add-cart-alert {
   position: fixed;
-  right: 1rem;
-  animation: appear 3s ease-in-out 1;
+  top: 10%;
+  right: 1%;
+  animation: appear 3s 1;
   padding: 8px 30px 10px 30px;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   border-radius: 30px;
   border: 0.1em solid var(--carol);
-  /* background-color: var(--carol); */
+  background-color: var(--carol);
 
 }
 .add-cart-alert p{
   margin:0;
-  color: var(--carol);
+  color: white;
 }
 
 @keyframes appear {
   0% {
+    transform: translateY(-100%);
     opacity: 0;
-  }
-  50% {
-    opacity: 1;
   }
   100% {
-    opacity: 0;
+    transform: translateY(0%);
+    opacity: 1;
   }
+  
 }
 
 .products-container {
+
   width: 80%;
   margin: 1rem auto;
   display: grid;
@@ -107,4 +99,39 @@
   grid-column: 1/3;
   justify-self: end;
 }
+.product-empty-container{
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-empty-alert{
+  text-align: center;
+  
+  color: var(--dark-yellow) !important;
+}
+
+@media only screen and (max-width : 700px){
+ .products-container{
+  display:block;
+ }
+ .cooker-info{
+       margin: 2rem 0;
+     padding-left:0;
+ }
+ .products-add-button{
+   width: 100%;
+ }
+}
+
+@media only screen and (max-width : 426px){
+  .products-wrapper{
+    padding: 3rem 2rem;
+  }
+  .products-img-food{
+    height: 17rem;
+    width: 17rem;
+  }
+}
+
 
