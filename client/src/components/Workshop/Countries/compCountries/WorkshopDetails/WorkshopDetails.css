@@ -1,0 +1,112 @@
+.booking-container {
+    box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.76);
+    border-radius: 8px;
+    width: 400px;
+    height: 500px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container {
+    border-radius: 8px 8px 0px 0px;
+    width: 400px;
+    height: 330px;
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+}
+
+.booking-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 10px 0px 10px;
+    text-align: center;
+    font-size: 14px; 
+}
+
+.booking-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--carol);
+}
+
+.focus {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.review-container {
+    border-top: solid rgb(202, 202, 202);
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.review-icon {
+    width: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 70px;
+    color: var(--carol);
+}
+
+.review-details {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.review-details > * {
+    margin-bottom: 0;
+}
+
+.review-link {
+    text-decoration: none;
+    color: red;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.review-link:hover {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.booking-button {
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--carol);
+    border-radius: 0px 0px 8px 8px;
+}
+
+.booking-button:hover {
+    text-decoration: none;
+    background: #e27458;
+}
+
+.booking-button > * {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.country-container {
+    margin: 85px 15px 80px 40px;
+}
+
+.workshop-info > * {
+    font-weight: bold;
+}
+
+.ticket-info {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ticket-info > * {
+    margin-right: 20px;
+}
+
+.info-icon {
+    color: var(--carol);
+    font-size: 18px;
+}
+
+.workshop-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 0px 10px;
+}
+
+.workshop-container > * {
+    width: 100%;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordeon-container {
+    margin-top: 25px;
+}
