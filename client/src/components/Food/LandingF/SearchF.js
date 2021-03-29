@@ -11,6 +11,8 @@ function SearchF({ setSelectedDish, searchResult, setSearchResult }) {
 
     const foodName = inputRef.current.value.toLowerCase();
 
+    console.log(foodName)
+
     if (foodName === "") return;
 
     let searchingArray = FoodTable.filter((food) => food.keywords.includes(foodName))
@@ -33,11 +35,14 @@ function SearchF({ setSelectedDish, searchResult, setSearchResult }) {
       </h2>
       <form className="search-bar">
         <input
-          ref={inputRef}
+          // ref={inputRef}
           className="search-input"
           type="text"
           placeholder="Home dishes..."
         />
+
+      
+
         <button className="search-button" onClick={searchHandler}>
           <SearchIcon className="search-button-icon" />
         </button>
@@ -53,6 +58,7 @@ function SearchF({ setSelectedDish, searchResult, setSearchResult }) {
           )}
         
       </form>
+      
     </div>
   );
 }

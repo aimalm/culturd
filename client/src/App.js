@@ -55,8 +55,8 @@ function App() {
             <SubNavW />
             <BookForm />
             <Footer />
-         
           </Route>
+
           <Route path="/workshop/listW">
             <SubNavW />
             <ListW />
@@ -65,7 +65,6 @@ function App() {
 
           <Route path="/workshop/about_us">
             <SubNavW />
-     
             <Footer />
           </Route>
 
@@ -76,7 +75,6 @@ function App() {
 
           <Route path="/food/profile">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
-
             <ProfileF />
           </Route>
 
@@ -101,8 +99,7 @@ function App() {
 
   
 
-          <Route path="/about_us">
-            {/* change the Nav to Nav_Logout when the user is login */}
+          <Route path="/contact_us">
             <MainNav />
             <AboutUs />
             <Footer />
