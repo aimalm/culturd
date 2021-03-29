@@ -15,9 +15,7 @@
 .ticket-info {
     display: flex;
     font-weight: bold;
-    border-bottom: solid var(--light-turquiose);
-    margin-bottom: 40px;
-    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .ticket-info > * {
@@ -32,7 +30,7 @@
 .workshop-container {
     display: flex;
     justify-content: space-between;
-    margin: 0px 10px 0px 20px;
+    margin: 0px 10px 0px 10px;
 }
 
 .workshop-container > * {
