@@ -30,12 +30,11 @@ function SearchF({ setSelectedDish, searchResult, setSearchResult }) {
       <h2 className="home-search-title">
         Getting your <br></br>
         <strong>home food takeaway</strong>
-        <br></br>
-        <i>slogan hereeee</i>
+  
       </h2>
       <form className="search-bar">
         <input
-          // ref={inputRef}
+           ref={inputRef}
           className="search-input"
           type="text"
           placeholder="Home dishes..."

@@ -27,7 +27,7 @@ function ProfileF() {
         <div className="profile-content-border">
         {viewSection === "info" ? (
           <div className="profile-info">
-            <h3 className="profile-info-title">Your personal details</h3>
+            <h3 className="profile-info-title">Edit your account details</h3>
 
             <Form
               className='profile-info-form'
@@ -92,7 +92,7 @@ function ProfileF() {
                 src="https://images.unsplash.com/photo-1560434019-4558f9a9e2a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
                 alt=""
               />
-              <button className="profile-order-button">Review</button>
+              <button className="profile-history-button">Review</button>
             </div>
             <div className="profile-order-container">
               <div className="profile-order-details">
@@ -112,7 +112,7 @@ function ProfileF() {
                 src="https://images.unsplash.com/photo-1604228982586-ded54b1ad579?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                 alt=""
               />
-              <button className="profile-order-button">Review</button>
+              <button className="profile-history-button">Review</button>
             </div>
           </div>
         )}
