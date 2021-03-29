@@ -257,8 +257,8 @@
  
 .how-it-works{
 
-  grid-template-rows: 33% 33% 33%;
-  height: 900px;
+  grid-template-rows: 25% 25% 25%;
+  height: 850px;
  
 }
 
@@ -283,10 +283,26 @@
     grid-auto-flow: row;
     width: 90%;
   }
+  .how-it-works{
+    grid-template-rows: auto;
+    height: auto;
+   
+  }
+  .how-it-works-title{
+    padding:  3rem 0;
+    text-align: center;
+    
+  }
    .step-one,
   .step-two, .step-three{
+    margin: 1rem 0;
     border: none;
     height: auto;
     width: auto;
+  }
+}
+@media only screen and (max-width : 320px){
+  .how-it-works{
+    padding: 0;
   }
 }
