@@ -105,16 +105,26 @@
   padding-bottom: 0.5rem;
 }
 .random-container {
-  padding: 3rem 0;
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 2rem auto;
   justify-content: center;
+  transition: ease-in-out;
+}
+.food-card{
+  margin: 1rem .5rem;
+  max-width: 18rem;
+}
+.food-card-img{
+  
+  width: 18rem;
+  height: 18rem;
+  
 }
 .product-image {
-  height: 18rem;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
@@ -126,9 +136,14 @@
   border-radius: 0 0 10px 10px;
   padding: 1rem;
   color: rgb(80, 80, 80);
+  border: .5px solid var(--beige);
+  border-top:none;
 }
 .dish-name {
   font-weight: bolder;
+  text-transform: capitalize;
+}
+.cook-info{
   text-transform: capitalize;
 }
 .star {
@@ -146,13 +161,18 @@
   display: flex;
   justify-content: space-between;
 }
+.food-list-container{
+  display: flex;
+  justify-content: center;
+}
 .food-list-link {
-  width: 80%;
-  justify-self: end;
+  width: 60%;
+
   padding: 0.5rem;
   border: 0.1em solid var(--greenish);
   background-color: var(--greenish);
-  grid-column: 4/5;
+  
+  margin: auto;
 }
 .food-list-link:hover {
   border: 0.1em solid var(--light-green);
@@ -221,7 +241,10 @@
   font-size: 4rem;
   font-weight: bold;
 }
-@media only screen and (max-width : 1024px){
+
+
+@media only screen and (max-width : 1080px){
+  
   .how-it-works{
     grid-template-columns: 100% ;
     grid-template-rows: 25% 25% 25%;
@@ -242,30 +265,34 @@
 }
 }
 @media only screen and (max-width : 768px){
+  .random-container{
+    width: 95%;
+  }
+  
   .home-search-container{
     padding: 1rem;
   }
-  .random-container {
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-gap: 1rem;
-    grid-auto-flow: row;
-    width: 90%;
-  }
+  
+
+
   .dish-name{
     font-size: 1rem;
   }
  
 .how-it-works{
 
-  grid-template-rows: 25% 25% 25%;
-  height: 850px;
+  grid-template-rows: 33% 33% 33%;
+  height: auto;
  
 }
 
-.step-three
-{
-  margin: 0;
+
+.step-one,
+.step-two, .step-three{
+  margin: 2rem 0;
+  border: none;
+  height: auto;
+  width: auto;
 }
 
 }
@@ -284,6 +311,9 @@
     grid-auto-flow: row;
     width: 90%;
   }
+  .food-title-new{
+    font-size:1.5rem;
+  }
   .how-it-works{
     grid-template-rows: auto;
     height: auto;
@@ -294,15 +324,10 @@
     text-align: center;
     
   }
-   .step-one,
-  .step-two, .step-three{
-    margin: 1rem 0;
-    border: none;
-    height: auto;
-    width: auto;
-  }
+ 
 }
-@media only screen and (max-width : 320px){
+@media only screen and (max-width : 375px){
+ 
   .how-it-works{
     padding: 0;
   }
