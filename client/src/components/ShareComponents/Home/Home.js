@@ -22,6 +22,9 @@ function Home() {
             <Link to="/" className="home-reg-link">
               <p>Register</p>
             </Link>
+            <Link to="/" className="home-about-us-link">
+              <p>Contact Us</p>
+            </Link>
           </div>
         ) : (
           ""
@@ -30,7 +33,7 @@ function Home() {
       <div className="home-section-container">
         <div className="home-section-workshop">
           <h1 className="home-section-title-workshop">
-            Always wanted to learn <br></br>how to cook foreign dishes
+           Get to know more <br></br>About Our culture workshop
           </h1>
           <Link to="/workshop" className="home-workshop-link">
             Discover more

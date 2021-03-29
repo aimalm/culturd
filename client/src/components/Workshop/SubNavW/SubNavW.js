@@ -11,10 +11,10 @@ function SubNavW() {
 
     return (
       <div className="container-navbar ">
-      <Navbar bg="white fixed-top main-nav" expand="lg">
-      <LinkContainer to="/">
-      <img src={workshop} className="logo-icon" alt=""/>
-     </LinkContainer>
+     <Navbar bg="white fixed-top navbar-style" expand="lg">
+        <LinkContainer to="/">
+        <img src={workshop} className="logo-icon" alt=""/>
+        </LinkContainer>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="ml-auto navbar">
