@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-.login-container {
+.login-container, .signup-container {
     background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
     height: 100vh;
 }
 
 .reg-button-container {
-    position: fixed;
+    position: absolute;
     top: 5%;
     right: 3%;
 }
@@ -123,4 +123,20 @@ form > h4 {
 .submit-btn:hover {
     background-color: #e27458;
     color: #FFFFFF;
+}
+
+.signup-container {
+    height: 118vh;
+}
+
+.sign-form-container {
+    display: flex;
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    z-index: 1;
+    top: 59%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
 }
