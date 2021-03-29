@@ -1,7 +1,4 @@
-import React, { useRef } from "react";
-import SearchIcon from "@material-ui/icons/Search";
-import { FoodTable } from "../Template";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./LandingF.css";
 
 import { RiUserSearchFill, RiEmotionHappyLine } from "react-icons/ri";
@@ -12,32 +9,11 @@ import SearchF from "./SearchF";
 import NewInCardF from "./NewInCardF";
 
 function LandingF({
-  selectedDish,
   setSelectedDish,
-  shoppingCart,
-  viewingCart,
   searchResult,
   setSearchResult,
 }) {
-  const inputRef = useRef();
 
-  const searchHandler = (e) => {
-    e.preventDefault();
-
-    const foodName = inputRef.current.value.toLowerCase();
-
-    if (foodName === "") return;
-
-    let searchingArray = FoodTable.filter((food) =>
-      food.keywords.includes(foodName)
-    );
-
-    setSearchResult(searchingArray);
-  };
-
-  const resultHandler = (searchID) => {
-    setSelectedDish(FoodTable.filter((item) => item.id === searchID));
-  };
 
   return (
     <div className="food-home">

@@ -17,8 +17,8 @@ function NewInCardF({ setSelectedDish }) {
       <div className="breakline"></div>
       <div className="random-container">
         {newInArray.map((dish) => (
-          <div className="food-card" >
-          <Link key={dish.id} to={"/food/products/" + dish.id} onClick={() => selectHandler(dish.id)}>
+          <div className="food-card" key={dish.id}>
+          <Link  to={"/food/products/" + dish.id} onClick={() => selectHandler(dish.id)}>
             
               <div className="food-card-img">
                 <img className="product-image" src={dish.imageUrl} alt="" />

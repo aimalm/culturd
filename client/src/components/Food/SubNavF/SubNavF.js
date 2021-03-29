@@ -12,12 +12,12 @@ import foodLogo from "../../ShareComponents/image/logofood.png"
 function SubNavF({shoppingCart}) {
   return (
     <div className="container-navbar">
-      <Navbar bg="white fixed-top nav-border" expand="lg">
+      <Navbar bg="white fixed-top nav-border" animation="false" expand="lg">
         <LinkContainer to="/">
         <img src={foodLogo} className="logo-icon" alt=""/>
         </LinkContainer>
         <Navbar.Toggle />
-        <Navbar.Collapse>
+        <Navbar.Collapse animation="false">
           <Nav className="ml-auto navbar">
             <LinkContainer to="/food">
               <Nav.Link className="nav-color">Home</Nav.Link>

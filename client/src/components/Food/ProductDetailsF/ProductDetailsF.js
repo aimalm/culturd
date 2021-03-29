@@ -22,7 +22,7 @@ function ProductDetailsF({
     if (dishIDArray.includes(dishID) === true) {
       let newArray = [...shoppingCart];
 
-      newArray.map((item) => {
+      newArray.forEach((item) => {
         if (item.id === dishID) {
           item.quantity++;
         }
@@ -65,7 +65,7 @@ function ProductDetailsF({
         {selectedDish.length > 0 ? (
           <div>
             {selectedDish.map((dish) => (
-              <div className="products-container">
+              <div key={dish.id} className="products-container">
                 <div className="products-info">
                   <img
                     className="products-img-food"

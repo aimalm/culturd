@@ -17,7 +17,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
     switch (e.currentTarget.value) {
       case "plus":
         const plusArray = [...shoppingCart];
-        shoppingCart.map((item) => {
+        shoppingCart.forEach((item) => {
           if (item.id === id) {
             item.quantity++;
           }
@@ -28,11 +28,11 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
       case "minus":
         let minusArray = [...shoppingCart];
 
-        shoppingCart.map((item) => {
+        shoppingCart.forEach((item) => {
           if (item.id === id && item.quantity > 1) {
             item.quantity--;
             setShoppingCart(minusArray);
-          } else {
+          } else if( item.id === id && item.quantity === 1){
             deleteFromCart(id);
           }
         });

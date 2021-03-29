@@ -6,17 +6,18 @@ import { Link } from "react-router-dom";
 function SearchF({ setSelectedDish, searchResult, setSearchResult }) {
   const inputRef = useRef();
 
+
   const searchHandler = (e) => {
     e.preventDefault();
 
     const foodName = inputRef.current.value.toLowerCase();
 
-    console.log(foodName)
+
 
     if (foodName === "") return;
 
     let searchingArray = FoodTable.filter((food) => food.keywords.includes(foodName))
-    
+
    setSearchResult(searchingArray)
   };
 

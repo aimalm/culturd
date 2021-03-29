@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./ProductListF.css";
 import { FoodTable } from "../Template";
 import { Link } from "react-router-dom";
@@ -98,9 +98,9 @@ function ProductListF({ setSelectedDish }) {
      
 
         {filteredDish.map((dish) => (
-          <div className="food-card">
+          <div className="food-card"  key={dish.id}>
             <Link
-              key={dish.id}
+             
               to={"/food/products/" + dish.id}
               onClick={() => selectHandler(dish.id)}
             >
