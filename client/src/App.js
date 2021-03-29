@@ -14,18 +14,24 @@ import {fetchEvents} from "./API/index"
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
-import PricingW from "./components/Workshop/PricingW/PricingW";
+import BookForm from "./components/Workshop/Booking/BookForm";
 import ListW from "./components/Workshop/ListW/ListW";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+import Afghanistan from "./components/Workshop/Countries/Afghanistan";
+import Congo from "./components/Workshop/Countries/Congo";
+import HongKong from "./components/Workshop/Countries/HongKong";
+import Indonesia from "./components/Workshop/Countries/Indonesia";
+
 
 //food components
-import ProductsF from "./components/Food/ProductsF/ProductsF";
+import ProductDetailsF from "./components/Food/ProductDetailsF/ProductDetailsF";
 import SubnavF from "./components/Food/SubNavF/SubNavF";
 import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
-import SearchProductsF from "./components/Food/SearchProductsF/SearchProductsF";
+import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 import shadows from "@material-ui/core/styles/shadows";
+
 
 
 
@@ -34,8 +40,9 @@ function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
+  const [searchResult, setSearchResult] = useState([]);
 
-
+  
   const LSKEY = "culturd";
   useEffect(() => {
     let localShoppingCart = JSON.parse(localStorage.getItem(LSKEY));
@@ -55,21 +62,45 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-
-
-          <Route path="/workshop/pricing">
+          <Route path="/workshop/bookform">
             <SubNavW />
-            <PricingW />
+            <BookForm />
+            <Footer />
          
           </Route>
-          <Route path="/workshop/list">
+          <Route path="/workshop/listW">
             <SubNavW />
             <ListW />
+            <Footer />
           </Route>
 
           <Route path="/workshop/about_us">
             <SubNavW />
-            <AboutUsW />
+     
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/Afghanistan">
+            <SubNavW />
+            <Afghanistan />
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/Congo">
+            <SubNavW />
+            <Congo />
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/HongKong">
+            <SubNavW />
+            <HongKong />
+            <Footer />
+          </Route>
+
+          <Route path="/workshop/Indonesia">
+            <SubNavW />
+            <Indonesia />
             <Footer />
           </Route>
 
@@ -87,7 +118,7 @@ function App() {
           <Route path="/food/products">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
-            <ProductsF
+            <ProductDetailsF
               selectedDish={selectedDish}
               setSelectedDish={setSelectedDish}
               shoppingCart={shoppingCart}
@@ -98,9 +129,9 @@ function App() {
             <Footer/>
           </Route>
 
-          <Route path="/food/search">
+          <Route path="/food/product_list">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
-            <SearchProductsF  setSelectedDish={setSelectedDish} />
+            <ProductListF  setSelectedDish={setSelectedDish} />
           </Route>
 
   
@@ -116,7 +147,8 @@ function App() {
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
             <LandingF
-            selectedDish={selectedDish}
+            searchResult={searchResult}
+            setSearchResult={setSearchResult}
               setSelectedDish={setSelectedDish}
               selectedDish={selectedDish}
               shoppingCart={shoppingCart}
@@ -136,7 +168,7 @@ function App() {
           <Route path="/">
             {/* change the Nav to Nav_Logout when the user is login */}
             {/* <MainNav /> */}
-            <Home />
+            <Home/>
             <Footer />
            
           </Route>

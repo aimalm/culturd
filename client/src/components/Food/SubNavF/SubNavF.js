@@ -34,8 +34,8 @@ function SubNavF({shoppingCart, setViewingCart}) {
                 </NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>
-            <LinkContainer to="/food/search">
-              <Nav.Link className="nav-color">Search</Nav.Link>
+            <LinkContainer to="/food/product_list">
+              <Nav.Link className="nav-color">List</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/food/Profile">
@@ -43,10 +43,9 @@ function SubNavF({shoppingCart, setViewingCart}) {
             </LinkContainer>
 
             <LinkContainer to="/food/shopping_cart">
-            <Button variant="outline-warning" >
-              <ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}
-            </Button>
+              <Nav.Link className="nav-color"><ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}</Nav.Link>
             </LinkContainer>
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>

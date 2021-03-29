@@ -7,9 +7,7 @@
 .shopping-cart-wrapper h3,.shopping-cart-wrapper h4,.shopping-cart-wrapper h5,.shopping-cart-wrapper p{
   color: var(--NavbarColor);
 }
-.shopping-cart-wrapper button{
-  border:none;
-}
+
 
 
 
@@ -36,7 +34,7 @@
 
 .shopping-cart-item{
   display: grid;
-  grid-template-columns: 20% 50% 20% 10%;
+  grid-template-columns: 20% 40% 10% 20% 10%;
   width: 70%;
   margin:auto;
   padding: 1rem 0;
@@ -52,22 +50,52 @@
 .cart-food-info{
   text-transform: capitalize;
 }
+.cart-quantity{
+ height: 30%;
+ width: 50%;
+  display:grid;
+  grid-template-columns: 33% 63% 33%;
+}
+.cart-plus-button, .cart-minus-button{
+background-color: transparent;
+border: 1px solid var(--light-turquiose);
+color:var(--dark-turquiose);
 
+}
+.cart-plus-button{
+  border-radius: 8px 0 0 8px;
+}
+.cart-minus-button{
+  border-radius: 0 8px 8px 0;
+
+}
+.cart-quantity-input{
+  background-color: var(--light-turquiose);
+  border: none;
+  text-align: center;
+  font-family: var(--font);
+}
+.cart-delete-button{
+  border: 1px solid var(--light-turquiose);
+  background-color: transparent;
+  color: var(--dark-turquiose);
+  height: 30%;
+  border-radius: 8px;
+}
 
 .cart-breakline {
   border-bottom: 3px solid var(--dark-turquiose);
-  margin: 0 7rem;
-  padding-bottom: 0.5rem;
+  margin: 2rem 7rem;
+  color: var(--NavbarColor);
 }
-.cart-button-checkout{
-  background-color: var(--yellowish);
-  width: 15rem;
-    padding: 0.8rem 1rem;
-    border-radius: 30px;
-    font-family: var(--font);
-    font-weight: 600;
-    font-size: 1rem;
-    color: white;
-    text-transform: uppercase;
 
+.cart-checkout-button{
+  grid-column: 4/6;
+  width: 80%;
+  justify-self: end;
+}
+.cart-checkout-button:hover{
+background-color: var(--light-yellow);
+border: 1px solid var(--light-yellow);
+color: var(--dark-yellow);
 }

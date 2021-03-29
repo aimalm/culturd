@@ -3,25 +3,25 @@ import SearchIcon from "@material-ui/icons/Search";
 import { FoodTable } from "../Template";
 import { Link } from "react-router-dom";
 
-function SearchF({ setSelectedDish, selectedDish }) {
-  //useRef can take the entry of the input
+function SearchF({ setSelectedDish, searchResult, setSearchResult }) {
   const inputRef = useRef();
-  console.log(selectedDish)
+
   const searchHandler = (e) => {
     e.preventDefault();
+
     const foodName = inputRef.current.value.toLowerCase();
 
     if (foodName === "") return;
 
-    console.log(foodName);
-
-    let keywordArray = FoodTable.map(food=>{
-      food.keywords.map(keyword=> keyword == foodName)})
-    console.log(keywordArray)
-    // setSelectedDish(
-    //   FoodTable.filter((food) => food.keywords.includes(foodName))
-    // );
+    let searchingArray = FoodTable.filter((food) => food.keywords.includes(foodName))
+    
+   setSearchResult(searchingArray)
   };
+
+  const resultHandler = (searchID)=>{
+  
+    setSelectedDish(FoodTable.filter((item) => item.id === searchID))
+  }
 
   return (
     <div className="home-search-container">
@@ -41,17 +41,17 @@ function SearchF({ setSelectedDish, selectedDish }) {
         <button className="search-button" onClick={searchHandler}>
           <SearchIcon className="search-button-icon" />
         </button>
-        <div className="search-suggestion">
-          {selectedDish.length > 0 ? (
-            <div>{selectedDish.map((food) => 
-              <Link key={food.id} to={"/food/products/" + food.id}>
+        
+          {searchResult.length > 0 ? (
+            <div className="search-suggestion" >{searchResult.map((food) => 
+               <Link key={food.id} to={"/food/products/" + food.id} onClick={()=>resultHandler(food.id)} >
             <p key={food.id} >{food.dishName}</p>
             </Link>
             )}</div>
           ) : (
-            "no its nothing"
+            ""
           )}
-        </div>
+        
       </form>
     </div>
   );

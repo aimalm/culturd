@@ -1,0 +1,102 @@
+.profile-wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.profile-wrapper h3,
+.profile-wrapper h5,
+.profile-wrapper p {
+  color: var(--NavbarColor);
+  margin: 0;
+}
+.profile-menu {
+  padding: 0 2rem;
+  padding-top: 6rem;
+  height: 100vh;
+  background-color: var(--beige);
+  display: grid;
+  grid-template-rows: 40% 10% 10% 10%;
+  justify-items: center;
+}
+.profile-user-pic {
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  justify-content: center;
+}
+.profile-menu-categories{
+    border: none;
+    background-color: transparent;
+    font-family: var(--font);
+    color: var(--NavbarColor);
+    text-transform: uppercase;
+}
+.profile-menu-categories:hover{
+    color: white;
+}
+
+.profile-content {
+  height: 100vh;
+  padding-top: 6rem;
+  width: 70%;
+  margin: auto;
+}
+.profile-content-border{
+    padding:8%;
+    border: 3px solid var(--dark-turquiose);
+    border-radius: 13px;
+}
+.profile-info-title,
+.profile-history-title {
+  text-transform: capitalize;
+}
+.rfe-form.profile-info-form{
+margin-top: 2rem ;
+font-family: var(--font);
+color: var(--dark-carol);
+
+}
+.rfe-form.profile-info-form *{
+margin: 1rem;
+}
+.profile-form input{
+   border:none;
+   color: var(--dark-beige);
+   background-color: var(--light-beige);
+   padding: .1rem 1rem;
+}
+.profile-form input:focus{
+    outline: none;
+}
+
+.profile-order-container {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px dashed var(--beige);
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 70% 30%;
+}
+.profile-order-img {
+  grid-column: 2/3;
+  justify-self: end;
+}
+.profile-order-button {
+  padding: 5px 50px;
+  text-decoration: none;
+  color: white;
+  font-family: var(--font);
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: 0.1em solid var(--dark-beige);
+  background-color: var(--dark-beige);
+}
+.profile-order-button:hover {
+  border: 0.1em solid var(--light-beige);
+  background-color: var(--light-beige);
+  color: var(--dark-beige);
+}
