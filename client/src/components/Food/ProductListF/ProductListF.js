@@ -42,7 +42,7 @@ function ProductListF({ setSelectedDish }) {
     <div>
       <div className="search-button-container">
         
-        <button className="search-filter-button" value="all" onClick={(e) => filterHandler(e)}>
+        <button className="search-filter-button all-button" value="all" onClick={(e) => filterHandler(e)}>
           See All
         </button>
      
