@@ -7,6 +7,7 @@ import Accordeon from '../compCountries/Accordion/Accordion';
 import CongoFood from '../../image/congo.jpg';
 import {CongoFoodInfo} from '../compCountries/ImageCards/FoodInfo';
 import { CongoWorkshopInfo } from '../compCountries/Accordion/WorkshopInfo';
+import WorkshopDetails from '../compCountries/WorkshopDetails/WorkshopDetails';
 
 function Congo() {
     return (
@@ -19,7 +20,7 @@ function Congo() {
                 </div>
             </div>
             <div className="workshop-container">
-                <div className="container-1">
+                <div className="inner-container">
                     <ImageCards 
                         imageSrc={CongoFood} 
                         foodDes_1={CongoFoodInfo[0].description}
@@ -33,8 +34,8 @@ function Congo() {
                         <Accordeon content={CongoWorkshopInfo}/>
                     </div>
                 </div>
-                <div className="container-1">
-                    
+                <div className="inner-container">
+                    <WorkshopDetails />
                 </div>
             </div>
         </div>

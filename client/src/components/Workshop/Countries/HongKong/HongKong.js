@@ -7,6 +7,7 @@ import Accordeon from '../compCountries/Accordion/Accordion';
 import HongFood from '../../image/hongkong.jpg';
 import {HongFoodInfo} from '../compCountries/ImageCards/FoodInfo';
 import { HongWorkshopInfo } from '../compCountries/Accordion/WorkshopInfo';
+import WorkshopDetails from '../compCountries/WorkshopDetails/WorkshopDetails';
 
 function HongKong() {
     return (
@@ -19,7 +20,7 @@ function HongKong() {
                 </div>
             </div>
             <div className="workshop-container">
-                <div className="container-1">
+                <div className="inner-container">
                     <ImageCards 
                         imageSrc={HongFood} 
                         foodDes_1={HongFoodInfo[0].description}
@@ -33,8 +34,8 @@ function HongKong() {
                         <Accordeon content={HongWorkshopInfo}/>
                     </div>
                 </div>
-                <div className="container-1">
-                    
+                <div className="inner-container">
+                    <WorkshopDetails />
                 </div>
             </div>
         </div>
