@@ -13,7 +13,6 @@
 
 .image {
     position: relative;
-    /* border: solid black; */
 }
 
 .image_img {
@@ -38,7 +37,6 @@
     justify-content: center;
     opacity: 0;
     transition: opacity 0.25s;
-
 }
 
 .image_overlay:hover {

@@ -36,7 +36,6 @@
 }
 
 .workshop-container > * {
-    /* border: solid salmon; */
     width: 100%;
 }
 
@@ -48,7 +47,3 @@
 .accordeon-container {
     margin-top: 25px;
 }
-
-
-
-
