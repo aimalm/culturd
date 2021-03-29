@@ -7,14 +7,14 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
-import { Button } from "react-bootstrap";
+import foodLogo from "../../ShareComponents/image/logofood.png"
 
 function SubNavF({shoppingCart, setViewingCart}) {
   return (
     <div className="container-navbar">
-      <Navbar bg="transparent fixed-top" expand="lg">
+      <Navbar bg="white fixed-top navbar-style" expand="lg">
         <LinkContainer to="/">
-          <Navbar.Brand className="logo">CULTURD</Navbar.Brand>
+        <img src={foodLogo} className="logo-icon" alt=""/>
         </LinkContainer>
         <Navbar.Toggle />
         <Navbar.Collapse>
@@ -39,11 +39,11 @@ function SubNavF({shoppingCart, setViewingCart}) {
             </LinkContainer>
 
             <LinkContainer to="/food/Profile">
-              <Nav.Link className="nav-color">Your Profile</Nav.Link>
+              <Nav.Link className="nav-color">Profile</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/food/shopping_cart">
-              <Nav.Link className="nav-color"><ShoppingBasketIcon /> {shoppingCart?shoppingCart.length:0}</Nav.Link>
+              <Nav.Link className="nav-color"><ShoppingBasketIcon className="nav-basket-icon" />{shoppingCart?shoppingCart.length:0}</Nav.Link>
             </LinkContainer>
 
           </Nav>
