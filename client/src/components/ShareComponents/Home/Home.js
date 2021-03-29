@@ -20,7 +20,7 @@ function Home() {
               <p>Login</p>
             </Link>
             <Link to="/" className="home-reg-link">
-              <p>Register</p>
+              <p>Sign Up</p>
             </Link>
             <Link to="/contact_us" className="home-about-us-link">
               <p>Contact Us</p>
