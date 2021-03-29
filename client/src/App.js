@@ -8,6 +8,8 @@ import MainNav from "./components/ShareComponents/Nav/MainNav";
 import Home from "./components/ShareComponents/Home/Home";
 import AboutUs from "./components/ShareComponents/AboutUs/AboutUs";
 import Footer from "./components/ShareComponents/Footer/Footer";
+import LogIn from "./components/ShareComponents/Registration/LogIn";
+import SignUp from "./components/ShareComponents/Registration/SignUp";
 
 //import {fetchEvents} from "./API/index"
 
@@ -132,9 +134,17 @@ function App() {
             <ProductListF  setSelectedDish={setSelectedDish} />
           </Route>
 
-  
+          <Route path="/login">
+            <LogIn />
+            <Footer />
+          </Route>
 
-          <Route path="/contact_us">
+          <Route path="/signup">
+            <SignUp />
+            <Footer />
+          </Route>
+
+          <Route path="/about_us">
             <MainNav />
             <AboutUs />
             <Footer />
@@ -170,7 +180,6 @@ function App() {
            
           </Route>
 
-          
         </Switch>
         <div>
         
