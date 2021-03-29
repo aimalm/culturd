@@ -10,6 +10,7 @@
     background: var(--light-turquiose);
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .section-wrap > * {
