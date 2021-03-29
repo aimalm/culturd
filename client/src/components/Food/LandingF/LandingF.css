@@ -9,7 +9,7 @@
 /* search section start here */
 .home-search-container {
   margin-top: 6rem;
-  margin-bottom: -7rem;
+  /* margin-bottom: -7rem; */
   padding: 3rem 7rem 0 7rem;
   color: var(--NavbarColor);
   text-align: center;
@@ -17,16 +17,16 @@
 .home-search-title {
   font-size: 3rem;
   text-transform: capitalize;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
 }
-/* .search-bar {
-  margin-top: 2rem;
+.search-bar {
+  
   display: grid;
-  grid-template-columns: 80% 20%;
-  width: 60%;
+  grid-template-columns: 90% 10%;
+  width: 70%;
   margin: auto;
-} */
-/* .search-input {
+} 
+ .search-input {
   padding: 0.5rem 1.5rem;
   font-size: var(--font);
   color: var(--NavbarColor);
@@ -34,10 +34,10 @@
   border: 4px solid var(--carol);
   height: 3rem;
   text-transform: capitalize;
-} */
-/* .search-input:focus {
+}
+ .search-input:focus {
   outline: none;
-} */
+}
 .search-button {
   background-color: transparent;
   border: none;
@@ -74,6 +74,7 @@
 .search-suggestion a:hover {
   color: var(--yellowish);
 }
+
 @keyframes slidein {
   from {
     transform: translateY(-50%);
