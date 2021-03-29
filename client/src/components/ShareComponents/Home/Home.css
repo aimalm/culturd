@@ -5,9 +5,7 @@
 }
 .home-button-container p {
   background: var(--light-turquiose);
-  padding: .5rem;
-
-
+  padding: 0.5rem;
 }
 .home-dropdown-button {
   color: white;
@@ -21,7 +19,8 @@
 }
 
 .home-login-link,
-.home-reg-link, .home-about-us-link {
+.home-reg-link,
+.home-about-us-link {
   color: white;
   transition: all 0.2s ease-in-out;
 }
@@ -76,6 +75,7 @@
   color: white;
   margin-bottom: 2rem;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .home-section-title-food {
   animation: rightToLeft 1.5s 1;
@@ -168,72 +168,93 @@
   }
 }
 
-.workshop-img{
+.workshop-img {
   width: 65%;
   margin: 0 auto;
 }
 
-.food-img{
-    width: 67%;
-    margin: 0 auto;
-  }
+.food-img {
+  width: 67%;
+  margin: 0 auto;
+}
 
-@media only screen and (max-width : 768px){
-  
-  .home-section-container{
+@media only screen and (max-width: 768px) {
+  .home-section-container {
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
   }
-  .home-section-workshop,.home-section-food{
+  .home-section-workshop,
+  .home-section-food {
     padding: 4rem 1rem;
   }
-  .home-aboutus-link{
+  .home-aboutus-link {
     left: 5%;
     bottom: 40%;
     width: 9rem;
     height: 9rem;
   }
-  .home-logo-food,.home-logo-workshop{
-    width:7rem;
+  .home-logo-food,
+  .home-logo-workshop {
+    width: 7rem;
   }
-
 }
 
-@media only screen and (max-width : 426px){
-  .home-section-container{
+@media only screen and (max-width: 1024px) {
+  .home-aboutus-link {
+    left: 43%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home-aboutus-link {
+    bottom: 42%;
+    width: 6em;
+    height: 6rem;
+  }
+  .home-logo-food,
+  .home-logo-workshop {
+    width: 5rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .home-section-container {
     height: auto;
   }
-  .home-button-container{
+  .home-button-container {
     top: 1%;
   }
-  .home-button-container p{
-    font-size: .8rem;
+  .home-button-container p {
+    font-size: 0.8rem;
   }
-  .home-dropdown-button{
-    font-size: .8rem;
+  .home-dropdown-button {
+    font-size: 0.8rem;
   }
- .home-section-workshop,.home-section-food{
-   padding: 4rem 1rem;
- }
- .home-logo-food,.home-logo-workshop{
-  width:5rem;
-}
- .home-aboutus-link{
-  bottom: 36%;
-  width: 6rem;
-  height: 6rem;
-}
+  .home-section-workshop,
+  .home-section-food {
+    padding: 4rem 1rem;
+  }
+  .home-section-title-workshop,
+  .home-section-title-food {
+    font-size: 1.8rem;
+  }
+  .home-logo-food,
+  .home-logo-workshop {
+    width: 4rem;
+  }
+  .home-aboutus-link {
+    bottom: 47%;
+  }
 }
 
-@media only screen and (max-width : 768px){
-
-  .home-aboutus-link{
-    bottom: 35%;
-    width: 5rem;
-    height: 5rem;
+@media only screen and (max-width: 320px){
+  .home-aboutus-link {
+    bottom:48%;
+    width: 4em;
+    height: 4rem;
   }
-  .home-logo-food,.home-logo-workshop{
-    width:4rem;
+  .home-logo-food,
+  .home-logo-workshop {
+    width: 3rem;
   }
-
 }

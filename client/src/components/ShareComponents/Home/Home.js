@@ -33,7 +33,7 @@ function Home() {
       <div className="home-section-container">
         <div className="home-section-workshop">
           <h1 className="home-section-title-workshop">
-           Get to know more <br></br>About Our culture Workshop
+           Get to know more <br></br>About Our culture workshop
           </h1>
           <Link to="/workshop" className="home-workshop-link">
             Discover more
