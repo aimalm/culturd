@@ -26,7 +26,6 @@ function SubNavW() {
                 <LinkContainer to="/workshop/Indonesia"><NavDropdown.Item className="nav-color" to="/food" >Indonesia</NavDropdown.Item></LinkContainer>
              </NavDropdown>
                 <LinkContainer to="/workshop/about_us"><Nav.Link className="nav-color">About Us</Nav.Link></LinkContainer>
-                <LinkContainer to="/workshop/bookform"><Nav.Link className="nav-color">BOOK NOW</Nav.Link></LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
