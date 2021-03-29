@@ -3,6 +3,12 @@
   top: 5%;
   right: 3%;
 }
+.home-button-container p {
+  background: var(--light-turquiose);
+  padding: .5rem;
+
+
+}
 .home-dropdown-button {
   color: white;
   background: transparent;
@@ -15,12 +21,14 @@
 }
 
 .home-login-link,
-.home-reg-link {
+.home-reg-link, .home-about-us-link {
   color: white;
   transition: all 0.2s ease-in-out;
 }
+
 .home-login-link:hover,
-.home-reg-link:hover {
+.home-reg-link:hover,
+.home-about-us-link:hover {
   text-decoration: none;
   color: var(--dark-carol);
 }
@@ -165,11 +173,65 @@
   margin: 0 auto;
 }
 
-
 .food-img{
     width: 67%;
     margin: 0 auto;
   }
 
-
+@media only screen and (max-width : 768px){
   
+  .home-section-container{
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+  .home-section-workshop,.home-section-food{
+    padding: 4rem 1rem;
+  }
+  .home-aboutus-link{
+    left: 5%;
+    bottom: 40%;
+    width: 9rem;
+    height: 9rem;
+  }
+  .home-logo-food,.home-logo-workshop{
+    width:7rem;
+  }
+
+}
+
+@media only screen and (max-width : 426px){
+  .home-section-container{
+    height: auto;
+  }
+  .home-button-container{
+    top: 1%;
+  }
+  .home-button-container p{
+    font-size: .8rem;
+  }
+  .home-dropdown-button{
+    font-size: .8rem;
+  }
+ .home-section-workshop,.home-section-food{
+   padding: 4rem 1rem;
+ }
+ .home-logo-food,.home-logo-workshop{
+  width:5rem;
+}
+ .home-aboutus-link{
+  bottom: 36%;
+  width: 6rem;
+  height: 6rem;
+}
+}
+
+@media only screen and (max-width : 376px){
+  .home-aboutus-link{
+    bottom: 35%;
+    width: 5rem;
+    height: 5rem;
+  }
+  .home-logo-food,.home-logo-workshop{
+    width:4rem;
+  }
+}
