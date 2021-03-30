@@ -12,15 +12,15 @@ function Home() {
     <div>
       <div className="home-button-container">
         <button className="home-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-          Login <AiFillCaretDown />
+          Register <AiFillCaretDown />
         </button>
         {showLogin ? (
           <div className="home-dropdown-container">
-            <Link to="/" className="home-login-link">
-              <p>Login</p>
+            <Link to="/login" className="home-login-link">
+              <p>Log In</p>
             </Link>
-            <Link to="/" className="home-reg-link">
-              <p>Register</p>
+            <Link to="/signup" className="home-reg-link">
+              <p>Sign Up</p>
             </Link>
             <Link to="/contact_us" className="home-about-us-link">
               <p>Contact Us</p>
@@ -52,6 +52,7 @@ function Home() {
           <img className="home-logo-workshop" src={logoWorkshop} alt="" />
         </Link>
       </div>
+      
     </div>
   );
 }

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-container, .signup-container {
+    background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
+    height: 100vh;
+}
+
+.reg-button-container {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+
+.reg-button-container p {
+    background: #FFFFFF;
+    padding: 0.5rem;
+}
+
+.reg-dropdown-button {
+    color: var(--carol);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--carol);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.reg-login-link,
+.reg-signup-link,
+.reg-contact-us-link {
+    color: var(--carol);
+    transition: all 0.2s ease-in-out;
+}
+
+.reg-login-link:hover,
+.reg-signup-link:hover,
+.reg-contact-us-link:hover {
+    text-decoration: none;
+    color: #e27458;
+}
+
+.reg-dropdown-container p {
+    margin: 0;
+    font-family: var(--font);
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.log-form-container {
+    display: flex;
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
+}
+
+.form-container-1 {
+    width: 50%;
+    background-color: var(--light-turquiose);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+}
+
+.form-container-2 {
+    width: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-link {
+    text-decoration: none !important;
+}
+
+.reg-link:hover {
+    color: #FFFFFF;
+}
+
+#password-link {
+    font-size: 13px;
+    text-decoration: underline;
+    color: #808080;
+}
+
+#password-link:hover {
+    color: #FF0000;
+}
+
+form > h4 {
+    text-align: center;
+}
+
+.form-group > label {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.form-group > input, .submit-btn {
+    width: 200px;
+}
+
+.submit-btn {
+    background-color: var(--carol);
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+}
+
+.submit-btn:hover {
+    background-color: #e27458;
+    color: #FFFFFF;
+}
+
+.signup-container {
+    height: 118vh;
+}
+
+.sign-form-container {
+    display: flex;
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    z-index: 1;
+    top: 59%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
+}
