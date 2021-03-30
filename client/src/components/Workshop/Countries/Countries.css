@@ -5,8 +5,9 @@
 }
 
 .country-container {
-    margin: 85px 15px 80px 40px;
+    margin: 85px;
     padding-top: 10px;
+    width: 90%;
 }
 
 .workshop-info > * {
@@ -19,9 +20,9 @@
     margin-bottom: 15px;
 }
 
-.ticket-info > * {
+/* .ticket-info > * {
     margin-right: 20px;
-}
+} */
 
 .info-icon {
     color: var(--carol);
