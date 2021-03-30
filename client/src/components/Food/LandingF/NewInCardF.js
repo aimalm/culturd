@@ -13,7 +13,7 @@ function NewInCardF({ setSelectedDish }) {
 
   return (
     <div className="food-new">
-      <h3 className="food-title-new">New In!</h3>
+      <h3 className="food-title-new">New In</h3>
       <div className="breakline"></div>
       <div className="random-container">
         {newInArray.map((dish) => (

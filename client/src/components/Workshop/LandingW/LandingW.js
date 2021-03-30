@@ -1,16 +1,14 @@
 import React from 'react'
 import './LandingW.css'
 import { Link } from "react-router-dom";
-import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
-import image1 from '../image/1.jpg'
-import image2 from '../image/2.jpg'
-import image3 from '../image/3.jpg'
-import image4 from '../image/4.jpg'
 import cook from '../image/cooking.png'
 import dance from '../image/dance.png'
 import art from '../image/art.png'
 import SectionGrid from './SectionGrid';
+import ContactForm from './ContactForm';
+import CarouselW from './CarouselW';
+
 
 
 function LandingW() {
@@ -27,17 +25,8 @@ function LandingW() {
     </div>
 
     <SectionGrid/>
-    <div className="carousel">
-     <AliceCarousel autoPlay autoPlayInterval="1000">
-      <img src={image1} className="sliderimg" alt=""/>
-      <img src={image2} className="sliderimg" alt=""/>
-      <img src={image3} className="sliderimg" alt=""/>
-      <img src={image4} className="sliderimg" alt=""/>
-
-    </AliceCarousel>
-    </div>
-  
-    
+    <CarouselW/>
+    <ContactForm/>
    <div className="wrapper-service__home">
      <h1 className="h1-icon">Pick your choice!</h1>
    <section className="header-extra-div margin">

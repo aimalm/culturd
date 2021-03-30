@@ -6,7 +6,7 @@ import AddCircleSharpIcon from "@material-ui/icons/AddCircleSharp";
 import StarIcon from "@material-ui/icons/Star";
 
 function ProductListF({ setSelectedDish }) {
-  const [filteredDish, setFilteredDish] = useState(FoodTable);
+  const [filteredDish, setFilteredDish] = useState();
   const [addAnimationClass, setAddAnimationClass] = useState(false);
 
   const selectHandler = (dishID) => {

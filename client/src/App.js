@@ -40,20 +40,20 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
 
-  const [database, setDatabase] = useState([]);
+  const [dishData, setDishData] = useState([]);
 
-  console.log(database)
+  console.log(dishData.map(data=>data.dishName))
 
-  const getData = async () =>{
-    const response = await Axois.get("http://localhost:5000/culturd_api/Em3Wi5va8is15/event").catch((err)=>console.log(err))
+  const getFoodData = async () =>{
+    const response = await Axois.get("http://localhost:5000/culturd_api/Em3Wi5va8is15/food").catch((err)=>console.log(err))
     
     console.log(response)
-    if(response && response.data) setDatabase(response.data)
+    if(response && response.data) setDishData(response.data)
   
   }
 
   useEffect(() => {
-   getData()
+    getFoodData()
   }, [])
 
   
@@ -158,6 +158,13 @@ function App() {
             <AboutUs />
             <Footer />
           </Route>
+
+          <Route path="/about_us">
+            <MainNav />
+            <AboutUs />
+            <Footer />
+          </Route>
+
 
           <Route path="/food">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />

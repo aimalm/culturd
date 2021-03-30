@@ -13,7 +13,7 @@ function HongKong() {
     return (
         <div className="country-container">
             <div className="workshop-info">
-                <h2>Chinese Cooking Workshop</h2>
+                <h2>Chinese Workshops</h2>
                 <div className="ticket-info">
                     <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
                     <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
