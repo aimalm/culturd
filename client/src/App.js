@@ -127,7 +127,17 @@ function App() {
             <ProductListF  setSelectedDish={setSelectedDish} />
           </Route>
 
-          <Route path="/contact_us">
+          <Route path="/login">
+            <LogIn />
+            <Footer />
+          </Route>
+
+          <Route path="/signup">
+            <SignUp />
+            <Footer />
+          </Route>
+
+          <Route path="/about_us">
             <MainNav />
             <AboutUs />
             <Footer />

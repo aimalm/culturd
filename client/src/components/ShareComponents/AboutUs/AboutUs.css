@@ -142,8 +142,12 @@
 }
 .sec-title .title {
     position: relative;
-    color: #49d7c4;
-    font-size: 3usu8px;
+    font-family: 'Train One', cursive;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 38px;
     font-weight: 700;
     padding-right: 50px;
     margin-bottom: 15px;
