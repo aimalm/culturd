@@ -1,44 +1,47 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import "./ProductListF.css";
-import { FoodTable } from "../Template";
 import { Link } from "react-router-dom";
 import AddCircleSharpIcon from "@material-ui/icons/AddCircleSharp";
 import StarIcon from "@material-ui/icons/Star";
 
-function ProductListF({ setSelectedDish }) {
-  const [filteredDish, setFilteredDish] = useState();
+function ProductListF({ setSelectedDish, dishData }) {
+  const [filteredDish, setFilteredDish] = useState(dishData);
   const [addAnimationClass, setAddAnimationClass] = useState(false);
+ 
+  useEffect(() => {
+    setFilteredDish(dishData)
+  }, [dishData])
 
   const selectHandler = (dishID) => {
-    setSelectedDish(FoodTable.filter((item) => item.id === dishID));
+    setSelectedDish(dishData.filter((item) => item._id === dishID));
   };
 
   const filterHandler = (e) => {
     switch (e.target.value) {
       case "main":
-        setFilteredDish(FoodTable.filter((food) => food.category === "main"));
+        setFilteredDish(dishData.filter((food) => food.category === "main"));
         toggleClass()
         break;
 
       case "side":
-        setFilteredDish(FoodTable.filter((food) => food.category === "side"));
+        setFilteredDish(dishData.filter((food) => food.category === "side"));
         toggleClass()
         break;
 
       case "dessert":
         setFilteredDish(
-          FoodTable.filter((food) => food.category === "dessert")
+          dishData.filter((food) => food.category === "dessert")
         );
         toggleClass()
         break;
 
       case "veg":
-        setFilteredDish(FoodTable.filter((food) => food.vegetarian));
+        setFilteredDish(dishData.filter((food) => food.vegetarian));
         toggleClass()
         break;
 
       default:
-        setFilteredDish(FoodTable);
+        setFilteredDish(dishData);
         break;
     }
 
@@ -98,11 +101,11 @@ function ProductListF({ setSelectedDish }) {
      
 
         {filteredDish.map((dish) => (
-          <div className="food-card"  key={dish.id}>
+          <div className="food-card"  key={dish._id}>
             <Link
              
-              to={"/food/products/" + dish.id}
-              onClick={() => selectHandler(dish.id)}
+              to={"/food/products/" + dish._id}
+              onClick={() => selectHandler(dish._id)}
             >
               <div className="food-card-img">
                 <img className="product-image" src={dish.imageUrl} alt="" />

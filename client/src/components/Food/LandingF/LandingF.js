@@ -12,6 +12,7 @@ function LandingF({
   setSelectedDish,
   searchResult,
   setSearchResult,
+  dishData
 }) {
 
 
@@ -28,7 +29,7 @@ function LandingF({
       </svg>
 
       {/* new food post start here */}
-      <NewInCardF setSelectedDish={setSelectedDish} />
+      <NewInCardF setSelectedDish={setSelectedDish}  dishData={dishData} />
 
       {/* How it works start here */}
       <h3 className="how-it-works-title">How it works?</h3>

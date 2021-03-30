@@ -10,20 +10,19 @@ import { Link } from "react-router-dom";
 
 function ProductDetailsF({
   selectedDish,
-  setSelectedDish,
   shoppingCart,
   setShoppingCart,
   viewingCart,
   setViewingCart,
 }) {
   const addCart = (dishID) => {
-    let dishIDArray = shoppingCart.map((food) => food.id);
+    let dishIDArray = shoppingCart.map((food) => food._id);
 
     if (dishIDArray.includes(dishID) === true) {
       let newArray = [...shoppingCart];
 
       newArray.forEach((item) => {
-        if (item.id === dishID) {
+        if (item._id === dishID) {
           item.quantity++;
         }
       });
@@ -65,7 +64,7 @@ function ProductDetailsF({
         {selectedDish.length > 0 ? (
           <div>
             {selectedDish.map((dish) => (
-              <div key={dish.id} className="products-container">
+              <div key={dish._id} className="products-container">
                 <div className="products-info">
                   <img
                     className="products-img-food"
@@ -111,7 +110,7 @@ function ProductDetailsF({
                 </div>
                 <button
                   className="home-food-link products-add-button"
-                  onClick={() => addCart(dish.id)}
+                  onClick={() => addCart(dish._id)}
                 >
                  Add to cart
                 </button>

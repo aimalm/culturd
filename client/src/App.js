@@ -42,12 +42,12 @@ function App() {
 
   const [dishData, setDishData] = useState([]);
 
-  console.log(dishData.map(data=>data.dishName))
+  // console.log(dishData)
+  // console.log(dishData.map(data=>data.dishName))
 
   const getFoodData = async () =>{
     const response = await Axois.get("http://localhost:5000/culturd_api/Em3Wi5va8is15/food").catch((err)=>console.log(err))
     
-    console.log(response)
     if(response && response.data) setDishData(response.data)
   
   }
@@ -55,6 +55,9 @@ function App() {
   useEffect(() => {
     getFoodData()
   }, [])
+
+  console.log(dishData)
+
 
   
   const LSKEY = "culturd";
@@ -128,6 +131,7 @@ function App() {
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
             <ProductDetailsF
+            dishData={dishData}
               selectedDish={selectedDish}
               setSelectedDish={setSelectedDish}
               shoppingCart={shoppingCart}
@@ -140,7 +144,7 @@ function App() {
 
           <Route path="/food/product_list">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
-            <ProductListF  setSelectedDish={setSelectedDish} />
+            <ProductListF  dishData={dishData} setSelectedDish={setSelectedDish} />
           </Route>
 
           <Route path="/login">
@@ -173,10 +177,7 @@ function App() {
             searchResult={searchResult}
             setSearchResult={setSearchResult}
               setSelectedDish={setSelectedDish}
-              // selectedDish={selectedDish}
-              // shoppingCart={shoppingCart}
-              // setShoppingCart={setShoppingCart}
-              // viewingCart={viewingCart}
+              dishData={dishData}
             />
 
             <Footer />

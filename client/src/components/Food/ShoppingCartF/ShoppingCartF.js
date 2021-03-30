@@ -9,7 +9,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
   const subTotal = shoppingCart.reduce((a, b) => (a + b.price) * b.quantity, 0);
 
   const deleteFromCart = (id) => {
-    let newShoppingCart = shoppingCart.filter((food) => food.id !== id);
+    let newShoppingCart = shoppingCart.filter((food) => food._id !== id);
     setShoppingCart(newShoppingCart);
   };
 
@@ -18,7 +18,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
       case "plus":
         const plusArray = [...shoppingCart];
         shoppingCart.forEach((item) => {
-          if (item.id === id) {
+          if (item._id === id) {
             item.quantity++;
           }
         });
@@ -29,10 +29,10 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
         let minusArray = [...shoppingCart];
 
         shoppingCart.forEach((item) => {
-          if (item.id === id && item.quantity > 1) {
+          if (item._id === id && item.quantity > 1) {
             item.quantity--;
             setShoppingCart(minusArray);
-          } else if( item.id === id && item.quantity === 1){
+          } else if( item._id === id && item.quantity === 1){
             deleteFromCart(id);
           }
         });
@@ -59,7 +59,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
       ) : (
         <div>
           {shoppingCart.map((food) => (
-            <div key={food.id} className="shopping-cart-item">
+            <div key={food._id} className="shopping-cart-item">
               <img className="cart-img" src={food.imageUrl} alt="" />
               <div className="cart-food-info">
                 <h4>{food.dishName}</h4>
@@ -75,7 +75,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
               <div className="cart-quantity">
                 <button
                   className="cart-plus-button"
-                  onClick={(e) => changeQuanityHandler(e, food.id)}
+                  onClick={(e) => changeQuanityHandler(e, food._id)}
                   value="plus"
                 >
                   <BsPlus />
@@ -89,7 +89,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
                 />
                 <button
                   className="cart-minus-button"
-                  onClick={(e) => changeQuanityHandler(e, food.id)}
+                  onClick={(e) => changeQuanityHandler(e, food._id)}
                   value="minus"
                 >
                   <BiMinus />
@@ -97,7 +97,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
               </div>
               <button
                 className="cart-delete-button"
-                onClick={() => deleteFromCart(food.id)}
+                onClick={() => deleteFromCart(food._id)}
               >
                 Delete
               </button>
