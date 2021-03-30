@@ -12,30 +12,32 @@ import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 function Congo() {
     return (
         <div className="country-container">
-            <div className="workshop-info">
-                <h2>Congolese Workshops</h2>
-                <div className="ticket-info">
-                    <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
-                    <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
-                </div>
-            </div>
-            <div className="workshop-container">
-                <div className="inner-container">
-                    <ImageCards 
-                        imageSrc={CongoFood} 
-                        foodDes_1={CongoFoodInfo[0].description}
-                        foodTit_1={CongoFoodInfo[0].title}
-                        foodDes_2={CongoFoodInfo[1].description}
-                        foodTit_2={CongoFoodInfo[1].title}
-                        foodDes_3={CongoFoodInfo[2].description}
-                        foodTit_3={CongoFoodInfo[2].title}
-                    />
-                    <div className="accordeon-container">
-                        <Accordeon content={CongoWorkshopInfo}/>
+            <div className="wrapper">
+                <div className="workshop-info">
+                    <h1>Congolese Workshops</h1>
+                    <div className="ticket-info">
+                        <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
+                        <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
                     </div>
                 </div>
-                <div className="inner-container">
-                    <WorkshopDetails />
+                <div className="workshop-container">
+                    <div className="inner-container-1">
+                        <ImageCards 
+                            imageSrc={CongoFood} 
+                            foodDes_1={CongoFoodInfo[0].description}
+                            foodTit_1={CongoFoodInfo[0].title}
+                            foodDes_2={CongoFoodInfo[1].description}
+                            foodTit_2={CongoFoodInfo[1].title}
+                            foodDes_3={CongoFoodInfo[2].description}
+                            foodTit_3={CongoFoodInfo[2].title}
+                        />
+                        <div className="accordeon-container">
+                            <Accordeon content={CongoWorkshopInfo}/>
+                        </div>
+                    </div>
+                    <div className="inner-container-2">
+                        <WorkshopDetails />
+                    </div>
                 </div>
             </div>
         </div>

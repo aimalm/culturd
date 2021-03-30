@@ -12,30 +12,32 @@ import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 function HongKong() {
     return (
         <div className="country-container">
-            <div className="workshop-info">
-                <h2>Chinese Workshops</h2>
-                <div className="ticket-info">
-                    <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
-                    <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
-                </div>
-            </div>
-            <div className="workshop-container">
-                <div className="inner-container">
-                    <ImageCards 
-                        imageSrc={HongFood} 
-                        foodDes_1={HongFoodInfo[0].description}
-                        foodTit_1={HongFoodInfo[0].title}
-                        foodDes_2={HongFoodInfo[1].description}
-                        foodTit_2={HongFoodInfo[1].title}
-                        foodDes_3={HongFoodInfo[2].description}
-                        foodTit_3={HongFoodInfo[2].title}
-                    />
-                    <div className="accordeon-container">
-                        <Accordeon content={HongWorkshopInfo}/>
+            <div className="wrapper">
+                <div className="workshop-info">
+                    <h1>Chinese Workshops</h1>
+                    <div className="ticket-info">
+                        <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
+                        <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
                     </div>
                 </div>
-                <div className="inner-container">
-                    <WorkshopDetails />
+                <div className="workshop-container">
+                    <div className="inner-container-1">
+                        <ImageCards 
+                            imageSrc={HongFood} 
+                            foodDes_1={HongFoodInfo[0].description}
+                            foodTit_1={HongFoodInfo[0].title}
+                            foodDes_2={HongFoodInfo[1].description}
+                            foodTit_2={HongFoodInfo[1].title}
+                            foodDes_3={HongFoodInfo[2].description}
+                            foodTit_3={HongFoodInfo[2].title}
+                        />
+                        <div className="accordeon-container">
+                            <Accordeon content={HongWorkshopInfo}/>
+                        </div>
+                    </div>
+                    <div className="inner-container-2">
+                        <WorkshopDetails />
+                    </div>
                 </div>
             </div>
         </div>
