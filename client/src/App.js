@@ -32,13 +32,29 @@ import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 
 
-
+import Axois from "axios"
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
+
+  const [database, setDatabase] = useState([]);
+
+  console.log(database)
+
+  const getData = async () =>{
+    const response = await Axois.get("http://localhost:5000/culturd_api/Em3Wi5va8is15/event").catch((err)=>console.log(err))
+    
+    console.log(response)
+    if(response && response.data) setDatabase(response.data)
+  
+  }
+
+  useEffect(() => {
+   getData()
+  }, [])
 
   
   const LSKEY = "culturd";

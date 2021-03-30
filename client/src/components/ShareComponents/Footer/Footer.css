@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--light-beige);
+  background-color: #f3f3f3;
   padding-bottom: 2rem;
   padding-top: .5rem;
   display: flex;
@@ -16,7 +16,7 @@
   padding-top: 1rem;
 }
 .footer-copyright {
-  background-color: var(--light-beige);
+  background-color: var(--dark-carol);
   margin: 0;
   font-family: var(--font);
   font-size: 0.8rem;
@@ -24,7 +24,7 @@
 }
 .footer-icon,
 .footer-copyright {
-  color: var(--dark-beige);
+  color: var(--light-beige);
 }
 .footer-icon:hover {
   color: var(--beige);
@@ -37,14 +37,6 @@
   font-size: 5rem;
   line-height: .5;
 }
-
-
-
-
-/* .footer-line-img{
-  padding-top: 1rem;
-  width: 3rem;
-} */
 
 @media only screen and (max-width: 376px) {
     .footer{
