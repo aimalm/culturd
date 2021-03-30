@@ -109,9 +109,13 @@ form > h4 {
     margin-bottom: 0px;
 }
 
-.form-group > input, .submit-btn {
+.input-fields, .submit-btn {
     width: 200px;
     height: 30px !important;
+}
+
+.form-group > input:focus {
+    border-color: var(--light-turquiose);
 }
 
 .submit-btn {
