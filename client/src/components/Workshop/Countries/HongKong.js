@@ -4,8 +4,8 @@ import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
 import ImageCards from './compCountries/ImageCards/ImageCards';
 import Accordeon from './compCountries/Accordion/Accordion';
-import HongFood from '../image/hongkong.jpg';
-import {HongFoodInfo} from './compCountries/ImageCards/FoodInfo';
+import InProgress from '../image/inProgress.png';
+import {HongWorkshop} from './compCountries/ImageCards/WorkshopDescription';
 import { HongWorkshopInfo } from './compCountries/Accordion/WorkshopInfo';
 import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 
@@ -23,13 +23,13 @@ function HongKong() {
                 <div className="workshop-container">
                     <div className="inner-container-1">
                         <ImageCards 
-                            imageSrc={HongFood} 
-                            foodDes_1={HongFoodInfo[0].description}
-                            foodTit_1={HongFoodInfo[0].title}
-                            foodDes_2={HongFoodInfo[1].description}
-                            foodTit_2={HongFoodInfo[1].title}
-                            foodDes_3={HongFoodInfo[2].description}
-                            foodTit_3={HongFoodInfo[2].title}
+                            imageSrc={InProgress} 
+                            foodDes_1={HongWorkshop[0].description}
+                            foodTit_1={HongWorkshop[0].title}
+                            foodDes_2={HongWorkshop[1].description}
+                            foodTit_2={HongWorkshop[1].title}
+                            foodDes_3={HongWorkshop[2].description}
+                            foodTit_3={HongWorkshop[2].title}
                         />
                         <div className="accordeon-container">
                             <Accordeon content={HongWorkshopInfo}/>
