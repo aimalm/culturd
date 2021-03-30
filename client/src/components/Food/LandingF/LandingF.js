@@ -10,16 +10,16 @@ import NewInCardF from "./NewInCardF";
 
 function LandingF({
   setSelectedDish,
-  searchResult,
-  setSearchResult,
+  
   dishData
 }) {
+
 
 
   return (
     <div className="food-home">
       {/* search for food start here */}
-      <SearchF setSelectedDish={setSelectedDish} searchResult={searchResult} setSearchResult={setSearchResult}/>  
+      <SearchF setSelectedDish={setSelectedDish}   dishData={dishData}/>  
 
       <svg className="food-home-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path

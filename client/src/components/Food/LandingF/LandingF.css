@@ -56,12 +56,12 @@
   color: var(--yellowish);
 }
 .search-suggestion {
-  border: 0.5px solid var(--carol);
+  border: 0.5px solid var(--greenish);
   border-top: none;
   padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   width: 100%;
-  animation: slidein 1.3s 1;
+  animation: slidein 1.3s 1 ease-in-out;
   justify-self: center;
   text-transform: capitalize;
   border-radius: 0px 0px 30px 30px;

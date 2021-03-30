@@ -38,7 +38,7 @@ function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
-  const [searchResult, setSearchResult] = useState([]);
+  // const [searchResult, setSearchResult] = useState([]);
   const [dishData, setDishData] = useState([]);
 
 
@@ -170,8 +170,8 @@ function App() {
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
 
             <LandingF
-            searchResult={searchResult}
-            setSearchResult={setSearchResult}
+            // searchResult={searchResult}
+            // setSearchResult={setSearchResult}
               setSelectedDish={setSelectedDish}
               dishData={dishData}
             />
