@@ -22,7 +22,7 @@ function SignUp() {
                     <Link to="/signup" className="reg-signup-link">
                     <p>Sign Up</p>
                     </Link>
-                    <Link to="/" className="reg-contact-us-link">
+                    <Link to="/contact_us" className="reg-contact-us-link">
                     <p>Contact Us</p>
                     </Link>
                 </div>
