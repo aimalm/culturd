@@ -60,12 +60,14 @@
   border-top: none;
   padding-bottom: 0.5rem;
   padding-left: 1.5rem;
-  width: 100%;
+  width: 33%;
   animation: slidein 1.3s 1 ease-in-out;
   justify-self: center;
   text-transform: capitalize;
   border-radius: 0px 0px 30px 30px;
   text-align: left;
+  position:absolute;
+  font-size: .8rem;
 }
 .search-suggestion a {
   text-decoration: none;
@@ -250,23 +252,14 @@
 @media only screen and (max-width : 1080px){
   
   .how-it-works{
-    grid-template-columns: 100% ;
-    grid-template-rows: 25% 25% 25%;
-    height: 700px;
-    padding: 2rem;
+    width: 90%;
+    height: auto;
     margin: 0 auto;
   }
-  .step-one,
-.step-three
-{
-  justify-self: start;
-}
-.step-three{
-  margin: 0 9rem;
-}
-.step-two{
-  justify-self: end;
-}
+  .step-one,.step-two,.step-three{
+    border: none;
+    
+  }
 }
 @media only screen and (max-width : 768px){
   .search-bar{
@@ -279,6 +272,9 @@
   .home-search-container{
     padding: 1rem;
   }
+  .search-suggestion{
+    width: 55%;
+  }
   
 
 
@@ -286,17 +282,16 @@
     font-size: 1rem;
   }
  
-.how-it-works{
-
-  grid-template-rows: 33% 33% 33%;
-  height: auto;
- 
-}
+  .how-it-works{
+    grid-template-rows: auto;
+    height: auto;
+   
+  }
 
 
 .step-one,
 .step-two, .step-three{
-  margin: 2rem 0;
+  margin: 1rem 0;
   border: none;
   height: auto;
   width: auto;
@@ -309,7 +304,7 @@
     font-size: 1.5rem;
   }
   .home-search-container{
-    margin-bottom: -3rem;
+    margin-bottom: -1rem;
   }
   .random-container {
     grid-template-columns: 50% 50% ;
@@ -321,15 +316,15 @@
   .food-title-new{
     font-size:1.5rem;
   }
-  .how-it-works{
-    grid-template-rows: auto;
-    height: auto;
-   
-  }
+ 
   .how-it-works-title{
     padding:  3rem 0;
     text-align: center;
     
+  }
+  .how-it-works{
+    grid-template-columns: 100%;
+    width: 90%;
   }
  
 }

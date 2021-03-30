@@ -8,7 +8,6 @@ function SearchF({ setSelectedDish, dishData }) {
   const [isSearching, setIsSearching] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
 
-
   const searchHandler = (e) => {
     e.preventDefault();
 
@@ -19,13 +18,12 @@ function SearchF({ setSelectedDish, dishData }) {
     let searchingArray = dishData.filter((food) =>
       food.keywords.includes(foodName)
     );
-    
+
     setSearchResult(searchingArray);
     setIsSearching(true);
 
     setTimeout(() => {
       setIsSearching(false);
-
     }, 3000);
   };
 
@@ -51,6 +49,7 @@ function SearchF({ setSelectedDish, dishData }) {
           <SearchIcon className="search-button-icon" />
         </button>
 
+        <div className="search-result-display">
         {searchResult.length > 0 ? (
           <div className="search-suggestion">
             {searchResult.map((food) => (
@@ -69,11 +68,12 @@ function SearchF({ setSelectedDish, dishData }) {
 
         {isSearching && searchResult.length == 0 ? (
           <div className="search-suggestion">
-           <p>no matching dish yet</p>
+            <p>no matching dish yet</p>
           </div>
         ) : (
           ""
         )}
+        </div>
       </form>
     </div>
   );
