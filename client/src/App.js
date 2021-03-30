@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-
+import { instance } from "./components/Axois/Axois";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // share components
@@ -22,7 +22,6 @@ import Congo from "./components/Workshop/Countries/Congo";
 import HongKong from "./components/Workshop/Countries/HongKong";
 import Indonesia from "./components/Workshop/Countries/Indonesia";
 
-
 //food components
 import ProductDetailsF from "./components/Food/ProductDetailsF/ProductDetailsF";
 import SubnavF from "./components/Food/SubNavF/SubNavF";
@@ -31,31 +30,29 @@ import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 
-import {instance} from "./components/Axois/Axois"
-
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
-  // const [searchResult, setSearchResult] = useState([]);
   const [dishData, setDishData] = useState([]);
 
+  //fetch get from database
+  const getFoodData = async () => {
+    const response = await instance
+      .get("/food")
+      .catch((err) => console.log(err));
 
-  const getFoodData = async () =>{
-    const response = await instance.get("/food")
-                      .catch((err)=>console.log(err))
-    
-    if(response && response.data){setDishData(response.data)}
-  }
+    if (response && response.data) {
+      setDishData(response.data);
+    }
+  };
 
   useEffect(() => {
-    getFoodData()
-  }, [])
+    getFoodData();
+  }, []);
 
-
-
-  
+  // save shopping cart to localStorage
   const LSKEY = "culturd";
   useEffect(() => {
     let localShoppingCart = JSON.parse(localStorage.getItem(LSKEY));
@@ -63,7 +60,6 @@ function App() {
       setShoppingCart(localShoppingCart);
     }
   }, []);
-
   useEffect(() => {
     window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
   }, [shoppingCart]);
@@ -114,33 +110,43 @@ function App() {
           </Route>
 
           <Route path="/food/shopping_cart">
-            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
-            <ShoppingCartF shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>
+            <SubnavF
+              shoppingCart={shoppingCart}
+            />
+            <ShoppingCartF
+              shoppingCart={shoppingCart}
+              setShoppingCart={setShoppingCart}
+            />
           </Route>
 
           <Route path="/food/profile">
-            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
+            <SubnavF
+              shoppingCart={shoppingCart}
+            />
             <ProfileF />
           </Route>
 
           <Route path="/food/products">
-            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
+            <SubnavF
+              shoppingCart={shoppingCart}
+            />
 
             <ProductDetailsF
-            dishData={dishData}
               selectedDish={selectedDish}
-              setSelectedDish={setSelectedDish}
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
               viewingCart={viewingCart}
               setViewingCart={setViewingCart}
             />
-            <Footer/>
+            <Footer />
           </Route>
 
           <Route path="/food/product_list">
-            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart}/>
-            <ProductListF  dishData={dishData} setSelectedDish={setSelectedDish} />
+            <SubnavF shoppingCart={shoppingCart}/>
+            <ProductListF
+              dishData={dishData}
+              setSelectedDish={setSelectedDish}
+            />
           </Route>
 
           <Route path="/login">
@@ -165,17 +171,9 @@ function App() {
             <Footer />
           </Route>
 
-
           <Route path="/food">
-            <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
-
-            <LandingF
-            // searchResult={searchResult}
-            // setSearchResult={setSearchResult}
-              setSelectedDish={setSelectedDish}
-              dishData={dishData}
-            />
-
+            <SubnavF shoppingCart={shoppingCart}/>
+            <LandingF setSelectedDish={setSelectedDish} dishData={dishData} />
             <Footer />
           </Route>
 
@@ -186,12 +184,9 @@ function App() {
           </Route>
 
           <Route path="/">
-            {/* change the Nav to Nav_Logout when the user is login */}
-            {/* <MainNav /> */}
-            <Home/>
+            <Home />
             <Footer />
           </Route>
-
         </Switch>
       </Router>
     </div>

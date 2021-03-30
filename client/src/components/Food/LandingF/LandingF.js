@@ -10,28 +10,26 @@ import NewInCardF from "./NewInCardF";
 
 function LandingF({
   setSelectedDish,
-  
-  dishData
+  dishData,
 }) {
-
-
-
   return (
     <div className="food-home">
-      {/* search for food start here */}
-      <SearchF setSelectedDish={setSelectedDish}   dishData={dishData}/>  
 
-      <svg className="food-home-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <SearchF setSelectedDish={setSelectedDish} dishData={dishData} />
+
+      <svg
+        className="food-home-background"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
         <path
           fill="#f5d98e"
           d="M0,224L720,288L1440,192L1440,320L720,320L0,320Z"
         ></path>
       </svg>
 
-      {/* new food post start here */}
-      <NewInCardF setSelectedDish={setSelectedDish}  dishData={dishData} />
+      <NewInCardF setSelectedDish={setSelectedDish} dishData={dishData} />
 
-      {/* How it works start here */}
       <h3 className="how-it-works-title">How it works?</h3>
 
       <CarouselF />
