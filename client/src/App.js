@@ -31,32 +31,28 @@ import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 
+import {instance} from "./components/Axois/Axois"
 
-import Axois from "axios"
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
-
   const [dishData, setDishData] = useState([]);
 
-  // console.log(dishData)
-  // console.log(dishData.map(data=>data.dishName))
 
   const getFoodData = async () =>{
-    const response = await Axois.get("http://localhost:5000/culturd_api/Em3Wi5va8is15/food").catch((err)=>console.log(err))
+    const response = await instance.get("/food")
+                      .catch((err)=>console.log(err))
     
-    if(response && response.data) setDishData(response.data)
-  
+    if(response && response.data){setDishData(response.data)}
   }
 
   useEffect(() => {
     getFoodData()
   }, [])
 
-  console.log(dishData)
 
 
   
