@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--light-beige);
+  background-color:#dfd0c1;
   padding-bottom: 2rem;
   padding-top: .5rem;
   display: flex;
@@ -16,7 +16,7 @@
   padding-top: 1rem;
 }
 .footer-copyright {
-  background-color: var(--light-beige);
+  color: var(--dark-turquiose);
   margin: 0;
   font-family: var(--font);
   font-size: 0.8rem;
@@ -24,18 +24,18 @@
 }
 .footer-icon,
 .footer-copyright {
-  color: var(--dark-beige);
+  color: var(--dark-turquiose);
 }
 .footer-icon:hover {
-  color: var(--beige);
+  color:var(--carol) ;
 }
 .footer-icon:focus {
   outline:none;
 }
 .footer-line {
-  color: var(--dark-turquiose);
+  color:var(--carol) ;
   font-size: 5rem;
-  line-height: .5;
+  line-height: 1;
 }
 
 
