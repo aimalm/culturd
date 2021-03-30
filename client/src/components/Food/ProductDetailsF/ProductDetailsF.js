@@ -35,7 +35,7 @@ function ProductDetailsF({
     setViewingCart(true);
     setTimeout(() => {
       setViewingCart(false);
-    }, 3000);
+    }, 4000);
   };
 
   return (
@@ -44,7 +44,7 @@ function ProductDetailsF({
       {viewingCart ? (
         <div className="add-cart-alert">
           <p>
-            {" "}
+            
             <CgArrowLongUp />
             The dish is now in the cart! <CgArrowLongUp />
           </p>
@@ -113,13 +113,15 @@ function ProductDetailsF({
                   className="home-food-link products-add-button"
                   onClick={() => addCart(dish.id)}
                 >
-                  Add to cart
+                 Add to cart
                 </button>
               </div>
             ))}
           </div>
         ) : (
-          <h3>Go back to check out the delicious HOME DISHES</h3>
+          <div className="product-empty-container">
+          <h3 className="product-empty-alert">Go back to check out the delicious HOME DISHES</h3>
+          </div>
         )}
       </div>
     </div>
