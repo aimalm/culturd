@@ -20,7 +20,7 @@ function ContactForm() {
     return (
       <>
        <h1 className="title-home">Get in Touch</h1>
-        <div className="container-contactus">
+        <div className="container-contactus-work">
           <Form onSubmit={sendEmail}>
             <FormGroup controlId="formBasicEmail">
               <Label className="text-muted">Email address</Label>
