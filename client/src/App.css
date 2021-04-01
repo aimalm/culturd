@@ -33,11 +33,3 @@
 h1,h2,h3,h4,h5{
     font-family: var(--font);
 }
-.App{
-  background-color: #63dbc4;
-  margin: 0px;
-display: flex;
-flex-direction: column;
-
-
-}
