@@ -28,21 +28,21 @@ function LandingW() {
     <CarouselW/>
     <ContactForm/>
    <div className="wrapper-service__home">
-     <h1 className="h1-icon">Pick your choice!</h1>
-   <section className="header-extra-div margin">
-        <div className="container">
+     <h4 className="h1-icon">Pick your choice!</h4>
+   <section className="">
+        <div className="container-service">
           <div className="row">
-            <div className="extra-div col-lg-4 col-md-4 col-12">
-            <img src={cook} alt=""/>
-              <h2 className="text-uppercase">Cooking</h2>
+            <div className="box-service">
+            <img src={cook} className="service-logo" alt=""/>
+              <h4 className="text-service">Cooking</h4>
             </div>
-            <div className="extra-div col-lg-4 col-md-4 col-12">
-              <img src={dance} alt=""/>
-              <h2 className="text-uppercase">Dance</h2>
+            <div className="box-service">
+              <img src={dance} className="service-logo"  alt=""/>
+              <h4 className="text-service">Dance</h4>
             </div>
-            <div className="extra-div col-lg-4 col-md-4 col-12">
-            <img src={art} alt=""/>
-              <h2 className="text-uppercase">Art</h2>
+            <div className="box-service">
+            <img src={art} className="service-logo"  alt=""/>
+              <h4 className="text-service">Art</h4>
             </div>
           </div>
         </div>

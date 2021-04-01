@@ -1,14 +1,17 @@
 import React from "react";
-import { FoodTable } from "../Template";
 import { Link } from "react-router-dom";
 import AddCircleSharpIcon from "@material-ui/icons/AddCircleSharp";
 import StarIcon from "@material-ui/icons/Star";
 
-let newInArray = FoodTable.slice(Math.max(FoodTable.length - 4, 1));
 
-function NewInCardF({ setSelectedDish }) {
+function NewInCardF({ setSelectedDish, dishData }) {
+
+
+  let newInArray = dishData.slice(Math.max(dishData.length - 4, 1));
+
+ 
   const selectHandler = (selectedDishId) => {
-    setSelectedDish(FoodTable.filter((item) => item.id === selectedDishId));
+    setSelectedDish(dishData.filter((item) => item._id === selectedDishId));
   };
 
   return (
@@ -17,8 +20,8 @@ function NewInCardF({ setSelectedDish }) {
       <div className="breakline"></div>
       <div className="random-container">
         {newInArray.map((dish) => (
-          <div className="food-card" >
-          <Link key={dish.id} to={"/food/products/" + dish.id} onClick={() => selectHandler(dish.id)}>
+          <div className="food-card" key={dish._id}>
+          <Link  to={"/food/products/" + dish._id} onClick={() => selectHandler(dish._id)}>
             
               <div className="food-card-img">
                 <img className="product-image" src={dish.imageUrl} alt="" />

@@ -3,6 +3,8 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 
 function ContactForm() {
+
+  
     return (
       <>
        <h1 className="title-home">Get in Touch</h1>

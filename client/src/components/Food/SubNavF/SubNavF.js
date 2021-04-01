@@ -5,24 +5,24 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
 import foodLogo from "../../ShareComponents/image/logofood.png"
 
 function SubNavF({shoppingCart}) {
   return (
     <div className="container-navbar">
-      <Navbar bg="white fixed-top nav-border" expand="lg">
+      <Navbar bg="white fixed-top nav-border" animation="false" expand="lg">
         <LinkContainer to="/">
         <img src={foodLogo} className="logo-icon" alt=""/>
         </LinkContainer>
         <Navbar.Toggle />
-        <Navbar.Collapse>
+        <Navbar.Collapse animation="false">
           <Nav className="ml-auto navbar">
             <LinkContainer to="/food">
               <Nav.Link className="nav-color">Home</Nav.Link>
             </LinkContainer>
-            <NavDropdown className="nav-color" title="Worskhops">
+            {/* <NavDropdown className="nav-color" title="Worskhops">
               <LinkContainer to="/workshop">
                 <NavDropdown.Item className="nav-color">
                   CULTURD WORKSHOP
@@ -33,7 +33,7 @@ function SubNavF({shoppingCart}) {
                   CULTURD KITCHING
                 </NavDropdown.Item>
               </LinkContainer>
-            </NavDropdown>
+            </NavDropdown> */}
             <LinkContainer to="/food/product_list">
               <Nav.Link className="nav-color">List</Nav.Link>
             </LinkContainer>

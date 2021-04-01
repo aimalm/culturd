@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import { FoodTable } from "../Template";
+import React from "react";
 import "./LandingF.css";
 
 import { RiUserSearchFill, RiEmotionHappyLine } from "react-icons/ri";
@@ -11,45 +10,26 @@ import NewInCardF from "./NewInCardF";
 
 function LandingF({
   setSelectedDish,
-  searchResult,
-  setSearchResult,
+  dishData,
 }) {
-  const inputRef = useRef();
-
-  const searchHandler = (e) => {
-    e.preventDefault();
-
-    const foodName = inputRef.current.value.toLowerCase();
-
-    if (foodName === "") return;
-
-    let searchingArray = FoodTable.filter((food) =>
-      food.keywords.includes(foodName)
-    );
-
-    setSearchResult(searchingArray);
-  };
-
-  const resultHandler = (searchID) => {
-    setSelectedDish(FoodTable.filter((item) => item.id === searchID));
-  };
-
   return (
     <div className="food-home">
-      {/* search for food start here */}
-      <SearchF setSelectedDish={setSelectedDish} searchResult={searchResult} setSearchResult={setSearchResult}/>  
 
-      <svg className="food-home-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <SearchF setSelectedDish={setSelectedDish} dishData={dishData} />
+
+      <svg
+        className="food-home-background"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
         <path
           fill="#f5d98e"
           d="M0,224L720,288L1440,192L1440,320L720,320L0,320Z"
         ></path>
       </svg>
 
-      {/* new food post start here */}
-      <NewInCardF setSelectedDish={setSelectedDish} />
+      <NewInCardF setSelectedDish={setSelectedDish} dishData={dishData} />
 
-      {/* How it works start here */}
       <h3 className="how-it-works-title">How it works?</h3>
 
       <CarouselF />

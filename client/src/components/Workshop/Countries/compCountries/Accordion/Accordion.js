@@ -3,7 +3,7 @@ import './Accordion.css';
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 
-function Accordion(accordeonProp) {
+function Accordion(accordionProp) {
     const [clicked, setClicked] = useState(false);
     const toggleAngle = index => {
         if (clicked === index) {
@@ -14,7 +14,7 @@ function Accordion(accordeonProp) {
     }
     return (
         <div>
-            {accordeonProp.content.map((item, index) => {
+            {accordionProp.content.map((item, index) => {
                 return (
                     <div className="info-section">
                         <div className="section-wrap" onClick={() => toggleAngle(index)} key={index}>
