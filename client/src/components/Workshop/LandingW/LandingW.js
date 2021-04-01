@@ -34,18 +34,18 @@ function LandingW() {
         <h4 className="h1-icon">Pick your choice!</h4>
         <div className="container-service">
           
-            <div className="box-service">
+            <button className="box-service">
               <img src={cook} className="service-logo" alt="" />
               <h4 className="text-service">Cooking</h4>
-            </div>
-            <div className="box-service">
+            </button>
+            <button className="box-service">
               <img src={dance} className="service-logo" alt="" />
               <h4 className="text-service">Dance</h4>
-            </div>
-            <div className="box-service">
+            </button>
+            <button className="box-service">
               <img src={art} className="service-logo" alt="" />
               <h4 className="text-service">Art</h4>
-            </div>
+            </button>
           
         </div>
       <div className="button-about-container">
