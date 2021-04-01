@@ -40,23 +40,23 @@ function SignUp() {
                         <h4>Sign up</h4>
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label><br/>
-                            <input type="text" name="firstName" id="firstName" />
+                            <input type="text" name="firstName" id="firstName" className="input-fields"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="lastName">Last Name</label><br/>
-                            <input type="text" name="lastName" id="lastName" />
+                            <input type="text" name="lastName" id="lastName" className="input-fields"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label><br/>
-                            <input type="email" name="email" id="sign-email" />
+                            <input type="email" name="email" id="sign-email" className="input-fields"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label><br/>
-                            <input type="email" name="password" id="sign-pass" />
+                            <input type="email" name="password" id="sign-pass" className="input-fields"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="confirmPass">Confirm Password</label><br/>
-                            <input type="password" name="confirmPass" id="confirmPass" />
+                            <input type="password" name="confirmPass" id="confirmPass" className="input-fields"/>
                         </div>
                         <button type="submit" className="submit-btn">Signup</button>
                     </form>

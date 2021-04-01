@@ -10,20 +10,19 @@ import { Link } from "react-router-dom";
 
 function ProductDetailsF({
   selectedDish,
-  setSelectedDish,
   shoppingCart,
   setShoppingCart,
   viewingCart,
   setViewingCart,
 }) {
   const addCart = (dishID) => {
-    let dishIDArray = shoppingCart.map((food) => food.id);
+    let dishIDArray = shoppingCart.map((food) => food._id);
 
     if (dishIDArray.includes(dishID) === true) {
       let newArray = [...shoppingCart];
 
-      newArray.map((item) => {
-        if (item.id === dishID) {
+      newArray.forEach((item) => {
+        if (item._id === dishID) {
           item.quantity++;
         }
       });
@@ -35,7 +34,7 @@ function ProductDetailsF({
     setViewingCart(true);
     setTimeout(() => {
       setViewingCart(false);
-    }, 3000);
+    }, 4000);
   };
 
   return (
@@ -44,7 +43,7 @@ function ProductDetailsF({
       {viewingCart ? (
         <div className="add-cart-alert">
           <p>
-            {" "}
+            
             <CgArrowLongUp />
             The dish is now in the cart! <CgArrowLongUp />
           </p>
@@ -65,7 +64,7 @@ function ProductDetailsF({
         {selectedDish.length > 0 ? (
           <div>
             {selectedDish.map((dish) => (
-              <div className="products-container">
+              <div key={dish._id} className="products-container">
                 <div className="products-info">
                   <img
                     className="products-img-food"
@@ -111,15 +110,17 @@ function ProductDetailsF({
                 </div>
                 <button
                   className="home-food-link products-add-button"
-                  onClick={() => addCart(dish.id)}
+                  onClick={() => addCart(dish._id)}
                 >
-                  Add to cart
+                 Add to cart
                 </button>
               </div>
             ))}
           </div>
         ) : (
-          <h3>Go back to check out the delicious HOME DISHES</h3>
+          <div className="product-empty-container">
+          <h3 className="product-empty-alert">Go back to check out the delicious HOME DISHES</h3>
+          </div>
         )}
       </div>
     </div>

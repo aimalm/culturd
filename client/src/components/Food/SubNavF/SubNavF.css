@@ -1,3 +1,8 @@
 .nav-basket-icon{
-    color: var(--carol);
+    color: var(--dark-turquiose);
 }
+.nav-border{
+    box-shadow: 1px .5px var(--light-beige);
+
+}
+

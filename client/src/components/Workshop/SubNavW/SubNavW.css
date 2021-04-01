@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 
 
-.logo-icon{
+  .logo-icon{
     width: 13%;
    
     
     }
 
-
     .navbar-style{
-
     box-shadow: 2px 2px #dd7d7d;
 
     }
@@ -29,7 +27,7 @@
       text-transform: uppercase;
       background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
       background-clip: text;
-  -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
      
   
 

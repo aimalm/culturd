@@ -5,7 +5,26 @@
 }
 
 .country-container {
-    margin: 85px 15px 80px 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* border: solid red; */
+}
+
+.wrapper {
+    width: 90%;
+    margin: 85px auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    /* border: solid green; */
+}
+
+.workshop-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: solid purple; */
 }
 
 .workshop-info > * {
@@ -14,34 +33,41 @@
 
 .ticket-info {
     display: flex;
-    font-weight: bold;
-    margin-bottom: 15px;
 }
 
 .ticket-info > * {
-    margin-right: 20px;
+    margin-right: 15px;
+    padding-bottom: 15px;
 }
 
 .info-icon {
     color: var(--carol);
-    font-size: 18px;
 }
 
 .workshop-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0px 10px 0px 10px;
+    /* border: solid yellow; */
 }
 
-.workshop-container > * {
+.inner-container-1 {
     width: 100%;
-}
-
-.inner-container {
     display: flex;
     flex-direction: column;
+    /* border: solid black; */
 }
 
+/* .inner-container-2 {
+    border: solid black;
+} */
+
 .accordeon-container {
-    margin-top: 25px;
+    padding-top: 25px;
 }
+
+
+
+
+
+

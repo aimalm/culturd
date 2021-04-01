@@ -4,38 +4,40 @@ import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
 import ImageCards from './compCountries/ImageCards/ImageCards';
 import Accordeon from './compCountries/Accordion/Accordion';
-import AfghanFood from '../image/afghanistan.jpg';
-import { AfghanFoodInfo } from './compCountries/ImageCards/FoodInfo';
+import InProgress from '../image/inProgress.png';
+import { AfghanWorkshop } from './compCountries/ImageCards/WorkshopDescription';
 import { AfghanWorkshopInfo } from './compCountries/Accordion/WorkshopInfo';
 import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 
 function Afghanistan() {
     return (
         <div className="country-container">
-            <div className="workshop-info">
-                <h2>Afghan Cooking Workshop</h2>
-                <div className="ticket-info">
-                    <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
-                    <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
-                </div>
-            </div>
-            <div className="workshop-container">
-                <div className="inner-container">
-                    <ImageCards 
-                        imageSrc={AfghanFood} 
-                        foodDes_1={AfghanFoodInfo[0].description}
-                        foodTit_1={AfghanFoodInfo[0].title}
-                        foodDes_2={AfghanFoodInfo[1].description}
-                        foodTit_2={AfghanFoodInfo[1].title}
-                        foodDes_3={AfghanFoodInfo[2].description}
-                        foodTit_3={AfghanFoodInfo[2].title}
-                    />
-                    <div className="accordeon-container">
-                        <Accordeon content={AfghanWorkshopInfo}/>
+            <div className="wrapper">
+                <div className="workshop-info">
+                    <h1>Afghan Workshops</h1>
+                    <div className="ticket-info">
+                        <p><span className="info-icon"><IoTicketSharp /></span> E-Ticket</p>
+                        <p><span className="info-icon"><BsFillLightningFill /></span> Instant Confirmation</p>
                     </div>
                 </div>
-                <div className="inner-container">
-                    <WorkshopDetails />
+                <div className="workshop-container">
+                    <div className="inner-container-1">
+                        <ImageCards 
+                            imageSrc={InProgress} 
+                            foodDes_1={AfghanWorkshop[0].description}
+                            foodTit_1={AfghanWorkshop[0].title}
+                            foodDes_2={AfghanWorkshop[1].description}
+                            foodTit_2={AfghanWorkshop[1].title}
+                            foodDes_3={AfghanWorkshop[2].description}
+                            foodTit_3={AfghanWorkshop[2].title}
+                        />
+                        <div className="accordeon-container">
+                            <Accordeon content={AfghanWorkshopInfo}/>
+                        </div>
+                    </div>
+                    <div className="inner-container-2">
+                        <WorkshopDetails />
+                    </div>
                 </div>
             </div>
         </div>
