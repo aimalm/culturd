@@ -1,6 +1,6 @@
 import React from 'react'
 import emailjs from 'emailjs-com';
-import "./contactUs.css";
+import "./ContactUs.css";
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 

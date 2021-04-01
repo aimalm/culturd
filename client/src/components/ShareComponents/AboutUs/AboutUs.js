@@ -5,8 +5,10 @@ import group from '../image/group.jpg'
 
 
 function AboutUs() {
-    return (
-     
+    
+return (
+
+ 
     <div className="aboutus_main">
         
         <section className="about-section">
@@ -17,7 +19,7 @@ function AboutUs() {
                 	<div className="inner-column">
                     	<div className="sec-title">
                     		<div className="title">About Us</div>
-                        	<h2>We Are profesional in our culture</h2>
+                        	<h4 className="h2-about">Experience the original, authentic cultures with you</h4>
                         </div>
                         <div className="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</div>
                         <a href="about.html" class="theme-btn btn-style-three"> WORKSHOP</a>
