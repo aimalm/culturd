@@ -12,7 +12,13 @@
 	clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0 75%, 0 0);
 }
 
-
+.header-extra-div{
+	height: auto;
+	width: 100%;
+	text-align: center;
+  margin: 2rem auto;
+  
+}
 
 .extra-div{
 	border: none;
@@ -195,17 +201,28 @@ text-decoration: none;
   width: 60%;
 }
 .box-service{
+
+  background-color: transparent;
+  border: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
   display: grid;
   grid-template-rows: auto auto;
 }
+.box-service:hover{
+  box-shadow: rgba(255, 255, 255, 0.8) 0px 16px 48px;
+  border-radius: 8px;
+  transform: scale(1.2);
+}
 .service-logo{
-  width: 100%;
+  max-width: 100%;
   margin: 1rem;
+  
  }
 .box-service h4{
   justify-self: center;
   margin: 0;
-  color:white; 
+  color:rgb(22, 17, 17); 
 }
 .button-about-container{
   display: flex;
@@ -271,12 +288,44 @@ margin: auto;
     background-color: #3bdbe0;
 }
 
+.container-work{
+  display: flex;
+    margin: 3rem auto;
+    justify-content: space-around;
+    width: 60%;
+}
+.box-work{
+  border:none;
+  background-color: transparent;
+  margin: .5rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1rem;
+}
+.box-work:hover{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+}
+.box-work i{
+  color: var(--carol);
+}
+.box-work h2{
+  color: var(--greenish);
+}
+.box-work p{
+  color: var(--NavbarColor);
+}
+
+
+
 
 /*contact us */
 .container-contactus{
   width: 60%;
   height: 480px;
   margin: 50px auto;
+  margin-bottom: 150px;
   padding: 30px 60px;
   border-radius: 5px;
   box-shadow: 5px 10px 18px #888888;
@@ -314,19 +363,29 @@ input[type="text" i]{
   
 /*responsive*/
 @media screen and (max-width: 768px) {
-
-  .title-home{
-    margin-left: 50px;
-  }
   .container-homepage{
-    width:100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
   }
-  .h1-animation{
-    font-size: 2rem;
-
+  .dummy-text{
+    margin-top: 0;
+  }
+  .container-work{
+    flex-direction: column;
+    width: 80%;
+  }
+  .header-extra-div{
+    margin-top: 0;
+  }
+  .title-home{
+    margin-left: 10%;
+  }
+  .h4-homeW{
+    font-size: 1.5rem;
   }
   .h1-icon{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 40px 0;
   }
   .container-service{
@@ -338,6 +397,20 @@ input[type="text" i]{
   }
   .box-service{
     margin: 1rem;
+  }
+  .container-contactus{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 426px){
+  
+  .h1-animation{
+    font-size: 2rem;
+    margin: 1rem;
+  }
+  .landing_main-button{
+    margin: 0 150px;
   }
 }
 

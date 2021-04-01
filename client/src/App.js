@@ -43,6 +43,8 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
   const [dishData, setDishData] = useState([]);
 
+
+
   //fetch get from database
   const getFoodData = async () => {
     const response = await axois

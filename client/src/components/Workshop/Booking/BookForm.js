@@ -48,8 +48,6 @@ function BookForm() {
          
         />
          <EmailInput
-           
-
           name="emailbox"
           label="Email"
           initialValue=""
@@ -94,20 +92,6 @@ function BookForm() {
           <button className="button-about" onClick={e => {}}>Save</button>
         </Form>
      </div>
-        <div data-testid="ref-out">
-          <ul>
-            <li>Firstname: {values.firstname}</li> 
-            <li>Lastn: {values.lastname}</li> 
-            <li>Email Address : {values.emailbox}</li> 
-            <li>Telephone : {values.myTelephone}</li>
-            <li>Number of person: {values.myDateTime}</li>
-            <li> Date & Time booking: {values.myDateTimeLocal}</li>
-            <li>Country: {values.myDropDownCountry}</li>
-            <li>Workshop: {values.myDropDownWorkshop}</li>
-            <li>Number of people: {values.number}</li>
-          </ul>
-        </div>
-   
    </>
     )
   }
