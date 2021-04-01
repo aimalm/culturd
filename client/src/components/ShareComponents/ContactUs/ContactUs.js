@@ -8,7 +8,7 @@ init("user_PEqi70VcSRGoi1kpcoHyN");
 
 
 
-export default function AboutUs() {
+export default function ContactUs() {
 
     function sendEmail(e) {
         e.preventDefault();

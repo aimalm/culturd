@@ -18,19 +18,26 @@ booking
 
 food
 {
-      "dishName": "piza",
-    "ingredients": ["onion", "mashroom"],
-    "vegetarian": "yes",
-    "keywords": ["pizza", "vegetarian"],
-    "dishDescription": "Very good Pizaa. Believe me",
-    "cooker": "Wing",
-    "cookerImage": "www.yahoo.com",
-    "cookerScore": ["star"],
-    "price": "12.5",
-    "pickupDate": "2021-5-25",
-    "openingHours" "10:00 - 16:00"
-    "address": "Drootbeekstraat 555, Brussels"
-}
+     
+      "dishName": "chow mein",
+      "ingredients": ["noodles", "carrot", "zucchini", "spring onion", "chili"],
+      "keywords": ["mein", "noodles"],
+      "category": "main",
+      "vegetarian": "1",
+      "dishDescription":
+        "not the usually chow mein you find in 'Chinese restaurant",
+      "cooker": "Annie Chu",
+      "cookerImage":"https://images.unsplash.com/photo-1614427855823-fc9eca8a5e2e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "cookerScore": ["star", "star"],
+      "price": "4",
+      "pickupDate": "2021-03-27",
+      "openingHours":"11:00 - 16:00",
+      "address": "Rue de Namur 28, 1000 Bruxelles",
+      "imageUrl":
+        "https://tastesbetterfromscratch.com/wp-content/uploads/2019/03/Chicken-Chow-Mein-4.jpg",
+        "quantity":"1"
+    }
+
 
 order
 {

@@ -11,6 +11,7 @@ import Footer from "./components/ShareComponents/Footer/Footer";
 import LogIn from "./components/ShareComponents/Registration/LogIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
 
+
 //import {fetchEvents} from "./API/index"
 
 //workshop components
@@ -32,6 +33,7 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
+//import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
 //import shadows from "@material-ui/core/styles/shadows";
 
 
@@ -149,6 +151,7 @@ function App() {
             <AboutUs />
             <Footer />
           </Route>
+         
 
           <Route path="/food">
             <SubnavF shoppingCart={shoppingCart} setViewingCart={setViewingCart} />
