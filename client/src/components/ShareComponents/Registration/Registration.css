@@ -21,11 +21,13 @@
 }
 
 .reg-dropdown-button {
-    color: var(--carol);
-    background: transparent;
+    font-family: 'Train One', cursive;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+     -webkit-text-fill-color: transparent;
     border: none;
     border-bottom: 1px solid var(--carol);
-    text-transform: uppercase;
     text-decoration: none;
     padding: 0.5rem;
     font-size: 1.3rem;
@@ -34,20 +36,22 @@
 .reg-login-link,
 .reg-signup-link,
 .reg-contact-us-link {
-    color: var(--carol);
+    color:#3aab95;
     transition: all 0.2s ease-in-out;
+  
 }
 
 .reg-login-link:hover,
 .reg-signup-link:hover,
 .reg-contact-us-link:hover {
     text-decoration: none;
-    color: #e27458;
+    color:var(--carol);
 }
 
 .reg-dropdown-container p {
     margin: 0;
-    font-family: var(--font);
+    font-family: 'Train One', cursive;
+    background-clip: text;
     padding-top: 1rem;
     font-size: 1.2rem;
 }
@@ -72,6 +76,9 @@
     justify-content: center;
     text-align: center;
     padding: 8px;
+   
+    
+    
 }
 
 .form-container-2 {
@@ -83,11 +90,17 @@
 }
 
 .reg-link {
-    text-decoration: none !important;
+
+    font-size: 1.5rem;
+    font-family: 'Train One', cursive;
+    text-transform: uppercase;
+    color: #f59d87 !important;
+    
 }
 
 .reg-link:hover {
-    color: #FFFFFF;
+    color: var( --dark-turquiose);
+    text-decoration: none !important;
 }
 
 #password-link {
@@ -102,16 +115,27 @@
 
 form > h4 {
     text-align: center;
+    font-family: 'Train One', cursive;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+     -webkit-text-fill-color: transparent;
+
 }
 
 .form-group > label {
     font-size: 14px;
     margin-bottom: 0px;
+    color: var(--dark-turquiose);
+    
 }
 
 .input-fields, .submit-btn {
     width: 200px;
     height: 30px !important;
+    border:1px solid #f59d87;
+    border-top:1px solid #3aab95;
+    border-bottom:1px solid #3aab95;
 }
 
 .form-group > input:focus {
@@ -124,7 +148,9 @@ form > h4 {
     border-radius: 3px;
     height: 30px;
     padding-bottom: 2px;
+    color: var(--light-turquiose);
 }
+
 
 .submit-btn:hover {
     background-color: #e27458;
@@ -146,3 +172,14 @@ form > h4 {
     transform: translate(-50%, -50%); 
     box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
 }
+
+.login-h2{
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+     -webkit-text-fill-color: transparent;
+
+}
+
+
+
+

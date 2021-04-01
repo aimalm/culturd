@@ -32,7 +32,7 @@ function SignUp() {
             </div>
             <div className="sign-form-container">
                 <div className="form-container-1">
-                    <h2>Already have an account?</h2>
+                    <h2 className="login-h2">Already have an account?</h2>
                     <p><Link to="/login" className="reg-link">Log in</Link> to get access to all features of the application</p>
                 </div>
                 <div className="form-container-2">

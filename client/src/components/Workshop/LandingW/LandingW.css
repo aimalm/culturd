@@ -141,14 +141,7 @@ span:last-child {
   text-align: center;
 }
 
-/* .text-service{
- max-width: 30%;
- margin-left:10px;
- color:white; 
- align-items: center;
-
-
-} */
+ 
 
 .margin {
   margin-top: -30px;
@@ -211,7 +204,7 @@ span:last-child {
 .box-service h4 {
   justify-self: center;
   margin: 0;
-  color: white;
+  color: rgb(15, 14, 14);
 }
 .button-about-container {
   display: flex;
@@ -378,6 +371,7 @@ input[type="text" i] {
   .box-service {
     margin: 1rem;
   }
+  
 }
 
 @media screen and (max-width: 426px) {

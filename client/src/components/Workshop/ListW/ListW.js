@@ -21,30 +21,30 @@ function ListW() {
           <div className="card_image"><img className="img-cards" src={image1} alt=""/></div>
           <h2 className="card_title">Indonesia</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
-          <Link to="/workshop/Indonesia" className="btn card_btn">Discover More</Link>{" "}
+          <Link to="/workshop/Indonesia" className="btn-listW">Discover More</Link>{" "}
         </div>
       
    
 
       <div class="card_content">
           <div className="card_image"><img className="img-cards" src={image2} alt=""/></div>
-          <h2 className="card_title">Congo</h2>
+          <h2 className="card_title">Afganistan</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
-          <Link to="/workshop/Congo" className="btn card_btn">Discover More</Link>{" "}
+          <Link to="/workshop/Congo" className="btn-listW">Discover More</Link>{" "}
       </div>
     </div>
     <div className="cards-flex_two">
       <div class="card_content">
           <div className="card_image"><img className="img-cards" src={image3} alt=""/></div>
-          <h2 className="card_title">Chinese</h2>
+          <h2 className="card_title">Congo</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
-          <Link to="/workshop/HongKong" className="btn card_btn">Discover More</Link>{" "}
+          <Link to="/workshop/HongKong" className="btn-listW">Discover More</Link>{" "}
       </div>
       <div class="card_content">
           <div className="card_image"><img className="img-cards" src={image4} alt=""/></div>
-          <h2 className="card_title">Afganistan</h2>
+          <h2 className="card_title">Chinese</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
-          <Link to="/workshop/Afghanistan" className="btn card_btn">Discover More</Link>{" "}
+          <Link to="/workshop/Afghanistan" className="btn-listW">Discover More</Link>{" "}
       </div>
     </div>
   </div>

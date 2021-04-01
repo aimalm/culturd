@@ -32,8 +32,8 @@ function Login() {
             </div>
             <div className="log-form-container">
                 <div className="form-container-1">
-                    <h2>New User?</h2>
-                    <p><Link to="/signup" className="reg-link">Sign up</Link> to get access to all features of the application</p>
+                    <h2 className="login-h2">New User ?</h2>
+                    <p className="p-login"><Link to="/signup" className="reg-link">Sign up</Link> to get access to all features of the application</p>
                 </div>
                 <div className="form-container-2">
                     <form>
@@ -47,7 +47,7 @@ function Login() {
                             <input type="password" name="password" id="log-pass" className="input-fields"/>
                             <p><Link to="/" id="password-link">Forgot password?</Link></p>
                         </div>
-                        <button type="submit"className="submit-btn">Login</button>
+                        <button type="submit"className="submit-btn">LOGIN</button>
                     </form>
                 </div>
             </div>
