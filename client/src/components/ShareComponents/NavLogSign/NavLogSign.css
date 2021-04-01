@@ -1,0 +1,51 @@
+.reg-button-container {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+
+.reg-button-container p {
+    background: #FFFFFF;
+    padding: 0.5rem;
+}
+
+.reg-dropdown-button {
+    font-family: 'Train One', cursive;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--carol);
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.reg-login-link,
+.reg-signup-link,
+.reg-contact-us-link {
+    /* color:#3aab95; */
+    color: #19d1d1;
+    transition: all 0.2s ease-in-out;
+  
+}
+
+.reg-login-link:hover,
+.reg-signup-link:hover,
+.reg-contact-us-link:hover {
+    text-decoration: none;
+    color:var(--carol);
+}
+
+.reg-dropdown-container p {
+    margin: 0;
+    font-family: 'Train One', cursive;
+    background-clip: text;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.angle-icon {
+    color: var(--carol);
+}
