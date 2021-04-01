@@ -1,38 +1,14 @@
 .Booking-container{
-    margin: -150px 250px;
-    max-width: 800%;
+    width: 50%;
     padding: 20px 60px;
     border:4px solid #f5e3b1;
     border-top:4px solid #f59d87;
     border-bottom: 4px solid #f59d87;
     background-color:var(--light-turquiose);
-  
-   
+    margin: auto;
+    margin-bottom: 50px;
 
 }
-
-.book-logo{
-    width: 13%;
-    margin: 80px 240px;
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
-    animation: swinging 3.5s ease-in-out forwards infinite;
-    
-}
-
-@-webkit-keyframes swinging{
-    0%{-webkit-transform: rotate(10deg);}
-    50%{-webkit-transform: rotate(-5deg)}
-    100%{-webkit-transform: rotate(10deg);}
-  }
-  
-  @keyframes swinging{
-    0%{transform: rotate(10deg);}
-    50%{transform: rotate(-5deg)}
-    100%{transform: rotate(10deg);}
-  }
-
 
 .h1-book{
     text-align: center;
@@ -42,6 +18,8 @@
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
     background-clip: text;
      -webkit-text-fill-color: transparent;
+     margin:200px auto;
+     margin-bottom: 50px;
 
 }
 
@@ -65,3 +43,23 @@
     display: block;
     border: none;
 }  
+
+/*responsive*/
+@media screen and (max-width: 320px) {
+.Booking-container{
+    width: 80%;
+}
+
+    
+  }
+
+
+ 
+  @media screen and (max-width: 768px) {
+    .Booking-container{
+        width: 90%;
+    }
+    
+        
+      }
+    

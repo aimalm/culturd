@@ -1,9 +1,9 @@
 
 .logo{
 font-size: 2rem;
-font-family: 'Monoton', cursive;
+font-family: 'Dela Gothic One', cursive;
 text-transform: uppercase;
-background: linear-gradient(to right, #dcee37 0%, #fa9726 100%);
+background: linear-gradient(to right, #37eeb7 0%, #d0d85f 100%);
 background-clip: text;
 -webkit-text-fill-color: transparent;
   
@@ -64,3 +64,6 @@ background-clip: text;
   grid-template-columns: auto auto;
 }
 
+.navbar-main{
+  box-shadow: 2px 2px #92e0c2;
+}

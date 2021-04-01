@@ -46,12 +46,7 @@
 
   }
 
-  .carousel{
-    margin: 50px;;
-  }
-
   
-
   .img-cards {
     width: 100%;
     object-fit: cover;
@@ -85,13 +80,16 @@
     display: block;
     width: 100%;
     cursor: pointer;
-    border: 1px solid rgba(26, 9, 9, 0.781);
     background: transparent;
+    text-align: center;
+    background-color: var(--dark-turquiose);
+   
    
   }
   
   .btn-listW:hover {
-    background-color: rgb(114, 201, 182);
+    background-color:var(--carol);
+    text-decoration: none;
   }
   
   
@@ -124,4 +122,25 @@
     font-weight: 400;
   }
 
+  /*responsive*/
+  @media screen and (max-width: 768px) {
+    .cards-flex{
+      flex-direction: column;
+    }
+    .card_content{
+      grid-template-rows: 50% 10% 25% 15%;
+    }
+    .cards-flex_two{
+      flex-direction: column;
+    }
+  }
+
+
+  @media screen and (max-width: 425px) {
+   
+    .card_content{
+      grid-template-rows: 30% 10% 45% 15%;
+    }
+    
+  }
  

@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react'
 import './BookForm.css'
-import book from '../image/book.png'
 
 import {
   TextBox,
@@ -16,14 +15,14 @@ import {
 
 function BookForm() {
 
-    const [values, setValues] = useState({})
+    const [ setValues] = useState({})
 
     return (
 
     <>
-        <img src={book} className="book-logo" alt=""/>
-        <div className="Booking-container">
+          
         <h1 className="h1-book">Request your price quote here</h1>
+        <div className="Booking-container">
         <Form
           name="testForm"
           onSubmit={data => {
@@ -48,8 +47,6 @@ function BookForm() {
          
         />
          <EmailInput
-           
-
           name="emailbox"
           label="Email"
           initialValue=""
@@ -76,38 +73,11 @@ function BookForm() {
               <Option initialValue="Afganistan">Afganistan</Option>
             </OptionGroup>
           </DropDown>
-
-          <DropDown
-            label="Workshop"
-            initialValue=""
-            data-testid="dd1"
-            name="myDropDownWorkshop"
-          >
-            <OptionGroup label="Workshop">
-              <Option initialValue="Cooking">Cooking</Option>
-              <Option initialValue="Dance">Dance</Option>
-              <Option initialValue="Art">Art</Option>
-            </OptionGroup>
-          </DropDown>
           <DateTime label="Number of participants" type="datetime" name="number" />
          <br></br>
           <button className="button-about" onClick={e => {}}>Save</button>
         </Form>
      </div>
-        <div data-testid="ref-out">
-          <ul>
-            <li>Firstname: {values.firstname}</li> 
-            <li>Lastn: {values.lastname}</li> 
-            <li>Email Address : {values.emailbox}</li> 
-            <li>Telephone : {values.myTelephone}</li>
-            <li>Number of person: {values.myDateTime}</li>
-            <li> Date & Time booking: {values.myDateTimeLocal}</li>
-            <li>Country: {values.myDropDownCountry}</li>
-            <li>Workshop: {values.myDropDownWorkshop}</li>
-            <li>Number of people: {values.number}</li>
-          </ul>
-        </div>
-   
    </>
     )
   }
