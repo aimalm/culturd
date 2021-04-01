@@ -32,7 +32,7 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
-//import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
+import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
 //import shadows from "@material-ui/core/styles/shadows";
 
 
@@ -191,6 +191,11 @@ function App() {
             <SubNavW />
             <LandingW />
             <Footer />
+          </Route>
+          <Route path="/contact_us">
+            <ContactUs/>
+            <Footer />
+           
           </Route>
 
           <Route path="/">

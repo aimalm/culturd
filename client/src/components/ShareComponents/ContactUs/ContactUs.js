@@ -1,38 +1,64 @@
 import React from 'react'
-import './contactUs.css'
 import emailjs from 'emailjs-com';
+import "./ContactUs.css";
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
-import{ init } from 'emailjs-com';
-init("user_PEqi70VcSRGoi1kpcoHyN");
 
-export default function contactUs() {
+function ContactForm() {
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-   const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_1jymwca', 'template_sy3h1dt', e.target, 'user_PEqi70VcSRGoi1kpcoHyN')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-          e.target.reset();
-      }
+    emailjs.sendForm('service_1jymwca', 'template_sy3h1dt', e.target, 'user_PEqi70VcSRGoi1kpcoHyN')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  }
+
+  
     return (
-        <div className="aboutus_main">
-          <form className="contact-form" >
-            <input type="hidden" name="contact_number" />
+      <>
+       <h1 className="title-home">Get in Touch</h1>
+        <div className="container-contactus">
+          <Form onSubmit={sendEmail}>
+            <FormGroup controlId="formBasicEmail">
+              <Label className="text-muted">Email address</Label>
+              <Input
+                type="email"
+                name="email"
+                placeholder="Enter email"
+              />
+            </FormGroup>
+            <FormGroup controlId="formBasicName">
+              <Label className="text-muted">Name</Label>
+              <Input
+                className="contact-input"
+                type="text"
+                name="name"
+                placeholder="Name"
+              />
+            </FormGroup>
+            <FormGroup controlId="formBasicMessage">
+              <Label className="text-muted">Message</Label>
+              <Input
+                type="textarea"
+                name="message"
+                className="text-primary"
+              />
+            </FormGroup>
+            <Button variant="primary" type="submit" value="Send">
+              Submit
+            </Button>
+          </Form>
+ 
 
-            <label>Name</label>
-            <input type="text" name="from_name" />
+      </div>
 
-            <label>Email</label>
-            <input type="email" name="user_email" />
-            
-            <label>Message</label>
-            <textarea name="message" />
-            <input type="submit" value="Send" />
-          </form>
-        </div>
+      </>
     )
-}
+  }
+
+
+export default ContactForm
