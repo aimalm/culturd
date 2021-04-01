@@ -35,7 +35,6 @@ import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
 //import shadows from "@material-ui/core/styles/shadows";
 
-// import ReactPayPal from './Paypal';
 
 
 function App() {
@@ -43,7 +42,7 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
   const [dishData, setDishData] = useState([]);
-  const [checkout, setCheckout] = useState(false);
+
 
 
   //fetch get from database
@@ -79,18 +78,7 @@ function App() {
   return (
     <div className="App">
 
-{/* <header className="App-header">
-        {(checkout === true) 
-          ? <div className="payment-div">
-            <ReactPayPal />
-          </div> 
 
-          :<div>
-            <h1>React-PayPal</h1>
-            <button onClick={() => {setCheckout(true)}} className="checkout-button">Checkout</button>
-          </div>
-        }
-      </header> */}
       <Router>
         <Switch>
           <Route path="/workshop/bookform">
