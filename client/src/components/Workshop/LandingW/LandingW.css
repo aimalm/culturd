@@ -3,22 +3,6 @@
   flex-direction: column;
   background-repeat: no-repeat;
   height: 100%;
-<<<<<<< HEAD
-	height: 100vh;
-	background-image: linear-gradient(rgba(98, 219, 209, 0.74), rgba(0, 255, 234, 0.555)), url('../image/indo.jpg');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	position: relative;
-	clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0 75%, 0 0);
-}
-
-.header-extra-div{
-	height: auto;
-	width: 100%;
-	text-align: center;
-  margin: 2rem auto;
-  
-=======
   height: 100vh;
   background-image: linear-gradient(
       rgba(98, 219, 209, 0.74),
@@ -36,7 +20,6 @@
   width: 100%;
   text-align: center;
   margin: 2rem auto;
->>>>>>> 0aa62511a310fbdb3bcbc42f89f30a844a6195d2
 }
 
 .extra-div {
@@ -158,14 +141,7 @@ span:last-child {
   text-align: center;
 }
 
-/* .text-service{
- max-width: 30%;
- margin-left:10px;
- color:white; 
- align-items: center;
-
-
-} */
+ 
 
 .margin {
   margin-top: -30px;
@@ -224,20 +200,11 @@ span:last-child {
 .service-logo {
   max-width: 100%;
   margin: 1rem;
-<<<<<<< HEAD
-  
- }
-.box-service h4{
-  justify-self: center;
-  margin: 0;
-  color:rgb(22, 17, 17); 
-=======
 }
 .box-service h4 {
   justify-self: center;
   margin: 0;
-  color: white;
->>>>>>> 0aa62511a310fbdb3bcbc42f89f30a844a6195d2
+  color: rgb(15, 14, 14);
 }
 .button-about-container {
   display: flex;
@@ -390,13 +357,8 @@ input[type="text" i] {
   .h4-homeW {
     font-size: 1.5rem;
   }
-<<<<<<< HEAD
-  .h1-icon{
-    font-size: 1.5rem;
-=======
   .h1-icon {
     font-size: 2rem;
->>>>>>> 0aa62511a310fbdb3bcbc42f89f30a844a6195d2
     margin: 40px 0;
   }
   .container-service {
@@ -409,6 +371,7 @@ input[type="text" i] {
   .box-service {
     margin: 1rem;
   }
+  
 }
 
 @media screen and (max-width: 426px) {

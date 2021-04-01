@@ -122,4 +122,25 @@
     font-weight: 400;
   }
 
+  /*responsive*/
+  @media screen and (max-width: 768px) {
+    .cards-flex{
+      flex-direction: column;
+    }
+    .card_content{
+      grid-template-rows: 65% 5% 15% 15%;
+    }
+    .cards-flex_two{
+      flex-direction: column;
+    }
+  }
+
+
+  @media screen and (max-width: 425px) {
+   
+    .card_content{
+      grid-template-rows: 30% 10% 45% 15%;
+    }
+    
+  }
  

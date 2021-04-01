@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react'
 import './BookForm.css'
-import book from '../image/book.png'
 
 import {
   TextBox,
@@ -16,14 +15,14 @@ import {
 
 function BookForm() {
 
-    const [values, setValues] = useState({})
+    const [ setValues] = useState({})
 
     return (
 
     <>
-        <img src={book} className="book-logo" alt=""/>
-        <div className="Booking-container">
+          
         <h1 className="h1-book">Request your price quote here</h1>
+        <div className="Booking-container">
         <Form
           name="testForm"
           onSubmit={data => {
