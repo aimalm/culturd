@@ -73,19 +73,6 @@ function BookForm() {
               <Option initialValue="Afganistan">Afganistan</Option>
             </OptionGroup>
           </DropDown>
-
-          <DropDown
-            label="Workshop"
-            initialValue=""
-            data-testid="dd1"
-            name="myDropDownWorkshop"
-          >
-            <OptionGroup label="Workshop">
-              <Option initialValue="Cooking">Cooking</Option>
-              <Option initialValue="Dance">Dance</Option>
-              <Option initialValue="Art">Art</Option>
-            </OptionGroup>
-          </DropDown>
           <DateTime label="Number of participants" type="datetime" name="number" />
          <br></br>
           <button className="button-about" onClick={e => {}}>Save</button>
