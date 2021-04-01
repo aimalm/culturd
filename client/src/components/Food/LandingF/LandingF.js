@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
-import SearchIcon from "@material-ui/icons/Search";
 import { FoodTable } from "../Template";
-import { Link } from "react-router-dom";
 import "./LandingF.css";
 
 import { RiUserSearchFill, RiEmotionHappyLine } from "react-icons/ri";
@@ -12,10 +10,7 @@ import SearchF from "./SearchF";
 import NewInCardF from "./NewInCardF";
 
 function LandingF({
-  selectedDish,
   setSelectedDish,
-  shoppingCart,
-  viewingCart,
   searchResult,
   setSearchResult,
 }) {
