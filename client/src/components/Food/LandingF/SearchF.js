@@ -66,7 +66,7 @@ function SearchF({ setSelectedDish, dishData }) {
           ""
         )}
 
-        {isSearching && searchResult.length == 0 ? (
+        {isSearching && searchResult.length === 0 ? (
           <div className="search-suggestion">
             <p>no matching dish yet</p>
           </div>

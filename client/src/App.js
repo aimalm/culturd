@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { instance } from "./components/Axois/Axois";
+import { axois } from "./components/Axois/Axois";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // share components
@@ -45,7 +45,7 @@ function App() {
 
   //fetch get from database
   const getFoodData = async () => {
-    const response = await instance
+    const response = await axois
       .get("/food")
       .catch((err) => console.log(err));
 
