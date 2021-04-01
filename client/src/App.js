@@ -11,6 +11,9 @@ import Footer from "./components/ShareComponents/Footer/Footer";
 import LogIn from "./components/ShareComponents/Registration/LogIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
 
+
+//import {fetchEvents} from "./API/index"
+
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
@@ -29,6 +32,9 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
+import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
+//import shadows from "@material-ui/core/styles/shadows";
+
 
 
 function App() {
@@ -66,6 +72,9 @@ function App() {
     window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
   }, [shoppingCart]);
 
+
+  
+  
   return (
     <div className="App">
       <Router>
@@ -166,6 +175,7 @@ function App() {
             <AboutUs />
             <Footer />
           </Route>
+         
 
           <Route path="/about_us">
             <MainNav />
@@ -184,13 +194,23 @@ function App() {
             <LandingW />
             <Footer />
           </Route>
+          <Route path="/contact_us">
+            <ContactUs/>
+            <Footer />
+           
+          </Route>
 
           <Route path="/">
             <Home />
             <Footer />
+           
           </Route>
         </Switch>
+        <div>
+        
+        </div>
       </Router>
+      
     </div>
   );
 }
