@@ -9,7 +9,7 @@ function Login() {
         <div className="login-container">
             <div className="reg-button-container">
                 <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-                Register <AiFillCaretDown />
+                Register <AiFillCaretDown className="angle-icon"/>
                 </button>
                 {showLogin ? (
                 <div className="reg-dropdown-container">
