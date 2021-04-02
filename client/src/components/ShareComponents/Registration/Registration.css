@@ -16,13 +16,17 @@
 .log-form-container {
     display: flex;
     height: auto;
-    width: 600px;
+    width: 60%;
     box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
 }
 
+.p-login {
+    font-size: 18px;
+}
+
 .form-container-1 {
-    width: 300px;
-    padding: 0px 8px;
+    width: 50%;
+    padding: 0px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,8 +36,8 @@
 }
 
 .form-container-2 {
-    width: 300px;
-    padding: 50px 0px;
+    width: 50%;
+    padding: 100px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +46,7 @@
 }
 
 .reg-link {
-    font-size: 1.5rem;
+    font-size: 28px;
     font-family: 'Train One', cursive;
     text-transform: uppercase;
     color: #f59d87 !important;
@@ -65,17 +69,18 @@
     color: #FF0000;
 }
 
-form > h4 {
+form > h1 {
     text-align: center;
     font-family: 'Train One', cursive;
     text-transform: uppercase;
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
 }
 
 .form-group > label {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0px;
     color: var(--dark-turquiose); 
 }
@@ -86,8 +91,8 @@ form > h4 {
 }
 
 .input-fields, .submit-btn {
-    width: 200px;
-    height: 30px !important;
+    width: 250px;
+    height: 35px !important;
     border:1px solid #f59d87;
     border-top:1px solid #3aab95;
     border-bottom:1px solid #3aab95;
@@ -110,11 +115,12 @@ form > h4 {
     height: 30px;
     padding-bottom: 2px;
     color: var(--light-turquiose);
+    font-size: 18px;
 }
 
 
 .submit-btn:hover {
-    background-color: #e27458;
+    background-color: var(--turquiose);
     color: #FFFFFF;
 }
 
@@ -133,6 +139,7 @@ form > h4 {
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 45px;
 }
 
 
