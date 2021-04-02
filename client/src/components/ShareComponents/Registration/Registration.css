@@ -10,7 +10,6 @@
     align-items: center;
     height: 100vh;
     width: auto;
-    border: solid red;
     background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
 }
 
@@ -78,8 +77,12 @@ form > h4 {
 .form-group > label {
     font-size: 14px;
     margin-bottom: 0px;
+    color: var(--dark-turquiose); 
+}
+
+.form-group > select {
+    font-size: 14px;
     color: var(--dark-turquiose);
-    
 }
 
 .input-fields, .submit-btn {
@@ -116,18 +119,13 @@ form > h4 {
 }
 
 .signup-container {
-    height: 118vh;
+    height: 150vh;
 }
 
 .sign-form-container {
     display: flex;
-    height: 500px;
+    height: auto;
     width: 600px;
-    position: absolute;
-    z-index: 1;
-    top: 59%;
-    left: 50%; 
-    transform: translate(-50%, -50%); 
     box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
 }
 

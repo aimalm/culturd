@@ -18,22 +18,34 @@ function SignUp() {
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label><br/>
                             <input type="text" name="firstName" id="firstName" className="input-fields"/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="lastName">Last Name</label><br/>
                             <input type="text" name="lastName" id="lastName" className="input-fields"/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label><br/>
                             <input type="email" name="email" id="sign-email" className="input-fields"/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label><br/>
                             <input type="email" name="password" id="sign-pass" className="input-fields"/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="confirmPass">Confirm Password</label><br/>
                             <input type="password" name="confirmPass" id="confirmPass" className="input-fields"/>
+                            <p className="error-msg">* error</p>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="user">Choose</label><br/>
+                            <select name="user" id="user" className="input-fields">
+                                <option value="guest">Guest</option>
+                                <option value="cook">Cook</option>
+                            </select>
                         </div>
                         <button type="submit" className="submit-btn">Signup</button>
                     </form>
