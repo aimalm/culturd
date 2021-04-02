@@ -5,6 +5,8 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 function SignUp() {
     const [showLogin, setShowLogin] = useState(false);
+
+    
     return (
         <div className="signup-container">
             <div className="reg-button-container">
