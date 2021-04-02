@@ -7,8 +7,6 @@ import image3 from '../image/3.jpg'
 import image4 from '../image/4.jpg'
 
 
-
-
 function ListW() {
   return (
    <div className="main">
@@ -24,8 +22,6 @@ function ListW() {
           <Link to="/workshop/Indonesia" className="btn-listW">Discover More</Link>{" "}
         </div>
       
-   
-
       <div class="card_content">
           <div className="card_image"><img className="img-cards" src={image2} alt=""/></div>
           <h2 className="card_title">Afganistan</h2>

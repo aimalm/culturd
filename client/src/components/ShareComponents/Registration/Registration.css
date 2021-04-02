@@ -100,7 +100,7 @@
 
 .reg-link:hover {
     color: var( --dark-turquiose);
-    text-decoration: none !important;
+    text-decoration: none !;
 }
 
 #password-link {

@@ -4,7 +4,7 @@
 
 /* -- Setting some variables to color and fonts ,enz-- */
 :root {
-  --NavbarColor: rgb(67, 92, 76);
+  --NavbarColor: rgb(141, 148, 144);
 
   --light-turquiose: #bfede4;
   --turquiose: #63dbc4;
@@ -32,3 +32,5 @@
 h1,h2,h3,h4,h5{
     font-family: var(--font);
 }
+
+

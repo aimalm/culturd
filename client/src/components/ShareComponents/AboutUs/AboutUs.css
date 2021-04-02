@@ -6,7 +6,7 @@
 
 
 .h2-about{
-	color: var(--carol);
+	color: var( --dark-turquiose );
 
 }
 
@@ -23,7 +23,7 @@
 
 .about-section .content-column .text{
 	position:relative;
-	color:var( --dark-turquiose);
+	color:var(--NavbarColor);
 	font-size:15px;
 	line-height:2em;
 	margin-bottom:40px;
@@ -120,3 +120,22 @@
     height: 1px;
     background-color: #3bdbe0;
 }
+
+/*responsive*/
+@media screen and (max-width: 768px) {
+    img.logo-icon{
+        width: 30%;
+       
+        
+        }
+  }
+
+
+  @media screen and (max-width: 425px) {
+   
+    .card_content{
+      grid-template-rows: 30% 10% 45% 15%;
+    }
+    
+  }
+ 
