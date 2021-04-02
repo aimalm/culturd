@@ -9,10 +9,13 @@ function NavLogSign() {
         <div>
             <div className="reg-button-container">
                 <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-                Register <AiFillCaretDown className="angle-icon"/>
+                Register <span className="angle-icon"><AiFillCaretDown /></span>
                 </button>
                 {showLogin ? (
                 <div className="reg-dropdown-container">
+                    <Link to="/" className="reg-home-link">
+                    <p>Home</p>
+                    </Link>
                     <Link to="/login" className="reg-login-link">
                     <p>Log In</p>
                     </Link>

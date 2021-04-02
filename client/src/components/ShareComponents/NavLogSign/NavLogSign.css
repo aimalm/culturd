@@ -22,13 +22,12 @@
     font-size: 1.3rem;
 }
 
+.reg-home-link,
 .reg-login-link,
 .reg-signup-link,
 .reg-contact-us-link {
-    /* color:#3aab95; */
     color: #19d1d1;
     transition: all 0.2s ease-in-out;
-  
 }
 
 .reg-login-link:hover,
