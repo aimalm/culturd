@@ -17,12 +17,12 @@ function Login() {
                         <h4>Log in</h4>
                         <div className="form-group">
                             <label htmlFor="email">Email</label><br/>
-                            <input type="email" name="email" id="log-email" className="input-fields"/>
+                            <input type="email" name="email" id="log-email" className="input-fields" required/>
                             <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label><br/>
-                            <input type="password" name="password" id="log-pass" className="input-fields"/>
+                            <input type="password" name="password" id="log-pass" className="input-fields" required/>
                             <p className="error-msg">* error</p>
                             <p><Link to="/" id="password-link">Forgot password?</Link></p>
                         </div>
