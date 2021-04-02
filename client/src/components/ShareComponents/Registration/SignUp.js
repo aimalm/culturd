@@ -2,8 +2,27 @@ import React from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
 import NavLogSign from '../NavLogSign/NavLogSign';
+import axios from "axios"
+
 
 function SignUp() {
+    function register(e){
+        console.log("hi");
+        e.preventDefault();
+        const data =    {
+            "Type_of_User": "guest",
+            "User_Name": "aimal.m",
+            "Name": "Valerie",
+            "Last_Name": "Maarij",
+            "Email": "me@gmail.com",
+            "Contact_Number": "0489784513",
+            "Address": "gentstraat 120, 900",
+            "Profile_Picture": "www.photo.com"
+        };
+        
+        axios.post('http://localhost:5000/culturd_api/Em3Wi5va8is15/user', data);
+
+    }
     return (
         <div className="signup-container">
             <NavLogSign />
@@ -32,7 +51,7 @@ function SignUp() {
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label><br/>
-                            <input type="email" name="password" id="sign-pass" className="input-fields" required/>
+                            <input type="password" name="password" id="sign-pass" className="input-fields" required/>
                             <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
@@ -47,10 +66,12 @@ function SignUp() {
                                 <option value="cook">Cook</option>
                             </select>
                         </div>
-                        <button type="submit" className="submit-btn">Signup</button>
+                        <button type="submit" className="submit-btn onClick = {register(e)}">Signup</button>
                     </form>
                 </div>
             </div>
+            <button className="submit-btn" onClick={register}>Signup</button>
+
         </div>
     );
 }
