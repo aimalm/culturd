@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ShoppingCartF.css";
 import { IoMdArrowBack } from "react-icons/io";
 import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
 import { BsPlus } from "react-icons/bs";
 import { BiMinus } from "react-icons/bi";
+import { IoMdClose } from "react-icons/io";
+
+import ReactPayPal from "../../Paypal/ReactPayPal";
 
 function ShoppingCartF({ shoppingCart, setShoppingCart }) {
-  const subTotal = shoppingCart.reduce((a, b) => (a + b.price) * b.quantity, 0);
+  const [checkingOut, setcheckingOut] = useState(false);
+  const [paid, setPaid] = useState(false);
+
+  
+ 
+  const calcSubTotal = () => shoppingCart.reduce((total, element) => {
+    
+      total += element.quantity * element.price
+   
+    return total
+  }, 0)
+
+
 
   const deleteFromCart = (id) => {
     let newShoppingCart = shoppingCart.filter((food) => food._id !== id);
@@ -32,7 +47,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
           if (item._id === id && item.quantity > 1) {
             item.quantity--;
             setShoppingCart(minusArray);
-          } else if( item._id === id && item.quantity === 1){
+          } else if (item._id === id && item.quantity === 1) {
             deleteFromCart(id);
           }
         });
@@ -43,6 +58,8 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
         break;
     }
   };
+
+
 
   return (
     <div className="shopping-cart-wrapper">
@@ -106,18 +123,53 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
           <div className="cart-breakline"></div>
           <div className="cart-subtotal-container">
-            
-
             <h5 className="cart-subtotal-title">Subtotal</h5>
 
             <h5 className="cart-subtotal-price">
-              <EuroSymbolIcon /> {subTotal}
+              <EuroSymbolIcon /> {calcSubTotal()}
             </h5>
 
-            <button className="home-food-link cart-checkout-button">
-              Check Out
-            </button>
+            {checkingOut === true ? (
+              <div className="paypal-buttons-contrainer">
+                <button
+                  className="paypal-button-close"
+                  onClick={() => {
+                    setcheckingOut(false);
+                  }}
+                >
+                  <IoMdClose />
+                </button>
+                <div className="paypal-button">
+                  <ReactPayPal
+                  shoppingCart={shoppingCart}
+                  setShoppingCart={setShoppingCart}
+                  calcSubTotal={calcSubTotal}
+                    setPaid={setPaid}
+                    paid={paid}
+                    setcheckingOut={setcheckingOut}
+                  />
+                </div>
+              </div>
+            ) : (
+              <div>
+                <button
+                  onClick={() => {
+                    setcheckingOut(true);
+                  }}
+                  className="home-food-link cart-checkout-button"
+                >
+                  Checkout
+                </button>
+              </div>
+            )}
           </div>
+
+          {paid? (
+            <div className="paypal-buttons-contrainer">
+              <h2>Thank you for your order</h2>
+              <p>We will send you an confirmation email very soon!</p>
+              </div>
+          ): "" }
         </div>
       )}
     </div>

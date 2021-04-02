@@ -16,7 +16,6 @@ function ContactForm() {
       e.target.reset();
   }
 
-  
     return (
       <>
        <h1 className="title-home">Get in Touch</h1>
@@ -51,8 +50,6 @@ function ContactForm() {
               Submit
             </Button>
           </Form>
- 
-
       </div>
 
       </>
