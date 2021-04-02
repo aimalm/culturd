@@ -79,4 +79,10 @@
       grid-template-columns: auto auto;
     }
     
-    
+    /*responsive*/
+@media screen and (max-width: 768px) {
+.logo-icon{
+  width: 30%;
+     
+   }
+}

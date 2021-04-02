@@ -90,6 +90,7 @@
   .btn-listW:hover {
     background-color:var(--carol);
     text-decoration: none;
+    color:teal;
   }
   
   
@@ -103,6 +104,7 @@
     border: 2px solid #f5e3b1;
     border-top: 2px solid #bfede4;
     border-bottom: 2px solid #f59d87;
+    background-color: white;
   }
   
   .card_title {
