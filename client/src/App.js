@@ -60,8 +60,9 @@ function App() {
       console.log(response.data);
     }
   };
- //POST for food_order
 
+  console.log(shoppingCart.map((dish)=>dish.address))
+ //POST for food_order
   const createFoodOrder = async (amount) => {
    const newObj=  {
     "user_id": Math.round(Math.random()*10000),
@@ -76,6 +77,7 @@ function App() {
       .then((res) => getFoodOrder(res))
       .catch((err) => console.error(err));
   };
+
   useEffect(() => {
     getFoodData();
     getFoodOrder();

@@ -58,6 +58,8 @@ function ShoppingCartF({ shoppingCart, setShoppingCart,createFoodOrder}) {
     }
   };
 
+  console.log(checkingOut)
+
 
 
   return (
@@ -166,7 +168,14 @@ function ShoppingCartF({ shoppingCart, setShoppingCart,createFoodOrder}) {
 
           {paid? (
             <div className="paypal-buttons-contrainer">
-              
+              <button
+                  className="paypal-button-close"
+                  onClick={() => {
+                    setcheckingOut(false);
+                  }}
+                >
+                  <IoMdClose />
+                </button>
               <p>Your order has been processed.</p>
               </div>
           ): "" }

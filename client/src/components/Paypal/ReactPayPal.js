@@ -29,13 +29,14 @@ function ReactPayPal({setPaid, setcheckingOut, calcSubTotal, setShoppingCart,cre
   const onApprove = (data, actions) => {
      actions.order.capture();
      setPaid(true)
-    //setcheckingOut(false)
+    
       createFoodOrder(chargeAmount)
 
-    // setTimeout(() => {
-    //   setShoppingCart([])
-    //   setPaid(false)
-    // }, 5000);
+    setTimeout(() => {
+      setShoppingCart([])
+      setPaid(false)
+      setcheckingOut(false)
+    }, 3000);
   };
 
 
