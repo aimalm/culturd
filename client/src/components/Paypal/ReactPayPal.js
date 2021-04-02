@@ -5,11 +5,12 @@ import ReactDOM from "react-dom"
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 
-function ReactPayPal({setPaid, paid, setcheckingOut, calcSubTotal, shoppingCart}) {
+function ReactPayPal({setPaid, setcheckingOut, calcSubTotal, setShoppingCart,createFoodOrder}) {
   
 
   let chargeAmount = calcSubTotal()
 
+  console.log(chargeAmount)
 
   const createOrder = (data, actions) =>{
     return actions.order.create({
@@ -18,7 +19,7 @@ function ReactPayPal({setPaid, paid, setcheckingOut, calcSubTotal, shoppingCart}
           description: "Your description",
                 amount: {
                   currency_code: "EUR",
-                  value: chargeAmount,
+                  value: JSON.stringify(chargeAmount),
           },
         },
       ],
@@ -28,8 +29,13 @@ function ReactPayPal({setPaid, paid, setcheckingOut, calcSubTotal, shoppingCart}
   const onApprove = (data, actions) => {
      actions.order.capture();
      setPaid(true)
-     setcheckingOut(false)
-     
+    //setcheckingOut(false)
+      createFoodOrder(chargeAmount)
+
+    // setTimeout(() => {
+    //   setShoppingCart([])
+    //   setPaid(false)
+    // }, 5000);
   };
 
 

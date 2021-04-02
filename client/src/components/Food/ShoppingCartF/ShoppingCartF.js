@@ -8,11 +8,10 @@ import { IoMdClose } from "react-icons/io";
 
 import ReactPayPal from "../../Paypal/ReactPayPal";
 
-function ShoppingCartF({ shoppingCart, setShoppingCart }) {
+function ShoppingCartF({ shoppingCart, setShoppingCart,createFoodOrder}) {
   const [checkingOut, setcheckingOut] = useState(false);
   const [paid, setPaid] = useState(false);
 
-  
  
   const calcSubTotal = () => shoppingCart.reduce((total, element) => {
     
@@ -141,11 +140,12 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
                 </button>
                 <div className="paypal-button">
                   <ReactPayPal
+                  createFoodOrder={createFoodOrder}
                   shoppingCart={shoppingCart}
                   setShoppingCart={setShoppingCart}
                   calcSubTotal={calcSubTotal}
                     setPaid={setPaid}
-                    paid={paid}
+               
                     setcheckingOut={setcheckingOut}
                   />
                 </div>
@@ -166,8 +166,8 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
           {paid? (
             <div className="paypal-buttons-contrainer">
-              <h2>Thank you for your order</h2>
-              <p>We will send you an confirmation email very soon!</p>
+              
+              <p>Your order has been processed.</p>
               </div>
           ): "" }
         </div>

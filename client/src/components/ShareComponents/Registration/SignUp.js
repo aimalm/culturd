@@ -1,35 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
-import { AiFillCaretDown } from "react-icons/ai";
+import NavLogSign from '../NavLogSign/NavLogSign';
 
 function SignUp() {
-    const [showLogin, setShowLogin] = useState(false);
     return (
         <div className="signup-container">
-            <div className="reg-button-container">
-                <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-                Register <AiFillCaretDown />
-                </button>
-                {showLogin ? (
-                <div className="reg-dropdown-container">
-                    <Link to="/" className="reg-login-link">
-                    <p>Home</p>
-                    </Link>
-                    <Link to="/login" className="reg-login-link">
-                    <p>Log In</p>
-                    </Link>
-                    <Link to="/signup" className="reg-signup-link">
-                    <p>Sign Up</p>
-                    </Link>
-                    <Link to="/contact_us" className="reg-contact-us-link">
-                    <p>Contact Us</p>
-                    </Link>
-                </div>
-                ) : (
-                ""
-                )}
-            </div>
+            <NavLogSign />
             <div className="sign-form-container">
                 <div className="form-container-1">
                     <h2 className="login-h2">Already have an account?</h2>
@@ -40,23 +17,35 @@ function SignUp() {
                         <h4>Sign up</h4>
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label><br/>
-                            <input type="text" name="firstName" id="firstName" className="input-fields"/>
+                            <input type="text" name="firstName" id="firstName" className="input-fields" required/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="lastName">Last Name</label><br/>
-                            <input type="text" name="lastName" id="lastName" className="input-fields"/>
+                            <input type="text" name="lastName" id="lastName" className="input-fields" required/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label><br/>
-                            <input type="email" name="email" id="sign-email" className="input-fields"/>
+                            <input type="email" name="email" id="sign-email" className="input-fields" required/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label><br/>
-                            <input type="email" name="password" id="sign-pass" className="input-fields"/>
+                            <input type="email" name="password" id="sign-pass" className="input-fields" required/>
+                            <p className="error-msg">* error</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="confirmPass">Confirm Password</label><br/>
-                            <input type="password" name="confirmPass" id="confirmPass" className="input-fields"/>
+                            <input type="password" name="confirmPass" id="confirmPass" className="input-fields" required/>
+                            <p className="error-msg">* error</p>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="user">Choose</label><br/>
+                            <select name="user" id="user" className="input-fields">
+                                <option value="guest">Guest</option>
+                                <option value="cook">Cook</option>
+                            </select>
                         </div>
                         <button type="submit" className="submit-btn">Signup</button>
                     </form>

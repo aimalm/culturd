@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { axois } from "./components/Axois/Axois";
+import {  axois } from "./components/Axois/Axois";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // share components
@@ -10,6 +10,8 @@ import AboutUs from "./components/ShareComponents/AboutUs/AboutUs";
 import Footer from "./components/ShareComponents/Footer/Footer";
 import LogIn from "./components/ShareComponents/Registration/LogIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
+import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
+
 
 //import {fetchEvents} from "./API/index"
 
@@ -31,8 +33,7 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
-import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
-//import shadows from "@material-ui/core/styles/shadows";
+
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
@@ -40,7 +41,8 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
   const [dishData, setDishData] = useState([]);
 
-  //fetch get from database
+
+  //Get all for food
   const getFoodData = async () => {
     const response = await axois.get("/food").catch((err) => console.log(err));
 
@@ -48,7 +50,7 @@ function App() {
       setDishData(response.data);
     }
   };
-
+  //Get all for food_order
   const getFoodOrder = async () => {
     const response = await axois
       .get("/food_order")
@@ -58,16 +60,19 @@ function App() {
       console.log(response.data);
     }
   };
-  const CreateOrder = async () => {
+ //POST for food_order
+
+  const createFoodOrder = async (amount) => {
+   const newObj=  {
+    "user_id": Math.round(Math.random()*10000),
+    "product_id": shoppingCart.map((dish)=>dish._id),
+    "payment": "yes",
+    "amount": amount,
+    "pickup_date":  new Date().toString(),
+    "Pickup_address": shoppingCart.map((dish)=>dish.address)
+  }
     await axois
-      .post("/food_order", {
-        user_id: "1234",
-        product_id: "jdsjdslj789889",
-        payment: "yes",
-        amount: "12.00",
-        delivery_date: "2021-01-23",
-        Pickup_address: "abc abc abc",
-      })
+      .post("/food_order", newObj)
       .then((res) => getFoodOrder(res))
       .catch((err) => console.error(err));
   };
@@ -75,6 +80,15 @@ function App() {
     getFoodData();
     getFoodOrder();
   }, []);
+
+  // useEffect(() => {
+  //   createOrder()
+  // }, [paid]);
+
+
+
+
+
 
   // save shopping cart to localStorage
   const LSKEY = "culturd";
@@ -90,6 +104,8 @@ function App() {
 
   return (
     <div className="App">
+
+
       <Router>
         <Switch>
           <Route path="/workshop/bookform">
@@ -136,6 +152,8 @@ function App() {
           <Route path="/food/shopping_cart">
             <SubnavF shoppingCart={shoppingCart} />
             <ShoppingCartF
+            createFoodOrder={createFoodOrder}
+            
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
             />
@@ -201,7 +219,7 @@ function App() {
             <Footer />
           </Route>
           <Route path="/contact_us">
-            <ContactUs />
+           <ContactUs />
             <Footer />
           </Route>
 
@@ -213,7 +231,7 @@ function App() {
         <div></div>
       </Router>
 
-      <button onClick={CreateOrder}>click</button>
+      {/* <button onClick={CreateOrder}>click</button> */}
     </div>
   );
 }
