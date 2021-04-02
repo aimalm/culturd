@@ -26,7 +26,7 @@ function Login() {
                             <p className="error-msg">* error</p>
                             <p><Link to="/" id="password-link">Forgot password?</Link></p>
                         </div>
-                        <button type="submit"className="submit-btn">LOGIN</button>
+                        <button type="submit"className="submit-btn">Login</button>
                     </form>
                 </div>
             </div>
