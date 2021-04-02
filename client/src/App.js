@@ -198,6 +198,7 @@ function App() {
             <Footer />
           </Route>
           <Route path="/contact_us">
+          <MainNav />
            <ContactUs />
             <Footer />
            
