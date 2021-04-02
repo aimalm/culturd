@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import NavLogSign from '../NavLogSign/NavLogSign';
 
 function SignUp() {
-    const [showLogin, setShowLogin] = useState(false);
-
-    
     return (
         <div className="signup-container">
             <NavLogSign />
