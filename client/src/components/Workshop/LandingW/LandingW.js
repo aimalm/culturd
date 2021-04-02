@@ -15,8 +15,8 @@ function LandingW() {
       <div className="container-homepage">
         <div className="dummy-text">
           <h2 className="h1-animation">
-            <span>CULTURD</span>
-            <span>WORKSHOP</span>
+            <span className="span-animation">CULTURD</span>
+            <span className="span-animation">WORKSHOP</span>
           </h2>
           <br></br>
           <h4 className="h4-homeW"> " We bring our Culture to you "</h4>

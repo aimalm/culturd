@@ -79,15 +79,15 @@
     -0.03em -0.03em 0 rgb(52, 129, 107), -0.03em 0.08em 0 rgb(49, 160, 132);
 }
 
-span {
+.span-animation {
   transform: scale(0.9);
   display: inline-block;
 }
-span:first-child {
+.span-animation:first-child {
   animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
     alternate;
 }
-span:last-child {
+.span-animation:last-child {
   animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
     infinite alternate;
 }
