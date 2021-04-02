@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 const orderSchema = mongoose.Schema({  
     "user_id": { type: String, required: true},
-    "product_id": { type: String, required: true},
+    "product_id": { type: Array, required: true},
     "payment": { type: Boolean, required: true},
     "amount": { type: Number, required: true},
     "pickup_date": { type: Date, required: true},
