@@ -11,7 +11,6 @@ import Footer from "./components/ShareComponents/Footer/Footer";
 import LogIn from "./components/ShareComponents/Registration/LogIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
 
-
 //import {fetchEvents} from "./API/index"
 
 //workshop components
@@ -35,29 +34,46 @@ import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
 //import shadows from "@material-ui/core/styles/shadows";
 
-
-
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
   const [dishData, setDishData] = useState([]);
 
-
-
   //fetch get from database
   const getFoodData = async () => {
-    const response = await axois
-      .get("/food")
-      .catch((err) => console.log(err));
+    const response = await axois.get("/food").catch((err) => console.log(err));
 
     if (response && response.data) {
       setDishData(response.data);
     }
   };
 
+  const getFoodOrder = async () => {
+    const response = await axois
+      .get("/food_order")
+      .catch((err) => console.log(err));
+
+    if (response && response.data) {
+      console.log(response.data);
+    }
+  };
+  const CreateOrder = async () => {
+    await axois
+      .post("/food_order", {
+        user_id: "1234",
+        product_id: "jdsjdslj789889",
+        payment: "yes",
+        amount: "12.00",
+        delivery_date: "2021-01-23",
+        Pickup_address: "abc abc abc",
+      })
+      .then((res) => getFoodOrder(res))
+      .catch((err) => console.error(err));
+  };
   useEffect(() => {
     getFoodData();
+    getFoodOrder();
   }, []);
 
   // save shopping cart to localStorage
@@ -72,13 +88,8 @@ function App() {
     window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
   }, [shoppingCart]);
 
-
-  
-  
   return (
     <div className="App">
-
-
       <Router>
         <Switch>
           <Route path="/workshop/bookform">
@@ -123,9 +134,7 @@ function App() {
           </Route>
 
           <Route path="/food/shopping_cart">
-            <SubnavF
-              shoppingCart={shoppingCart}
-            />
+            <SubnavF shoppingCart={shoppingCart} />
             <ShoppingCartF
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
@@ -133,16 +142,12 @@ function App() {
           </Route>
 
           <Route path="/food/profile">
-            <SubnavF
-              shoppingCart={shoppingCart}
-            />
+            <SubnavF shoppingCart={shoppingCart} />
             <ProfileF />
           </Route>
 
           <Route path="/food/products">
-            <SubnavF
-              shoppingCart={shoppingCart}
-            />
+            <SubnavF shoppingCart={shoppingCart} />
 
             <ProductDetailsF
               selectedDish={selectedDish}
@@ -155,7 +160,7 @@ function App() {
           </Route>
 
           <Route path="/food/product_list">
-            <SubnavF shoppingCart={shoppingCart}/>
+            <SubnavF shoppingCart={shoppingCart} />
             <ProductListF
               dishData={dishData}
               setSelectedDish={setSelectedDish}
@@ -177,7 +182,6 @@ function App() {
             <AboutUs />
             <Footer />
           </Route>
-         
 
           <Route path="/about_us">
             <MainNav />
@@ -186,7 +190,7 @@ function App() {
           </Route>
 
           <Route path="/food">
-            <SubnavF shoppingCart={shoppingCart}/>
+            <SubnavF shoppingCart={shoppingCart} />
             <LandingF setSelectedDish={setSelectedDish} dishData={dishData} />
             <Footer />
           </Route>
@@ -197,22 +201,19 @@ function App() {
             <Footer />
           </Route>
           <Route path="/contact_us">
-            <ContactUs/>
+            <ContactUs />
             <Footer />
-           
           </Route>
 
           <Route path="/">
             <Home />
             <Footer />
-           
           </Route>
         </Switch>
-        <div>
-        
-        </div>
+        <div></div>
       </Router>
-      
+
+      <button onClick={CreateOrder}>click</button>
     </div>
   );
 }
