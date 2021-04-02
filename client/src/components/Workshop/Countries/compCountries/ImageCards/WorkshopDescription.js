@@ -49,12 +49,12 @@ const IndoWorkshop = [
         title: 'Indonesian Food'
     },
     {
-        description: 'Indonesian Art Description',
-        title: 'Indonesian Art'
-    },
-    {
         description: 'Indonesian Dance Description',
         title: 'Indonesian Dance'
+    },
+    {
+        description: 'Indonesian Art Description',
+        title: 'Indonesian Art'
     }
 ];
 

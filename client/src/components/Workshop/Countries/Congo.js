@@ -4,8 +4,10 @@ import { IoTicketSharp } from 'react-icons/io5';
 import { BsFillLightningFill } from 'react-icons/bs';
 import ImageCards from './compCountries/ImageCards/ImageCards';
 import Accordeon from './compCountries/Accordion/Accordion';
-import InProgress from '../image/inProgress.png';
-import {CongoWorkshop} from './compCountries/ImageCards/WorkshopDescription';
+import Food from '../image/liboke.jpg';
+import Dance from '../image/congoDance.jpeg';
+import Art from '../image/congoMask.jpg';
+import { CongoWorkshop } from './compCountries/ImageCards/WorkshopDescription';
 import { CongoWorkshopInfo } from './compCountries/Accordion/WorkshopInfo';
 import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
 
@@ -23,7 +25,9 @@ function Congo() {
                 <div className="workshop-container">
                     <div className="inner-container-1">
                         <ImageCards 
-                            imageSrc={InProgress} 
+                            imageSrc1={Food} 
+                            imageSrc2={Dance}
+                            imageSrc3={Art}
                             foodDes_1={CongoWorkshop[0].description}
                             foodTit_1={CongoWorkshop[0].title}
                             foodDes_2={CongoWorkshop[1].description}
