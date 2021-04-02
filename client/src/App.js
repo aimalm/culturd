@@ -33,6 +33,8 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
+import ProfileCook from "./components/Food/ProfileCook/ProfileCook";
+
 
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
   const [dishData, setDishData] = useState([]);
+
 
 
   //Get all for food
@@ -50,18 +53,18 @@ function App() {
       setDishData(response.data);
     }
   };
+
+
+
+
+
   //Get all for food_order
   const getFoodOrder = async () => {
-    const response = await axois
+    //const response = 
+    await axois
       .get("/food_order")
       .catch((err) => console.log(err));
-
-    if (response && response.data) {
-      console.log(response.data);
-    }
   };
-
-  console.log(shoppingCart.map((dish)=>dish.address))
  //POST for food_order
   const createFoodOrder = async (amount) => {
    const newObj=  {
@@ -80,12 +83,11 @@ function App() {
 
   useEffect(() => {
     getFoodData();
-    getFoodOrder();
+    // getFoodOrder();
+ 
   }, []);
 
-  // useEffect(() => {
-  //   createOrder()
-  // }, [paid]);
+ 
 
 
 
@@ -161,9 +163,17 @@ function App() {
             />
           </Route>
 
+          
+          <Route path="/food/profile/cook">
+          <SubnavF shoppingCart={shoppingCart} />
+
+         <ProfileCook/>
+            <Footer />
+          </Route>
+
           <Route path="/food/profile">
             <SubnavF shoppingCart={shoppingCart} />
-            <ProfileF />
+            <ProfileF/>
           </Route>
 
           <Route path="/food/products">
