@@ -3,11 +3,12 @@
   padding: 3rem 7rem;
 }
 .add-cart-alert p,
-.products-wrapper h2,
-.products-wrapper h3,
-.products-wrapper p {
+.products-wrapper h3 {
   color: var(--NavbarColor);
 }
+
+
+
 
 .add-cart-alert {
   position: fixed;
@@ -38,6 +39,10 @@
   
 }
 
+.products-price{
+  color:var(--greenish)
+}
+
 .products-container {
 
   width: 80%;
@@ -56,12 +61,13 @@
 }
 .ingredient-lable {
   margin: 0.3rem;
-  border: 1px solid var(--NavbarColor);
+  border: 1px solid var(--light-yellow);
   padding: 0.1rem 0.5rem;
-  border-radius: 8px;
+  border-radius: 4px;
   text-transform: capitalize;
   display: inline-block;
-  color: var(--NavbarColor);
+  color:var( --yellowish);
+  
 }
 .ingredient-vegetarian {
   color: var(--dark-turquiose);
@@ -69,9 +75,16 @@
 }
 .products-dishname {
   text-transform: uppercase;
+  background: linear-gradient(to right, #c2cc67 0%, #26fade 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+  
 }
 .products-description {
   text-transform: capitalize;
+  color: var(--NavbarColor);
+
 }
 
 .cooker-info {

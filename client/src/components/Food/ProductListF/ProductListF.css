@@ -10,7 +10,7 @@
 }
 .search-filter-button {
   background-color: transparent;
-  color: var(--dark-green);
+  color:var(--turquiose);
   border: none;
   font-family: var(--font);
   text-transform: uppercase;
