@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react'
 import './BookForm.css'
+import logo from '../image/book.png'
+
 
 import {
   TextBox,
@@ -20,8 +22,9 @@ function BookForm() {
     return (
 
     <>
-          
-        <h1 className="h1-book">Request your price quote here</h1>
+     
+          <h1 className="h1-book">Request your price quote here</h1>
+
         <div className="Booking-container">
         <Form
           name="testForm"

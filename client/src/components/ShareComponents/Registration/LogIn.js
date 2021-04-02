@@ -14,7 +14,7 @@ function Login() {
                 </div>
                 <div className="form-container-2">
                     <form>
-                        <h4>Log in</h4>
+                        <h1>Log in</h1>
                         <div className="form-group">
                             <label htmlFor="email">Email</label><br/>
                             <input type="email" name="email" id="log-email" className="input-fields" required/>
