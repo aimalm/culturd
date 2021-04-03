@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import {
   Button,
@@ -13,18 +13,37 @@ import {
   Option,
   OptionGroup,
 } from "react-form-elements";
+import {CgArrowLongUp} from 'react-icons/cg'
 import { User } from "../Template";
 
-function AddPost({ setAddPost }) {
+function AddPost({ createFood }) {
+  const [addingPosting, setAddingPost] = useState(false);
+
   return (
     <div className="addpost-popup">
+      {addingPosting ? (
+        <div className="alert add-post-alert">
+          <p>
+            The dish is available in the LIST!<CgArrowLongUp /> <CgArrowLongUp /> 
+           
+          </p>
+        </div>
+      ) : (
+        ""
+      )}
+
       <h3>A new post</h3>
       <Form
         className="form-add-post"
         name="add post form"
         onSubmit={(values) => {
-          console.log("add post form", values);
-          setAddPost(values);
+          //console.log("add post form", values);
+          //createFood(values);
+          setAddingPost(true);
+
+          setTimeout(() => {
+            setAddingPost(false);
+          }, 3000);
         }}
       >
         <TextBox name="dishName" label="Dish Name" initialValue="" />

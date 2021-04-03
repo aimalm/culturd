@@ -118,6 +118,19 @@
   background-color: var(--dark-carol);
 }
 
+
+/* AddPost component css  */
+.add-post-alert{
+  top: 10%;
+  right: 10%;
+  border: 0.1em solid var(--light-green);
+  background-color: var(--light-green);
+}
+.add-post-alert p {
+  color: white;
+}
+
+
 @media only screen and (max-width : 768px){
   .profile-menu h3{
     font-size: 1.5rem;

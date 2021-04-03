@@ -41,11 +41,9 @@ function ProductDetailsF({
     <div>
       {/* shopping cart alert here */}
       {viewingCart ? (
-        <div className="add-cart-alert">
+        <div className="alert add-cart-alert">
           <p>
-            
-            <CgArrowLongUp />
-            The dish is now in the cart! <CgArrowLongUp />
+            The dish is now in the CART! <CgArrowLongUp /> <CgArrowLongUp />
           </p>
         </div>
       ) : (
@@ -112,14 +110,16 @@ function ProductDetailsF({
                   className="home-food-link products-add-button"
                   onClick={() => addCart(dish._id)}
                 >
-                 Add to cart
+                  Add to cart
                 </button>
               </div>
             ))}
           </div>
         ) : (
           <div className="product-empty-container">
-          <h3 className="product-empty-alert">Go back to check out the delicious HOME DISHES</h3>
+            <h3 className="product-empty-alert">
+              Go back to check out the delicious HOME DISHES
+            </h3>
           </div>
         )}
       </div>

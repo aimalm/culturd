@@ -41,7 +41,6 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
 
   const [dishData, setDishData] = useState([]);
-  const [addPost, setAddPost] = useState([]);
 
   //Get all for food
   const getFoodData = async () => {
@@ -52,36 +51,54 @@ function App() {
     }
   };
 
+  //prepare the array for ingredients and keywords before the POST req
+  const removeEmptyString = (string1, string2, string3, string4) => {
+    let validArray = [string1];
+
+    if (string2 !== "") {
+      validArray.push(string2);
+    }
+    if (string3 !== "") {
+      validArray.push(string3);
+    }
+    if (string4 !== "") {
+      validArray.push(string4);
+    }
+    return validArray;
+  };
+
+
   //POST for food
-  const createFood = async () => {
+  const createFood = async (values) => {
     const newObj = {
-      dishName: addPost.dishName,
-      ingredients: [
-        addPost.ingredient1,
-        addPost.ingredient2,
-        addPost.ingredient3,
-        addPost.ingredient4,
-      ],
-      keywords: [
-        addPost.keyword1,
-        addPost.keyword2,
-        addPost.keyword3,
-        addPost.keyword4,
-      ],
-      category: addPost.category,
-      vegetarian: addPost.vegetarian,
-      dishDescription: addPost.dishDescription,
+      dishName: values.dishName,
+      ingredients: removeEmptyString(
+        values.ingredient1,
+        values.ingredient2,
+        values.ingredient3,
+        values.ingredient4
+      ),
+      keywords: removeEmptyString(
+        values.keyword1,
+        values.keyword2,
+        values.keyword3,
+        values.keyword4
+      ),
+      category: values.category,
+      vegetarian: values.vegetarian,
+      dishDescription: values.dishDescription,
       cooker: User.Name,
       cookerImage: User.Profile_Picture,
       cookerScore: ["star", "star", "star"],
-      price: addPost.Price,
-      pickupDate: addPost.pickupdate.substring(0, 10),
-      openingHours: addPost.pickupdate.substring(11, 16),
-      address: addPost.address,
-      imageUrl: addPost.imageUrl,
+      price: values.Price,
+      pickupDate: values.pickupdate.substring(0, 10),
+      openingHours: values.pickupdate.substring(11, 16),
+      address: values.address,
+      imageUrl: values.imageUrl,
       quantity: "1",
     };
 
+    console.log(newObj);
     await axois
       .post("/food", newObj)
       .then((res) => getFoodData(res))
@@ -112,6 +129,7 @@ function App() {
     getFoodData();
   }, []);
 
+
   // save shopping cart to localStorage
   const LSKEY = "culturd";
   useEffect(() => {
@@ -120,7 +138,6 @@ function App() {
       setShoppingCart(localShoppingCart);
     }
   }, []);
-  // take shopping cart record from localStorage
   useEffect(() => {
     window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
   }, [shoppingCart]);
@@ -181,7 +198,7 @@ function App() {
 
           <Route path="/food/profile">
             <SubnavF shoppingCart={shoppingCart} />
-            <ProfileF setAddPost={setAddPost} />
+            <ProfileF createFood={createFood} />
           </Route>
 
           <Route path="/food/products">
@@ -194,6 +211,10 @@ function App() {
               viewingCart={viewingCart}
               setViewingCart={setViewingCart}
             />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+              vero deleniti quo nam eos nisi!
+            </p>
             <Footer />
           </Route>
 
@@ -252,7 +273,7 @@ function App() {
         <div></div>
       </Router>
 
-      <button onClick={createFood}>click</button>
+      {/* <button onClick={createFood}>click</button> */}
     </div>
   );
 }

@@ -8,19 +8,16 @@ import { IoMdClose } from "react-icons/io";
 
 import ReactPayPal from "../../Paypal/ReactPayPal";
 
-function ShoppingCartF({ shoppingCart, setShoppingCart,createFoodOrder}) {
+function ShoppingCartF({ shoppingCart, setShoppingCart, createFoodOrder }) {
   const [checkingOut, setcheckingOut] = useState(false);
   const [paid, setPaid] = useState(false);
 
- 
-  const calcSubTotal = () => shoppingCart.reduce((total, element) => {
-    
-      total += element.quantity * element.price
-   
-    return total
-  }, 0)
+  const calcSubTotal = () =>
+    shoppingCart.reduce((total, element) => {
+      total += element.quantity * element.price;
 
-
+      return total;
+    }, 0);
 
   const deleteFromCart = (id) => {
     let newShoppingCart = shoppingCart.filter((food) => food._id !== id);
@@ -57,10 +54,6 @@ function ShoppingCartF({ shoppingCart, setShoppingCart,createFoodOrder}) {
         break;
     }
   };
-
-  console.log(checkingOut)
-
-
 
   return (
     <div className="shopping-cart-wrapper">
@@ -142,12 +135,11 @@ function ShoppingCartF({ shoppingCart, setShoppingCart,createFoodOrder}) {
                 </button>
                 <div className="paypal-button">
                   <ReactPayPal
-                  createFoodOrder={createFoodOrder}
-                  shoppingCart={shoppingCart}
-                  setShoppingCart={setShoppingCart}
-                  calcSubTotal={calcSubTotal}
+                    createFoodOrder={createFoodOrder}
+                    shoppingCart={shoppingCart}
+                    setShoppingCart={setShoppingCart}
+                    calcSubTotal={calcSubTotal}
                     setPaid={setPaid}
-               
                     setcheckingOut={setcheckingOut}
                   />
                 </div>
@@ -166,19 +158,21 @@ function ShoppingCartF({ shoppingCart, setShoppingCart,createFoodOrder}) {
             )}
           </div>
 
-          {paid? (
+          {paid ? (
             <div className="paypal-buttons-contrainer">
               <button
-                  className="paypal-button-close"
-                  onClick={() => {
-                    setcheckingOut(false);
-                  }}
-                >
-                  <IoMdClose />
-                </button>
+                className="paypal-button-close"
+                onClick={() => {
+                  setcheckingOut(false);
+                }}
+              >
+                <IoMdClose />
+              </button>
               <p>Your order has been processed.</p>
-              </div>
-          ): "" }
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       )}
     </div>

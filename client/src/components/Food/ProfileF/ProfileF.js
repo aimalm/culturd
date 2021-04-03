@@ -6,7 +6,7 @@ import EditProfile from "./EditProfile";
 import OrderHistory from "./OrderHistory";
 import AddPost from "./AddPost";
 
-function ProfileF({setAddPost}) {
+function ProfileF({createFood}) {
   const [viewSection, setViewSection] = useState("info");
  
  
@@ -50,7 +50,7 @@ function ProfileF({setAddPost}) {
             <OrderHistory/>
           ) : ""}
           {viewSection === "addPost" ? (
-            <AddPost setAddPost={setAddPost}/>
+            <AddPost createFood={createFood}/>
           ) : ""}
         </div>
       </div>

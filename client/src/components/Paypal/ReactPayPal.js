@@ -1,25 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom"
-
+import ReactDOM from "react-dom";
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
+function ReactPayPal({
+  setPaid,
+  setcheckingOut,
+  calcSubTotal,
+  setShoppingCart,
+  createFoodOrder,
+}) {
+  let chargeAmount = calcSubTotal();
 
-function ReactPayPal({setPaid, setcheckingOut, calcSubTotal, setShoppingCart,createFoodOrder}) {
-  
-
-  let chargeAmount = calcSubTotal()
-
-  console.log(chargeAmount)
-
-  const createOrder = (data, actions) =>{
+  const createOrder = (data, actions) => {
     return actions.order.create({
       purchase_units: [
         {
           description: "Your description",
-                amount: {
-                  currency_code: "EUR",
-                  value: JSON.stringify(chargeAmount),
+          amount: {
+            currency_code: "EUR",
+            value: JSON.stringify(chargeAmount),
           },
         },
       ],
@@ -27,29 +27,25 @@ function ReactPayPal({setPaid, setcheckingOut, calcSubTotal, setShoppingCart,cre
   };
 
   const onApprove = (data, actions) => {
-     actions.order.capture();
-     setPaid(true)
-    
-      createFoodOrder(chargeAmount)
+    actions.order.capture();
+    setPaid(true);
+
+    createFoodOrder(chargeAmount);
 
     setTimeout(() => {
-      setShoppingCart([])
-      setPaid(false)
-      setcheckingOut(false)
+      setShoppingCart([]);
+      setPaid(false);
+      setcheckingOut(false);
     }, 3000);
   };
 
-
   return (
-
-    
-    <PayPalButton className="paypal-button"
+    <PayPalButton
+      className="paypal-button"
       createOrder={(data, actions) => createOrder(data, actions)}
       onApprove={(data, actions) => onApprove(data, actions)}
     />
-    
   );
 }
 
-
-export default ReactPayPal
+export default ReactPayPal;
