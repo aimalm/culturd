@@ -12,8 +12,6 @@ import LogIn from "./components/ShareComponents/Registration/LogIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
 import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
 
-
-
 //import {fetchEvents} from "./API/index"
 
 //workshop components
@@ -34,32 +32,103 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
-//import shadows from "@material-ui/core/styles/shadows";
 
-
+import { User } from "./components/Food/Template";
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
+
   const [dishData, setDishData] = useState([]);
 
-
-
-  //fetch get from database
+  //Get all for food
   const getFoodData = async () => {
-    const response = await axois
-      .get("/food")
-      .catch((err) => console.log(err));
+    const response = await axois.get("/food").catch((err) => console.log(err));
 
     if (response && response.data) {
       setDishData(response.data);
     }
   };
 
+  //prepare the array for ingredients and keywords before the POST req
+  const removeEmptyString = (string1, string2, string3, string4) => {
+    let validArray = [string1];
+
+    if (string2 !== "") {
+      validArray.push(string2);
+    }
+    if (string3 !== "") {
+      validArray.push(string3);
+    }
+    if (string4 !== "") {
+      validArray.push(string4);
+    }
+    return validArray;
+  };
+
+
+  //POST for food
+  const createFood = async (values) => {
+    const newObj = {
+      dishName: values.dishName,
+      ingredients: removeEmptyString(
+        values.ingredient1,
+        values.ingredient2,
+        values.ingredient3,
+        values.ingredient4
+      ),
+      keywords: removeEmptyString(
+        values.keyword1,
+        values.keyword2,
+        values.keyword3,
+        values.keyword4
+      ),
+      category: values.category,
+      vegetarian: values.vegetarian,
+      dishDescription: values.dishDescription,
+      cooker: User.Name,
+      cookerImage: User.Profile_Picture,
+      cookerScore: ["star", "star", "star"],
+      price: values.Price,
+      pickupDate: values.pickupdate.substring(0, 10),
+      openingHours: values.pickupdate.substring(11, 16),
+      address: values.address,
+      imageUrl: values.imageUrl,
+      quantity: "1",
+    };
+
+    console.log(newObj);
+    await axois
+      .post("/food", newObj)
+      .then((res) => getFoodData(res))
+      .catch((err) => console.error(err));
+  };
+
+  //Get all for food_order
+  const getFoodOrder = async () => {
+    await axois.get("/food_order").catch((err) => console.log(err));
+  };
+  //POST for food_order
+  const createFoodOrder = async (amount) => {
+    const newObj = {
+      user_id: Math.round(Math.random() * 10000),
+      product_id: shoppingCart.map((dish) => dish._id),
+      payment: "yes",
+      amount: amount,
+      pickup_date: new Date().toString(),
+      Pickup_address: shoppingCart.map((dish) => dish.address),
+    };
+    await axois
+      .post("/food_order", newObj)
+      .then((res) => getFoodOrder(res))
+      .catch((err) => console.error(err));
+  };
+
   useEffect(() => {
     getFoodData();
   }, []);
+
 
   // save shopping cart to localStorage
   const LSKEY = "culturd";
@@ -73,13 +142,8 @@ function App() {
     window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
   }, [shoppingCart]);
 
-
-  
-  
   return (
     <div className="App">
-
-
       <Router>
         <Switch>
           <Route path="/workshop/bookform">
@@ -124,26 +188,21 @@ function App() {
           </Route>
 
           <Route path="/food/shopping_cart">
-            <SubnavF
-              shoppingCart={shoppingCart}
-            />
+            <SubnavF shoppingCart={shoppingCart} />
             <ShoppingCartF
+              createFoodOrder={createFoodOrder}
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
             />
           </Route>
 
           <Route path="/food/profile">
-            <SubnavF
-              shoppingCart={shoppingCart}
-            />
-            <ProfileF />
+            <SubnavF shoppingCart={shoppingCart} />
+            <ProfileF createFood={createFood} />
           </Route>
 
           <Route path="/food/products">
-            <SubnavF
-              shoppingCart={shoppingCart}
-            />
+            <SubnavF shoppingCart={shoppingCart} />
 
             <ProductDetailsF
               selectedDish={selectedDish}
@@ -152,11 +211,15 @@ function App() {
               viewingCart={viewingCart}
               setViewingCart={setViewingCart}
             />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+              vero deleniti quo nam eos nisi!
+            </p>
             <Footer />
           </Route>
 
           <Route path="/food/product_list">
-            <SubnavF shoppingCart={shoppingCart}/>
+            <SubnavF shoppingCart={shoppingCart} />
             <ProductListF
               dishData={dishData}
               setSelectedDish={setSelectedDish}
@@ -178,7 +241,6 @@ function App() {
             <AboutUs />
             <Footer />
           </Route>
-         
 
           <Route path="/about_us">
             <MainNav />
@@ -187,7 +249,7 @@ function App() {
           </Route>
 
           <Route path="/food">
-            <SubnavF shoppingCart={shoppingCart}/>
+            <SubnavF shoppingCart={shoppingCart} />
             <LandingF setSelectedDish={setSelectedDish} dishData={dishData} />
             <Footer />
           </Route>
@@ -198,23 +260,20 @@ function App() {
             <Footer />
           </Route>
           <Route path="/contact_us">
-          <MainNav />
-           <ContactUs />
+            <MainNav />
+            <ContactUs />
             <Footer />
-           
           </Route>
 
           <Route path="/">
             <Home />
             <Footer />
-           
           </Route>
         </Switch>
-        <div>
-        
-        </div>
+        <div></div>
       </Router>
-      
+
+      {/* <button onClick={createFood}>click</button> */}
     </div>
   );
 }
