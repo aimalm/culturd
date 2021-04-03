@@ -11,18 +11,11 @@ function SignUp() {
     const email = useRef();
     const password = useRef();
     const userType = useRef();
-    //const emailError = useRef();
 
-    //const [ emailError2, setEmail2Error] = useState()
-
-  
-
-
+    const [ emailError, setEmailError] = useState("")
 
 
     function register(e){
-
-        
         e.preventDefault();
 
         const fName = name.current.value
@@ -31,8 +24,6 @@ function SignUp() {
         const userPassword = password.current.value
         const user_Type = userType.current.value
 
-        console.log(name.current.value)
-
         const data =    {
             "Type_of_User": `${user_Type}`,
             "Name": `${fName}`,
@@ -40,18 +31,17 @@ function SignUp() {
             "Email": `${userEmail}`,
             "password": `${userPassword}`,
         };
-
             axios
                 .post("http://localhost:5000/culturd_api/Em3Wi5va8is15/user", data)
                 .then(function(res) {
                     window.location.replace("http://localhost:3000/login");
                 })
                 .catch(function(res) {
-                    sessionStorage.setItem("emailError", "Someone has already registered with this email")
+                    sessionStorage.setItem("emailError", "* Someone has already registered with this email")
+                    setEmailError(sessionStorage.getItem("emailError"))
+
 
                 });
-     
-           
     }
     return (
         <div className="signup-container">
@@ -67,27 +57,27 @@ function SignUp() {
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label><br/>
                             <input ref = {name} type="text" name="firstName" id="firstName" className="input-fields" required/>
-                            <p className="error-msg" >* error</p>
+                            <p className="error-msg" ></p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="lastName">Last Name</label><br/>
                             <input ref = {lastName} type="text" name="lastName" id="lastName" className="input-fields" required/>
-                            <p className="error-msg">* error</p>
+                            <p className="error-msg"></p>
                         </div>
                         <div className="form-group">
                             <label  htmlFor="email">Email</label><br/>
                             <input ref = {email} type="email" name="email" id="sign-email" className="input-fields" required/>
-                            <p className="error-msg">* error</p>
+                            <p className="error-msg"> {emailError}</p>
                         </div>
                         <div className="form-group">
                             <label  htmlFor="password">Password</label><br/>
                             <input ref = {password} type="password" name="password" id="sign-pass" className="input-fields" required/>
-                            <p className="error-msg">* error</p>
+                            <p className="error-msg"></p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="confirmPass">Confirm Password</label><br/>
                             <input type="password" name="confirmPass" id="confirmPass" className="input-fields" required/>
-                            <p className="error-msg">* error</p>
+                            <p className="error-msg"></p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="user">Choose</label><br/>
