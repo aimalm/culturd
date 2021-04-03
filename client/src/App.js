@@ -41,6 +41,7 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
 
   const [dishData, setDishData] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   //Get all for food
   const getFoodData = async () => {
@@ -67,6 +68,9 @@ function App() {
     return validArray;
   };
 
+  
+  
+
 
   //POST for food
   const createFood = async (values) => {
@@ -87,8 +91,8 @@ function App() {
       category: values.category,
       vegetarian: values.vegetarian,
       dishDescription: values.dishDescription,
-      cooker: User.Name,
-      cookerImage: User.Profile_Picture,
+      cooker: userData.firstName,
+      cookerImage: userData.ProfilePicturee===undefined?"https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80":userData.ProfilePicture,
       cookerScore: ["star", "star", "star"],
       price: values.Price,
       pickupDate: values.pickupdate.substring(0, 10),
@@ -98,11 +102,44 @@ function App() {
       quantity: "1",
     };
 
-    console.log(newObj);
+    //console.log(newObj);
     await axois
       .post("/food", newObj)
       .then((res) => getFoodData(res))
       .catch((err) => console.error(err));
+  };
+
+  //Get one user
+  const getUser = async (id) => {
+    const response = await axois
+      .get(`/user/${id}`)
+      .catch((err) => console.log(err));
+
+    if (response && response.data) {
+
+      
+      setUserData(response.data);
+      
+    }
+  };
+
+  //Patch user info
+  const updateUser = async (id, values) => {
+
+    const newObj = {
+      firstName: values.firstName,
+      lastName : values.lastName,
+      ProfilePicture: values.ProfilePicture,
+      email: values.email,
+      password: values.password,
+      address: values.address
+    }
+    await axois
+      .patch(`/user/${id}`, newObj)
+      .catch((err) => console.log(err))
+      .then(getUser(id))
+
+      
   };
 
   //Get all for food_order
@@ -127,7 +164,11 @@ function App() {
 
   useEffect(() => {
     getFoodData();
+    
   }, []);
+  useEffect(() => {
+    getUser("6068f6840c67c657a0420b2a");
+  }, [userData]);
 
 
   // save shopping cart to localStorage
@@ -198,7 +239,7 @@ function App() {
 
           <Route path="/food/profile">
             <SubnavF shoppingCart={shoppingCart} />
-            <ProfileF createFood={createFood} />
+            <ProfileF createFood={createFood} userData={userData} updateUser={updateUser} />
           </Route>
 
           <Route path="/food/products">
@@ -211,7 +252,7 @@ function App() {
               viewingCart={viewingCart}
               setViewingCart={setViewingCart}
             />
-           
+
             <Footer />
           </Route>
 

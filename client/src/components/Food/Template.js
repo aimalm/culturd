@@ -171,19 +171,28 @@ export const FoodTable = [
     },
 ];
 
-export const User = {
-  Address: "gentstraat 120, 900",
-  Created_date: "2021-03-27T09:34:36.014Z",
-  Email: "me@gmail.com",
-  Last_Name: "Jap",
-  Name: "Ar BB",
-  Profile_Picture: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-  Type_of_User: "cook",
-  User_Name: "aimal.m",
-  password: "",
-  __v: 0,
-  _id: "605efc56954c925c44542cbf"
-}
+export const User = [
+  {
+    "Created_date": "2021-04-03T16:41:24.702Z",
+    "_id": "6068a1015e62750534d13a67",
+    "Type_of_User": "guest",
+    "Name": "Aimal",
+    "Last_Name": "Maarij",
+    "Email": "Maarij.be15@gmail.com",
+    "password": "123",
+    "__v": 0
+    },
+    {
+    "Created_date": "2021-04-03T16:41:24.702Z",
+    "_id": "6068a8de5e62750534d13a72",
+    "Type_of_User": "cook",
+    "Name": "Aimal",
+    "Last_Name": "Maarij",
+    "Email": "Maarij.begmail.com",
+    "password": "123",
+    "__v": 0
+    }
+]
 
 
 
