@@ -26,13 +26,13 @@ function EditProfile() {
         <TextBox
           name="Name"
           label="First Name"
-          // initialValue={User.Name}
+        initialValue={User.Name}
           className="profile-form"
         />
         <TextBox
           name="Last_Name"
           label="Last Name"
-          // initialValue={User.Last_Name}
+          initialValue={User.Last_Name}
           className="profile-form"
         />
         <Password
@@ -51,20 +51,20 @@ function EditProfile() {
         <EmailInput
           name="Email"
           label="Email Input"
-          // initialValue={User.Email}
+         initialValue={User.Email}
           className="profile-form"
         />
 
         <Telephone
           name="Contact_Number"
           label="Telephone Number"
-          //  initialValue={User.Contact_Number.toString()}
+           initialValue={User.Contact_Number.toString()}
           className="profile-form"
         />
         <TextBox
           name="Address"
           label="Address"
-          // initialValue={User.Address}
+          initialValue={User.Address}
           className="profile-form"
         />
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Button,
@@ -13,37 +13,48 @@ import {
   Option,
   OptionGroup,
 } from "react-form-elements";
+import { User } from "../Template";
 
-function AddPost() {
+function AddPost({ setAddPost }) {
   return (
     <div className="addpost-popup">
       <h3>A new post</h3>
       <Form
-        className="profile-info-form"
+        className="form-add-post"
         name="add post form"
-
         onSubmit={(values) => {
-          console.log("formValues", values);
+          console.log("add post form", values);
+          setAddPost(values);
         }}
       >
         <TextBox name="dishName" label="Dish Name" initialValue="" />
-        <TextBox name="ingredient1" label="Ingredients" initialValue="" />
+        <TextBox
+          name="ingredient1"
+          label="Ingredients (Please put one ingredient in one column)"
+          initialValue=""
+          required
+        />
         <TextBox name="ingredient2" label="" initialValue="" />
         <TextBox name="ingredient3" label="" initialValue="" />
         <TextBox name="ingredient4" label="" initialValue="" />
-
-        <TextBox name="keyword1" label="Keywords" initialValue="" />
+        <TextBox
+          name="keyword1"
+          label="Keywords for searching (Please put one keyword in one column)"
+          initialValue=""
+          required
+        />
         <TextBox name="keyword2" label="" initialValue="" />
         <TextBox name="keyword3" label="" initialValue="" />
         <TextBox name="keyword4" label="" initialValue="" />
 
-        <TextArea label="Dish description" name="dishDescription" />
+        <TextArea label="Dish description" name="dishDescription" required />
 
         <DropDown
           label="Category"
           initialValue=""
           data-testid=""
           name="category"
+          required
         >
           <OptionGroup label="">
             <Option initialValue="main">Main Dish</Option>
@@ -66,15 +77,21 @@ function AddPost() {
           initialChecked="false"
           options={[{ value: "true", label: "vegetarian" }]}
         />
-        <Telephone name="Price" label="price" initialValue="" />
+        <Telephone name="Price" label="price" initialValue="" required />
         <DateTime
           label="Pick up date and time"
           type="datetime-local"
           name="pickupdate"
+          required
         />
-        <TextBox name="Pick up Address" label="address" initialValue="" />
+        <TextBox
+          name="address"
+          label="Pick Up Address"
+          initialValue={User.Address}
+          required
+        />
 
-        <Button className="profile-order-button">Save Changes</Button>
+        <Button className="profile-order-button">Add new home food</Button>
       </Form>
     </div>
   );
