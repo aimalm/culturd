@@ -7,7 +7,7 @@ function ImageCards(imageProps) {
             <div className="imageCards">
                 <div className="imageCard">
                     <div className="image">
-                        <img className="image_img" src={imageProps.imageSrc} alt="Food"/>
+                        <img className="image_img" src={imageProps.imageSrc1} alt="Food"/>
                         <div className="image_overlay">
                             <p className="workshop_description">{imageProps.foodDes_1}</p>
                         </div>
@@ -18,7 +18,7 @@ function ImageCards(imageProps) {
                 </div>
                 <div className="imageCard">
                     <div className="image">
-                        <img className="image_img" src={imageProps.imageSrc} alt="Food"/>
+                        <img className="image_img" src={imageProps.imageSrc2} alt="Food"/>
                         <div className="image_overlay">
                             <p className="workshop_description">{imageProps.foodDes_2}</p>
                         </div>
@@ -29,7 +29,7 @@ function ImageCards(imageProps) {
                 </div>
                 <div className="imageCard">
                     <div className="image">
-                        <img className="image_img" src={imageProps.imageSrc} alt="Food"/>
+                        <img className="image_img" src={imageProps.imageSrc3} alt="Food"/>
                         <div className="image_overlay">
                             <p className="workshop_description">{imageProps.foodDes_3}</p>
                         </div>

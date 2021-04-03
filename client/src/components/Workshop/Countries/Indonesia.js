@@ -5,6 +5,9 @@ import { BsFillLightningFill } from "react-icons/bs";
 import ImageCards from './compCountries/ImageCards/ImageCards';
 import Accordeon from './compCountries/Accordion/Accordion';
 import InProgress from '../image/inProgress.png';
+import Food from '../image/indoFood.jpg';
+import Dance from '../image/indoDance.jpg';
+import Art from '../image/indoArt.jpg';
 import {IndoWorkshop} from './compCountries/ImageCards/WorkshopDescription';
 import { IndoWorkshopInfo } from './compCountries/Accordion/WorkshopInfo';
 import WorkshopDetails from './compCountries/WorkshopDetails/WorkshopDetails';
@@ -23,7 +26,9 @@ function Indonesia() {
                 <div className="workshop-container">
                     <div className="inner-container-1">
                         <ImageCards 
-                            imageSrc={InProgress} 
+                            imageSrc1={Food} 
+                            imageSrc2={Dance}
+                            imageSrc3={Art}
                             foodDes_1={IndoWorkshop[0].description}
                             foodTit_1={IndoWorkshop[0].title}
                             foodDes_2={IndoWorkshop[1].description}

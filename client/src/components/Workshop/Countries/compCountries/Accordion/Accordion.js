@@ -23,7 +23,7 @@ function Accordion(accordionProp) {
                         </div>
                         {clicked === index? (
                             <div className="dropDown">
-                                <p>{item.content}</p>
+                                {item.content}
                             </div>  
                         ) : null}
                     </div>
