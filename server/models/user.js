@@ -4,16 +4,16 @@ import  uniqueValidator from 'mongoose-unique-validator';
 
 
 const userSchema = mongoose.Schema({  
-    "Type_of_User": { type: String, required: true},
-    "Name": { type: String, required: true},
-    "Last_Name": { type: String, required: true},
-    "Email": { type: String, required: true, unique: true},
+    "TypeOfUser": { type: String, required: true},
+    "firstName": { type: String, required: true},
+    "lastName": { type: String, required: true},
+    "email": { type: String, required: true, unique: true},
     "password": { type: String, required: true},
-    "Contact_Number": { type: Number},
-    "Address": { type: String},
-    "Profile_Picture": { type: String},
-    "Created_date": { type: Date, default: Date.now()},
-    "Update_date": { type: Date},
+    "contactNumber": { type: Number},
+    "address": { type: String},
+    "ProfilePicture": { type: String},
+    "CreatedDate": { type: Date, default: Date.now()},
+    "UpdateDate": { type: Date},
 })
 
 userSchema.plugin(uniqueValidator, { message: 'Email or user name already in use!' });

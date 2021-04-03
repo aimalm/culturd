@@ -23,14 +23,14 @@ function SignUp() {
         const user_Type = userType.current.value;
 
         const data =    {
-            "Type_of_User": `${user_Type}`,
-            "Name": `${fName}`,
-            "Last_Name": `${lName}`,
-            "Email": `${userEmail}`,
-            "password": `${userPassword}`,
+            "TypeOfUser": `${user_Type}`,
+            "firstName": `${fName}`,
+            "lastName": `${lName}`,
+            "email": `${userEmail}`,
+            "password": `${userPassword}`
         };
             axios
-                .post("http://localhost:5000/culturd_api/Em3Wi5va8is15/user", data)
+                .post("http://localhost:5000/culturd_api/Em3Wi5va8is15/signup", data)
                 .then(function(res) {
                     window.location.replace("http://localhost:3000/login");
                 })
