@@ -23,13 +23,12 @@
   -webkit-text-fill-color: transparent;
 }
 .search-bar {
-  
   display: grid;
   grid-template-columns: 90% 10%;
   width: 40%;
   margin: auto;
-} 
- .search-input {
+}
+.search-input {
   padding: 0.5rem 1.5rem;
   font-size: var(--font);
   color: var(--NavbarColor);
@@ -38,7 +37,7 @@
   height: 3rem;
   text-transform: capitalize;
 }
- .search-input:focus {
+.search-input:focus {
   outline: none;
 }
 .search-button {
@@ -69,8 +68,8 @@
   text-transform: capitalize;
   border-radius: 0px 0px 30px 30px;
   text-align: left;
-  position:absolute;
-  font-size: .8rem;
+  position: absolute;
+  font-size: 0.8rem;
 }
 .search-suggestion a {
   text-decoration: none;
@@ -78,18 +77,6 @@
 }
 .search-suggestion a:hover {
   color: var(--yellowish);
-}
-
-@keyframes slidein {
-  from {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
 }
 
 /* new in section start here */
@@ -105,7 +92,7 @@
   background: linear-gradient(to right, #c0c93f 0%, #fa9726 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Train One', cursive;
+  font-family: "Train One", cursive;
 }
 .breakline {
   border-bottom: 3px solid rgb(136, 163, 17);
@@ -113,7 +100,6 @@
   padding-bottom: 0.5rem;
 }
 .random-container {
-
   display: flex;
   flex-wrap: wrap;
   width: 85%;
@@ -121,15 +107,13 @@
   justify-content: center;
   transition: ease-in-out;
 }
-.food-card{
-  margin: 1rem .5rem;
+.food-card {
+  margin: 1rem 0.5rem;
   max-width: 18rem;
 }
-.food-card-img{
-  
+.food-card-img {
   width: 18rem;
   height: 18rem;
-  
 }
 .product-image {
   height: 100%;
@@ -144,8 +128,8 @@
   border-radius: 0 0 10px 10px;
   padding: 1rem;
   color: rgb(80, 80, 80);
-  border: .5px solid var(--beige);
-  border-top:none;
+  border: 0.5px solid var(--beige);
+  border-top: none;
 }
 .dish-name {
   font-weight: bolder;
@@ -153,11 +137,9 @@
   background: linear-gradient(to right, #c2cc67d5 0%, #339689f3 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
-.cook-info{
+.cook-info {
   text-transform: capitalize;
-  
 }
 .star {
   color: var(--yellowish) !important;
@@ -174,7 +156,7 @@
   display: flex;
   justify-content: space-between;
 }
-.food-list-container{
+.food-list-container {
   display: flex;
   justify-content: center;
 }
@@ -184,7 +166,7 @@
   padding: 0.5rem;
   border: 0.1em solid var(--greenish);
   background-color: var(--greenish);
-  
+
   margin: auto;
 }
 .food-list-link:hover {
@@ -212,7 +194,6 @@
   height: 50vh;
 }
 
-
 /* how it works style start here */
 .how-it-works-title {
   font-size: 2.5rem;
@@ -220,9 +201,9 @@
   padding: 5% 7rem;
   text-transform: uppercase;
   background: linear-gradient(to right, #c0c93f 0%, #fa9726 100%);
-   background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Train One', cursive;
+  font-family: "Train One", cursive;
 }
 .how-it-works {
   display: grid;
@@ -256,89 +237,81 @@
   font-weight: bold;
 }
 
-
-@media only screen and (max-width : 1080px){
-  
-  .how-it-works{
+@media only screen and (max-width: 1080px) {
+  .how-it-works {
     width: 90%;
     height: auto;
     margin: 0 auto;
   }
-  .step-one,.step-two,.step-three{
+  .step-one,
+  .step-two,
+  .step-three {
     border: none;
-    
   }
 }
-@media only screen and (max-width : 768px){
-  .search-bar{
+@media only screen and (max-width: 768px) {
+  .search-bar {
     width: 60%;
   }
-  .random-container{
+  .random-container {
     width: 95%;
   }
-  
-  .home-search-container{
+
+  .home-search-container {
     padding: 1rem;
   }
-  .search-suggestion{
+  .search-suggestion {
     width: 55%;
   }
-  
 
-
-  .dish-name{
+  .dish-name {
     font-size: 1rem;
   }
- 
-  .how-it-works{
+
+  .how-it-works {
     grid-template-rows: auto;
     height: auto;
-   
   }
 
-
-.step-one,
-.step-two, .step-three{
-  margin: 1rem 0;
-  border: none;
-  height: auto;
-  width: auto;
+  .step-one,
+  .step-two,
+  .step-three {
+    margin: 1rem 0;
+    border: none;
+    height: auto;
+    width: auto;
+  }
 }
 
-}
-
-@media only screen and (max-width : 426px){
+@media only screen and (max-width: 426px) {
   .home-search-title {
     font-size: 1.5rem;
   }
-  .home-search-container{
+  .home-search-container {
     margin-bottom: -1rem;
   }
   .random-container {
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto;
     grid-gap: 1rem;
     grid-auto-flow: row;
     width: 90%;
   }
-  .food-title-new{
-    font-size:1.5rem;
+  .food-title-new {
+    font-size: 1.5rem;
   }
- 
-  .how-it-works-title{
-    padding:  3rem 0;
+
+  .how-it-works-title {
+    padding: 3rem 0;
     text-align: center;
-    
   }
-  .how-it-works{
+  .how-it-works {
     grid-template-columns: 100%;
     width: 90%;
   }
- 
 }
-@media only screen and (max-width : 375px){
- 
-  .how-it-works{
+@media only screen and (max-width: 375px) {
+  .how-it-works {
     padding: 0;
   }
 }

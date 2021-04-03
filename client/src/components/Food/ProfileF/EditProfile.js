@@ -55,12 +55,12 @@ function EditProfile() {
           className="profile-form"
         />
 
-        <Telephone
+        {/* <Telephone
           name="Contact_Number"
           label="Telephone Number"
            initialValue={User.Contact_Number.toString()}
           className="profile-form"
-        />
+        /> */}
         <TextBox
           name="Address"
           label="Address"

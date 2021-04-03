@@ -211,10 +211,7 @@ function App() {
               viewingCart={viewingCart}
               setViewingCart={setViewingCart}
             />
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-              vero deleniti quo nam eos nisi!
-            </p>
+           
             <Footer />
           </Route>
 

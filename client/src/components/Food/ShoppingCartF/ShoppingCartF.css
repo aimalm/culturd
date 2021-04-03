@@ -128,8 +128,6 @@ color: var(--dark-yellow);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  /* padding: 4rem 16rem; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1.5rem;
   animation: showUp .8s 1 ease-in-out;
@@ -153,14 +151,7 @@ color: var(--dark-yellow);
   color: var(--NavbarColor);
 }
 
-@keyframes showUp {
-  0% {
-     opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 @media only screen and (max-width : 768px){
   .shopping-cart-item{

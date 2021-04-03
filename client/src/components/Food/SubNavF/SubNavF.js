@@ -38,7 +38,7 @@ function SubNavF({shoppingCart}) {
               <Nav.Link className="nav-color">List</Nav.Link>
             </LinkContainer>
 
-            <LinkContainer to="/food/Profile">
+            <LinkContainer to="/food/profile">
               <Nav.Link className="nav-color">Profile</Nav.Link>
             </LinkContainer>
 
