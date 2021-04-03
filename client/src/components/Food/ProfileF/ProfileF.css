@@ -48,7 +48,9 @@
 }
 .profile-content-border {
   padding: 8%;
-  border: 3px solid var(--dark-turquiose);
+  border: 2px solid #f5e3b1;
+  border-top: 2px solid #bfede4;
+  border-bottom: 2px solid #f59d87;
   border-radius: 13px;
 }
 .profile-info-title,
@@ -56,18 +58,18 @@
   text-transform: capitalize;
 }
 .rfe-form.profile-info-form {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-family: var(--font);
   color: var(--dark-carol);
 }
 .rfe-form.profile-info-form label {
-  margin: 0.2rem;
+  margin: 0.2rem !important;
 }
 .profile-form input {
   border: none;
   color: var(--dark-beige);
-  background-color: var(--light-beige);
-  padding: 0.1rem 1rem;
+  background-color: var(--carol);
+  padding: 0.1rem 1rem !important;
 }
 .profile-form input:focus {
   outline: none;

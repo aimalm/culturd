@@ -102,7 +102,7 @@
 
 .booking-button:hover {
     text-decoration: none;
-    background: #e27458;
+    background: var(--turquiose);
 }
 
 .booking-button > * {

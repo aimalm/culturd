@@ -22,5 +22,29 @@
 }
 
 .dropDown {
-    padding: 15px;
+    padding: 10px 15px 20px 15px;
+}
+
+.lastline {
+    margin-bottom: 0px;
+}
+
+.impDetails > h5 {
+    font-weight: bold;
+}
+
+.multiline {
+    white-space: pre-line;
+}
+
+.cross-icon-wrapper {
+    margin-left: 10px;
+}
+
+.cross-icon {
+    color: red;
+}
+
+.cross-icon-wrapper > p {
+    margin: 0px;
 }

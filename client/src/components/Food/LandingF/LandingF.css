@@ -11,13 +11,16 @@
   margin-top: 6rem;
   /* margin-bottom: -7rem; */
   padding: 3rem 7rem 0 7rem;
-  color: var(--NavbarColor);
+  text-transform: uppercase;
   text-align: center;
 }
 .home-search-title {
   font-size: 3rem;
   text-transform: capitalize;
   padding-bottom: 2rem;
+  background: linear-gradient(to right, #67ccc7 0%, #fa9726 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .search-bar {
   
@@ -147,9 +150,14 @@
 .dish-name {
   font-weight: bolder;
   text-transform: capitalize;
+  background: linear-gradient(to right, #c2cc67d5 0%, #339689f3 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
 }
 .cook-info{
   text-transform: capitalize;
+  
 }
 .star {
   color: var(--yellowish) !important;
