@@ -13,7 +13,7 @@ import {
   Option,
   OptionGroup,
 } from "react-form-elements";
-import {CgArrowLongUp} from 'react-icons/cg'
+import { CgArrowLongUp } from "react-icons/cg";
 import { User } from "../Template";
 
 function AddPost({ createFood }) {
@@ -24,8 +24,8 @@ function AddPost({ createFood }) {
       {addingPosting ? (
         <div className="alert add-post-alert">
           <p>
-            The dish is available in the LIST!<CgArrowLongUp /> <CgArrowLongUp /> 
-           
+            The dish is available in the LIST!
+            <CgArrowLongUp /> <CgArrowLongUp />
           </p>
         </div>
       ) : (
@@ -38,7 +38,7 @@ function AddPost({ createFood }) {
         name="add post form"
         onSubmit={(values) => {
           //console.log("add post form", values);
-          //createFood(values);
+          createFood(values);
           setAddingPost(true);
 
           setTimeout(() => {
