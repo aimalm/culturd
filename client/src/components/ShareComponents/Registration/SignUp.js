@@ -1,9 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
 import NavLogSign from '../NavLogSign/NavLogSign';
-import axios from "axios"
-
+import axios from "axios";
 
 function SignUp() {
     const name = useRef();
@@ -12,17 +11,16 @@ function SignUp() {
     const password = useRef();
     const userType = useRef();
 
-    const [ emailError, setEmailError] = useState("")
-
+    const [ emailError, setEmailError] = useState("");
 
     function register(e){
         e.preventDefault();
 
-        const fName = name.current.value
-        const lName = lastName.current.value
-        const userEmail = email.current.value
-        const userPassword = password.current.value
-        const user_Type = userType.current.value
+        const fName = name.current.value;
+        const lName = lastName.current.value;
+        const userEmail = email.current.value;
+        const userPassword = password.current.value;
+        const user_Type = userType.current.value;
 
         const data =    {
             "Type_of_User": `${user_Type}`,
@@ -37,10 +35,8 @@ function SignUp() {
                     window.location.replace("http://localhost:3000/login");
                 })
                 .catch(function(res) {
-                    sessionStorage.setItem("emailError", "* Someone has already registered with this email")
-                    setEmailError(sessionStorage.getItem("emailError"))
-
-
+                    sessionStorage.setItem("emailError", "* Someone has already registered with this email");
+                    setEmailError(sessionStorage.getItem("emailError"));
                 });
     }
     return (
