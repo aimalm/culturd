@@ -19,11 +19,23 @@ export const showUser = async (req, res) => {
     const email = req.params.email;
     console.log(email)
     try {
-        const showUser = await User.findOne({email: "zaherc@gmail.com"});
+        const showUser = await User.findOne({ email });
         res.status(200).json(showUser);
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
+}
+
+
+export const showUserById = async (req, res) => { 
+  const id = req.params._id;
+  console.log(id)
+  try {
+      const showUser = await User.findById(id);
+      res.status(200).json(showUser);
+  } catch (error) {
+      res.status(404).json({ message: error.message });
+  }
 }
 
 export const createAnUser = async (req, res) => {
@@ -72,7 +84,7 @@ export const signin = async (req, res) => {
 
     if (!isPasswordCorrect) return res.status(400).json({ message: "Invalid credentials" });
 
-    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
+    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "24h" });
 
     res.status(200).json({ result: oldUser, token });
   } catch (err) {
