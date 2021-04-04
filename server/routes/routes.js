@@ -4,7 +4,7 @@ import { getEvents, getEvent, createEvent, updateEvent, deleteEvent } from '../c
 import { getAllBookedEvents, getAnEvent, bookAnEvent, updateBooking, deleteBooking } from '../controllers/booking.js';
 import { getAllFoods, getFood, createFoodPost, updateFood, deleteFoodPost } from '../controllers/food.js';
 import { getAllOrders, createAnOrder, showAnOrder, updateAnOrder, deleteAnOrder } from '../controllers/order.js';
-import {  signin, signup, getAllUsers, createAnUser, showUser, updateAnUser, deleteAnUser } from '../controllers/user.js';
+import { showUserById, signin, signup, getAllUsers, createAnUser, showUser, updateAnUser, deleteAnUser } from '../controllers/user.js';
 
 
 
@@ -47,12 +47,19 @@ router.delete('/food_order/:_id', deleteAnOrder);
 //routes for the users
 router.get('/user', getAllUsers);
 router.post('/user', createAnUser);
+
+
 router.get('/user/:email', showUser);
+router.get('/user/id/:_id', showUserById);
+
+
 router.patch('/user/:_id', updateAnUser);
 router.delete('/user/:_id', deleteAnUser);
 
 router.post("/signin", signin);
 router.post("/signup", signup);
+
+
 
 
 export default router;

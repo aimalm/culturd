@@ -8,8 +8,6 @@ import axios from "axios";
 function Login() {
     const email = useRef();
     const password = useRef();
-
-    
     const [ SignInError, setSignInError] = useState("");
 
     useEffect(() => {
@@ -24,7 +22,7 @@ function Login() {
             "email": `${userEmail}`,
             "password": `${userPassword}`
         };
-
+  
         const API = axios.create({ baseURL: 'http://localhost:5000/culturd_api/Em3Wi5va8is15' });
         API.interceptors.request.use((req) => {
         if (localStorage.getItem('profile')) {
@@ -33,15 +31,18 @@ function Login() {
         return req;
     })
 
-        //Get all for food
-        const getUser = async (email) => {
-            const response = await API.get(`/user/${email}`).catch((err) => console.log(err));
+      //Get all for food
+      const getUser = async () => {
+        const response = await API.get(`/user/${userEmail}`).catch((err) => console.log(err));
 
-            if (response && response.data) {
-                localStorage.setItem("userID", `${response.data._id}`);
-                console.log(response.data._id)
-            }
-        };
+        if (response && response.data) {
+            window.localStorage.setItem("userID", `${response.data._id}`);
+            window.localStorage.setItem("TypeOfUser", "admin");
+            console.log(response.data._id)
+        }
+    };
+
+    
         
             API
                 .post("/signin", data)
@@ -49,7 +50,7 @@ function Login() {
                     localStorage.setItem("email", `${userEmail}`);
                     localStorage.setItem("SignInError", "");
                     setSignInError(sessionStorage.getItem("SignInError"));
-                    getUser("email")
+                    getUser()
                     localStorage.removeItem("SignInError");
                     window.location.replace("http://localhost:3000/food/Profile");
 
