@@ -19,7 +19,7 @@
     padding: 2.5rem 0rem;
     width: 100%;
     background: #FFFFFF;
-    border: solid black;
+    /* border: solid black; */
 }
 
 .the-concept-header {
@@ -38,6 +38,7 @@
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
 }
 
 .the-concept-content {
@@ -46,7 +47,7 @@
 }
 
 .trilogy {
-    border: solid black;
+    /* border: solid black; */
     width: 100%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -58,12 +59,14 @@
 .people {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 8px dotted var(--light-green);
-    border-radius: 50%;
-    height: 18.5rem;
-    width: 18.5rem;
-    border: solid red;
+    text-align: center;
+    width: 18rem;
+    height: 13rem;
+    padding: 1.8rem 0.5rem 0rem 0.5rem;
+    border: 2px solid #f5e3b1;
+    border-top: 2px solid #bfede4;
+    border-bottom: 2px solid #f59d87;
+    
 }
 
