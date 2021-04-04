@@ -4,13 +4,16 @@ import {
   Button,
   Form,
   TextBox,
-  Password,
+  //Password,
   EmailInput,
-  Telephone,
+  UrlInput
 } from "react-form-elements";
-import { User } from "../Template";
+import {updateUser} from '../../Axois/Axois'
 
-function EditProfile() {
+function EditProfile({userData,getUser}) {
+
+
+
   return (
     <div className="profile-info">
       <h3 className="profile-info-title">Edit your account details</h3>
@@ -21,50 +24,54 @@ function EditProfile() {
 
         onSubmit={(values) => {
           console.log("edit profile form", values);
+         
+          updateUser(userData._id, values)
+
+          setTimeout(() => {
+            getUser(userData._id)
+          }, 500);
         }}
       >
         <TextBox
-          name="Name"
+          name="firstName"
           label="First Name"
-        initialValue={User.Name}
+        initialValue={userData.firstName}
           className="profile-form"
         />
         <TextBox
-          name="Last_Name"
+          name="lastName"
           label="Last Name"
-          initialValue={User.Last_Name}
+          initialValue={userData.lastName}
           className="profile-form"
         />
-        <Password
+        {/* <Password
           name="password"
-          label="Password Input"
-          initialValue=""
+          label="Password "
+          initialValue={userData.password}
           className="profile-form"
-        />
-        <Password
-          name="re-confirm-password"
-          label="Re-enter Password"
-          initialValue=""
-          className="profile-form"
-        />
+        /> */}
+       
 
         <EmailInput
-          name="Email"
-          label="Email Input"
-         initialValue={User.Email}
+          name="email"
+          label="Email "
+         initialValue={userData.email}
           className="profile-form"
+        />
+        <UrlInput
+          name="Profile_Picture"
+          label="Profile Picture URL"
+          initialValue={userData.ProfilePicture}
+          placeholder="https://www.example.com"
+          className="profile-form"
+
+          
         />
 
-        <Telephone
-          name="Contact_Number"
-          label="Telephone Number"
-           initialValue={User.Contact_Number.toString()}
-          className="profile-form"
-        />
         <TextBox
           name="Address"
           label="Address"
-          initialValue={User.Address}
+          initialValue={userData.address}
           className="profile-form"
         />
 

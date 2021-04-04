@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import {
   Button,
@@ -14,9 +14,8 @@ import {
   OptionGroup,
 } from "react-form-elements";
 import { CgArrowLongUp } from "react-icons/cg";
-import { User } from "../Template";
 
-function AddPost({ createFood }) {
+function AddPost({userData,createFood}) {
   const [addingPosting, setAddingPost] = useState(false);
 
   return (
@@ -84,7 +83,7 @@ function AddPost({ createFood }) {
 
         <UrlInput
           name="imageUrl"
-          label="Image url"
+          label="Food image url"
           initialValue=""
           placeholder="https://www.example.com"
           required
@@ -106,7 +105,7 @@ function AddPost({ createFood }) {
         <TextBox
           name="address"
           label="Pick Up Address"
-          initialValue={User.Address}
+          initialValue={userData.address}
           required
         />
 

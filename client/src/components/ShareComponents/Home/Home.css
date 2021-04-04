@@ -136,9 +136,6 @@
   align-items: center;
   justify-items: center;
   box-shadow: inset 0 -1em 0 -0.55em rgba(0, 0, 0, 0.17);
-  /* border: 0.1em solid var(--dark-carol); */
-
-
 }
 .home-aboutus-link:hover{
   background-color: var(--light-green);
@@ -155,27 +152,6 @@
   align-self: start;
 }
 
-@keyframes leftToRight {
-  0% {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes rightToLeft {
-  0% {
-    transform: translateX(30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
 
 .workshop-img {
   width: 65%;

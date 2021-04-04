@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {createFoodOrder} from "../../Axois/Axois"
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
@@ -8,7 +9,8 @@ function ReactPayPal({
   setcheckingOut,
   calcSubTotal,
   setShoppingCart,
-  createFoodOrder,
+  shoppingCart
+  
 }) {
   let chargeAmount = calcSubTotal();
 
@@ -30,7 +32,7 @@ function ReactPayPal({
     actions.order.capture();
     setPaid(true);
 
-    createFoodOrder(chargeAmount);
+    createFoodOrder(chargeAmount, shoppingCart);
 
     setTimeout(() => {
       setShoppingCart([]);

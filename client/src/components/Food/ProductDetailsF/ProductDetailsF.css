@@ -7,9 +7,6 @@
   color: var(--NavbarColor);
 }
 
-
-
-
 .alert {
   position: fixed;
   animation: appear 3s 1;
@@ -17,35 +14,22 @@
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   border-radius: 30px;
 }
-.add-cart-alert{
+.add-cart-alert {
   top: 10%;
   right: 1%;
   border: 0.1em solid var(--carol);
   background-color: var(--carol);
 }
-.add-cart-alert p{
-  margin:0;
+.add-cart-alert p {
+  margin: 0;
   color: white;
 }
 
-@keyframes appear {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  
-}
-
-.products-price{
-  color:var(--greenish)
+.products-price {
+  color: var(--greenish);
 }
 
 .products-container {
-
   width: 80%;
   margin: 1rem auto;
   display: grid;
@@ -67,8 +51,7 @@
   border-radius: 4px;
   text-transform: capitalize;
   display: inline-block;
-  color:var( --yellowish);
-  
+  color: var(--yellowish);
 }
 .ingredient-vegetarian {
   color: var(--dark-turquiose);
@@ -80,12 +63,10 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
-  
 }
 .products-description {
   text-transform: capitalize;
   color: var(--NavbarColor);
-
 }
 
 .cooker-info {
@@ -113,39 +94,37 @@
   grid-column: 1/3;
   justify-self: end;
 }
-.product-empty-container{
+.product-empty-container {
   min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-empty-alert{
+.product-empty-alert {
   text-align: center;
-  
+
   color: var(--dark-yellow) !important;
 }
 
-@media only screen and (max-width : 700px){
- .products-container{
-  display:block;
- }
- .cooker-info{
-       margin: 2rem 0;
-     padding-left:0;
- }
- .products-add-button{
-   width: 100%;
- }
+@media only screen and (max-width: 700px) {
+  .products-container {
+    display: block;
+  }
+  .cooker-info {
+    margin: 2rem 0;
+    padding-left: 0;
+  }
+  .products-add-button {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width : 426px){
-  .products-wrapper{
+@media only screen and (max-width: 426px) {
+  .products-wrapper {
     padding: 3rem 2rem;
   }
-  .products-img-food{
+  .products-img-food {
     height: 17rem;
     width: 17rem;
   }
 }
-
-
