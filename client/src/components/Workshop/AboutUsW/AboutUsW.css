@@ -1,5 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    /* border: solid red; */
+}
 
+.the-concept {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4.375rem;
+    padding: 2.5rem 0rem;
+    width: 100%;
+    background: #FFFFFF;
+    border: solid black;
+}
 
+.the-concept-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid orange; */
+}
 
+.the-concept-header > *, 
+.mission > h3, 
+.vision > h3, 
+.people > h3 {
+    font-family: 'Train One', cursive;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.the-concept-content {
+    font-size: 1.125rem;
+    /* border: solid green; */
+}
+
+.trilogy {
+    border: solid black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    place-items: center;
+}
+
+.mission, 
+.vision, 
+.people {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 8px dotted var(--light-green);
+    border-radius: 50%;
+    height: 18.5rem;
+    width: 18.5rem;
+    border: solid red;
+}
 

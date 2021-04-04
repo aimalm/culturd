@@ -21,7 +21,7 @@ import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
 import BookForm from "./components/Workshop/Booking/BookForm";
 import ListW from "./components/Workshop/ListW/ListW";
-// import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 import Afghanistan from "./components/Workshop/Countries/Afghanistan";
 import Congo from "./components/Workshop/Countries/Congo";
 import HongKong from "./components/Workshop/Countries/HongKong";
@@ -96,6 +96,7 @@ function App() {
 
           <Route path="/workshop/about_us">
             <SubNavW />
+            <AboutUsW />
             <Footer />
           </Route>
 
