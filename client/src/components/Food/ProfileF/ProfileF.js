@@ -7,7 +7,7 @@ import AddPost from "./AddPost";
 
 
 
-function ProfileF({ createFood, userData, updateUser,dishData,getUser }) {
+function ProfileF({  userData,dishData,getUser,createFood }) {
   const [viewSection, setViewSection] = useState("info");
 
   return (
@@ -59,9 +59,9 @@ function ProfileF({ createFood, userData, updateUser,dishData,getUser }) {
       </div>
       <div className="profile-content">
         <div className="profile-content-border">
-          {viewSection === "info" ? <EditProfile userData={userData} updateUser={updateUser} getUser={getUser}/> : ""}
+          {viewSection === "info" ? <EditProfile userData={userData}  getUser={getUser}/> : ""}
           {viewSection === "history" ? <OrderHistory userData={userData} dishData={dishData} /> : ""}
-          {viewSection === "addPost" ? <AddPost createFood={createFood} /> : ""}
+          {viewSection === "addPost" ? <AddPost userData={userData} createFood={createFood}/> : ""}
         </div>
       </div>
     </div>

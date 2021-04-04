@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { axois } from "./components/Axois/Axois";
+import {axois,removeEmptyString } from "./components/Axois/Axois";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // share components
@@ -12,7 +12,6 @@ import LogIn from "./components/ShareComponents/Registration/LogIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
 import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
 
-//import {fetchEvents} from "./API/index"
 
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
@@ -33,7 +32,7 @@ import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 
-import { User } from "./components/Food/Template";
+
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
@@ -41,72 +40,58 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
 
   const [dishData, setDishData] = useState([]);
-  const [userData, setUserData] = useState([]);
+ const [userData, setUserData] = useState([]);
 
-  //Get all for food
-  const getAllFood = async () => {
-    const response = await axois.get("/food").catch((err) => console.log(err));
+   
 
-    if (response && response.data) {
-      setDishData(response.data);
-    }
-  };
-
-  //prepare the array for ingredients and keywords before the POST req
-  const removeEmptyString = (string1, string2, string3, string4) => {
-    let validArray = [string1];
-
-    if (string2 !== "") {
-      validArray.push(string2);
-    }
-    if (string3 !== "") {
-      validArray.push(string3);
-    }
-    if (string4 !== "") {
-      validArray.push(string4);
-    }
-    return validArray;
-  };
-
-  //POST for food
-  const createFood = async (values) => {
-    const newObj = {
-      dishName: values.dishName,
-      ingredients: removeEmptyString(
-        values.ingredient1,
-        values.ingredient2,
-        values.ingredient3,
-        values.ingredient4
-      ),
-      keywords: removeEmptyString(
-        values.keyword1,
-        values.keyword2,
-        values.keyword3,
-        values.keyword4
-      ),
-      category: values.category,
-      vegetarian: values.vegetarian,
-      dishDescription: values.dishDescription,
-      cooker: userData.firstName,
-      cookerImage:
-        userData.ProfilePicturee === undefined
-          ? "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-          : userData.ProfilePicture,
-      cookerScore: ["star", "star", "star"],
-      price: values.Price,
-      pickupDate: values.pickupdate.substring(0, 10),
-      openingHours: values.pickupdate.substring(11, 16),
-      address: values.address,
-      imageUrl: values.imageUrl,
-      quantity: "1",
+    //Get all for food
+    const getAllFood = async () => {
+      const response = await axois.get("/food").catch((err) => console.log(err));
+      if (response && response.data) {
+        setDishData(response.data);
+      }
     };
 
-    //console.log(newObj);
-    await axois
-      .post("/food", newObj)
-      .then((res) => getAllFood(res))
-      .catch((err) => console.error(err));
+    //POST for food
+ const createFood = async (values) => {
+  const newObj = {
+    dishName: values.dishName,
+    ingredients: removeEmptyString(
+      values.ingredient1,
+      values.ingredient2,
+      values.ingredient3,
+      values.ingredient4
+    ),
+    keywords: removeEmptyString(
+      values.keyword1,
+      values.keyword2,
+      values.keyword3,
+      values.keyword4
+    ),
+    category: values.category,
+    vegetarian: values.vegetarian,
+    dishDescription: values.dishDescription,
+    cooker: userData.firstName,
+    cookerImage:
+      userData.ProfilePicture === undefined
+        ? "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+        : userData.ProfilePicture,
+    cookerScore: ["star", "star", "star"],
+    price: values.Price,
+    pickupDate: values.pickupdate.substring(0, 10),
+    openingHours: values.pickupdate.substring(11, 16),
+    address: values.address,
+    imageUrl: values.imageUrl,
+    quantity: "1",
   };
+
+  //console.log(newObj);
+  await axois
+    .post("/food", newObj)
+    .then((res) => getAllFood(res))
+    .catch((err) => console.error(err));
+};
+
 
   //Get one user
   const getUser = async (id) => {
@@ -118,47 +103,13 @@ function App() {
       setUserData(response.data);
     }
   };
-
-  //Patch user info
-  const updateUser = async (id, values) => {
-    const newObj = {
-      firstName: values.firstName,
-      lastName: values.lastName,
-      ProfilePicture: values.ProfilePicture,
-      email: values.email,
-      // password: values.password,
-      address: values.address,
-    };
-    await axois
-      .patch(`/user/${id}`, newObj)
-      .catch((err) => console.log(err))
-      .then(getUser(id));
-  };
-
-  //Get all for food_order
-  const getFoodOrder = async () => {
-    await axois.get("/food_order").catch((err) => console.log(err));
-  };
-  //POST for food_order
-  const createFoodOrder = async (amount) => {
-    const newObj = {
-      user_id: Math.round(Math.random() * 10000),
-      product_id: shoppingCart.map((dish) => dish._id),
-      payment: "yes",
-      amount: amount,
-      pickup_date: new Date().toString(),
-      Pickup_address: shoppingCart.map((dish) => dish.address),
-    };
-    await axois
-      .post("/food_order", newObj)
-      .then((res) => getFoodOrder(res))
-      .catch((err) => console.error(err));
-  };
-
   useEffect(() => {
-    getAllFood();
+    getAllFood()
     getUser("6068fedc5207b03f7c599ec2")
   }, []);
+  
+
+
 
 
   // save shopping cart to localStorage
@@ -176,6 +127,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+
         <Switch>
           <Route path="/workshop/bookform">
             <SubNavW />
@@ -221,7 +173,7 @@ function App() {
           <Route path="/food/shopping_cart">
             <SubnavF shoppingCart={shoppingCart} />
             <ShoppingCartF
-              createFoodOrder={createFoodOrder}
+             
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
             />
@@ -232,9 +184,9 @@ function App() {
             <ProfileF
             getUser={getUser}
             dishData={dishData}
-              createFood={createFood}
+            userData={userData}
               userData={userData}
-              updateUser={updateUser}
+              createFood={createFood}
             />
           </Route>
 

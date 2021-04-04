@@ -6,9 +6,9 @@ import { BsPlus } from "react-icons/bs";
 import { BiMinus } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 
-import ReactPayPal from "../../Paypal/ReactPayPal";
+import ReactPayPal from "./ReactPayPal";
 
-function ShoppingCartF({ shoppingCart, setShoppingCart, createFoodOrder }) {
+function ShoppingCartF({ shoppingCart, setShoppingCart }) {
   const [checkingOut, setcheckingOut] = useState(false);
   const [paid, setPaid] = useState(false);
 
@@ -135,7 +135,6 @@ function ShoppingCartF({ shoppingCart, setShoppingCart, createFoodOrder }) {
                 </button>
                 <div className="paypal-button">
                   <ReactPayPal
-                    createFoodOrder={createFoodOrder}
                     shoppingCart={shoppingCart}
                     setShoppingCart={setShoppingCart}
                     calcSubTotal={calcSubTotal}

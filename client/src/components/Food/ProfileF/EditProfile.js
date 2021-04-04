@@ -8,8 +8,9 @@ import {
   EmailInput,
   UrlInput
 } from "react-form-elements";
+import {updateUser} from '../../Axois/Axois'
 
-function EditProfile({userData,updateUser,getUser}) {
+function EditProfile({userData,getUser}) {
 
 
 
