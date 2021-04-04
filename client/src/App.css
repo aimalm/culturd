@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 /* -- Setting some variables to color and fonts ,enz-- */
 :root {
@@ -8,7 +7,7 @@
 
   --light-turquiose: #bfede4;
   --turquiose: #63dbc4;
- --dark-turquiose : #3aab95;
+  --dark-turquiose: #3aab95;
 
   --light-yellow: #f5e3b1;
   --yellowish: #f5c133;
@@ -26,14 +25,18 @@
   --greenish: #86a059;
   --dark-green: #556a3b;
 
-  --font:'Montserrat', sans-serif;
+  --font: "Montserrat", sans-serif;
 }
 
-h1,h2,h3,h4,h5{
-    font-family: var(--font);
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font);
 }
 
-.button{
+.button {
   display: inline-block;
   padding: 10px 50px;
   box-sizing: border-box;
@@ -88,7 +91,7 @@ h1,h2,h3,h4,h5{
 
 @keyframes showUp {
   0% {
-     opacity: 0;
+    opacity: 0;
   }
   100% {
     opacity: 1;

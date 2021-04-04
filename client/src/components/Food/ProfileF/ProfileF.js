@@ -43,13 +43,6 @@ function ProfileF({ userData, dishData, getUser, createFood }) {
           {userData.TypeOfUser === "cook" ? "post history" : "order history"}
         </button>
 
-        <button
-          className="button profile-menu-addpost"
-          onClick={() => setViewSection("addPost")}
-        >
-          Add a new post
-        </button>
-
         {userData.TypeOfUser === "cook" ? (
           <button
             className="button profile-menu-addpost"
@@ -64,7 +57,7 @@ function ProfileF({ userData, dishData, getUser, createFood }) {
       <div className="profile-content">
         <div className="profile-content-border">
           {viewSection === "info" ? (
-            <EditProfile userData={userData} getUser={getUser} />
+            <EditProfile userData={userData} getUser={getUser}  />
           ) : (
             ""
           )}

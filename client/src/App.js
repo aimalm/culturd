@@ -37,6 +37,7 @@ function App() {
   const [viewingCart, setViewingCart] = useState(false);
   const [dishData, setDishData] = useState([]);
   const [userData, setUserData] = useState([]);
+  const [userLoginEmail, setUserLoginEmail] = useState("");
 
   //Get all for food and save in dishData state
   const getAllFood = async () => {
@@ -87,22 +88,21 @@ function App() {
   };
 
   //Get one user and save in userData state
-  const getUser = async (id) => {
+  const getUser = async (email) => {
     const response = await axois
-      .get(`/user/:${id}`)
+      .get(`/user/${email}`)
       .catch((err) => console.log(err));
 
     if (response && response.data) {
       setUserData(response.data);
-      console.log(response.data)
+      //console.log(response.data)
     }
   };
 
+
   useEffect(() => {
     getAllFood();
-    getUser("6068fedc5207b03f7c599ec2");
   }, []);
-
 
   // save shopping cart to localStorage
   const LSKEY = "culturd";
@@ -111,10 +111,19 @@ function App() {
     if (localShoppingCart) {
       setShoppingCart(localShoppingCart);
     }
+
+    if (localStorage.hasOwnProperty("email")) {
+      setUserLoginEmail(localStorage.getItem("email"));
+    }
   }, []);
+
   useEffect(() => {
     window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
   }, [shoppingCart]);
+
+  useEffect(() => {
+    getUser(userLoginEmail);
+  }, [userLoginEmail]);
 
   return (
     <div className="App">
@@ -176,6 +185,7 @@ function App() {
               dishData={dishData}
               userData={userData}
               createFood={createFood}
+             
             />
           </Route>
 

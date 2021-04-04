@@ -29,7 +29,8 @@
 .profile-menu h3 {
   color: white;
 }
-.profile-menu-categories, .profile-menu-addpost {
+.profile-menu-categories,
+.profile-menu-addpost {
   height: 50%;
   width: 80%;
 
@@ -45,8 +46,8 @@
   border: 0.1em solid var(--light-yellow);
 }
 .profile-menu-addpost {
- background-color: var(--yellowish);
-} 
+  background-color: var(--yellowish);
+}
 .profile-menu-addpost:hover {
   color: white;
   border: 0.1em solid var(--light-yellow);
@@ -54,7 +55,6 @@
 
 /* profile section css here */
 .profile-content {
-  
   width: 70%;
   margin: auto;
 }
@@ -70,32 +70,38 @@
   text-transform: capitalize;
   font-weight: bold;
 }
-.rfe-form.profile-info-form, .rfe-form.add-post-form {
+.rfe-form.profile-info-form,
+.rfe-form.add-post-form {
   margin-top: 1rem;
   font-family: var(--font);
   color: var(--dark-carol);
   padding: 0;
 }
-.rfe-form.profile-info-form label, .rfe-form.add-post-form label {
+.rfe-form.profile-info-form label,
+.rfe-form.add-post-form label {
   margin: 0.2rem !important;
 }
-.rfe-form__row.profile-form, .rfe-form__row.add-post-form {
+.rfe-form__row.profile-form,
+.rfe-form__row.add-post-form {
   border: none;
   border-bottom: 1px solid var(--carol);
   padding: 0;
-  margin: .8rem 0;
+  margin: 0.8rem 0;
 }
-.profile-form label, .add-post-form label{
+.profile-form label,
+.add-post-form label {
   font-family: var(--font);
   color: var(--NavbarColor);
 }
-.profile-form input, .add-post-form input{
+.profile-form input,
+.add-post-form input {
   margin: 0;
   color: var(--dark-carol);
-  padding-bottom: .1rem;
+  padding-bottom: 0.1rem;
   height: auto;
 }
-.profile-form input:focus, .add-post-form input:focus {
+.profile-form input:focus,
+.add-post-form input:focus {
   outline: none;
 }
 
@@ -124,7 +130,6 @@
   background-color: var(--carol);
   margin: 2rem 0;
 }
-
 .profile-history-button {
   padding: 8px 50px;
   color: white;
@@ -153,7 +158,7 @@
 .add-post-alert p {
   color: white;
 }
-.addpost-container{
+.addpost-container {
   height: 65vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -161,62 +166,51 @@
 .addpost-container::-webkit-scrollbar {
   width: 2px;
 }
-
 .addpost-container::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .addpost-container::-webkit-scrollbar-thumb {
   background-color: #f5e3b1;
   height: 10px;
   border-radius: 13px;
 }
-
-.rfe-form.add-post-form{
+.rfe-form.add-post-form {
   width: 70%;
 }
-
-.add-post-form select{
+.add-post-form select {
   padding-bottom: 0;
   color: var(--NavbarColor);
 }
-.add-post-form select:focus{
-  outline:none;
+.add-post-form select:focus {
+  outline: none;
+}
+.rfe-form__row.rfe-radiogroup {
+  color: var(--NavbarColor);
 }
 
-.rfe-form__row.rfe-radiogroup{
-  color:var(--NavbarColor);
-}
-
-
-
-
-
-@media only screen and (max-width: 1024px){
-  .profile-menu-categories, .profile-menu-addpost{
+@media only screen and (max-width: 1024px) {
+  .profile-menu-categories,
+  .profile-menu-addpost {
     font-size: 1.2rem;
     padding: 5px 50px;
   }
 }
 @media only screen and (max-width: 768px) {
-
- 
-  .profile-menu-categories, .profile-menu-addpost{
+  .profile-menu-categories,
+  .profile-menu-addpost {
     font-size: 1rem;
-   
   }
   .profile-order-container {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
-
   }
   .profile-order-img.cart-img {
     grid-row: 1/2;
     grid-column: 1/2;
     justify-self: start;
   }
-  .addpost-container{
+  .addpost-container {
     height: 75vh;
   }
 }
@@ -229,7 +223,7 @@
     width: 90%;
   }
   .profile-menu {
-    grid-template-rows: auto ;
+    grid-template-rows: auto;
     height: auto;
     padding: 2rem 0;
     padding-top: 5rem;
@@ -237,13 +231,12 @@
   .profile-menu-categories {
     margin: 1rem 0;
   }
-  .profile-info-title{
+  .profile-info-title {
     font-size: 1.5rem;
   }
 }
-
-@media only screen and (max-width: 426px){
-  .profile-info-title{
+@media only screen and (max-width: 426px) {
+  .profile-info-title {
     font-size: 1rem;
   }
 }

@@ -52,7 +52,7 @@ function Login() {
                     setSignInError(sessionStorage.getItem("SignInError"));
                     getUser()
                     localStorage.removeItem("SignInError");
-                    window.location.replace("http://localhost:3000/food/Profile");
+                    window.location.replace("http://localhost:3000/food");
 
                 })
                 

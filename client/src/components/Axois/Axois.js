@@ -1,5 +1,6 @@
 import Axios from "axios";
 
+
 export const axois = Axios.create({
   baseURL: "http://localhost:5000/culturd_api/Em3Wi5va8is15",
 });
@@ -20,22 +21,21 @@ export const removeEmptyString = (string1, string2, string3, string4) => {
   return validArray;
 };
 
-//Patch user info
-// TODO: have to call the getUser() again?
-export const updateUser = async (id, values) => {
-  const newObj = {
-    firstName: values.firstName,
-    lastName: values.lastName,
-    ProfilePicture: values.ProfilePicture,
-    email: values.email,
-    // password: values.password,
-    address: values.address,
+  //Patch user info
+  export const updateUser = async (id, values) => {
+    const newObj = {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      ProfilePicture: values.ProfilePicture,
+      email: values.email,
+      // password: values.password,
+      address: values.address,
+    };
+    await axois
+      .patch(`/user/${id}`, newObj)
+      .catch((err) => console.log(err))
+  
   };
-  await axois
-    .patch(`/user/${id}`, newObj)
-    .catch((err) => console.log(err))
-   // .then(getUser(id));
-};
 
 //Get all for food_order
 export const getFoodOrder = async () => {

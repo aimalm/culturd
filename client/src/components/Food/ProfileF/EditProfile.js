@@ -6,36 +6,31 @@ import {
   TextBox,
   //Password,
   EmailInput,
-  UrlInput
+  UrlInput,
 } from "react-form-elements";
-import {updateUser} from '../../Axois/Axois'
 
-function EditProfile({userData,getUser}) {
+import {updateUser} from "../../Axois/Axois"
 
-
-
+function EditProfile({ userData, getUser }) {
   return (
     <div className="profile-info">
       <h3 className="profile-info-title">Edit your account details</h3>
 
       <Form
-        // className="profile-info-form"
         name="edit profile form"
-
         onSubmit={(values) => {
           console.log("edit profile form", values);
-         
-          updateUser(userData._id, values)
+          updateUser(userData._id, values);
 
           setTimeout(() => {
-            getUser(userData._id)
+            getUser(userData.email);
           }, 500);
         }}
       >
         <TextBox
           name="firstName"
           label="First Name"
-        initialValue={userData.firstName}
+          initialValue={userData.firstName}
           className="profile-form"
         />
         <TextBox
@@ -50,22 +45,19 @@ function EditProfile({userData,getUser}) {
           initialValue={userData.password}
           className="profile-form"
         /> */}
-       
 
         <EmailInput
           name="email"
           label="Email "
-         initialValue={userData.email}
+          initialValue={userData.email}
           className="profile-form"
         />
         <UrlInput
-          name="Profile_Picture"
+          name="ProfilePicture"
           label="Profile Picture URL"
           initialValue={userData.ProfilePicture}
           placeholder="https://www.example.com"
           className="profile-form"
-
-          
         />
 
         <TextBox
