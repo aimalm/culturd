@@ -18,6 +18,7 @@ function ContactForm() {
       });
       e.target.reset();
   }
+  console.log(localStorage.getItem("email"))
 
   
     return (

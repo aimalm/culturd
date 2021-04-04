@@ -95,6 +95,7 @@ function App() {
 
     if (response && response.data) {
       setUserData(response.data);
+      console.log(response.data)
     }
   };
   useEffect(() => {
