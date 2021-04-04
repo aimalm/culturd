@@ -120,128 +120,128 @@ function App() {
     <div className="App">
       <Router>
         <ScrollToTop>
-        <Switch>
-          <Route path="/workshop/bookform">
-            <SubNavW />
-            <BookForm />
-            <Footer />
-          </Route>
+          <Switch>
+            <Route path="/workshop/bookform">
+              <SubNavW />
+              <BookForm />
+              <Footer />
+            </Route>
 
-          <Route path="/workshop/listW">
-            <SubNavW />
-            <ListW />
-            <Footer />
-          </Route>
+            <Route path="/workshop/listW">
+              <SubNavW />
+              <ListW />
+              <Footer />
+            </Route>
 
-          <Route path="/workshop/about_us">
-            <SubNavW />
-            <Footer />
-          </Route>
+            <Route path="/workshop/about_us">
+              <SubNavW />
+              <Footer />
+            </Route>
 
-          <Route path="/workshop/Afghanistan">
-            <SubNavW />
-            <Afghanistan />
-            <Footer />
-          </Route>
+            <Route path="/workshop/Afghanistan">
+              <SubNavW />
+              <Afghanistan />
+              <Footer />
+            </Route>
 
-          <Route path="/workshop/Congo">
-            <SubNavW />
-            <Congo />
-            <Footer />
-          </Route>
+            <Route path="/workshop/Congo">
+              <SubNavW />
+              <Congo />
+              <Footer />
+            </Route>
 
-          <Route path="/workshop/HongKong">
-            <SubNavW />
-            <HongKong />
-            <Footer />
-          </Route>
+            <Route path="/workshop/HongKong">
+              <SubNavW />
+              <HongKong />
+              <Footer />
+            </Route>
 
-          <Route path="/workshop/Indonesia">
-            <SubNavW />
-            <Indonesia />
-            <Footer />
-          </Route>
+            <Route path="/workshop/Indonesia">
+              <SubNavW />
+              <Indonesia />
+              <Footer />
+            </Route>
 
-          <Route path="/food/shopping_cart">
-            <SubnavF shoppingCart={shoppingCart} userData={userData} />
-            <ShoppingCartF
-              shoppingCart={shoppingCart}
-              setShoppingCart={setShoppingCart}
-            />
-          </Route>
+            <Route path="/food/shopping_cart">
+              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <ShoppingCartF
+                shoppingCart={shoppingCart}
+                setShoppingCart={setShoppingCart}
+              />
+            </Route>
 
-          <Route path="/food/profile">
-            <SubnavF shoppingCart={shoppingCart} userData={userData} />
-            <ProfileF
-              getUser={getUser}
-              dishData={dishData}
-              userData={userData}
-              createFood={createFood}
-            />
-          </Route>
+            <Route path="/food/profile">
+              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <ProfileF
+                getUser={getUser}
+                dishData={dishData}
+                userData={userData}
+                createFood={createFood}
+              />
+            </Route>
 
-          <Route path="/food/products">
-            <SubnavF shoppingCart={shoppingCart} userData={userData} />
-            <ProductDetailsF
-              selectedDish={selectedDish}
-              shoppingCart={shoppingCart}
-              setShoppingCart={setShoppingCart}
-            />
-            <Footer />
-          </Route>
+            <Route path="/food/products">
+              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <ProductDetailsF
+                selectedDish={selectedDish}
+                shoppingCart={shoppingCart}
+                setShoppingCart={setShoppingCart}
+              />
+              <Footer />
+            </Route>
 
-          <Route path="/food/product_list">
-            <SubnavF shoppingCart={shoppingCart} userData={userData} />
-            <ProductListF
-              dishData={dishData}
-              setSelectedDish={setSelectedDish}
-            />
-          </Route>
+            <Route path="/food/product_list">
+              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <ProductListF
+                dishData={dishData}
+                setSelectedDish={setSelectedDish}
+              />
+            </Route>
 
-          <Route path="/login">
-            <LogIn />
-            <Footer />
-          </Route>
+            <Route path="/login">
+              <LogIn />
+              <Footer />
+            </Route>
 
-          <Route path="/signup">
-            <SignUp />
-            <Footer />
-          </Route>
+            <Route path="/signup">
+              <SignUp />
+              <Footer />
+            </Route>
 
-          <Route path="/about_us">
-            <MainNav />
-            <AboutUs />
-            <Footer />
-          </Route>
+            <Route path="/about_us">
+              <MainNav />
+              <AboutUs />
+              <Footer />
+            </Route>
 
-          <Route path="/about_us">
-            <MainNav />
-            <AboutUs />
-            <Footer />
-          </Route>
+            <Route path="/about_us">
+              <MainNav />
+              <AboutUs />
+              <Footer />
+            </Route>
 
-          <Route path="/food">
-            <SubnavF shoppingCart={shoppingCart} userData={userData} />
-            <LandingF setSelectedDish={setSelectedDish} dishData={dishData} />
-            <Footer />
-          </Route>
+            <Route path="/food">
+              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <LandingF setSelectedDish={setSelectedDish} dishData={dishData} />
+              <Footer />
+            </Route>
 
-          <Route path="/workshop">
-            <SubNavW />
-            <LandingW />
-            <Footer />
-          </Route>
-          <Route path="/contact_us">
-            <MainNav />
-            <ContactUs />
-            <Footer />
-          </Route>
+            <Route path="/workshop">
+              <SubNavW />
+              <LandingW />
+              <Footer />
+            </Route>
+            <Route path="/contact_us">
+              <MainNav />
+              <ContactUs />
+              <Footer />
+            </Route>
 
-          <Route path="/">
-            <Home />
-            <Footer />
-          </Route>
-        </Switch>
+            <Route path="/">
+              <Home />
+              <Footer />
+            </Route>
+          </Switch>
         </ScrollToTop>
       </Router>
     </div>
