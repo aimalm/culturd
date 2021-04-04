@@ -5,15 +5,15 @@ import EditProfile from "./EditProfile";
 import OrderHistory from "./OrderHistory";
 import AddPost from "./AddPost";
 
-
-
-function ProfileF({  userData,dishData,getUser,createFood }) {
+function ProfileF({ userData, dishData, getUser, createFood }) {
   const [viewSection, setViewSection] = useState("info");
 
   return (
     <div className="profile-wrapper">
       <div className="profile-menu">
-        {userData.ProfilePicture === null ||userData.ProfilePicture === undefined || userData.ProfilePicture === "" ? (
+        {userData.ProfilePicture === null ||
+        userData.ProfilePicture === undefined ||
+        userData.ProfilePicture === "" ? (
           <img
             className="profile-user-pic"
             src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
@@ -30,28 +30,32 @@ function ProfileF({  userData,dishData,getUser,createFood }) {
         <h3>Hello {userData.firstName} !</h3>
 
         <button
-          className="profile-menu-categories"
+          className="button profile-menu-categories"
           onClick={() => setViewSection("info")}
         >
           personal info
         </button>
 
-        
         <button
-        className="profile-menu-categories"
-        onClick={() => setViewSection("history")}
-      >
+          className="button profile-menu-categories"
+          onClick={() => setViewSection("history")}
+        >
+          {userData.TypeOfUser === "cook" ? "post history" : "order history"}
+        </button>
 
-      {userData.TypeOfUser === "cook"?"post history":"order history"}
-        
-      </button>
+        <button
+          className="button profile-menu-addpost"
+          onClick={() => setViewSection("addPost")}
+        >
+          Add a new post
+        </button>
 
         {userData.TypeOfUser === "cook" ? (
           <button
-            className="profile-menu-addpost"
+            className="button profile-menu-addpost"
             onClick={() => setViewSection("addPost")}
           >
-            Add Post
+            Add a new post
           </button>
         ) : (
           ""
@@ -59,9 +63,21 @@ function ProfileF({  userData,dishData,getUser,createFood }) {
       </div>
       <div className="profile-content">
         <div className="profile-content-border">
-          {viewSection === "info" ? <EditProfile userData={userData}  getUser={getUser}/> : ""}
-          {viewSection === "history" ? <OrderHistory userData={userData} dishData={dishData} /> : ""}
-          {viewSection === "addPost" ? <AddPost userData={userData} createFood={createFood}/> : ""}
+          {viewSection === "info" ? (
+            <EditProfile userData={userData} getUser={getUser} />
+          ) : (
+            ""
+          )}
+          {viewSection === "history" ? (
+            <OrderHistory userData={userData} dishData={dishData} />
+          ) : (
+            ""
+          )}
+          {viewSection === "addPost" ? (
+            <AddPost userData={userData} createFood={createFood} />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

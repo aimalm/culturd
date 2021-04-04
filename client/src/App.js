@@ -35,11 +35,10 @@ function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [viewingCart, setViewingCart] = useState(false);
-
   const [dishData, setDishData] = useState([]);
   const [userData, setUserData] = useState([]);
 
-  //Get all for food
+  //Get all for food and save in dishData state
   const getAllFood = async () => {
     const response = await axois.get("/food").catch((err) => console.log(err));
     if (response && response.data) {
@@ -47,7 +46,7 @@ function App() {
     }
   };
 
-  //POST for food
+  //POST for food get input from the form + userData, reload the getAllFood()after post req
   const createFood = async (values) => {
     const newObj = {
       dishName: values.dishName,
@@ -87,10 +86,10 @@ function App() {
       .catch((err) => console.error(err));
   };
 
-  //Get one user
+  //Get one user and save in userData state
   const getUser = async (id) => {
     const response = await axois
-      .get(`/user/${id}`)
+      .get(`/user/:${id}`)
       .catch((err) => console.log(err));
 
     if (response && response.data) {
@@ -98,10 +97,12 @@ function App() {
       console.log(response.data)
     }
   };
+
   useEffect(() => {
     getAllFood();
     getUser("6068fedc5207b03f7c599ec2");
   }, []);
+
 
   // save shopping cart to localStorage
   const LSKEY = "culturd";

@@ -20,8 +20,8 @@ export const removeEmptyString = (string1, string2, string3, string4) => {
   return validArray;
 };
 
-
 //Patch user info
+// TODO: have to call the getUser() again?
 export const updateUser = async (id, values) => {
   const newObj = {
     firstName: values.firstName,

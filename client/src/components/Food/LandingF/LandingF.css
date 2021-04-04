@@ -85,7 +85,6 @@
   padding: 5rem 0;
 }
 .food-title-new {
-  font-family: var(--font);
   font-size: 3rem;
   padding: 0 7rem;
   text-transform: uppercase;
@@ -111,9 +110,15 @@
   margin: 1rem 0.5rem;
   max-width: 18rem;
 }
+.food-card-img:hover {
+  opacity: 0.5;
+
+  transform: scale(1.05);
+}
 .food-card-img {
   width: 18rem;
   height: 18rem;
+  transition: 0.5s ease;
 }
 .product-image {
   height: 100%;

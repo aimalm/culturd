@@ -63,7 +63,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
       <h3 className="shopping-cart-title">My Order</h3>
 
       {shoppingCart.length === 0 ? (
-        <h3 className="shopping-cart-title">
+        <h3 className="cart-empty-msg">
           Shopping cart is empty, <br></br>search for the your next HOME COOK
           FOOD!
         </h3>
@@ -74,7 +74,8 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
               <img className="cart-img" src={food.imageUrl} alt="" />
               <div className="cart-food-info">
                 <h4>{food.dishName}</h4>
-                <p>pick up date: {food.pickupDate}</p>
+                <p>pick up date: {food.pickupDate.substring(0,10)}</p>
+                <p>pick up time: {food.openingHours}</p>
                 <p>pick up address: {food.address}</p>
               </div>
               <div className="cart-price">
@@ -149,7 +150,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
                   onClick={() => {
                     setcheckingOut(true);
                   }}
-                  className="home-food-link cart-checkout-button"
+                  className="button cart-checkout-button"
                 >
                   Checkout
                 </button>

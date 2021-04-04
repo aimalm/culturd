@@ -1,16 +1,15 @@
-.shopping-cart-wrapper{
-   margin-top: 6rem;
+.shopping-cart-wrapper {
+  margin-top: 6rem;
 }
-.shopping-cart-wrapper *{
+.shopping-cart-wrapper * {
   margin: 0;
 }
-.shopping-cart-wrapper h4,.shopping-cart-wrapper h5,.shopping-cart-wrapper p{
+.shopping-cart-wrapper h4,
+.shopping-cart-wrapper h5,
+.shopping-cart-wrapper p, .cart-empty-msg {
   color: var(--NavbarColor);
   font-family: var(--font);
 }
-
-
-
 
 .back-button {
   background-color: transparent;
@@ -21,74 +20,73 @@
   top: 6rem;
   left: 1rem;
 }
-.back-button:hover{
+.back-button:hover {
   color: var(--dark-carol);
 }
 
-.shopping-cart-title{
+.shopping-cart-title {
+  font-size: 3rem;
   padding: 3rem 15rem;
   text-transform: uppercase;
-  color: var(--carol);
-  font-weight: 600;
-  font-family: var(--font);
+  background: linear-gradient(to right, #c0c93f 0%, #fa9726 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Train One", cursive;
+}
+.cart-empty-msg{
+  padding: 3rem 15rem;
 }
 
-
-.shopping-cart-item{
+.shopping-cart-item {
   display: grid;
   grid-template-columns: 15% 45% 10% 20% 10%;
   width: 70%;
-  margin:auto;
+  margin: auto;
   padding: 1rem 0;
-  
+
   text-transform: uppercase;
   color: var(--NavbarColor);
   font-weight: 600;
-  
 }
-.cart-img{
+.cart-img {
   width: 6rem;
-  height: 6rem; 
+  height: 6rem;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.cart-food-info{
+.cart-food-info {
   text-transform: capitalize;
-
 }
-.cart-food-info h4{
-  
-  padding: .5rem 0 1rem 0;
-
+.cart-food-info h4 {
+  padding: 0.5rem 0 1rem 0;
 }
-.cart-quantity{
- height: 30%;
- width: 50%;
-  display:grid;
+.cart-quantity {
+  height: 30%;
+  width: 50%;
+  display: grid;
   grid-template-columns: 33% 63% 33%;
   justify-self: center;
 }
-.cart-plus-button, .cart-minus-button{
-background-color: transparent;
-border: 1px solid var(--light-turquiose);
-color:var(--dark-turquiose);
-
+.cart-plus-button,
+.cart-minus-button {
+  background-color: transparent;
+  border: 1px solid var(--light-turquiose);
+  color: var(--dark-turquiose);
 }
-.cart-plus-button{
+.cart-plus-button {
   border-radius: 8px 0 0 8px;
 }
-.cart-minus-button{
+.cart-minus-button {
   border-radius: 0 8px 8px 0;
-
 }
-.cart-quantity-input{
+.cart-quantity-input {
   background-color: var(--light-turquiose);
   border: none;
   text-align: center;
   font-family: var(--font);
 }
-.cart-delete-button{
+.cart-delete-button {
   border: 1px solid var(--light-turquiose);
   background-color: transparent;
   color: var(--dark-turquiose);
@@ -102,35 +100,33 @@ color:var(--dark-turquiose);
   color: var(--NavbarColor);
 }
 
-.cart-subtotal-container{
+.cart-subtotal-container {
   display: grid;
   grid-template-columns: 30% 20% 50%;
   width: 50%;
   margin: auto;
+  margin-bottom: 3rem;
 }
-.cart-checkout-button{
+.cart-checkout-button {
   background-color: var(--greenish);
-border: 1px solid var(--greenish);
-
-
-  width: 80%;
-  justify-self: end;
+  border: 1px solid var(--greenish);
+  width: 100%;
 }
-.cart-checkout-button:hover{
-background-color: var(--light-yellow);
-border: 1px solid var(--light-yellow);
-color: var(--dark-yellow);
+.cart-checkout-button:hover {
+  background-color: var(--light-green);
+  border: 1px solid var(--light-green);
+  
 }
 
-.paypal-buttons-contrainer{
-  background-color: #f6f1eb ;
+.paypal-buttons-contrainer {
+  background-color: #f6f1eb;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1.5rem;
-  animation: showUp .8s 1 ease-in-out;
+  animation: showUp 0.8s 1 ease-in-out;
   width: 70%;
   height: 80%;
   margin: auto;
@@ -139,10 +135,10 @@ color: var(--dark-yellow);
   justify-content: center;
   align-items: center;
 }
-.paypal-button{
+.paypal-button {
   width: 20rem;
 }
-.paypal-button-close{
+.paypal-button-close {
   border: none;
   background-color: transparent;
   position: absolute;
@@ -151,85 +147,82 @@ color: var(--dark-yellow);
   color: var(--NavbarColor);
 }
 
-
-
-@media only screen and (max-width : 768px){
-  .shopping-cart-item{
+@media only screen and (max-width: 768px) {
+  .shopping-cart-item {
     width: 90%;
   }
-  .cart-food-info h4{
+  .cart-food-info h4 {
     font-size: 1.2rem;
     font-weight: 500;
   }
-  .cart-food-info p{
-    font-size: .8rem;
+  .cart-food-info p {
+    font-size: 0.8rem;
     font-weight: 400;
   }
-  .cart-checkout-button{
+  .cart-checkout-button {
     padding: 10px 30px;
-
-   
   }
 }
 
-@media only screen and (max-width : 625px){
-  .back-button{
+@media only screen and (max-width: 625px) {
+  .back-button {
     top: 6%;
     left: 1%;
   }
-  .shopping-cart-title{
-    padding: 0 5rem;
+  .shopping-cart-title, .cart-empty-msg {
+    padding: 1rem 5rem;
   }
-  .shopping-cart-item{
+  .shopping-cart-item {
     padding: 2rem 0;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 70% 30%;
     width: 80%;
   }
-  .cart-food-info{
+  .cart-food-info {
     grid-column: 2/3;
   }
-  .cart-delete-button{
+  .cart-delete-button {
     grid-column: 3/4;
-    grid-row:2/3;
-    height:auto;
+    grid-row: 2/3;
+  
+    height: 50%;
   }
-  .cart-quantity{
+  .cart-quantity {
     grid-column: 3/4;
-    grid-row:1/2;
+    grid-row: 1/2;
     width: 4rem;
   }
-  .cart-plus-button{
+  .cart-plus-button {
     width: 1.5rem;
     padding: 0;
-    padding-right: .5rem;
+    padding-right: 0.5rem;
   }
-  .cart-minus-button{
+  .cart-minus-button {
     width: 1.5rem;
     padding: 0;
   }
-  .cart-delete-button{
+  .cart-delete-button {
     width: 80%;
     justify-self: end;
   }
-  .cart-subtotal-container{
+  .cart-subtotal-container {
     width: 90%;
     margin-bottom: 2rem;
   }
-} 
+}
 
-@media only screen and (max-width : 426px){
-  .cart-food-info p{
-    font-size: .8rem;
+@media only screen and (max-width: 426px) {
+  .cart-food-info p {
+    font-size: 0.8rem;
   }
 
-.cart-checkout-button{
-  width: auto;
-}
-.paypal-buttons-contrainer{
-  height: 40%;
-}
-.paypal-button{
-  width: auto;
-}
+  .cart-checkout-button {
+    width: auto;
+  }
+  .paypal-buttons-contrainer {
+    height: 40%;
+  }
+  .paypal-button {
+    width: auto;
+  }
 }

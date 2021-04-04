@@ -35,7 +35,7 @@ function Home() {
           <h1 className="home-section-title-workshop">
            Get to know more <br></br>About Our culture workshop
           </h1>
-          <Link to="/workshop" className="home-workshop-link">
+          <Link to="/workshop" className=" button home-workshop-link">
             Discover more
           </Link>
         </div>
@@ -43,7 +43,7 @@ function Home() {
           <h1 className="home-section-title-food">
             Get foreign dishes <br></br>from passionate home cooks
           </h1>
-          <Link to="/food" className="home-food-link">
+          <Link to="/food" className="button home-food-link">
             Discover more
           </Link>
         </div>

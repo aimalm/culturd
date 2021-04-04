@@ -19,7 +19,7 @@ function AddPost({userData,createFood}) {
   const [addingPosting, setAddingPost] = useState(false);
 
   return (
-    <div className="addpost-popup">
+    <div className="addpost-container">
       {addingPosting ? (
         <div className="alert add-post-alert">
           <p>
@@ -31,9 +31,9 @@ function AddPost({userData,createFood}) {
         ""
       )}
 
-      <h3>A new post</h3>
+      <h3 className="profile-info-title">Ready to sell your next home dish?</h3>
       <Form
-        className="form-add-post"
+        className="add-post-form"
         name="add post form"
         onSubmit={(values) => {
           //console.log("add post form", values);
@@ -45,39 +45,42 @@ function AddPost({userData,createFood}) {
           }, 3000);
         }}
       >
-        <TextBox name="dishName" label="Dish Name" initialValue="" />
+        <TextBox name="dishName" label="Dish Name" initialValue="" className="add-post-form"/>
         <TextBox
           name="ingredient1"
-          label="Ingredients (Please put one ingredient in one column)"
+          label="Ingredients (one ingredient per column)"
           initialValue=""
+          className="add-post-form"
           required
         />
-        <TextBox name="ingredient2" label="" initialValue="" />
-        <TextBox name="ingredient3" label="" initialValue="" />
-        <TextBox name="ingredient4" label="" initialValue="" />
+        <TextBox name="ingredient2" label="" initialValue="" className="add-post-form"/>
+        <TextBox name="ingredient3" label="" initialValue=""className="add-post-form" />
+        <TextBox name="ingredient4" label="" initialValue="" className="add-post-form"/>
         <TextBox
           name="keyword1"
-          label="Keywords for searching (Please put one keyword in one column)"
+          label="Keywords (one keyword per column)"
           initialValue=""
+          className="add-post-form"
           required
         />
-        <TextBox name="keyword2" label="" initialValue="" />
-        <TextBox name="keyword3" label="" initialValue="" />
-        <TextBox name="keyword4" label="" initialValue="" />
+        <TextBox name="keyword2" label="" initialValue="" className="add-post-form"/>
+        <TextBox name="keyword3" label="" initialValue="" className="add-post-form"/>
+        <TextBox name="keyword4" label="" initialValue="" className="add-post-form"/>
 
-        <TextArea label="Dish description" name="dishDescription" required />
+        <TextBox label="Dish description" name="dishDescription" className="add-post-form" required />
 
         <DropDown
           label="Category"
           initialValue=""
           data-testid=""
           name="category"
+          className="add-post-form"
           required
         >
-          <OptionGroup label="">
-            <Option initialValue="main">Main Dish</Option>
-            <Option initialValue="side">Side Dish</Option>
-            <Option initialValue="dessert">Dessert</Option>
+          <OptionGroup label="" className="add-post-form">
+            <Option initialValue="main" className="add-post-form">Main Dish</Option>
+            <Option initialValue="side" className="add-post-form">Side Dish</Option>
+            <Option initialValue="dessert" className="add-post-form">Dessert</Option>
           </OptionGroup>
         </DropDown>
 
@@ -86,6 +89,7 @@ function AddPost({userData,createFood}) {
           label="Food image url"
           initialValue=""
           placeholder="https://www.example.com"
+          className="add-post-form"
           required
         />
 
@@ -93,18 +97,21 @@ function AddPost({userData,createFood}) {
           name="vegetarian"
           label=""
           initialChecked="false"
-          options={[{ value: "true", label: "vegetarian" }]}
+          options={[{ value: "true", label: "Vegetarian" }]}
+          className="add-post-form"
         />
-        <Telephone name="Price" label="price" initialValue="" required />
+        <Telephone name="Price" label="Price" initialValue="" className="add-post-form" required />
         <DateTime
           label="Pick up date and time"
           type="datetime-local"
           name="pickupdate"
+          className="add-post-form"
           required
         />
         <TextBox
           name="address"
           label="Pick Up Address"
+          className="add-post-form"
           initialValue={userData.address}
           required
         />

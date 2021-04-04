@@ -37,11 +37,14 @@ function ProductDetailsF({
     }, 4000);
   };
 
+  console.log(selectedDish)
+
   return (
     <div>
+
       {/* shopping cart alert here */}
       {viewingCart ? (
-        <div className="alert add-cart-alert">
+        <div className="alert-button add-cart-alert">
           <p>
             The dish is now in the CART! <CgArrowLongUp /> <CgArrowLongUp />
           </p>
@@ -86,10 +89,13 @@ function ProductDetailsF({
                     <EuroSymbolIcon /> <strong>{dish.price}</strong>
                   </h3>
                   <p className="products-description">{dish.dishDescription}</p>
-                  <p>
-                    <strong>Pick Up Date:</strong> {dish.pickupDate}
+                  <p className="products-pickup-details">
+                    <strong>Pick Up Date:</strong> {dish.pickupDate.substring(0,10)}
                   </p>
-                  <p>
+                  <p className="products-pickup-details">
+                    <strong>Pick Up Time:</strong> {dish.openingHours}
+                  </p>
+                  <p className="products-pickup-details">
                     <strong>Pick Up Address:</strong> {dish.address}
                   </p>
                 </div>
@@ -101,13 +107,13 @@ function ProductDetailsF({
                   />
                   <p>{dish.cooker}</p>
                   <div className="products-cooker-score">
-                    {dish.cookerScore.map((score, index) => (
+                    {dish.cookerScore.map(( index) => (
                       <StarIcon key={index} className="star" />
                     ))}
                   </div>
                 </div>
                 <button
-                  className="home-food-link products-add-button"
+                  className="button products-add-button"
                   onClick={() => addCart(dish._id)}
                 >
                   Add to cart
