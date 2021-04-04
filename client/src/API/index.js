@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect } from "react";
+
 
 const url = 'http://localhost:5000/culturd_api/Em3Wi5va8is15/event';
 
