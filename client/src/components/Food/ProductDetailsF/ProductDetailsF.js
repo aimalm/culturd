@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./ProductDetailsF.css";
 import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
@@ -12,9 +12,10 @@ function ProductDetailsF({
   selectedDish,
   shoppingCart,
   setShoppingCart,
-  viewingCart,
-  setViewingCart,
+  
 }) {
+  const [viewingCart, setViewingCart] = useState(false);
+
   const addCart = (dishID) => {
     let dishIDArray = shoppingCart.map((food) => food._id);
 

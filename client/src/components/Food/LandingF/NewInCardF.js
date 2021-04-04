@@ -35,7 +35,7 @@ function NewInCardF({ setSelectedDish, dishData }) {
                 </div>
                 <p className="cook-info">
                   {dish.cooker}<br></br>
-                  {dish.cookerScore.map((index) => (
+                  {dish.cookerScore.map((star, index) => (
                     <StarIcon key={index} className="star" />
                   ))}
                 </p>

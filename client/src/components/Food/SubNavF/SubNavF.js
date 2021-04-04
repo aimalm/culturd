@@ -9,7 +9,10 @@ import Nav from "react-bootstrap/Nav";
 import { LinkContainer } from "react-router-bootstrap";
 import foodLogo from "../../ShareComponents/image/logofood.png"
 
-function SubNavF({shoppingCart}) {
+function SubNavF({shoppingCart, userData}) {
+
+
+ 
   return (
     <div className="container-navbar">
       <Navbar bg="white fixed-top nav-border" animation="false" expand="lg">
@@ -38,9 +41,13 @@ function SubNavF({shoppingCart}) {
               <Nav.Link className="nav-color">List</Nav.Link>
             </LinkContainer>
 
-            <LinkContainer to="/food/profile">
+            {userData.firstName===undefined?(<LinkContainer to="/login">
               <Nav.Link className="nav-color">Profile</Nav.Link>
-            </LinkContainer>
+            </LinkContainer>):(<LinkContainer to="/food/profile">
+              <Nav.Link className="nav-color">Profile</Nav.Link>
+            </LinkContainer>)}
+
+            
 
             <LinkContainer to="/food/shopping_cart">
               <Nav.Link className="nav-color nav-basket-number"><ShoppingBasketIcon className="nav-basket-icon" />{shoppingCart?shoppingCart.length:0}</Nav.Link>
