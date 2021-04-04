@@ -4,12 +4,12 @@ import {
   Button,
   Form,
   TextBox,
-  Password,
+  //Password,
   EmailInput,
   UrlInput
 } from "react-form-elements";
 
-function EditProfile({userData,updateUser}) {
+function EditProfile({userData,updateUser,getUser}) {
 
 
 
@@ -25,6 +25,10 @@ function EditProfile({userData,updateUser}) {
           console.log("edit profile form", values);
          
           updateUser(userData._id, values)
+
+          setTimeout(() => {
+            getUser(userData._id)
+          }, 500);
         }}
       >
         <TextBox
@@ -39,12 +43,12 @@ function EditProfile({userData,updateUser}) {
           initialValue={userData.lastName}
           className="profile-form"
         />
-        <Password
+        {/* <Password
           name="password"
           label="Password "
-          initialValue=""
+          initialValue={userData.password}
           className="profile-form"
-        />
+        /> */}
        
 
         <EmailInput

@@ -7,7 +7,7 @@ import AddPost from "./AddPost";
 
 
 
-function ProfileF({ createFood, userData, updateUser }) {
+function ProfileF({ createFood, userData, updateUser,dishData,getUser }) {
   const [viewSection, setViewSection] = useState("info");
 
   return (
@@ -35,12 +35,16 @@ function ProfileF({ createFood, userData, updateUser }) {
         >
           personal info
         </button>
+
+        
         <button
-          className="profile-menu-categories"
-          onClick={() => setViewSection("history")}
-        >
-          order history
-        </button>
+        className="profile-menu-categories"
+        onClick={() => setViewSection("history")}
+      >
+
+      {userData.TypeOfUser === "cook"?"post history":"order history"}
+        
+      </button>
 
         {userData.TypeOfUser === "cook" ? (
           <button
@@ -55,8 +59,8 @@ function ProfileF({ createFood, userData, updateUser }) {
       </div>
       <div className="profile-content">
         <div className="profile-content-border">
-          {viewSection === "info" ? <EditProfile userData={userData} updateUser={updateUser}/> : ""}
-          {viewSection === "history" ? <OrderHistory /> : ""}
+          {viewSection === "info" ? <EditProfile userData={userData} updateUser={updateUser} getUser={getUser}/> : ""}
+          {viewSection === "history" ? <OrderHistory userData={userData} dishData={dishData} /> : ""}
           {viewSection === "addPost" ? <AddPost createFood={createFood} /> : ""}
         </div>
       </div>
