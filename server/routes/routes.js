@@ -47,7 +47,7 @@ router.delete('/food_order/:_id', deleteAnOrder);
 //routes for the users
 router.get('/user', getAllUsers);
 router.post('/user', createAnUser);
-router.get('/user/:_id', showUser);
+router.get('/user/:email', showUser);
 router.patch('/user/:_id', updateAnUser);
 router.delete('/user/:_id', deleteAnUser);
 

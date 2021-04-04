@@ -16,9 +16,10 @@ export const getAllUsers = async (req, res) => {
 }
 
 export const showUser = async (req, res) => { 
-    const id = req.params._id;
+    const email = req.params.email;
+    console.log(email)
     try {
-        const showUser = await User.findById(id);
+        const showUser = await User.findOne({email: "zaherc@gmail.com"});
         res.status(200).json(showUser);
     } catch (error) {
         res.status(404).json({ message: error.message });
