@@ -14,14 +14,16 @@ import {
   OptionGroup,
 } from "react-form-elements";
 import { CgArrowLongUp } from "react-icons/cg";
+import {createFood} from "../../Axois/Axois"
 
-function AddPost({userData,createFood}) {
+function AddPost({userData,getAllFood}) {
   const [addingPosting, setAddingPost] = useState(false);
 
   return (
     <div className="addpost-container">
+    
       {addingPosting ? (
-        <div className="alert add-post-alert">
+        <div className="alert-button add-post-alert">
           <p>
             The dish is available in the LIST!
             <CgArrowLongUp /> <CgArrowLongUp />
@@ -37,11 +39,12 @@ function AddPost({userData,createFood}) {
         name="add post form"
         onSubmit={(values) => {
           //console.log("add post form", values);
-          createFood(values);
+          createFood(userData, values);
           setAddingPost(true);
 
           setTimeout(() => {
             setAddingPost(false);
+            getAllFood()
           }, 3000);
         }}
       >

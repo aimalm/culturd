@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { axois, removeEmptyString } from "./components/Axois/Axois";
+import { axois } from "./components/Axois/Axois";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // share components
@@ -17,7 +17,6 @@ import SubNavW from "./components/Workshop/SubNavW/SubNavW";
 import LandingW from "./components/Workshop/LandingW/LandingW";
 import BookForm from "./components/Workshop/Booking/BookForm";
 import ListW from "./components/Workshop/ListW/ListW";
-// import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 import Afghanistan from "./components/Workshop/Countries/Afghanistan";
 import Congo from "./components/Workshop/Countries/Congo";
 import HongKong from "./components/Workshop/Countries/HongKong";
@@ -46,74 +45,29 @@ function App() {
     }
   };
 
-  //POST for food get input from the form + userData, reload the getAllFood()after post req
-  const createFood = async (values) => {
-    const newObj = {
-      dishName: values.dishName,
-      ingredients: removeEmptyString(
-        values.ingredient1,
-        values.ingredient2,
-        values.ingredient3,
-        values.ingredient4
-      ),
-      keywords: removeEmptyString(
-        values.keyword1,
-        values.keyword2,
-        values.keyword3,
-        values.keyword4
-      ),
-      category: values.category,
-      vegetarian: values.vegetarian,
-      dishDescription: values.dishDescription,
-      cooker: userData.firstName,
-      cookerImage:
-        userData.ProfilePicture === undefined
-          ? "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-          : userData.ProfilePicture,
-      cookerScore: ["star", "star", "star"],
-      price: values.Price,
-      pickupDate: values.pickupdate.substring(0, 10),
-      openingHours: values.pickupdate.substring(11, 16),
-      address: values.address,
-      imageUrl: values.imageUrl,
-      quantity: "1",
-    };
-
-    //console.log(newObj);
-    await axois
-      .post("/food", newObj)
-      .then((res) => getAllFood(res))
-      .catch((err) => console.error(err));
-  };
-
   //Get one user and save in userData state
   const getUser = async (email) => {
     const response = await axois
       .get(`/user/${email}`)
       .catch((err) => console.log(err));
-
     if (response && response.data) {
       setUserData(response.data);
     }
   };
 
   // save shopping cart to localStorage
-  const LSKEY = "culturd";
   useEffect(() => {
-    let localShoppingCart = JSON.parse(localStorage.getItem(LSKEY));
-    if (localShoppingCart) {
-      setShoppingCart(localShoppingCart);
+    if (localStorage.hasOwnProperty("culturd")) {
+      setShoppingCart(JSON.parse(localStorage.getItem("culturd")));
     }
-
     if (localStorage.hasOwnProperty("email")) {
       getUser(localStorage.getItem("email"));
     }
-
     getAllFood();
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem(LSKEY, JSON.stringify(shoppingCart));
+    window.localStorage.setItem("culturd", JSON.stringify(shoppingCart));
   }, [shoppingCart]);
 
   return (
@@ -133,10 +87,10 @@ function App() {
               <Footer />
             </Route>
 
-            <Route path="/workshop/about_us">
+            {/* <Route path="/workshop/about_us">
               <SubNavW />
               <Footer />
-            </Route>
+            </Route> */}
 
             <Route path="/workshop/Afghanistan">
               <SubNavW />
@@ -176,7 +130,7 @@ function App() {
                 getUser={getUser}
                 dishData={dishData}
                 userData={userData}
-                createFood={createFood}
+                getAllFood={getAllFood}
               />
             </Route>
 
@@ -205,12 +159,6 @@ function App() {
 
             <Route path="/signup">
               <SignUp />
-              <Footer />
-            </Route>
-
-            <Route path="/about_us">
-              <MainNav />
-              <AboutUs />
               <Footer />
             </Route>
 

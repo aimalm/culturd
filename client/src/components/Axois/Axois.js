@@ -21,6 +21,47 @@ export const removeEmptyString = (string1, string2, string3, string4) => {
   return validArray;
 };
 
+
+ //POST for food get input from the form + userData, reload the getAllFood()after post req
+ export const createFood = async (userData, values) => {
+  const newObj = {
+    dishName: values.dishName,
+    ingredients: removeEmptyString(
+      values.ingredient1,
+      values.ingredient2,
+      values.ingredient3,
+      values.ingredient4
+    ),
+    keywords: removeEmptyString(
+      values.keyword1,
+      values.keyword2,
+      values.keyword3,
+      values.keyword4
+    ),
+    category: values.category,
+    vegetarian: values.vegetarian,
+    dishDescription: values.dishDescription,
+    cooker: userData.firstName,
+    cookerImage:
+      userData.ProfilePicture === undefined
+        ? "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+        : userData.ProfilePicture,
+    cookerScore: ["star", "star", "star"],
+    price: values.Price,
+    pickupDate: values.pickupdate.substring(0, 10),
+    openingHours: values.pickupdate.substring(11, 16),
+    address: values.address,
+    imageUrl: values.imageUrl,
+    quantity: "1",
+  };
+
+  //console.log(newObj);
+  await axois
+    .post("/food", newObj)
+    //.then((res) => getAllFood(res))
+    .catch((err) => console.error(err));
+};
+
   //Patch user info
   export const updateUser = async (id, values) => {
     const newObj = {
