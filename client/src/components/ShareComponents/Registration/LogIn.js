@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
 import NavLogSign from '../NavLogSign/NavLogSign';
@@ -11,6 +11,10 @@ function Login() {
 
     
     const [ SignInError, setSignInError] = useState("");
+
+    useEffect(() => {
+        setSignInError();
+      }, []);
 
     function logIn(e){
         e.preventDefault();
@@ -43,19 +47,14 @@ function Login() {
                 .post("/signin", data)
                 .then(function(res) {
                     localStorage.setItem("email", `${userEmail}`);
-                    //localStorage.setItem("SignInError", "");
+                    localStorage.setItem("SignInError", "");
                     setSignInError(sessionStorage.getItem("SignInError"));
-
+                    getUser("email")
                     localStorage.removeItem("SignInError");
-                    getUser("zaherc@gmail.com")
+                    window.location.replace("http://localhost:3000/food/Profile");
 
-                    
-                    //localStorage.setItem("_id", `${userID}`);
-                    //window.location.replace("http://localhost:3000/login");
                 })
-                .then(
-                    //console.log(sessionStorage.getItem("email"))
-                )
+                
                 .catch(function(res) {
                     localStorage.setItem("SignInError", "Email or password is wrong");
                     setSignInError(sessionStorage.getItem("SignInError"));
