@@ -3,7 +3,7 @@ import React from 'react'
 function SectionGrid() {
     return (
         <div>
-           <h1 className="title-home">How is work </h1>
+           <h1 className="title-home">How it works </h1>
 
            <div className="container-work">
           

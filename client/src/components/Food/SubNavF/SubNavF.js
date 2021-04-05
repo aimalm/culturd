@@ -1,5 +1,4 @@
 import "./SubNavF.css";
-
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,8 +10,6 @@ import foodLogo from "../../ShareComponents/image/logofood.png"
 
 function SubNavF({shoppingCart, userData}) {
 
-
- 
   return (
     <div className="container-navbar">
       <Navbar bg="white fixed-top nav-border" animation="false" expand="lg">

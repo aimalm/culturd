@@ -145,6 +145,7 @@
 }
 .cook-info {
   text-transform: capitalize;
+  color:var(--NavbarColor);
 }
 .star {
   color: var(--yellowish) !important;

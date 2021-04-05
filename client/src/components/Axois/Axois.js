@@ -20,7 +20,7 @@ const removeEmptyString = (string1, string2, string3, string4) => {
   return validArray;
 };
 
-//POST for food get input from the form + userData, reload the getAllFood()after post req
+//POST for food get input from the form + userData
 export const createFood = async (userData, values) => {
   const newObj = {
     dishName: values.dishName,
@@ -39,6 +39,7 @@ export const createFood = async (userData, values) => {
     category: values.category,
     vegetarian: values.vegetarian,
     dishDescription: values.dishDescription,
+    cookerId: userData._id,
     cooker: userData.firstName,
     cookerImage:
       userData.ProfilePicture === undefined
@@ -77,11 +78,14 @@ export const updateUser = async (id, values) => {
 export const getFoodOrder = async () => {
   await axois.get("/food_order").catch((err) => console.log(err));
 };
+
+
 //POST for food_order
 export const createFoodOrder = async (amount, shoppingCart) => {
   const newObj = {
     user_id: Math.round(Math.random() * 10000),
     product_id: shoppingCart.map((dish) => dish._id),
+    cooker_id: shoppingCart.map((dish) => dish.cookerId),
     payment: "yes",
     amount: amount,
     pickup_date: new Date().toString(),
