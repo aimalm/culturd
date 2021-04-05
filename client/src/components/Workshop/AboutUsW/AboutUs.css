@@ -9,7 +9,6 @@
     flex-direction: column;
     align-items: center;
     height: auto;
-    /* border: solid red; */
 }
 
 .the-concept {
@@ -19,20 +18,16 @@
     padding: 2.5rem 0rem;
     width: 100%;
     background: #FFFFFF;
-    /* border: solid black; */
 }
 
 .the-concept-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: solid orange; */
 }
 
 .the-concept-header > *, 
-.mission > h3, 
-.vision > h3, 
-.people > h3 {
+.mis-vis-p > h3 {
     font-family: 'Train One', cursive;
     text-transform: uppercase;
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
@@ -43,20 +38,17 @@
 
 .the-concept-content {
     font-size: 1.125rem;
-    /* border: solid green; */
 }
 
 .trilogy {
-    /* border: solid black; */
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     place-items: center;
+    padding-bottom: 8rem;
 }
 
-.mission, 
-.vision, 
-.people {
+.mis-vis-p {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +59,12 @@
     border: 2px solid #f5e3b1;
     border-top: 2px solid #bfede4;
     border-bottom: 2px solid #f59d87;
-    
+    transition: 0.5s;
 }
+
+.mis-vis-p:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
 
