@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
-import { concept, mission, vision, people, about } from './AboutUsWcontent';
+import { concept, mission, vision, people } from './AboutUsWcontent';
 
 function AboutUsW() {
     return (
