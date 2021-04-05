@@ -45,7 +45,7 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     place-items: center;
-    padding-bottom: 8rem;
+    padding-bottom: 6rem;
 }
 
 .mis-vis-p {
