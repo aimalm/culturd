@@ -34,6 +34,7 @@ import LandingF from "./components/Food/LandingF/LandingF";
 import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
+import AboutUsF from "./components/Food/AboutUsF/AboutUsF";
 //import shadows from "@material-ui/core/styles/shadows";
 
 
@@ -162,6 +163,12 @@ function App() {
               dishData={dishData}
               setSelectedDish={setSelectedDish}
             />
+          </Route>
+
+          <Route path="/food/about_us">
+            <SubnavF shoppingCart={shoppingCart}/>
+            <AboutUsF />
+            <Footer />
           </Route>
 
           <Route path="/login">
