@@ -1,8 +1,8 @@
 import React from 'react';
-import './AboutUs.css';
-import { concept, mission, vision, people } from './AboutUsWcontent';
+import '../../Workshop/AboutUsW/AboutUs.css';
+import { concept, vision, mission, people } from '../../Workshop/AboutUsW/AboutUsWcontent';
 
-function AboutUsW() {
+function AboutUsF() {
     return (
         <div className="aboutUs">
             <div className="the-concept">
@@ -31,4 +31,4 @@ function AboutUsW() {
     );
 }
 
-export default AboutUsW;
+export default AboutUsF;

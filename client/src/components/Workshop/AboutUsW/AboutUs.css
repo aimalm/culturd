@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.the-concept {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4.375rem;
+    padding: 2.5rem 0rem;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.the-concept-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.the-concept-header > *, 
+.mis-vis-p > h3 {
+    font-family: 'Train One', cursive;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.the-concept-content {
+    font-size: 1.125rem;
+}
+
+.trilogy {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    place-items: center;
+    padding-bottom: 6rem;
+}
+
+.mis-vis-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 18rem;
+    height: 13rem;
+    padding: 1.8rem 0.5rem 0rem 0.5rem;
+    border: 2px solid #f5e3b1;
+    border-top: 2px solid #bfede4;
+    border-bottom: 2px solid #f59d87;
+    transition: 0.5s;
+}
+
+.mis-vis-p:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
