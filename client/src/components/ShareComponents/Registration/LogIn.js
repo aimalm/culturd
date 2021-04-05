@@ -1,7 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
-import NavLogSign from '../NavLogSign/NavLogSign';
 import axios from "axios";
 
 
@@ -12,7 +11,7 @@ function Login() {
 
     useEffect(() => {
         setSignInError();
-      }, []);
+    }, []);
 
     function logIn(e){
         e.preventDefault();
@@ -31,8 +30,8 @@ function Login() {
         return req;
     })
 
-      //Get all for food
-      const getUser = async () => {
+    //Get all for food
+    const getUser = async () => {
         const response = await API.get(`/user/${userEmail}`).catch((err) => console.log(err));
 
         if (response && response.data) {
@@ -65,7 +64,6 @@ function Login() {
 
     return (
         <div className="login-container">
-            <NavLogSign />
             <div className="log-form-container">
                 <div className="form-container-1">
                     <h2 className="login-h2">New User ?</h2>
