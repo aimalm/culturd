@@ -304,6 +304,7 @@
   border-radius: 5px;
   box-shadow: 5px 10px 18px #888888;
   background-color: rgba(245, 198, 179, 0.904);
+  animation: rightToLeft 1.5s 1;
 }
 .form-control.text-primary {
   width: 80%;

@@ -62,11 +62,14 @@
 
   .cards-flex{
     display:flex;
+    animation: rightToLeft 1.5s 1;
+
   }
 
 
 .cards-flex_two{
   display: flex;
+  animation: rightToLeft 1.5s 1;
 
 }
 
