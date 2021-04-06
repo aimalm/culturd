@@ -34,7 +34,7 @@ function Login() {
       return req;
     });
 
-    //Get all for food
+    //Get all for user
     const getUser = async () => {
       const response = await API.get(`/user/${userEmail}`).catch((err) =>
         console.log(err)

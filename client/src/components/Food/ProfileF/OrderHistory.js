@@ -4,7 +4,7 @@ function OrderHistory({ userData,dishData }) {
 
   let cookHistory = dishData.filter(dish=>dish.cooker === userData.firstName)
 
- console.log(cookHistory)
+ //console.log(cookHistory)
   return (
     <div className="profile-history">
       {userData.TypeOfUser === "cook" ? (

@@ -55,16 +55,42 @@
 
 /* profile section css here */
 .profile-content {
-  width: 70%;
+  /* width: 70%;
   margin: auto;
+  margin-top: */
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 .profile-content-border {
-  padding: 8%;
+  height: 78vh;
+  width: 80%;
+  margin: auto;
+  padding: 5%;
   border: 2px solid #f5e3b1;
   border-top: 2px solid #bfede4;
   border-bottom: 2px solid #f59d87;
   border-radius: 13px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
+
+.profile-content-border::-webkit-scrollbar {
+  width: 2px;
+}
+.profile-content-border::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.profile-content-border::-webkit-scrollbar-thumb {
+  background-color: #f5e3b1;
+  height: 10px;
+  border-radius: 13px;
+}
+
+
+
 .profile-info-title,
 .profile-history-title {
   text-transform: capitalize;
@@ -77,21 +103,19 @@
   color: var(--dark-carol);
   padding: 0;
 }
-.rfe-form.profile-info-form label,
-.rfe-form.add-post-form label {
-  margin: 0.2rem !important;
-}
+
 .rfe-form__row.profile-form,
 .rfe-form__row.add-post-form {
   border: none;
   border-bottom: 1px solid var(--carol);
   padding: 0;
-  margin: 0.8rem 0;
+  margin: 0.2rem 0;
 }
 .profile-form label,
 .add-post-form label {
   font-family: var(--font);
   color: var(--NavbarColor);
+ 
 }
 .profile-form input,
 .add-post-form input {
@@ -99,6 +123,7 @@
   color: var(--dark-carol);
   padding-bottom: 0.1rem;
   height: auto;
+  padding: .5rem;
 }
 .profile-form input:focus,
 .add-post-form input:focus {
@@ -128,7 +153,7 @@
   border-radius: 30px;
   border: 0.1em solid var(--carol);
   background-color: var(--carol);
-  margin: 2rem 0;
+  margin: 2rem 0 .5rem 0;
 }
 .profile-history-button {
   padding: 8px 50px;
@@ -220,7 +245,8 @@
   }
   .profile-content {
     padding: 2rem 0;
-    width: 90%;
+    width: 95%;
+    margin:auto;
   }
   .profile-menu {
     grid-template-rows: auto;

@@ -11,7 +11,8 @@ const eventSchema = mongoose.Schema({
     Nationality: { type: String, required: true },
     Ticket_Price: { type: Number, required: true },
     Posted_Date: { type: Date, default: Date.now() },
-    Updated_date: { type: Date }
+    Updated_date: { type: Date },
+    Offer: {type: String, required: true }
 })
 var Events = mongoose.model('Events', eventSchema);
 

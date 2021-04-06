@@ -38,17 +38,25 @@ function SubNavF({shoppingCart, userData}) {
               <Nav.Link className="nav-color">List</Nav.Link>
             </LinkContainer>
 
-            {userData.firstName===undefined?(<LinkContainer to="/login">
+            {userData.firstName===undefined?(
+            <LinkContainer to="/login">
+              <Nav.Link className="nav-color">Login</Nav.Link>
+            </LinkContainer>
+            ):(
+            <LinkContainer to="/food/profile">
               <Nav.Link className="nav-color">Profile</Nav.Link>
-            </LinkContainer>):(<LinkContainer to="/food/profile">
-              <Nav.Link className="nav-color">Profile</Nav.Link>
-            </LinkContainer>)}
+            </LinkContainer>
+            )}
 
-            {userData.firstName===undefined?(<LinkContainer to="/login">
+            {userData.firstName===undefined?(
+            <LinkContainer to="/login">
               <Nav.Link className="nav-color nav-basket-number"><ShoppingBasketIcon className="nav-basket-icon" />{shoppingCart?shoppingCart.length:0}</Nav.Link>
-            </LinkContainer>):(<LinkContainer to="/food/shopping_cart">
+            </LinkContainer>
+            ):(
+            <LinkContainer to="/food/shopping_cart">
               <Nav.Link className="nav-color nav-basket-number"><ShoppingBasketIcon className="nav-basket-icon" />{shoppingCart?shoppingCart.length:0}</Nav.Link>
-            </LinkContainer>)}
+            </LinkContainer>
+            )}
 
             
 
