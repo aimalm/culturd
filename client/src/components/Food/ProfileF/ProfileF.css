@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 30% 70%;
   height: 100vh;
+  align-items: center;
 }
 .profile-wrapper h3,
 .profile-wrapper h5,
@@ -12,15 +13,24 @@
 
 /* left side menu css here */
 .profile-menu {
-  padding: 4rem 0;
- display: flex;
- justify-content: center;
- align-items: center;
+  height: 80%;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.left-menu-profile{
-  display: grid;
-  grid-template-rows: 50% 15% 10% 10% 10% ;
-  justify-items: center;
+.circle{
+  height: 25%;
+  width: 25rem;
+  /* background-color: var(--carol); */
+  background-image: linear-gradient(45deg, #f8b9bb 0%, #ffcfc2 59%, #fad0c4 100%);  border-radius: 5px 5px 50% 50%;
+  position: absolute;
+  top: 5%;
+
+  z-index: -1;
+  margin-top: 3rem;
+
 }
 
 .profile-user-pic {
@@ -29,13 +39,15 @@
   object-fit: cover;
   border-radius: 50%;
   align-self: center;
+  margin: 6rem 0 2rem 0;
 }
 .profile-menu h3 {
   color: var(--greenish);
+  margin: 1rem 0;
 }
 .profile-menu-categories,
 .profile-menu-addpost {
-  height: 50%;
+ 
   width: 80%;
 
   background-color: transparent;
@@ -46,17 +58,18 @@
   color: var(--dark-yellow);
 }
 .profile-menu-categories:hover {
-  color: white;
+  color: var(--light-green);
   border: 0.1em solid var(--light-yellow);
 }
 .profile-menu-addpost {
-  background-color: var(--greenish);
-  border: 0.1em solid var(--greenish);
+  background-color: var(--carol);
+  border: 0.1em solid var(---carol);
   color: white;
 }
 .profile-menu-addpost:hover {
   color: white;
-  border: 0.1em solid var(--light-yellow);
+  background-color: var(--light-carol);
+
 }
 
 /* profile section css here */
@@ -254,7 +267,7 @@
 @media only screen and (max-width: 1024px) {
   .profile-menu-categories,
   .profile-menu-addpost {
-    font-size: 1.2rem;
+    font-size: .8rem;
     padding: 5px 50px;
   }
   .profile-history-button{

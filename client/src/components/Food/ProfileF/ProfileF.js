@@ -6,72 +6,95 @@ import OrderHistory from "./OrderHistory";
 import AddPost from "./AddPost";
 import UpComingOrder from "./UpComingOrder";
 
-function ProfileF({ userData, dishData, getUser, createFood,getAllFood, orderData }) {
+function ProfileF({
+  userData,
+  dishData,
+  getUser,
+  createFood,
+  getAllFood,
+  orderData,
+}) {
   const [viewSection, setViewSection] = useState("info");
 
   return (
     <div className="profile-wrapper">
       <div className="profile-menu">
-      <div className="profile-content-border left-menu-profile">
-        {userData.ProfilePicture === null ||
-        userData.ProfilePicture === undefined ||
-        userData.ProfilePicture === "" ? (
-          <img
-            className="profile-user-pic"
-            src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-            alt=""
-          />
-        ) : (
-          <img
-            className="profile-user-pic"
-            src={userData.ProfilePicture}
-            alt=""
-          />
-        )}
+        <div className="circle"></div>
+       
+          {userData.ProfilePicture === null ||
+          userData.ProfilePicture === undefined ||
+          userData.ProfilePicture === "" ? (
+            <img
+              className="profile-user-pic"
+              src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+              alt=""
+            />
+          ) : (
+            <img
+              className="profile-user-pic"
+              src={userData.ProfilePicture}
+              alt=""
+            />
+          )}
 
-        <h3>Hello {userData.firstName} !</h3>
+          <h3>Hello {userData.firstName} !</h3>
 
-        <button
-          className="button profile-menu-categories"
-          onClick={() => setViewSection("info")}
-        >
-          personal info
-        </button>
-        {userData.TypeOfUser === "cook" ? (
-        <button
-          className="button profile-menu-categories"
-          onClick={() => setViewSection("history")}
-        >
-          Your dishes
-        </button>):""}
-
-        {userData.TypeOfUser === "cook" ? (
           <button
-            className="button profile-menu-addpost"
-            onClick={() => setViewSection("addPost")}
+            className="button profile-menu-categories"
+            onClick={() => setViewSection("info")}
           >
-            Add a new post
+            personal info
           </button>
-        ) : (
-          ""
-        )}
-        </div>
+          {userData.TypeOfUser === "cook" ? (
+            <button
+              className="button profile-menu-categories"
+              onClick={() => setViewSection("history")}
+            >
+              Your dishes
+            </button>
+          ) : (
+            ""
+          )}
+
+          {userData.TypeOfUser === "cook" ? (
+            <button
+              className="button profile-menu-addpost"
+              onClick={() => setViewSection("addPost")}
+            >
+              Add a new post
+            </button>
+          ) : (
+            ""
+          )}
+        
       </div>
       <div className="profile-content">
-        <UpComingOrder orderData={orderData} dishData={dishData} userData={userData}/>
+        <UpComingOrder
+          orderData={orderData}
+          dishData={dishData}
+          userData={userData}
+        />
         <div className="profile-content-border">
           {viewSection === "info" ? (
-            <EditProfile userData={userData} getUser={getUser}  />
+            <EditProfile userData={userData} getUser={getUser} />
           ) : (
             ""
           )}
           {viewSection === "history" ? (
-            <OrderHistory userData={userData} dishData={dishData} getAllFood={getAllFood}/>
+            <OrderHistory
+              userData={userData}
+              dishData={dishData}
+              getAllFood={getAllFood}
+            />
           ) : (
             ""
           )}
           {viewSection === "addPost" ? (
-            <AddPost userData={userData} createFood={createFood} getAllFood={getAllFood} />
+            <AddPost
+              userData={userData}
+              createFood={createFood}
+              getAllFood={getAllFood}
+            />
           ) : (
             ""
           )}
