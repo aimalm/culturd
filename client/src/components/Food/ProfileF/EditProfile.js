@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 
 import {
   Button,
@@ -7,42 +6,37 @@ import {
   //Password,
   EmailInput,
   UrlInput,
-  UrlInput,
 } from "react-form-elements";
 
 import {updateUser} from "../../Axois/Axois"
+import { useState } from "react";
 
 function EditProfile({ userData, getUser }) {
+ const [image, setImage] = useState('');
 
-  const [progressPercent, setProgressPercent] = useState(0);
+ 
 
-   const [formData, setFormData] = useState('');
+ const show= () => {
+  const b = document.getElementById('file-selector');
+  //data.append('categoryImage', files[0]);
+  //console.log(b.files[0].name);
+  let files = b.files
 
-  // const [error, setError] = useState({
-  //   found: false,
-  //   message: '',
-  // });
+  let reader = new FileReader();
 
+  console.log(reader.readAsDataURL(files[0]));
 
-    // Upload image
-    const upload = ({ target: { files } }) => {
-      let data = new FormData();
-      data.append('categoryImage', files[0]);
-      setFormData(data);
-    };
-
-    // setProgressPercent(0);
-    // const options = {
-    //   onUploadProgress: (progressEvent) => {
-    //     const { loaded, total } = progressEvent;
-    //     let percent = Math.floor((loaded * 100) / total);
-    //     console.log(`${loaded}kb of ${total}kb | ${percent}%`);
-    //     setProgressPercent(percent);
-    //   },
-    // };
-
-
+  //userData.ProfilePicture = a;
+  //a =b.files[0].name;
+  //return a
   
+  //('categoryImage', files[0]);
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  
+  };
   return (
     <div className="profile-info">
       <h3 className="profile-info-title">Edit your account details</h3>
@@ -97,22 +91,20 @@ function EditProfile({ userData, getUser }) {
           initialValue={userData.address}
           className="profile-form"
         />
-        <div>
-          <div className='progress mb-3 w-100'>
-           
-          </div>
-          <div className='custom-file mb-3'>
-          <UrlInput name="thisisaurl" label="URL" />
 
-            <label className='custom-file-label' htmlFor='inputGroupFile04'>
-              Choose file
-            </label>
-          </div>
-         
-        </div>
+      
 
-        <Button className="profile-order-button">Save Changes</Button>
+        <input
+            type='file'
+            id='file-selector'
+            onChange={show}
+          /> {show}
+          
+          <Button type ="submit" className="profile-order-button" onClick={show}>Save Changes</Button>
+
       </Form>
+
+
     </div>
   );
 }
