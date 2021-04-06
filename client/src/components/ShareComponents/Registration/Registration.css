@@ -29,9 +29,9 @@
 }
 
 .home-arrow{
-   position: absolute;
-   top: 3%;
-   left: 3%;
+    position: absolute;
+    top: 3%;
+    left: 3%;
 }
 .arrow{
     width: 2rem;
@@ -145,10 +145,6 @@ form > h1 {
 .submit-btn:hover {
     background-color: var(--turquiose);
     color: #FFFFFF;
-}
-
-.signup-container {
-    height: 150vh;
 }
 
 .sign-form-container {
