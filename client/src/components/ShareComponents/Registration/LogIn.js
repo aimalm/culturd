@@ -1,20 +1,34 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Registration.css";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import NavLogSign from "../NavLogSign/NavLogSign";
+=======
+>>>>>>> 69c68529528ebf6877776dcc611ab8ac1bbc770c
 import home from '../image/home.png';
 import axios from "axios";
 
 function Login() {
+<<<<<<< HEAD
   const email = useRef();
   const password = useRef();
   const [SignInError, setSignInError] = useState("");
+=======
+    const email = useRef();
+    const password = useRef();
+    const [ SignInError, setSignInError] = useState("");
+
+    useEffect(() => {
+        setSignInError();
+    }, []);
+>>>>>>> 69c68529528ebf6877776dcc611ab8ac1bbc770c
 
   useEffect(() => {
     setSignInError();
   }, []);
   
 
+<<<<<<< HEAD
   function logIn(e) {
     e.preventDefault();
     const userEmail = email.current.value;
@@ -44,6 +58,11 @@ function Login() {
       const response = await API.get(`/user/${userEmail}`).catch((err) =>
         console.log(err)
       );
+=======
+    //Get all for food
+    const getUser = async () => {
+        const response = await API.get(`/user/${userEmail}`).catch((err) => console.log(err));
+>>>>>>> 69c68529528ebf6877776dcc611ab8ac1bbc770c
 
       if (response && response.data) {
         window.localStorage.setItem("userID", `${response.data._id}`);

@@ -22,6 +22,9 @@ function SubNavF({shoppingCart, userData}) {
             <LinkContainer to="/food">
               <Nav.Link className="nav-color">Home</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/food/about_us">
+              <Nav.Link className="nav-color">About Us</Nav.Link>
+            </LinkContainer>
             {/* <NavDropdown className="nav-color" title="Worskhops">
               <LinkContainer to="/workshop">
                 <NavDropdown.Item className="nav-color">

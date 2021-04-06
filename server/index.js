@@ -9,6 +9,11 @@ import Routes from './routes/routes.js';
 
 
 const app = express();
+
+app.use(express.static('./public'));
+app.use('/uploads', express.static('uploads'));
+
+
 //const a = bodyParser
 //app.use(express.json());
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
