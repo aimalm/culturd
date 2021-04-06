@@ -38,6 +38,7 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [dishData, setDishData] = useState([]);
   const [userData, setUserData] = useState([]);
+  const [orderData, setOrderData] = useState([]);
 
   //Get all for food and save in dishData state
   const getAllFood = async () => {
@@ -57,6 +58,20 @@ function App() {
     }
   };
 
+
+  const getFoodOrder = async () => {
+    const response = await axois.get("/food_order").catch((err) => console.log(err));
+    setOrderData(response.data.filter(order=>order.cooker_id.includes(userData._id)))
+  };
+ 
+ // console.log('orderData in appJS:', orderData)
+
+
+
+
+
+
+
   // save shopping cart to localStorage
   useEffect(() => {
     if (localStorage.hasOwnProperty("culturd")) {
@@ -65,12 +80,16 @@ function App() {
     if (localStorage.hasOwnProperty("email")) {
       getUser(localStorage.getItem("email"));
     }
-    getAllFood();
+    getAllFood()
+    
   }, []);
 
   useEffect(() => {
     window.localStorage.setItem("culturd", JSON.stringify(shoppingCart));
   }, [shoppingCart]);
+  useEffect(() => {
+    getFoodOrder()
+  }, [userData]);
 
   return (
     <div className="App">
@@ -134,6 +153,7 @@ function App() {
                 dishData={dishData}
                 userData={userData}
                 getAllFood={getAllFood}
+                orderData={orderData}
               />
             </Route>
 

@@ -64,7 +64,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
       {shoppingCart.length === 0 ? (
         <h3 className="cart-empty-msg">
-          Shopping cart is empty, <br></br>search for the your next HOME COOK
+          Shopping cart is empty, <br></br>search for your next HOME COOK
           FOOD!
         </h3>
       ) : (
