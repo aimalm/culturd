@@ -53,8 +53,8 @@ function SignUp() {
                         <p><Link to="/login" className="reg-link">Log in</Link> to get access to all features of the application</p>
                     </div>
                     <div className="form-container-2">
-                        <form>
-                            <h4>Sign up</h4>
+                        <form className="signUp-form">
+                            <h1>Sign up</h1>
                             <div className="name-container">
                                 <div className="form-group">
                                     <label htmlFor="firstName">First Name</label><br/>

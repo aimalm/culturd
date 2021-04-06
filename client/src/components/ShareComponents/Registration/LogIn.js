@@ -77,7 +77,7 @@ function Login() {
                   <p className="p-login"><Link to="/signup" className="reg-link">Sign up</Link> to get access to all features of the application</p>
               </div>
               <div className="form-container-2">
-                  <form>
+                  <form className="log-form">
                       <h1>Log in</h1>
                       <div className="form-group">
                           <label htmlFor="email">Email</label><br/>
