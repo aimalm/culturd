@@ -38,6 +38,7 @@
 
 .the-concept-content {
     font-size: 1.125rem;
+    animation: rightToLeft 1.5s 1;
 }
 
 .trilogy {
@@ -80,4 +81,5 @@
 
 .img-food_group{
     width: 70%;
+    animation: leftToRight 1.5s 1;
 }
