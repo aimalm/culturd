@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import {
   Button,
@@ -7,11 +7,42 @@ import {
   //Password,
   EmailInput,
   UrlInput,
+  UrlInput,
 } from "react-form-elements";
 
 import {updateUser} from "../../Axois/Axois"
 
 function EditProfile({ userData, getUser }) {
+
+  const [progressPercent, setProgressPercent] = useState(0);
+
+   const [formData, setFormData] = useState('');
+
+  // const [error, setError] = useState({
+  //   found: false,
+  //   message: '',
+  // });
+
+
+    // Upload image
+    const upload = ({ target: { files } }) => {
+      let data = new FormData();
+      data.append('categoryImage', files[0]);
+      setFormData(data);
+    };
+
+    // setProgressPercent(0);
+    // const options = {
+    //   onUploadProgress: (progressEvent) => {
+    //     const { loaded, total } = progressEvent;
+    //     let percent = Math.floor((loaded * 100) / total);
+    //     console.log(`${loaded}kb of ${total}kb | ${percent}%`);
+    //     setProgressPercent(percent);
+    //   },
+    // };
+
+
+  
   return (
     <div className="profile-info">
       <h3 className="profile-info-title">Edit your account details</h3>
@@ -66,6 +97,19 @@ function EditProfile({ userData, getUser }) {
           initialValue={userData.address}
           className="profile-form"
         />
+        <div>
+          <div className='progress mb-3 w-100'>
+           
+          </div>
+          <div className='custom-file mb-3'>
+          <UrlInput name="thisisaurl" label="URL" />
+
+            <label className='custom-file-label' htmlFor='inputGroupFile04'>
+              Choose file
+            </label>
+          </div>
+         
+        </div>
 
         <Button className="profile-order-button">Save Changes</Button>
       </Form>
