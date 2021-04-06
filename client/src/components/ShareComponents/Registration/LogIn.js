@@ -1,19 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Registration.css";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import NavLogSign from "../NavLogSign/NavLogSign";
-=======
->>>>>>> 69c68529528ebf6877776dcc611ab8ac1bbc770c
 import home from '../image/home.png';
 import axios from "axios";
 
 function Login() {
-<<<<<<< HEAD
-  const email = useRef();
-  const password = useRef();
-  const [SignInError, setSignInError] = useState("");
-=======
     const email = useRef();
     const password = useRef();
     const [ SignInError, setSignInError] = useState("");
@@ -21,48 +12,15 @@ function Login() {
     useEffect(() => {
         setSignInError();
     }, []);
->>>>>>> 69c68529528ebf6877776dcc611ab8ac1bbc770c
 
   useEffect(() => {
     setSignInError();
   }, []);
   
 
-<<<<<<< HEAD
-  function logIn(e) {
-    e.preventDefault();
-    const userEmail = email.current.value;
-    const userPassword = password.current.value;
-    const data = {
-      email: `${userEmail}`,
-      password: `${userPassword}`,
-    };
-
-    const API = axios.create({
-      baseURL: "http://localhost:5000/culturd_api/Em3Wi5va8is15",
-    });
-    API.interceptors.request.use((req) => {
-      if (localStorage.getItem("profile")) {
-        req.headers.Authorization = `Bearer ${
-          JSON.parse(localStorage.getItem("profile")).token
-        }`;
-      }
-      return req;
-    });
-    // //Get all for food
-    // const getUser = async () => {
-    //     const response = await API.get(`/user/${userEmail}`).catch((err) => console.log(err));
-
-    //Get all for user
-    const getUser = async () => {
-      const response = await API.get(`/user/${userEmail}`).catch((err) =>
-        console.log(err)
-      );
-=======
     //Get all for food
     const getUser = async () => {
         const response = await API.get(`/user/${userEmail}`).catch((err) => console.log(err));
->>>>>>> 69c68529528ebf6877776dcc611ab8ac1bbc770c
 
       if (response && response.data) {
         window.localStorage.setItem("userID", `${response.data._id}`);
@@ -85,7 +43,7 @@ function Login() {
         localStorage.setItem("SignInError", "Email or password is wrong");
         setSignInError(sessionStorage.getItem("SignInError"));
       });
-  }
+  
 
 
   
@@ -121,9 +79,6 @@ function Login() {
                     </div>
                 </div>
             </div>
-            
-        
-     
     </div>
   );
 }
