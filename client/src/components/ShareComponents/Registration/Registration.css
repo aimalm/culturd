@@ -4,29 +4,53 @@
     box-sizing: border-box;
 }
 
-.login-container, .signup-container {
+.arrow {
+    position: absolute;
+    margin-top: 2%;
+    left: 2%;
+    height: 2.2rem;
+    width: 3rem !important;
+}
+
+.arrow:hover {
+    animation: spring 300ms ease-out; 
+}
+
+.login-container, 
+.signup-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     width: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
+}
+
+.home-arrow{
+   position: absolute;
+   top: 3%;
+   left: 3%;
+}
+.arrow{
+    width: 2rem;
 }
 
 .log-form-container {
     display: flex;
     height: auto;
-    width: 60%;
+    width: 65%;
     box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
 }
 
 .p-login {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .form-container-1 {
     width: 50%;
-    padding: 0px 10px;
+    padding: 0rem 0.625rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +61,7 @@
 
 .form-container-2 {
     width: 50%;
-    padding: 100px 0px;
+    padding: 6.25rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +70,7 @@
 }
 
 .reg-link {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-family: 'Train One', cursive;
     text-transform: uppercase;
     color: #f59d87 !important;
@@ -60,7 +84,7 @@
 }
 
 #password-link {
-    font-size: 13px;
+    font-size: 0.813rem;
     text-decoration: underline;
     color: #808080;
 }
@@ -76,23 +100,24 @@ form > h1 {
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .form-group > label {
-    font-size: 16px;
-    margin-bottom: 0px;
+    font-size: 1rem;
+    margin-bottom: 0rem;
     color: var(--dark-turquiose); 
 }
 
 .form-group > select {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--dark-turquiose);
 }
 
-.input-fields, .submit-btn {
-    width: 250px;
-    height: 35px !important;
+.input-fields, 
+.submit-btn {
+    width: 15.625rem;
+    height: 2.188rem !important;
     border:1px solid #f59d87;
     border-top:1px solid #3aab95;
     border-bottom:1px solid #3aab95;
@@ -103,19 +128,18 @@ form > h1 {
 }
 
 .error-msg {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #FF0000;
-   
 }
 
 .submit-btn {
     background-color: var(--carol);
     border: none;
     border-radius: 3px;
-    height: 30px;
-    padding-bottom: 2px;
+    height: 1.875rem;
+    padding-bottom: 0.125rem;
     color: var(--light-turquiose);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .submit-btn:hover {
@@ -141,6 +165,35 @@ form > h1 {
     font-size: 45px;
 }
 
+@media only screen and (max-width: 450px){
+    form {
+        width: 95%;
+    }
+
+    .input-fields,
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .log-form-container {
+        flex-direction: column;
+    }
+
+    .form-container-1,
+    .form-container-2 {
+        width: 100%;
+    }
+
+    .form-container-1 {
+        padding: 2rem 0rem;
+    }
+
+    .form-container-2 {
+        padding: 3.5rem 0rem 5rem 0rem;
+    }
+}
 
 
 

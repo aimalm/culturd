@@ -1,15 +1,37 @@
-import React from 'react'
-import './AboutUsW.css'
-
-
-
+import React from 'react';
+import './AboutUs.css';
+import { concept, mission, vision, people } from './AboutUsWcontent';
+import workshop from "../image/group.png";
 
 function AboutUsW() {
     return (
-    <>
-     about us
-    </>  
-    )
+        <div className="aboutUs">
+            <div className="the-concept">
+            <img className="img-workshop_group" src={workshop}  alt="" />
+                <div className="the-concept-header">
+                   
+                </div>
+                <div className="the-concept-content">
+                <h2 className="h2-aboutus">the concept</h2>
+                    <p className="multiline">{concept}</p>
+                </div>
+            </div>
+            <div className="trilogy">
+                <div className="mis-vis-p">
+                    <h3>mission</h3>
+                    <p>{mission}</p>
+                </div>
+                <div className="mis-vis-p">
+                    <h3>vision</h3>
+                    <p>{vision}</p>
+                </div>
+                <div className="mis-vis-p">
+                    <h3>people</h3>
+                    <p>{people}</p>
+                </div>
+            </div>
+        </div>
+    );
 }
 
-export default AboutUsW
+export default AboutUsW;

@@ -50,6 +50,8 @@ font-size: 22px;
 text-transform: capitalize;
 font-weight: 600;
 margin-bottom: 10px;
+
+
 }
 .contact-info-text span {
 color:var(--NavbarColor);

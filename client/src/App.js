@@ -30,6 +30,8 @@ import ProfileF from "./components/Food/ProfileF/ProfileF";
 import ProductListF from "./components/Food/ProductListF/ProductListF";
 import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 import ScrollToTop from "./components/ShareComponents/ScrollToTop/ScrollToTop";
+import AboutUsF from "./components/Food/AboutUsF/AboutUsF";
+import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
@@ -107,10 +109,11 @@ function App() {
               <Footer />
             </Route>
 
-            {/* <Route path="/workshop/about_us">
+            <Route path="/workshop/about_us">
               <SubNavW />
+              <AboutUsW />
               <Footer />
-            </Route> */}
+            </Route>
 
             <Route path="/workshop/Afghanistan">
               <SubNavW />
@@ -186,6 +189,13 @@ function App() {
             <Route path="/about_us">
               <MainNav />
               <AboutUs />
+              <Footer />
+            </Route>
+
+
+            <Route path="/food/about_us">
+              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <AboutUsF />
               <Footer />
             </Route>
 
