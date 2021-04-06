@@ -1,8 +1,7 @@
 import React, {useRef, useState, useEffect} from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
-import {LinkContainer} from 'react-router-bootstrap'
-import home from '../image/home.png'
+import home from '../image/home.png';
 import axios from "axios";
 
 
@@ -67,9 +66,9 @@ function Login() {
     return (
         <div>
             <div className="home-arrow">
-                    <Link to="/">
-                        <img src={home} className="arrow" alt=""/>
-                    </Link>
+                <Link to="/">
+                    <img src={home} className="arrow" alt=""/>
+                </Link>
             </div>
             <div className="login-container">
                 <div className="log-form-container">

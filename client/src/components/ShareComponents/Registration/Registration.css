@@ -167,7 +167,6 @@ form > h1 {
     }
 }
 
-
 @media only screen and (max-width: 960px){
     .log-form-container {
         flex-direction: column;
