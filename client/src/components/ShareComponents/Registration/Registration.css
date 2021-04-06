@@ -48,7 +48,8 @@
     font-size: 1.125rem;
 }
 
-.form-container-1 {
+.form-container-1,
+.form-container-3 {
     width: 50%;
     padding: 0rem 1rem;
     display: flex;
@@ -59,7 +60,8 @@
     background-color: var(--light-turquiose);
 }
 
-.form-container-2 {
+.form-container-2,
+.form-container-4 {
     width: 50%;
     padding: 6.25rem 0rem;
     display: flex;
@@ -159,6 +161,7 @@ form > h1 {
     align-items: center;
     padding: 0rem 2rem;
     width: 100%;
+    /* border: solid black; */
 }
 
 .name-container,
@@ -179,7 +182,7 @@ form > h1 {
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 45px;
+    font-size: 2.813rem;
 }
 
 @media only screen and (max-width: 450px){
@@ -212,6 +215,43 @@ form > h1 {
 
     .form-container-2 {
         padding: 3.5rem 0rem 5rem 0rem;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .name-container,
+    .email-container,
+    .password-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #firstName,
+    #sign-email,
+    #sign-pass {
+        margin-right: 0rem;
+    }
+
+    #user {
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .sign-form-container {
+        flex-direction: column;
+        width: 55%;
+    }
+
+    .form-container-3 {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .form-container-4 {
+        padding: 2rem 0rem 4rem 0rem;
+        width: 100%;
     }
 }
 
