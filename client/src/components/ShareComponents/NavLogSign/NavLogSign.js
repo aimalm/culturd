@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NavLogSign.css';
 import { Link } from "react-router-dom";
-import { AiFillCaretDown } from "react-icons/ai";
+import { ImUsers } from "react-icons/im";
 
 function NavLogSign() {
     const [showLogin, setShowLogin] = useState(false);
@@ -9,7 +9,7 @@ function NavLogSign() {
         <div>
             <div className="reg-button-container">
                 <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-                Register <span className="angle-icon"><AiFillCaretDown /></span>
+                Register <span className="angle-icon"><ImUsers /></span>
                 </button>
                 {showLogin ? (
                 <div className="reg-dropdown-container">
