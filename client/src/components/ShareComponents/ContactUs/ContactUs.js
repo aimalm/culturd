@@ -70,7 +70,7 @@ function ContactForm() {
                 <i className="fas fa-clock"></i>
               </div>
               <div className="contact-info-text">
-                <h2>office time</h2>
+                <h2>office hours</h2>
                 <span>Mon - Thu  9:00 am - 4.00 pm</span>
                 <span>Thu - Mon  10.00 pm - 5.00 pm</span>
               </div>
