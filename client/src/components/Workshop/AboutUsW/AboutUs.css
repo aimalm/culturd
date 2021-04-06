@@ -83,3 +83,9 @@
     width: 70%;
     animation: leftToRight 1.5s 1;
 }
+
+.img-workshop_group{
+    width:25%;
+    height:370px;
+    margin:30px 150px;
+}
