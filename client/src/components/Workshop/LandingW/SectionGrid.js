@@ -22,6 +22,7 @@ function SectionGrid() {
               <h2 className="text-uppercase">Fun cooking</h2>
               <p>Organic food, variety food, and alot of igredient delivered cooking together brings togetherness.</p>
             </button>
+            
           
         </div>
 
