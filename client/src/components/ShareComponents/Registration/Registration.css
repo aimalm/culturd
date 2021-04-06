@@ -187,7 +187,8 @@ form > h1 {
 
 @media only screen and (max-width: 450px){
 
-    .log-form {
+    .log-form, 
+    .signUp-form {
         padding: 0rem 2rem;
         width: 100% !important;
     }
@@ -196,11 +197,13 @@ form > h1 {
     .submit-btn{
         width: 100% !important;
     }
+
 }
 
 @media only screen and (max-width: 960px){
-    .log-form-container {
-        width: 65%;
+    .log-form-container,
+    .sign-form-container {
+        width: 65% !important;
         flex-direction: column;
     }
 
@@ -213,7 +216,7 @@ form > h1 {
         padding: 2rem 0rem;
     }
 
-    .form-container-2 {
+    .form-container-2 {   
         padding: 3.5rem 0rem 5rem 0rem;
     }
 }
@@ -250,7 +253,7 @@ form > h1 {
     }
 
     .form-container-4 {
-        padding: 2rem 0rem 4rem 0rem;
+        padding: 3.5rem 0rem 5rem 0rem;
         width: 100%;
     }
 }
