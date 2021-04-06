@@ -13,7 +13,7 @@ function AboutUs() {
               <div className="inner-column">
                 <div className="sec-title">
                   <div className="title">About Us</div>
-                  <h2 className="h2-aboutus">We Are profesional in our culture</h2>
+                  <h2 className="h2-main_aboutus">We Are profesional in our culture</h2>
                 </div>
                 <div className="text">
                   Lorem Ipsum is simply dummy text of the printing and
