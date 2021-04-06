@@ -4,8 +4,9 @@ import "./ProfileF.css";
 import EditProfile from "./EditProfile";
 import OrderHistory from "./OrderHistory";
 import AddPost from "./AddPost";
+import UpComingOrder from "./UpComingOrder";
 
-function ProfileF({ userData, dishData, getUser, createFood,getAllFood }) {
+function ProfileF({ userData, dishData, getUser, createFood,getAllFood, orderData }) {
   const [viewSection, setViewSection] = useState("info");
 
   return (
@@ -55,6 +56,7 @@ function ProfileF({ userData, dishData, getUser, createFood,getAllFood }) {
         )}
       </div>
       <div className="profile-content">
+        <UpComingOrder orderData={orderData} dishData={dishData} userData={userData}/>
         <div className="profile-content-border">
           {viewSection === "info" ? (
             <EditProfile userData={userData} getUser={getUser}  />

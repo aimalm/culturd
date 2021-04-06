@@ -1,12 +1,11 @@
 import Axios from "axios";
 
-
 export const axois = Axios.create({
   baseURL: "http://localhost:5000/culturd_api/Em3Wi5va8is15",
 });
 
 //prepare the array for ingredients and keywords before the POST req
-export const removeEmptyString = (string1, string2, string3, string4) => {
+const removeEmptyString = (string1, string2, string3, string4) => {
   let validArray = [string1];
 
   if (string2 !== "") {
@@ -21,9 +20,8 @@ export const removeEmptyString = (string1, string2, string3, string4) => {
   return validArray;
 };
 
-
- //POST for food get input from the form + userData, reload the getAllFood()after post req
- export const createFood = async (userData, values) => {
+//POST for food get input from the form + userData
+export const createFood = async (userData, values) => {
   const newObj = {
     dishName: values.dishName,
     ingredients: removeEmptyString(
@@ -41,6 +39,7 @@ export const removeEmptyString = (string1, string2, string3, string4) => {
     category: values.category,
     vegetarian: values.vegetarian,
     dishDescription: values.dishDescription,
+    cookerId: userData._id,
     cooker: userData.firstName,
     cookerImage:
       userData.ProfilePicture === undefined
@@ -62,37 +61,37 @@ export const removeEmptyString = (string1, string2, string3, string4) => {
     .catch((err) => console.error(err));
 };
 
-  //Patch user info
-  export const updateUser = async (id, values) => {
-    const newObj = {
-      firstName: values.firstName,
-      lastName: values.lastName,
-      ProfilePicture: values.ProfilePicture,
-      email: values.email,
-      // password: values.password,
-      address: values.address,
-    };
-    await axois
-      .patch(`/user/${id}`, newObj)
-      .catch((err) => console.log(err))
-  
+//Patch user info
+export const updateUser = async (id, values) => {
+  const newObj = {
+    firstName: values.firstName,
+    lastName: values.lastName,
+    ProfilePicture: values.ProfilePicture,
+    email: values.email,
+    // password: values.password,
+    address: values.address,
   };
+  await axois.patch(`/user/${id}`, newObj).catch((err) => console.log(err));
+};
 
 //Get all for food_order
 export const getFoodOrder = async () => {
   await axois.get("/food_order").catch((err) => console.log(err));
 };
+
+
 //POST for food_order
-export const createFoodOrder = async (amount,shoppingCart) => {
+export const createFoodOrder = async (amount, shoppingCart) => {
   const newObj = {
     user_id: Math.round(Math.random() * 10000),
     product_id: shoppingCart.map((dish) => dish._id),
+    cooker_id: shoppingCart.map((dish) => dish.cookerId),
     payment: "yes",
     amount: amount,
     pickup_date: new Date().toString(),
     Pickup_address: shoppingCart.map((dish) => dish.address),
   };
-  
+
   await axois
     .post("/food_order", newObj)
     .then((res) => getFoodOrder(res))

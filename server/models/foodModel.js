@@ -7,6 +7,7 @@ const foodSchema = mongoose.Schema({
     "keywords": { type: Object, required: true},
     "category": { type: String, required: true},
     "dishDescription": { type: String, required: true},
+    "cookerId":{ type: String, required: true},
     "cooker": { type: String, required: true},
     "cookerImage": { type: String, required: true},
     "cookerScore": { type: Object, default: "star"},

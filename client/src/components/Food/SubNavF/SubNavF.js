@@ -1,5 +1,4 @@
 import "./SubNavF.css";
-
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,8 +10,6 @@ import foodLogo from "../../ShareComponents/image/logofood.png"
 
 function SubNavF({shoppingCart, userData}) {
 
-
- 
   return (
     <div className="container-navbar">
       <Navbar bg="white fixed-top nav-border" animation="false" expand="lg">
@@ -44,17 +41,27 @@ function SubNavF({shoppingCart, userData}) {
               <Nav.Link className="nav-color">List</Nav.Link>
             </LinkContainer>
 
-            {userData.firstName===undefined?(<LinkContainer to="/login">
+            {userData.firstName===undefined?(
+            <LinkContainer to="/login">
+              <Nav.Link className="nav-color">Login</Nav.Link>
+            </LinkContainer>
+            ):(
+            <LinkContainer to="/food/profile">
               <Nav.Link className="nav-color">Profile</Nav.Link>
-            </LinkContainer>):(<LinkContainer to="/food/profile">
-              <Nav.Link className="nav-color">Profile</Nav.Link>
-            </LinkContainer>)}
+            </LinkContainer>
+            )}
 
-            
-
+            {userData.firstName===undefined?(
+            <LinkContainer to="/login">
+              <Nav.Link className="nav-color nav-basket-number"><ShoppingBasketIcon className="nav-basket-icon" />{shoppingCart?shoppingCart.length:0}</Nav.Link>
+            </LinkContainer>
+            ):(
             <LinkContainer to="/food/shopping_cart">
               <Nav.Link className="nav-color nav-basket-number"><ShoppingBasketIcon className="nav-basket-icon" />{shoppingCart?shoppingCart.length:0}</Nav.Link>
             </LinkContainer>
+            )}
+
+            
 
           </Nav>
         </Navbar.Collapse>
