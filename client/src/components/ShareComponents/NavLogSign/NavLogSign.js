@@ -9,7 +9,7 @@ function NavLogSign() {
         <div>
             <div className="reg-button-container">
                 <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-                Register <span className="angle-icon"><ImUsers /></span>
+             <span className="angle-icon"><ImUsers /> SIGN UP</span>
                 </button>
                 {showLogin ? (
                 <div className="reg-dropdown-container">
