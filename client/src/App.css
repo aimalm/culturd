@@ -66,6 +66,20 @@ h5 {
   background-color: var(--carol);
   color: white;*/
 }
+.pop-up-notice{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-size: 1.5rem;
+  animation: showUp 0.8s 1 ease-in-out;
+  margin: auto;
+  /* take the info below to change in your own class */
+  /* background-color: #f6f1eb;
+  width: 70%;
+  height: 80%; */
+}
 
 @keyframes slidein {
   from {

@@ -12,6 +12,7 @@ function ProfileF({ userData, dishData, getUser, createFood,getAllFood, orderDat
   return (
     <div className="profile-wrapper">
       <div className="profile-menu">
+      <div className="profile-content-border left-menu-profile">
         {userData.ProfilePicture === null ||
         userData.ProfilePicture === undefined ||
         userData.ProfilePicture === "" ? (
@@ -36,13 +37,13 @@ function ProfileF({ userData, dishData, getUser, createFood,getAllFood, orderDat
         >
           personal info
         </button>
-
+        {userData.TypeOfUser === "cook" ? (
         <button
           className="button profile-menu-categories"
           onClick={() => setViewSection("history")}
         >
-          {userData.TypeOfUser === "cook" ? "post history" : "order history"}
-        </button>
+          Your dishes
+        </button>):""}
 
         {userData.TypeOfUser === "cook" ? (
           <button
@@ -54,6 +55,7 @@ function ProfileF({ userData, dishData, getUser, createFood,getAllFood, orderDat
         ) : (
           ""
         )}
+        </div>
       </div>
       <div className="profile-content">
         <UpComingOrder orderData={orderData} dishData={dishData} userData={userData}/>
