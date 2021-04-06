@@ -21,6 +21,7 @@
   background: linear-gradient(to right, #67ccc7 0%, #fa9726 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: rightToLeft 1.5s 1;
 }
 .search-bar {
   display: grid;
