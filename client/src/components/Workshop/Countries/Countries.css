@@ -77,6 +77,15 @@
     color:var(--NavbarColor)
 }
 
+.review-container{
+    color: var(--NavbarColor);  
+
+}
+
+.icon-container{
+    color: var(--NavbarColor);  
+
+}
 
 
 
