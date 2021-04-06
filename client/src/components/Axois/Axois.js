@@ -61,6 +61,14 @@ export const createFood = async (userData, values) => {
     .catch((err) => console.error(err));
 };
 
+//DELETE for food
+export const deleteFoodPost = async(id) =>{
+  console.log(id)
+  await axois.delete(`/food/${id}`).catch((err) => console.log(err));
+  
+}
+
+
 //Patch user info
 export const updateUser = async (id, values) => {
   const newObj = {

@@ -64,7 +64,7 @@ function ProfileF({ userData, dishData, getUser, createFood,getAllFood, orderDat
             ""
           )}
           {viewSection === "history" ? (
-            <OrderHistory userData={userData} dishData={dishData} />
+            <OrderHistory userData={userData} dishData={dishData} getAllFood={getAllFood}/>
           ) : (
             ""
           )}
