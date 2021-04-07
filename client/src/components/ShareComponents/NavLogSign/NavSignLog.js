@@ -15,12 +15,12 @@ function NavSignLog() {
             </div>
             <div className="reg-button-container">
                 <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-                    <span className="angle-icon"><ImUsers /> SIGN IN</span>
+                    <span className="angle-icon"><ImUsers /> LOG IN</span>
                 </button>
                 {showLogin ? (
                 <div className="reg-dropdown-container">
-                    <Link to="/signin" className="reg-signup-link">
-                    <p>Sign In</p>
+                    <Link to="/login" className="reg-signup-link">
+                    <p>Log In</p>
                     </Link>
                     <Link to="/contact_us" className="reg-contact-us-link">
                     <p>Contact Us</p>

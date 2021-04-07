@@ -10,8 +10,8 @@ function Home() {
   return (
     <div>
       <div className="home-button-container">
-        <Link to="/signin" className="home-dropdown-button" >
-          <ImUsers/> sign in 
+        <Link to="/login" className="home-dropdown-button" >
+          <ImUsers/> log in
         </Link>
       </div>
       <div className="home-section-container">

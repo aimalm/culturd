@@ -74,7 +74,7 @@ function Login() {
               </div>
               <div className="form-container-2">
                   <form className="log-form">
-                      <h1 className="form-header">Sign in</h1>
+                      <h1 className="form-header">Log in</h1>
                       <div className="form-group">
                           <label htmlFor="email">Email</label><br/>
                           <input ref = {email} type="email" name="email" id="log-email" className="input-fields" required/>

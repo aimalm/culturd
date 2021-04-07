@@ -8,9 +8,9 @@ import MainNav from "./components/ShareComponents/Nav/MainNav";
 import Home from "./components/ShareComponents/Home/Home";
 import AboutUs from "./components/ShareComponents/AboutUs/AboutUs";
 import Footer from "./components/ShareComponents/Footer/Footer";
-import SignIn from "./components/ShareComponents/Registration/SignIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
 import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
+import Login from "./components/ShareComponents/Registration/Login";
 
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
@@ -171,8 +171,8 @@ function App() {
               />
             </Route>
 
-            <Route path="/signin">
-              <SignIn />
+            <Route path="/login">
+              <Login />
               <Footer />
             </Route>
 
