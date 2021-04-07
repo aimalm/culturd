@@ -4,7 +4,7 @@ import home from '../image/home.png'
 import { Link } from "react-router-dom";
 import { ImUsers } from "react-icons/im";
 
-function NavLogSign() {
+function NavSignLog() {
     const [showLogin, setShowLogin] = useState(false);
     return (
         <div>
@@ -15,12 +15,12 @@ function NavLogSign() {
             </div>
             <div className="reg-button-container">
                 <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-             <span className="angle-icon"><ImUsers /> SIGN UP</span>
+                    <span className="angle-icon"><ImUsers /> SIGN IN</span>
                 </button>
                 {showLogin ? (
                 <div className="reg-dropdown-container">
-                    <Link to="/signup" className="reg-signup-link">
-                    <p>Sign Up</p>
+                    <Link to="/signin" className="reg-signup-link">
+                    <p>Sign In</p>
                     </Link>
                     <Link to="/contact_us" className="reg-contact-us-link">
                     <p>Contact Us</p>
@@ -34,6 +34,4 @@ function NavLogSign() {
     );
 }
 
-export default NavLogSign;
-
-
+export default NavSignLog;
