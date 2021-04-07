@@ -72,10 +72,10 @@
 
 .h1-animation {
   margin: 40px;
-  font-size: 6rem;
+  font-size: 6.5rem;
   padding: 0;
-  color: rgb(228, 183, 166);
-  text-shadow: 0 0.1em 20px rgb(212, 157, 135),
+  color: rgb(181, 214, 192);
+  text-shadow: 0 0.1em 20px rgb(98, 170, 142),
     -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
     font-family: 'Londrina Solid', cursive;
     
