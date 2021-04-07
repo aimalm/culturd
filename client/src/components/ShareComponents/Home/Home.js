@@ -1,34 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { AiFillCaretDown } from "react-icons/ai";
 import logoFood from "../image/logofood.png";
 import logoWorkshop from "../image/logoworkshop.png";
+import { ImUsers } from "react-icons/im"
 
 function Home() {
-  const [showLogin, setShowLogin] = useState(false);
-
+ 
   return (
     <div>
       <div className="home-button-container">
-        <button className="home-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-          Register <AiFillCaretDown />
-        </button>
-        {showLogin ? (
-          <div className="home-dropdown-container">
-            <Link to="/login" className="home-login-link">
-              <p>Log In</p>
-            </Link>
-            <Link to="/signup" className="home-reg-link">
-              <p>Sign Up</p>
-            </Link>
-            <Link to="/contact_us" className="home-about-us-link">
-              <p>Contact Us</p>
-            </Link>
-          </div>
-        ) : (
-          ""
-        )}
+        <Link to="/login" className="home-dropdown-button" >
+          <ImUsers/> log in 
+        </Link>
       </div>
       <div className="home-section-container">
         <div className="home-section-workshop">

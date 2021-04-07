@@ -91,12 +91,10 @@
   border-radius: 13px;
   overflow-y: auto;
   overflow-x: hidden;
- 
 }
 
 .profile-content-border::-webkit-scrollbar {
   width: 5px;
-
 }
 .profile-content-border::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
@@ -107,9 +105,7 @@
   background-color: #f5e3b1;
   height: 10px;
   border-radius: 13px;
- 
 }
-
 .profile-info-title,
 .profile-history-title {
   text-transform: capitalize;
@@ -123,7 +119,6 @@
   padding: 0;
   animation: rightToLeft 1.5s 1 ease-in-out;
 }
-
 .rfe-form__row.profile-form,
 .rfe-form__row.add-post-form {
   border: none;
@@ -283,7 +278,6 @@ padding: .2rem .5rem;
   .addpost-container {
     height: 75vh;
   }
-
 }
 @media only screen and (max-width: 680px) {
   .profile-wrapper {
@@ -320,7 +314,6 @@ padding: .2rem .5rem;
   .rfe-form.add-post-form{
     width: 90%;
   }
-
 }
 @media only screen and (max-width: 426px) {
   .profile-info-title {

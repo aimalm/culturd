@@ -9,13 +9,17 @@
 }
 .home-dropdown-button {
   color: white;
-  background: transparent;
+ 
   border: none;
-  border-bottom: 1px solid white;
+ 
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.5rem;
   font-size: 1.3rem;
+}
+.home-dropdown-button:hover{
+  text-decoration: none;
+  color: var(--dark-turquiose);
 }
 
 .home-login-link,
