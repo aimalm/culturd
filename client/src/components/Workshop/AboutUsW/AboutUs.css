@@ -39,6 +39,7 @@
 .the-concept-content {
     font-size: 1.125rem;
     animation: rightToLeft 1.5s 1;
+    margin-right: 8rem;
 }
 
 .trilogy {
@@ -90,7 +91,8 @@
     animation: leftToRight 1.5s 1;
 }
 
-.multiline{
+.multiline-concept {
+    white-space: pre-line;
     color: var(--NavbarColor);
 }
 
