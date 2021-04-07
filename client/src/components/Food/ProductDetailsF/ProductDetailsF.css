@@ -80,15 +80,20 @@
 }
 .products-img-cook {
   border-radius: 50%;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
   object-fit: cover;
   padding: 1rem;
+  margin-left: 4rem;
 }
 .products-cooker-score {
   display: flex;
   flex-direction: row;
+  margin-left: 6rem;
+
 }
+
+
 
 .products-add-button {
   width: 30%;
