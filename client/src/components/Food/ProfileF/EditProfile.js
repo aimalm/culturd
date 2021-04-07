@@ -12,31 +12,34 @@ import {updateUser} from "../../Axois/Axois"
 import { useState } from "react";
 
 function EditProfile({ userData, getUser }) {
- const [image, setImage] = useState('');
 
- 
 
- const show= () => {
-  const b = document.getElementById('file-selector');
-  //data.append('categoryImage', files[0]);
-  //console.log(b.files[0].name);
-  let files = b.files
+const [fileData, setFileData] = useState();
 
-  let reader = new FileReader();
-
-  console.log(reader.readAsDataURL(files[0]));
-
-  //userData.ProfilePicture = a;
-  //a =b.files[0].name;
-  //return a
-  
-  //('categoryImage', files[0]);
-};
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  
+  const fileChangeHandler = (e) => {
+    setFileData(e.target.files[0]);
   };
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+
+    // Handle File Data from the state Before Sending
+    const data = new FormData();
+
+    data.append("ProfilePicture", fileData);
+
+    fetch("http://localhost:5000/culturd_api/Em3Wi5va8is15/user/606b2d70b3d1692a3cc3ac4b", {
+      method: "PATCH",
+      body: data,
+    })
+      .then((result) => {
+        console.log("File Sent Successful");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    }
+      
   return (
     <div className="profile-info">
       <h3 className="profile-info-title">Edit your account details</h3>
@@ -92,18 +95,17 @@ const handleSubmit = (e) => {
           initialValue={userData.address}
           className="profile-form"
         />
-
-      
-
-        <input
-            type='file'
-            id='file-selector'
-            onChange={show}
-          /> {show}
           
-          <Button type ="submit" className="profile-order-button" onClick={show}>Save Changes</Button>
+          <Button type ="submit" className="profile-order-button">Save Changes</Button>
 
       </Form>
+
+      <form onSubmit={onSubmitHandler}>
+        <input type="file" onChange={fileChangeHandler} />
+        <br />
+        <br />
+        <button type="submit">Confirm</button>
+      </form>
 
 
     </div>
