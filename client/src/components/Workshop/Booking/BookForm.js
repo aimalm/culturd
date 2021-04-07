@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react'
 import './BookForm.css'
-import logo from '../image/book.png'
+import {createBookForm} from '../../Axois/Axois'
+
 
 
 import {
@@ -17,7 +18,7 @@ import {
 
 function BookForm() {
 
-    const [ setValues] = useState({})
+  
 
     return (
 
@@ -30,7 +31,8 @@ function BookForm() {
           name="testForm"
           onSubmit={data => {
             // data[form element name]
-            setValues(data)
+          console.log(data);
+          createBookForm(data);
             // do something with values
          }}
 
@@ -50,7 +52,7 @@ function BookForm() {
          
         />
          <EmailInput
-          name="emailbox"
+          name="email"
           label="Email"
           initialValue=""
         />
@@ -58,16 +60,16 @@ function BookForm() {
           <Telephone className="input" label="Telephone" name="myTelephone" />
           <DateTime
            
-            label="My DateTime"
+            label="DateTime"
             type="datetime-local"
-            name="myDateTimeLocal"
+            name="date_time"
           />
          
           <DropDown
             label="Country"
             initialValue=""
             data-testid=""
-            name="myDropDownCountry"
+            name="country"
           >
             <OptionGroup label="Country">
               <Option initialValue="Indonesia">Indonesia</Option>

@@ -17,6 +17,7 @@
     display:grid;
     grid-template-columns: 200px 200px;
     grid-row: auto auto;
+    color: var(--NavbarColor);  
 }
 
 .booking-details {
@@ -47,6 +48,7 @@
     height: 100px;
     display: flex;
     justify-content: space-around;
+    color: var(--NavbarColor);  
 }
 
 .review-icon {

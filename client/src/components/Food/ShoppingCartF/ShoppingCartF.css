@@ -118,19 +118,11 @@
   
 }
 
-.paypal-buttons-contrainer {
+.paypal-buttons-container {
   background-color: #f6f1eb;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  font-size: 1.5rem;
-  animation: showUp 0.8s 1 ease-in-out;
   width: 70%;
   height: 80%;
   margin: auto;
-
   display: flex;
   justify-content: center;
   align-items: center;

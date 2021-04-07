@@ -9,9 +9,11 @@ import SectionGrid from "./SectionGrid";
 import ContactForm from "./ContactForm";
 import CarouselW from "./CarouselW";
 
+
 function LandingW() {
   return (
     <>
+      
       <div className="container-homepage">
         <div className="dummy-text">
           <h2 className="h1-animation">
@@ -54,6 +56,7 @@ function LandingW() {
         </Link>
         </div>
       </div>
+    
     </>
   );
 }

@@ -54,8 +54,8 @@ function LandingF({
               <FaShoppingCart />
             </h3>
             <p>
-              Add to shopping carte<br></br>
-              and login to your personal account
+              Add to shopping cart<br></br>
+              and log in to your personal account
             </p>
           </div>
         </div>

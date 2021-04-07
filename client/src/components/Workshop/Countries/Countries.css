@@ -41,6 +41,7 @@
 
 .ticket-info {
     display: flex;
+    color: var(--NavbarColor);
 }
 
 .ticket-info > * {
@@ -73,6 +74,7 @@
 
 .accordeon-container {
     padding-top: 25px;
+    color:var(--NavbarColor)
 }
 
 

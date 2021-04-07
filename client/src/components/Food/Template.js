@@ -12,7 +12,7 @@ export const FoodTable = [
     cookerScore: ["star"],
     price: 10,
     pickupDate: "30_03_2020",
-    address: "Place Poelaert 1, 1000 Bruxelles",
+    address: "Place Poelaert 1, 1000 Bruxelles",  
     imageUrl:
       "https://i.pinimg.com/originals/2c/f9/7a/2cf97a3e507f406a700445e56e5a9507.jpg",
     quantity:1,

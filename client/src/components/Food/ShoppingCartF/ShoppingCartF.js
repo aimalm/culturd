@@ -64,7 +64,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
       {shoppingCart.length === 0 ? (
         <h3 className="cart-empty-msg">
-          Shopping cart is empty, <br></br>search for the your next HOME COOK
+          Shopping cart is empty, <br></br>search for your next HOME COOK
           FOOD!
         </h3>
       ) : (
@@ -125,7 +125,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
             </h5>
 
             {checkingOut === true ? (
-              <div className="paypal-buttons-contrainer">
+              <div className="pop-up-notice paypal-buttons-container">
                 <button
                   className="paypal-button-close"
                   onClick={() => {

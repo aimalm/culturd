@@ -2,7 +2,7 @@
 
 section {
     padding: 40px 0;
-    min-height: 100vh;
+    min-height: 60vh;
 }
 .contact-info {
 display: inline-block;
@@ -50,6 +50,8 @@ font-size: 22px;
 text-transform: capitalize;
 font-weight: 600;
 margin-bottom: 10px;
+
+
 }
 .contact-info-text span {
 color:var(--NavbarColor);
@@ -107,6 +109,7 @@ margin-top: 30px;
 
 .contact-page-map {
 margin-top: 36px;
+
 }
 .contact-page-form form {
 padding: 20px 15px 0;
@@ -114,4 +117,12 @@ padding: 20px 15px 0;
 
 .logo-user{
     width: 25%;
+}
+
+.contact-page-sec{
+    box-shadow: 5px 10px 8px 10px #88888879;
+    width: 85%;
+    margin: 20px auto;
+    margin-bottom: 100px;
+    border: 1px solid var(--carol);
 }

@@ -21,6 +21,7 @@
   background: linear-gradient(to right, #67ccc7 0%, #fa9726 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: rightToLeft 1.5s 1;
 }
 .search-bar {
   display: grid;
@@ -113,7 +114,6 @@
 .food-card-img:hover {
   opacity: 0.5;
 
-  transform: scale(1.05);
 }
 .food-card-img {
   width: 18rem;
@@ -145,6 +145,7 @@
 }
 .cook-info {
   text-transform: capitalize;
+  color:var(--NavbarColor);
 }
 .star {
   color: var(--yellowish) !important;
@@ -166,9 +167,8 @@
   justify-content: center;
 }
 .food-list-link {
-  width: 60%;
-
-  padding: 0.5rem;
+  width: 30%;
+  padding: 0.8rem;
   border: 0.1em solid var(--greenish);
   background-color: var(--greenish);
 

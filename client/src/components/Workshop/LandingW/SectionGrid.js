@@ -3,7 +3,7 @@ import React from 'react'
 function SectionGrid() {
     return (
         <div>
-           <h1 className="title-home">How is work </h1>
+           <h1 className="title-home">How it works </h1>
 
            <div className="container-work">
           
@@ -22,6 +22,7 @@ function SectionGrid() {
               <h2 className="text-uppercase">Fun cooking</h2>
               <p>Organic food, variety food, and alot of igredient delivered cooking together brings togetherness.</p>
             </button>
+            
           
         </div>
 

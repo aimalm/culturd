@@ -9,7 +9,7 @@
     margin-top: 2%;
     left: 2%;
     height: 2.2rem;
-    width: 3rem;
+    width: 3rem !important;
 }
 
 .arrow:hover {
@@ -26,6 +26,15 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
     background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
+}
+
+.home-arrow{
+   position: absolute;
+   top: 3%;
+   left: 3%;
+}
+.arrow{
+    width: 2rem;
 }
 
 .log-form-container {
