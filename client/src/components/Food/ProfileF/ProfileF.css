@@ -78,6 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 .profile-content-border {
   height: 78vh;
@@ -90,6 +91,7 @@
   border-radius: 13px;
   overflow-y: auto;
   overflow-x: hidden;
+ 
 }
 
 .profile-content-border::-webkit-scrollbar {
@@ -113,12 +115,13 @@
   text-transform: capitalize;
   font-weight: bold;
 }
-.rfe-form.profile-info-form,
+.rfe-form.profile-form,
 .rfe-form.add-post-form {
   margin-top: 1rem;
   font-family: var(--font);
   color: var(--dark-carol);
   padding: 0;
+  animation: rightToLeft 1.5s 1 ease-in-out;
 }
 
 .rfe-form__row.profile-form,
@@ -157,6 +160,7 @@
   text-transform: capitalize;
   overflow-x: auto;
   overflow-y: hidden;
+  animation: rightToLeft 1.5s 1 ease-in-out;
 }
 .profile-order-img {
   grid-column: 2/3;
@@ -316,9 +320,7 @@ padding: .2rem .5rem;
   .rfe-form.add-post-form{
     width: 90%;
   }
-  .profile-order-container{
 
-  }
 }
 @media only screen and (max-width: 426px) {
   .profile-info-title {
