@@ -38,7 +38,7 @@
 .reg-login-link,
 .reg-signup-link,
 .reg-contact-us-link {
-    color: #19d1d1;
+    color: var(--dark-turquiose);
     transition: all 0.2s ease-in-out;
 }
 

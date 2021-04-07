@@ -19,6 +19,10 @@
 
 .p-login {
     font-size: 1.125rem;
+    color: var(--NavbarColor);
+}
+.nav-color{
+    color: var(--NavbarColor);
 }
 
 .form-container-1,
