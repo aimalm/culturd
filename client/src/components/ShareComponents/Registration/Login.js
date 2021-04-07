@@ -86,7 +86,7 @@ function Login() {
                           <p className="error-msg">{SignInError}</p>
                           <p><Link to="/" id="password-link">Forgot password?</Link></p>
                       </div>
-                      <button type="submit"className="submit-btn" onClick={logIn}>Sign in</button>
+                      <button type="submit"className="submit-btn" onClick={logIn}>Log in</button>
                   </form>
               </div>
           </div>
