@@ -4,17 +4,18 @@ import { Link } from "react-router-dom";
 import { AiFillCaretDown } from "react-icons/ai";
 import logoFood from "../image/logofood.png";
 import logoWorkshop from "../image/logoworkshop.png";
+import { ImUsers } from "react-icons/im"
 
 function Home() {
-  const [showLogin, setShowLogin] = useState(false);
+  //const [showLogin, setShowLogin] = useState(false);
 
   return (
     <div>
       <div className="home-button-container">
-        <button className="home-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-          Register <AiFillCaretDown />
-        </button>
-        {showLogin ? (
+        <Link to="/login" className="home-dropdown-button" >
+          <ImUsers/> log in 
+        </Link>
+        {/* {showLogin ? (
           <div className="home-dropdown-container">
             <Link to="/login" className="home-login-link">
               <p>Log In</p>
@@ -28,7 +29,7 @@ function Home() {
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </div>
       <div className="home-section-container">
         <div className="home-section-workshop">
