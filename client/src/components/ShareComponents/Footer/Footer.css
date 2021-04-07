@@ -1,6 +1,6 @@
 .footer {
   background-color:#dfd0c1;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   padding-top: .5rem;
   display: flex;
   flex-direction: column;
@@ -9,18 +9,18 @@
  
 }
 .footer-icon-container {
-  width: 40%;
+  width: 30%;
   margin: auto;
   display: flex;
   justify-content: space-around;
-  padding-top: 1rem;
+  padding-top: 0.3rem;
 }
 .footer-copyright {
   color: var(--dark-turquiose);
   margin: 0;
   font-family: var(--font);
   font-size: 0.8rem;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 .footer-icon,
 .footer-copyright {
@@ -33,9 +33,10 @@
   outline:none;
 }
 .footer-line {
-  color:var(--carol) ;
-  font-size: 5rem;
+  color:var(--dark-turquiose) ;
+  font-size: 3rem;
   line-height: 1;
+  
 }
 
 @media only screen and (max-width: 376px) {
