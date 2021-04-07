@@ -80,7 +80,7 @@ function Login() {
               </div>
               <div className="form-container-2">
                   <form className="log-form">
-                      <h1>Log in</h1>
+                      <h1>Sign in</h1>
                       <div className="form-group">
                           <label htmlFor="email">Email</label><br/>
                           <input ref = {email} type="email" name="email" id="log-email" className="input-fields" required/>
@@ -92,7 +92,7 @@ function Login() {
                           <p className="error-msg">{SignInError}</p>
                           <p><Link to="/" id="password-link">Forgot password?</Link></p>
                       </div>
-                      <button type="submit"className="submit-btn" onClick={logIn}>Login</button>
+                      <button type="submit"className="submit-btn" onClick={logIn}>Sign in</button>
                   </form>
               </div>
           </div>
