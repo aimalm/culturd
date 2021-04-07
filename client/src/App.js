@@ -58,6 +58,10 @@ function App() {
     }
   };
 
+  // const deleteSpecificFood = async () => {
+   
+  //   await axois.delete('/food/606d6b424a01683c543245b3').catch((err) => console.log(err));
+  // };
 
 
   // save shopping cart to localStorage
@@ -69,7 +73,7 @@ function App() {
       getUser(localStorage.getItem("email"));
     }
     getAllFood()
-    
+    //deleteSpecificFood()
   }, []);
 
   useEffect(() => {
