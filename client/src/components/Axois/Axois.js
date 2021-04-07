@@ -62,6 +62,13 @@ export const createFood = async (userData, values) => {
     .catch((err) => console.error(err));
 };
 
+
+//delete for food
+export const deleteFoodPost = async (id) => {
+  await axois.delete(`/food/${id}`).catch((err) => console.log(err));
+};
+
+
 //POST for bookform workshop
 export const createBookForm = async (values) => {
   const newObj = {
@@ -97,6 +104,8 @@ export const updateUser = async (id, values) => {
 
   await axois.patch(`/user/${id}`, newObj).catch((err) => console.log(err));
 };
+
+
 
 //Get all for food_order
 export const getFoodOrder = async () => {

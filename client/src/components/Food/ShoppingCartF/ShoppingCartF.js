@@ -125,7 +125,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
             </h5>
 
             {checkingOut === true ? (
-              <div className="paypal-buttons-contrainer">
+              <div className="pop-up-notice paypal-buttons-container">
                 <button
                   className="paypal-button-close"
                   onClick={() => {

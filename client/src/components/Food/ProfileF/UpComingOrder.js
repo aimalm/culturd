@@ -1,27 +1,50 @@
 import React from "react";
-import { RiContactsBookLine } from "react-icons/ri";
-import {axois} from "../../Axois/Axois"
+
 
 function UpComingOrder({ orderData, dishData, userData }) {
   
-  let dishName
   
 
-    console.log("orderData in profileF:", orderData);
+//   console.log("orderData in profileF:", orderData);
 
-  let onlyProductId = orderData.map((order) => order.product_id)
-  console.log(onlyProductId)
+//   let onlyProductId = orderData.map((order) => order.product_id)
+//   console.log("onlyProductID: ", onlyProductId)
 
-  onlyProductId.forEach(product => {
-    dishData.forEach(dish => {
+//   let dishPostByMe = dishData.filter(dish => dish.cookerId === '606b2d70b3d1692a3cc3ac4b')
+//   console.log("dishPostByMe: ", dishPostByMe)
 
-        if(dish.cookerId == "606b98194c437f4260c28fd7" ){
-            console.log(dish)
-        }
-     
-        
-    })
-  })
+
+
+// onlyProductId.forEach(productID => {
+//   dishPostByMe.forEach(dish => {
+//     if(dish._id === "606b401a42a5f64440516d47"){
+//       console.log(dish)
+//     }
+//   })
+// });
+
+
+  
+  // console.log("orderData in profileF:", orderData);
+
+  // let onlyProductId = orderData.map((order) => order.product_id)
+  // console.log(onlyProductId)
+
+  // onlyProductId.forEach(product => {
+  //   dishData.forEach(dish => {
+
+  //       if(dish.cookerId == "606b2d70b3d1692a3cc3ac4b" ){
+  //           console.log(dish)
+  //       }
+
+
+  //   })
+  // })
+
+ 
+
+  
+
       
 
 
