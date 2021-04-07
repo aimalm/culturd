@@ -167,9 +167,8 @@
   justify-content: center;
 }
 .food-list-link {
-  width: 60%;
-
-  padding: 0.5rem;
+  width: 30%;
+  padding: 0.8rem;
   border: 0.1em solid var(--greenish);
   background-color: var(--greenish);
 

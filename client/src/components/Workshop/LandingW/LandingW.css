@@ -72,11 +72,13 @@
 
 .h1-animation {
   margin: 40px;
-  font-size: 5rem;
+  font-size: 6rem;
   padding: 0;
-  color: white;
-  text-shadow: 0 0.1em 20px rgb(218, 223, 224),
-    -0.03em -0.03em 0 rgb(52, 129, 107), -0.03em 0.08em 0 rgb(49, 160, 132);
+  color: rgb(228, 183, 166);
+  text-shadow: 0 0.1em 20px rgb(212, 157, 135),
+    -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
+    font-family: 'Londrina Solid', cursive;
+    
 }
 
 .span-animation {
@@ -149,7 +151,7 @@
 
 .landing_main-button {
   display: inline-block;
-  padding: 20px 30px;
+  padding: 10px 20px;
   border: 0.1em solid #be7979;
   border-radius: 50px;
   box-sizing: border-box;
@@ -174,8 +176,11 @@
 }
 
 .h4-homeW {
-  font-size: 3rem;
-  color: white;
+  font-size: 2.5rem;
+  color:white;
+  text-shadow: 0 0.1em 20px rgb(159, 212, 135),
+    -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
+    font-family: 'Londrina Solid', cursive;
 }
 
 .container-service {
