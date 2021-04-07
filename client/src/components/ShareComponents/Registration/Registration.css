@@ -124,6 +124,7 @@ form > h1 {
 }
 
 .sign-form-container {
+    margin: 70px;
     display: flex;
     height: auto;
     width: 70rem;
