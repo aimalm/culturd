@@ -28,13 +28,15 @@ function BookForm() {
             onClick={() => setIsSubmitting(false)}>
             <IoMdClose />
           </button>
-          <h3>Please confirm the information:</h3>
+          <div className="pop-op_contect">
+          <h3 className="h3-popup">Please confirm the information</h3>
           <p><strong>First Name: </strong>{bookFrom.firstname}</p>
           <p><strong>Last Name: </strong>{bookFrom.lastname}</p>
           <p><strong>Telephone: </strong>{bookFrom.myTelephone}</p>
           <p><strong>email: </strong>{bookFrom.email}</p>
           <p><strong>Country you picked: </strong>{bookFrom.country}</p>
           <p><strong>Amount of ticket: </strong>{bookFrom.number}</p>
+          </div>
           <button
             onClick={() => {
               createBookForm(bookFrom);

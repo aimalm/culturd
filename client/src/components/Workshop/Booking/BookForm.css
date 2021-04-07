@@ -45,11 +45,26 @@
 
 /* pop up confirmation box css */
 .book-from-confirmation {
-  background-color: #f6f1eb;
+  background:var(--light-turquiose);
   width: 70%;
   height: 80%;
+  text-align:left;
+  padding: 40px auto;
+  color: var(--NavbarColor);
+  border: 2px solid #f5bbb1;
+   
+
 }
 
+.h3-popup{
+  font-family: "Train One", cursive;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align:center;
+  margin: 20px;
+}
 /*responsive*/
 @media screen and (max-width: 320px) {
   .Booking-container {
