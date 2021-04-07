@@ -18,15 +18,15 @@ function AboutUsF() {
             <div className="trilogy">
                 <div className="mis-vis-p">
                     <h3>mission</h3>
-                    <p>{mission}</p>
+                    <p className="p-text">{mission}</p>
                 </div>
                 <div className="mis-vis-p">
                     <h3>vision</h3>
-                    <p>{vision}</p>
+                    <p className="p-text">{vision}</p>
                 </div>
                 <div className="mis-vis-p">
                     <h3>people</h3>
-                    <p>{people}</p>
+                    <p className="p-text">{people}</p>
                 </div>
             </div>
         </div>
