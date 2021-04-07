@@ -46,11 +46,11 @@ function SignUp() {
                 <div className="sign-form-container">
                     <div className="form-container-3">
                         <h2 className="login-h2">Already have an account?</h2>
-                        <p><Link to="/login" className="reg-link">Log in</Link> to get access to all features of the application</p>
+                        <p><Link to="/login" className="reg-link">SIGN IN</Link> to get access to all features of the application</p>
                     </div>
                     <div className="form-container-4">
                         <form className="signUp-form">
-                            <h1 className="form-header">Sign up</h1>
+                            <h1 className="form-header">SIGN UP</h1>
                             <div className="name-container">
                                 <div className="form-group">
                                     <label htmlFor="firstName">First Name</label><br/>
@@ -89,7 +89,7 @@ function SignUp() {
                                     <p className="error-msg"></p>
                                 </div>
                             </div>
-                            <button type="submit" className="submit-btn" onClick={register}>Signup</button>
+                            <button type="submit" className="submit-btn" onClick={register}>SIGN UP</button>
                         </form>
                     </div>
                 </div>
