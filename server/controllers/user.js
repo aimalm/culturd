@@ -55,6 +55,7 @@ export const createAnUser = async (req, res) => {
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
 
     const updateAnUser = req.body;
+    console.log(req.body)
     await User.findByIdAndUpdate(id, updateAnUser, { new: true });
     res.json(updateAnUser);
 }
