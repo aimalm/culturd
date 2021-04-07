@@ -1,8 +1,8 @@
 import React, {useState, useRef} from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
-import home from '../image/home.png'
 import axios from "axios";
+import NavLogSign from '../NavLogSign/NavLogSign';
 
 function SignUp() {
     const name = useRef();
@@ -41,11 +41,7 @@ function SignUp() {
     }
     return (
         <div>
-            <div className="home-arrow">
-                <Link to="/">
-                    <img src={home} className="arrow" alt=""/>
-                </Link>
-            </div>
+            <NavLogSign />
             <div className="signup-container">
                 <div className="sign-form-container">
                     <div className="form-container-3">
@@ -54,7 +50,7 @@ function SignUp() {
                     </div>
                     <div className="form-container-4">
                         <form className="signUp-form">
-                            <h1>Sign up</h1>
+                            <h1 className="form-header">Sign up</h1>
                             <div className="name-container">
                                 <div className="form-group">
                                     <label htmlFor="firstName">First Name</label><br/>

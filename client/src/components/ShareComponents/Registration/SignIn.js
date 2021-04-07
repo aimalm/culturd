@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Registration.css";
 import { Link } from "react-router-dom";
-import home from '../image/home.png'
 import axios from "axios";
 import NavLogSign from "../NavLogSign/NavLogSign";
 
@@ -66,11 +65,6 @@ function Login() {
 
   return (
     <div>
-      <div className="home-arrow">
-        <Link to="/">
-            <img src={home} className="arrow" alt=""/>
-        </Link>
-      </div>
       <NavLogSign />
       <div className="login-container">
           <div className="log-form-container">
@@ -80,7 +74,7 @@ function Login() {
               </div>
               <div className="form-container-2">
                   <form className="log-form">
-                      <h1>Sign in</h1>
+                      <h1 className="form-header">Sign in</h1>
                       <div className="form-group">
                           <label htmlFor="email">Email</label><br/>
                           <input ref = {email} type="email" name="email" id="log-email" className="input-fields" required/>

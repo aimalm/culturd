@@ -1,25 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.arrow {
-    position: absolute;
-    margin-top: 3%;
-    left: 3%;
-    height: 2.2rem;
-    width: 3rem !important;
-}
-
-.arrow:hover {
-    animation: spring 300ms ease-out; 
-}
-
-.home-arrow {
-    margin-top: 0.5%;
-}
-
 .login-container, 
 .signup-container {
     display: flex;
@@ -27,18 +5,9 @@
     align-items: center;
     height: auto;
     width: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6.5rem;
+    padding-bottom: 7rem;
     background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
-}
-
-.home-arrow{
-    position: absolute;
-    top: 3%;
-    left: 3%;
-}
-.arrow{
-    width: 2rem;
 }
 
 .log-form-container {
@@ -92,7 +61,7 @@
 #password-link {
     font-size: 0.813rem;
     text-decoration: underline;
-    color: #808080;
+    color: var(--NavbarColor);
 }
 
 #password-link:hover {
@@ -109,15 +78,17 @@ form > h1 {
     margin-bottom: 1.875rem;
 }
 
+.login-h2 {
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.813rem;
+}
+
 .form-group > label {
     font-size: 1rem;
     margin-bottom: 0rem;
-    color: var(--dark-turquiose); 
-}
-
-.form-group > select {
-    font-size: 0.875rem;
-    color: var(--dark-turquiose);
+    color: var(--NavbarColor); 
 }
 
 .input-fields,
@@ -143,7 +114,7 @@ form > h1 {
     border: none;
     border-radius: 3px;
     padding-bottom: 0.125rem;
-    color: var(--light-turquiose);
+    color: #FFFFFF;
     font-size: 1.125rem;
 }
 
@@ -165,7 +136,6 @@ form > h1 {
     align-items: center;
     padding: 0rem 2rem;
     width: 100%;
-    /* border: solid black; */
 }
 
 .name-container,
@@ -182,17 +152,24 @@ form > h1 {
     margin-right: 10px;
 }
 
-.login-h2{
-    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2.813rem;
+
+@media only screen and (max-width: 360px) {
+    .login-h2,
+    .form-header {
+        font-size: 2rem;
+    }
+    
+    .reg-link {
+        font-size: 1.5rem;
+    }
+
+    #user {
+        width: 7.3rem !important;
+    }
 }
 
 @media only screen and (max-width: 450px){
-
-    .log-form, 
-    .signUp-form {
+    .log-form {
         padding: 0rem 2rem;
         width: 100% !important;
     }
@@ -202,37 +179,24 @@ form > h1 {
         width: 100% !important;
     }
 
-    #user {
-        background: blue;
-        width: 10rem !important;
-        color: var(--NavbarColor);
-    }
-
-
-    /* .sign-option {
-        width: 100% !important;
-    } */
 }
 
 @media only screen and (max-width: 960px){
-    .log-form-container,
-    .sign-form-container {
+    .log-form-container {
         width: 65% !important;
         flex-direction: column;
     }
 
-    .form-container-1,
-    .form-container-2 {
-        width: 100%;
-    }
-
     .form-container-1 {
-        padding: 2rem 0rem;
+        padding: 2rem 1rem;
+        width: 100%;
     }
 
     .form-container-2 {   
         padding: 3.5rem 0rem 5rem 0rem;
+        width: 100%;
     }
+
 }
 
 @media only screen and (max-width: 1020px) {
@@ -254,7 +218,6 @@ form > h1 {
     }
 }
 
-
 @media only screen and (max-width: 1200px) {
     .sign-form-container {
         flex-direction: column;
@@ -270,6 +233,7 @@ form > h1 {
         padding: 3.5rem 0rem 5rem 0rem;
         width: 100%;
     }
+
 }
 
 
