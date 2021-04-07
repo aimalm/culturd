@@ -156,7 +156,7 @@
   border-radius: 50px;
   box-sizing: border-box;
   text-decoration: none;
-  color: #d8e6e1;
+  color: #1c2c27;
   text-align: center;
   transition: all 0.15s;
   background-color: var(--carol);
@@ -164,7 +164,6 @@
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   font-size: 1rem;
   text-transform: uppercase;
-  font-weight: bold;
   margin: 0 150px;
 }
 

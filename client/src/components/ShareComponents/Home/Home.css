@@ -78,6 +78,8 @@
   margin-bottom: 2rem;
   font-weight: 600;
   text-transform: capitalize;
+  font-family: 'Londrina Solid', cursive;
+  
 }
 .home-section-title-food {
   animation: rightToLeft 1.5s 1;
