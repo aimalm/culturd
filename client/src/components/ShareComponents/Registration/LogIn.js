@@ -3,6 +3,7 @@ import "./Registration.css";
 import { Link } from "react-router-dom";
 import home from '../image/home.png'
 import axios from "axios";
+import NavLogSign from "../NavLogSign/NavLogSign";
 
 function Login() {
   const email = useRef();
@@ -70,6 +71,7 @@ function Login() {
             <img src={home} className="arrow" alt=""/>
         </Link>
       </div>
+      <NavLogSign />
       <div className="login-container">
           <div className="log-form-container">
               <div className="form-container-1">
