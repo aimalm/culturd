@@ -8,7 +8,7 @@ function OrderHistory({ userData, dishData, getAllFood }) {
   const dishPostByMe = dishData.filter(
     (dish) => dish.cookerId === userData._id
   );
-  console.log("dishPostByMe: ", dishPostByMe);
+ // console.log("dishPostByMe: ", dishPostByMe);
   // console.log(userData._id)
   //console.log(cookHistory)
   return (
@@ -29,7 +29,7 @@ function OrderHistory({ userData, dishData, getAllFood }) {
                   <strong>Description: </strong> {dish.dishDescription}
                 </p>
                 <p>
-                  <strong>Pick up date: </strong> {dish.pickupDate}
+                  <strong>Pick up date: </strong> {dish.pickupDate.substring(0, 10)}
                 </p>
               </div>
 

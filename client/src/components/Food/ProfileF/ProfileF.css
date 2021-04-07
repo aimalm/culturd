@@ -1,6 +1,6 @@
 .profile-wrapper {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 40% 60%;
   height: 100vh;
   align-items: center;
 }
@@ -20,17 +20,21 @@
   justify-content: center;
   align-items: center;
 }
-.circle{
-  height: 25%;
-  width: 25rem;
-  /* background-color: var(--carol); */
-  background-image: linear-gradient(45deg, #f8b9bb 0%, #ffcfc2 59%, #fad0c4 100%);  border-radius: 5px 5px 50% 50%;
-  position: absolute;
-  top: 5%;
-
-  z-index: -1;
-  margin-top: 3rem;
-
+.profile-img-background {
+  background-image: linear-gradient(
+    45deg,
+    #f3ccce 0%,
+    #ffdfd6 59%,
+    #faf5f4 100%
+  );
+  width: 80%;
+  height: 30%;
+  padding: 2rem 0;
+  border-radius: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 2rem 0;
 }
 
 .profile-user-pic {
@@ -39,7 +43,7 @@
   object-fit: cover;
   border-radius: 50%;
   align-self: center;
-  margin: 6rem 0 2rem 0;
+  border: 5px solid white;
 }
 .profile-menu h3 {
   color: var(--greenish);
@@ -47,9 +51,7 @@
 }
 .profile-menu-categories,
 .profile-menu-addpost {
- 
   width: 80%;
-
   background-color: transparent;
   box-shadow: none;
   font-size: 1.3rem;
@@ -69,15 +71,11 @@
 .profile-menu-addpost:hover {
   color: white;
   background-color: var(--light-carol);
-
 }
 
 /* profile section css here */
 .profile-content {
-  /* width: 70%;
-  margin: auto;
-  margin-top: */
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -94,21 +92,21 @@
   overflow-x: hidden;
 }
 
-
 .profile-content-border::-webkit-scrollbar {
-  width: 2px;
+  width: 5px;
+
 }
 .profile-content-border::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
   box-shadow: none;
+  margin: 5px;
 }
 .profile-content-border::-webkit-scrollbar-thumb {
   background-color: #f5e3b1;
   height: 10px;
   border-radius: 13px;
+ 
 }
-
-
 
 .profile-info-title,
 .profile-history-title {
@@ -126,7 +124,7 @@
 .rfe-form__row.profile-form,
 .rfe-form__row.add-post-form {
   border: none;
-  border-bottom: 1px solid var(--yellowish);
+  border-bottom: 1px solid var(--greenish);
   padding: 0;
   margin: 0.2rem 0;
 }
@@ -134,7 +132,6 @@
 .add-post-form label {
   font-family: var(--font);
   color: var(--NavbarColor);
- 
 }
 .profile-form input,
 .add-post-form input {
@@ -142,7 +139,7 @@
   color: var(--dark-carol);
   padding-bottom: 0.1rem;
   height: auto;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 .profile-form input:focus,
 .add-post-form input:focus {
@@ -153,16 +150,20 @@
 .profile-order-container {
   padding: 1rem;
   margin: 1rem 0;
-  border: 1px dashed var(--beige);
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 70% 30%;
-  grid-gap:  1rem 0;
-
+  grid-gap: 1rem 0;
+  text-transform: capitalize;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .profile-order-img {
   grid-column: 2/3;
   justify-self: end;
+}
+.profile-order-details{
+  grid-row:1/2;
 }
 .profile-order-button {
   padding: 10px 50px;
@@ -175,7 +176,7 @@
   border-radius: 30px;
   border: 0.1em solid var(--greenish);
   background-color: var(--greenish);
-  margin: 2rem 0 .5rem 0;
+  margin: 2rem 0 0.5rem 0;
 }
 .profile-history-button {
   padding: 8px 50px;
@@ -190,12 +191,12 @@
   background-color: var(--greenish);
   grid-column: 1/3;
   width: 50%;
-  margin:auto;
+  margin: auto;
 }
 .profile-history-button:hover,
 .profile-order-button:hover {
-  border: 0.1em solid var(--dark-carol);
-  background-color: var(--dark-carol);
+  border: 0.1em solid var(--light-green);
+  background-color: var(--light-green);
 }
 .delete-confirm-container {
   background-color: var(--light-green);
@@ -208,20 +209,18 @@
   justify-content: center;
   align-items: center;
 }
-.delete-confirm-container h4{
-  color:white;
+.delete-confirm-container h4 {
+  color: white;
 }
-.delete-post-button{
+.delete-post-button {
   border: 0.1em solid var(--greenish);
   background-color: var(--greenish);
   margin: 2rem 0;
 }
-.delete-post-button:hover{
+.delete-post-button:hover {
   border: 0.1em solid var(--dark-green);
   background-color: var(--dark-green);
 }
-
-
 
 /* AddPost component css  */
 .add-post-alert {
@@ -235,21 +234,8 @@
 }
 .addpost-container {
   height: 65vh;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
-.addpost-container::-webkit-scrollbar {
-  width: 2px;
-}
-.addpost-container::-webkit-scrollbar-track {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.addpost-container::-webkit-scrollbar-thumb {
-  background-color: #f5e3b1;
-  height: 10px;
-  border-radius: 13px;
-}
+
 .rfe-form.add-post-form {
   width: 70%;
 }
@@ -267,22 +253,24 @@
 @media only screen and (max-width: 1024px) {
   .profile-menu-categories,
   .profile-menu-addpost {
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 5px 50px;
   }
-  .profile-history-button{
-    font-size: .8rem;
+  .profile-history-button {
+    font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 768px) {
-  .profile-menu-categories,
-  .profile-menu-addpost {
-    font-size: 1rem;
-  }
   .profile-order-container {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
   }
+.profile-order-details{
+  grid-row:2/3;
+}
+.profile-history-button{
+padding: .2rem .5rem;
+}
   .profile-order-img.cart-img {
     grid-row: 1/2;
     grid-column: 1/2;
@@ -291,6 +279,7 @@
   .addpost-container {
     height: 75vh;
   }
+
 }
 @media only screen and (max-width: 680px) {
   .profile-wrapper {
@@ -298,20 +287,37 @@
   }
   .profile-content {
     padding: 2rem 0;
-    width: 95%;
-    margin:auto;
+    width: 100%;
+    margin: auto;
   }
   .profile-menu {
     grid-template-rows: auto;
     height: auto;
     padding: 2rem 0;
     padding-top: 5rem;
+    background-image: linear-gradient(
+      45deg,
+      #f3ccce 0%,
+      #ffdfd6 40%,
+      #faf5f4 100%
+    );
+    border-radius: 0 0 22px 22px;
+  }
+  .profile-img-background {
+    background-image: none;
+    margin: 0;
   }
   .profile-menu-categories {
     margin: 1rem 0;
   }
   .profile-info-title {
     font-size: 1.5rem;
+  }
+  .rfe-form.add-post-form{
+    width: 90%;
+  }
+  .profile-order-container{
+
   }
 }
 @media only screen and (max-width: 426px) {

@@ -19,8 +19,7 @@ function ProfileF({
   return (
     <div className="profile-wrapper">
       <div className="profile-menu">
-        <div className="circle"></div>
-       
+        <div className="profile-img-background">
           {userData.ProfilePicture === null ||
           userData.ProfilePicture === undefined ||
           userData.ProfilePicture === "" ? (
@@ -36,37 +35,37 @@ function ProfileF({
               alt=""
             />
           )}
+        </div>
 
-          <h3>Hello {userData.firstName} !</h3>
+        <h3>Hello {userData.firstName} !</h3>
 
+        <button
+          className="button profile-menu-categories"
+          onClick={() => setViewSection("info")}
+        >
+          personal info
+        </button>
+        {userData.TypeOfUser === "cook" ? (
           <button
             className="button profile-menu-categories"
-            onClick={() => setViewSection("info")}
+            onClick={() => setViewSection("history")}
           >
-            personal info
+            Your dishes
           </button>
-          {userData.TypeOfUser === "cook" ? (
-            <button
-              className="button profile-menu-categories"
-              onClick={() => setViewSection("history")}
-            >
-              Your dishes
-            </button>
-          ) : (
-            ""
-          )}
+        ) : (
+          ""
+        )}
 
-          {userData.TypeOfUser === "cook" ? (
-            <button
-              className="button profile-menu-addpost"
-              onClick={() => setViewSection("addPost")}
-            >
-              Add a new post
-            </button>
-          ) : (
-            ""
-          )}
-        
+        {userData.TypeOfUser === "cook" ? (
+          <button
+            className="button profile-menu-addpost"
+            onClick={() => setViewSection("addPost")}
+          >
+            Add a new post
+          </button>
+        ) : (
+          ""
+        )}
       </div>
       <div className="profile-content">
         <UpComingOrder
