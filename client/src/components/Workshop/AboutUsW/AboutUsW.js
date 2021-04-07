@@ -14,15 +14,15 @@ function AboutUsW() {
                 </div>
             </div>
             <div className="trilogy">
-                <div className="mis-vis-p">
+                <div className="mis-vis-p mission">
                     <h3>mission</h3>
                     <p className="p-text">{missionW}</p>
                 </div>
-                <div className="mis-vis-p">
+                <div className="mis-vis-p vision">
                     <h3>vision</h3>
                     <p className="p-text">{visionW}</p>
                 </div>
-                <div className="mis-vis-p">
+                <div className="mis-vis-p people">
                     <h3>people</h3>
                     <p className="p-text">{peopleW}</p>
                 </div>
