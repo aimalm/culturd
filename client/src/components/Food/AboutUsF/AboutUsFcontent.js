@@ -1,4 +1,4 @@
-const conceptW = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+const conceptF = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Donec gravida tincidunt euismod. Mauris lacus mi, vulputate eget sem
 vitae, imperdiet consectetur urna. In ante sapien, mattis eu nisi ut,
 malesuada fringilla massa. 
@@ -10,8 +10,8 @@ Duis ex dolor, commodo vitae metus ac, egestas tincidunt turpis.
 Morbi leo quam, ornare molestie pellentesque interdum, euismod ut magna.
 Aliquam tincidunt orci vulputate interdum varius.`
 
-const missionW = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec gravida tincidunt euismod.'
-const visionW = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec gravida tincidunt euismod.'
-const peopleW = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec gravida tincidunt euismod.'
+const missionF = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec gravida tincidunt euismod.'
+const visionF = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec gravida tincidunt euismod.'
+const peopleF = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec gravida tincidunt euismod.'
 
-export {conceptW, missionW, visionW, peopleW};
+export {conceptF, missionF, visionF, peopleF};
