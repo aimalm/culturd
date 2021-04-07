@@ -198,6 +198,16 @@ form > h1 {
         width: 100% !important;
     }
 
+    #user {
+        background: blue;
+        width: 10rem !important;
+        color: var(--NavbarColor);
+    }
+
+
+    /* .sign-option {
+        width: 100% !important;
+    } */
 }
 
 @media only screen and (max-width: 960px){

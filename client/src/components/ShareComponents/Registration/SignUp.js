@@ -76,8 +76,8 @@ function SignUp() {
                                 <div className="form-group">
                                     <label htmlFor="user">Choose</label><br/>
                                     <select ref = {userType} name="user" id="user" className="input-fields">
-                                        <option value="guest">Guest</option>
-                                        <option value="cook">Cook</option>
+                                        <option value="guest" className="sign-option">Guest</option>
+                                        <option value="cook" className="sign-option">Cook</option>
                                     </select>
                                 </div>
                             </div>
