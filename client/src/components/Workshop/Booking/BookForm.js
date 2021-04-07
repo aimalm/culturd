@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./BookForm.css";
 import { createBookForm } from "../../Axois/Axois";
 import { IoMdClose } from "react-icons/io";
+import popup from "../image/popup.png";
 
 
 import {
@@ -28,25 +29,30 @@ function BookForm() {
             onClick={() => setIsSubmitting(false)}>
             <IoMdClose />
           </button>
-          <div className="pop-op_contect">
+          
           <h3 className="h3-popup">Please confirm the information</h3>
+          <div className="pop-op_content">
           <p><strong>First Name: </strong>{bookFrom.firstname}</p>
           <p><strong>Last Name: </strong>{bookFrom.lastname}</p>
           <p><strong>Telephone: </strong>{bookFrom.myTelephone}</p>
-          <p><strong>email: </strong>{bookFrom.email}</p>
+          <p><strong>Email: </strong>{bookFrom.email}</p>
           <p><strong>Country you picked: </strong>{bookFrom.country}</p>
           <p><strong>Amount of ticket: </strong>{bookFrom.number}</p>
-          </div>
-          <button
+         
+          <button className="btn-popup"
             onClick={() => {
               createBookForm(bookFrom);
               setIsSubmitting(false);
+              
             }}
           >
             Submit
           </button>
-
+          <div className="flex-popup">
           <p>We will contact you shortly for details.</p>
+          <img src={popup} className="popup-logo" alt="" />
+          </div>
+        </div>
         </div>
       ) : (
         ""
