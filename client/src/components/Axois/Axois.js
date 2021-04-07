@@ -79,14 +79,11 @@ export const createBookForm = async (values) => {
     email:values.email,
     country:values.country,
     book_date:values.date_time,
-
   };
   
-
-  console.log(newObj);
+  //console.log("axois obj:", newObj);
   await axois
     .post("/booked_event", newObj)
-    //.then((res) => getAllFood(res))
     .catch((err) => console.error(err));
 };
 

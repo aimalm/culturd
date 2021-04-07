@@ -1,9 +1,7 @@
-
-import React, { useState } from 'react'
-import './BookForm.css'
-import {createBookForm} from '../../Axois/Axois'
-
-
+import React, { useState } from "react";
+import "./BookForm.css";
+import { createBookForm } from "../../Axois/Axois";
+import { IoMdClose } from "react-icons/io";
 
 import {
   TextBox,
@@ -14,57 +12,61 @@ import {
   Option,
   OptionGroup,
   Form,
-} from 'react-form-elements'
+} from "react-form-elements";
 
 function BookForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [bookFrom, setBookFrom] = useState([]);
 
-  
-
-    return (
-
+  return (
     <>
-     
-          <h1 className="h1-book">Request your price quote here</h1>
+      {isSubmitting && bookFrom ? (
+        <div className="pop-up-notice book-from-confirmation">
+          <button
+            className="paypal-button-close"
+            onClick={() => setIsSubmitting(false)}>
+            <IoMdClose />
+          </button>
+          <h3>Please confirm the information:</h3>
+          <p><strong>First Name: </strong>{bookFrom.firstname}</p>
+          <p><strong>Last Name: </strong>{bookFrom.lastname}</p>
+          <p><strong>Telephone: </strong>{bookFrom.myTelephone}</p>
+          <p><strong>email: </strong>{bookFrom.email}</p>
+          <p><strong>Country you picked: </strong>{bookFrom.country}</p>
+          <p><strong>Amount of ticket: </strong>{bookFrom.number}</p>
+          <button
+            onClick={() => {
+              createBookForm(bookFrom);
+              setIsSubmitting(false);
+            }}
+          >
+            Submit
+          </button>
 
-        <div className="Booking-container">
+          <p>We will contact you shortly for details.</p>
+        </div>
+      ) : (
+        ""
+      )}
+
+      <h1 className="h1-book">Request your price quote here</h1>
+
+      <div className="Booking-container">
         <Form
           name="testForm"
-          onSubmit={data => {
-            // data[form element name]
-          console.log(data);
-          createBookForm(data);
-            // do something with values
-         }}
-
+          onSubmit={(data) => {
+            //console.log(data);
+            setBookFrom(data);      
+          }}
         >
-            
-         <TextBox
-        label="Firstname" 
-        required
-        name="firstname"
-           />
+          <TextBox label="Firstname" required name="firstname" />
 
-        <TextBox
+          <TextBox label="Lastname" name="lastname" required />
+          <EmailInput name="email" label="Email" initialValue="" />
 
-          label="Lastname"
-          name="lastname"
-          required
-         
-        />
-         <EmailInput
-          name="email"
-          label="Email"
-          initialValue=""
-        />
-         
           <Telephone className="input" label="Telephone" name="myTelephone" />
-          <DateTime
-           
-            label="DateTime"
-            type="datetime-local"
-            name="date_time"
-          />
-         
+          <DateTime label="DateTime" type="datetime-local" name="date_time" />
+
           <DropDown
             label="Country"
             initialValue=""
@@ -78,13 +80,22 @@ function BookForm() {
               <Option initialValue="Afganistan">Afganistan</Option>
             </OptionGroup>
           </DropDown>
-          <DateTime label="Number of participants" type="datetime" name="number" />
-         <br></br>
-          <button className="button-about" onClick={e => {}}>Save</button>
+          <DateTime
+            label="Number of participants"
+            type="datetime"
+            name="number"
+          />
+          <br></br>
+          <button
+            className="button-about"
+            onClick={() => setIsSubmitting(true)}
+          >
+            Save
+          </button>
         </Form>
-     </div>
-   </>
-    )
-  }
-  
-export default BookForm
+      </div>
+    </>
+  );
+}
+
+export default BookForm;
