@@ -94,14 +94,6 @@ function BookForm() {
             Save
           </button>
         </Form>
-<<<<<<< HEAD
-      </div>
-    </>
-  );
-}
-
-export default BookForm;
-=======
      </div>
      
    </>
@@ -109,4 +101,3 @@ export default BookForm;
   }
   
 export default BookForm
->>>>>>> 48a87457966ec6f9699c21298b5a95eb6f423b84
