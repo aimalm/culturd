@@ -135,12 +135,17 @@
   font-size: 1rem;
   margin: 5px auto;
   line-height: 20px;
+ 
 }
 
 .h1-icon {
   margin: 80px 0;
   font-size: 4rem;
   text-align: center;
+  color: rgb(181, 214, 192);
+  text-shadow: 0 0.1em 20px rgb(98, 170, 142),
+    -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
+    font-family: 'Londrina Solid', cursive;
 }
 
  
@@ -195,6 +200,7 @@
   padding: 1rem;
   display: grid;
   grid-template-rows: auto auto;
+  
 }
 .box-service:hover {
   box-shadow: rgba(255, 255, 255, 0.8) 0px 16px 48px;
@@ -240,6 +246,11 @@
   color: #ffffff;
   border-color: #ffffff;
   text-decoration: none;
+}
+
+.text-service{
+color:rgb(114, 114, 114) !important;
+
 }
 
 .title-home {
