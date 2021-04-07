@@ -9,13 +9,17 @@
 }
 .home-dropdown-button {
   color: white;
-  background: transparent;
+ 
   border: none;
-  border-bottom: 1px solid white;
+ 
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.5rem;
   font-size: 1.3rem;
+}
+.home-dropdown-button:hover{
+  text-decoration: none;
+  color: var(--dark-turquiose);
 }
 
 .home-login-link,
@@ -78,6 +82,8 @@
   margin-bottom: 2rem;
   font-weight: 600;
   text-transform: capitalize;
+ 
+  
 }
 .home-section-title-food {
   animation: rightToLeft 1.5s 1;
@@ -113,8 +119,8 @@
   position: absolute;
   bottom: 10%;
   left: 45%;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   box-sizing: border-box;
   border-radius: 50%;
   background-color: white;
@@ -133,7 +139,7 @@
 
 .home-logo-food,
 .home-logo-workshop {
-  width: 130px;
+  width: 110px;
 }
 .home-logo-food {
   align-self: end;
@@ -182,13 +188,13 @@
 
 @media only screen and (max-width: 768px) {
   .home-aboutus-link {
-    bottom: 42%;
+    bottom: 45%;
     width: 6em;
     height: 6rem;
   }
   .home-logo-food,
   .home-logo-workshop {
-    width: 5rem;
+    width: 4.6rem;
   }
 }
 

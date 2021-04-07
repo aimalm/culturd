@@ -7,6 +7,8 @@
     background-color:var(--light-turquiose);
     margin: auto;
     margin-bottom: 50px;
+    color:var(--NavbarColor)
+  
 
 }
 
@@ -18,48 +20,45 @@
     background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
     background-clip: text;
      -webkit-text-fill-color: transparent;
-     margin:100px auto;
+     margin:90px auto;
      margin-bottom: 50px;
 
 }
 
-
 /* styling id from depencies*/
 
-.rfe-form__row input{
-    margin: 5px;
-    padding: 10px 5px;
-    width: 100%;
-    display: block;
-    border: none;
-    
-}   
+.rfe-form__row input {
+  margin: 5px;
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+  border: none;
+}
 
+.rfe-form__row select {
+  margin: 5px;
+  padding: 15px 10px;
+  width: 100%;
+  display: block;
+  border: none;
+}
 
-.rfe-form__row select{
-    margin: 5px;
-    padding: 15px 10px;
-    width: 100%;
-    display: block;
-    border: none;
-}  
+/* pop up confirmation box css */
+.book-from-confirmation {
+  background-color: #f6f1eb;
+  width: 70%;
+  height: 80%;
+}
 
 /*responsive*/
 @media screen and (max-width: 320px) {
-.Booking-container{
+  .Booking-container {
     width: 80%;
+  }
 }
 
-    
+@media screen and (max-width: 768px) {
+  .Booking-container {
+    width: 90%;
   }
-
-
- 
-  @media screen and (max-width: 768px) {
-    .Booking-container{
-        width: 90%;
-    }
-    
-        
-      }
-    
+}

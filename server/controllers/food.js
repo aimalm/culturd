@@ -52,4 +52,8 @@ export const deleteFoodPost = async (req, res) => {
     res.json({ message: "Post deleted successfully." });
 }
 
+export const deleteAllFoodPosts = async (req, res) => {
+    await Food.remove();
+    res.json({ message: "Post deleted successfully." });
+}
 export default router;

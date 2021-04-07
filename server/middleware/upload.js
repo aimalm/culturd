@@ -7,7 +7,7 @@ const storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         console.log(file)
-        cb(null, 'congar' + '-' + Date.now() + path.extname(file.originalname));
+        cb(null, 'profile' + '-' + Date.now() + path.extname(file.originalname));
     }
 });
 
@@ -17,4 +17,4 @@ const fileFilter = (req, file, cb) => {
 
 let upload = multer({ storage: storage, fileFilter: fileFilter,});
 
-export default upload.single('profileImage')
+export default upload.single('ProfilePicture')

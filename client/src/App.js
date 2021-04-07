@@ -35,8 +35,6 @@ import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
-
-  
   const [shoppingCart, setShoppingCart] = useState([]);
   const [dishData, setDishData] = useState([]);
   const [userData, setUserData] = useState([]);
@@ -60,15 +58,10 @@ function App() {
     }
   };
 
-
-
- 
- // console.log('orderData in appJS:', orderData)
-
-
-
-
-
+  // const deleteSpecificFood = async () => {
+   
+  //   await axois.delete('/food/606d6b424a01683c543245b3').catch((err) => console.log(err));
+  // };
 
 
   // save shopping cart to localStorage
@@ -80,7 +73,7 @@ function App() {
       getUser(localStorage.getItem("email"));
     }
     getAllFood()
-    
+    //deleteSpecificFood()
   }, []);
 
   useEffect(() => {
