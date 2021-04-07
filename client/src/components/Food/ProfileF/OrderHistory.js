@@ -1,57 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
+import { deleteFoodPost } from "../../Axois/Axois";
+import { IoMdClose } from "react-icons/io";
 
-function OrderHistory({ userData,dishData }) {
+function OrderHistory({ userData, dishData, getAllFood }) {
+  const [deleting, setDeleting] = useState(false);
 
-  let cookHistory = dishData.filter(dish=>dish.cooker === userData.firstName)
-
- //console.log(cookHistory)
+  const dishPostByMe = dishData.filter(
+    (dish) => dish.cookerId === userData._id
+  );
+ // console.log("dishPostByMe: ", dishPostByMe);
+  // console.log(userData._id)
+  //console.log(cookHistory)
   return (
     <div className="profile-history">
-      {userData.TypeOfUser === "cook" ? (
-        <h3 className="profile-history-title">Your selling history</h3>
+      <h3 className="profile-history-title">Your selling post history</h3>
+
+      {dishPostByMe.length === 0 ? (
+        <h5>You have no active post yet, add your next Home Food </h5>
       ) : (
-        <h3 className="profile-history-title">Your order history</h3>
+        <div>
+          {dishPostByMe.map((dish) => (
+            <div className="profile-order-container" key={dish._id}>
+              <div className="profile-order-details">
+                <p>
+                  <strong>Dish: </strong> {dish.dishName}
+                </p>
+                <p>
+                  <strong>Description: </strong> {dish.dishDescription}
+                </p>
+                <p>
+                  <strong>Pick up date: </strong> {dish.pickupDate.substring(0, 10)}
+                </p>
+              </div>
+
+              <img
+                className="profile-order-img cart-img"
+                src={dish.imageUrl}
+                alt=""
+              />
+              <button
+                className="profile-history-button"
+                onClick={() => {
+                  setDeleting(true);
+                }}
+              >
+                Remove This post
+              </button>
+              {deleting ? (
+                <div className="pop-up-notice delete-confirm-container ">
+                  <button
+                    className="paypal-button-close"
+                    onClick={() => {
+                      setDeleting(false);
+                    }}
+                  >
+                    <IoMdClose />
+                  </button>
+                  <h4>Are you sure to DELETE the post?</h4>
+                  
+                  <button
+                  className="button delete-post-button"
+                    onClick={() => {
+                      deleteFoodPost(dish._id);
+                      setDeleting(false);
+                      setTimeout(() => {
+                        getAllFood();
+                      }, 500);
+                    }}
+                  >
+                    Confirm
+                  </button>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          ))}
+        </div>
       )}
-      <div className="profile-order-container">
-        <div className="profile-order-details">
-          <p>
-            <strong>Order Date: </strong> 20/03/2021
-          </p>
-          <p>
-            <strong>Dish: </strong> Chicken Noodle Soup
-          </p>
-          <p>
-            <strong>Cook: </strong> Joanna Morrison
-          </p>
-        </div>
-
-        <img
-          className="profile-order-img cart-img"
-          src="https://images.unsplash.com/photo-1560434019-4558f9a9e2a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-          alt=""
-        />
-        <button className="profile-history-button">Review</button>
-      </div>
-      <div className="profile-order-container">
-        <div className="profile-order-details">
-          <p>
-            <strong>Order Date: </strong> 20/03/2021
-          </p>
-          <p>
-            <strong>Dish: </strong> Chicken Noodle Soup
-          </p>
-          <p>
-            <strong>Cook: </strong> Joanna Morrison
-          </p>
-        </div>
-
-        <img
-          className="profile-order-img cart-img"
-          src="https://images.unsplash.com/photo-1604228982586-ded54b1ad579?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          alt=""
-        />
-        <button className="profile-history-button">Review</button>
-      </div>
     </div>
   );
 }

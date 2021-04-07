@@ -17,6 +17,7 @@ function EditProfile({ userData, getUser }) {
       <h3 className="profile-info-title">Edit your account details</h3>
 
       <Form
+      className="profile-form"
         name="edit profile form"
         onSubmit={(values) => {
           console.log("edit profile form", values);

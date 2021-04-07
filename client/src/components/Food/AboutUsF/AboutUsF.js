@@ -1,15 +1,17 @@
 import React from 'react';
 import '../../Workshop/AboutUsW/AboutUs.css';
 import { concept, vision, mission, people } from '../../Workshop/AboutUsW/AboutUsWcontent';
+import food from "../images/food.png";
 
 function AboutUsF() {
     return (
         <div className="aboutUs">
             <div className="the-concept">
                 <div className="the-concept-header">
-                    <h2>the concept</h2>
+                    <img className="img-food_group" src={food}  alt="" />
                 </div>
                 <div className="the-concept-content">
+                <h2 className="h2-aboutus ">the concept</h2>
                     <p className="multiline">{concept}</p>
                 </div>
             </div>

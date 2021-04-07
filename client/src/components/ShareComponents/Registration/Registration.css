@@ -9,7 +9,7 @@
     margin-top: 2%;
     left: 2%;
     height: 2.2rem;
-    width: 3rem;
+    width: 3rem !important;
 }
 
 .arrow:hover {
