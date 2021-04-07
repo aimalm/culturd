@@ -85,7 +85,7 @@
 }
 
 .img-workshop_group{
-    width:25%;
-    height:370px;
-    margin:30px 150px;
+    width:20%;
+    margin: auto 100px;
+    animation: leftToRight 1.5s 1;
 }
