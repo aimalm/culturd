@@ -2,7 +2,7 @@ import express from 'express';
 
 import { getEvents, getEvent, createEvent, updateEvent, deleteEvent } from '../controllers/events.js';
 import { getAllBookedEvents, getAnEvent, bookAnEvent, updateBooking, deleteBooking } from '../controllers/booking.js';
-import { getAllFoods, getFood, createFoodPost, updateFood, deleteFoodPost } from '../controllers/food.js';
+import { getAllFoods, getFood, createFoodPost, updateFood, deleteFoodPost, deleteAllFoodPosts } from '../controllers/food.js';
 import { getAllOrders, createAnOrder, showAnOrder, updateAnOrder, deleteAnOrder } from '../controllers/order.js';
 import { showUserById, signin, signup, getAllUsers, createAnUser, showUser, updateAnUser, deleteAnUser } from '../controllers/user.js';
 import upload from '../middleware/upload.js'
@@ -37,6 +37,8 @@ router.post('/food', createFoodPost);
 router.get('/food/:_id', getFood);
 router.patch('/food/:_id', updateFood);
 router.delete('/food/:_id', deleteFoodPost);
+router.delete('/food/', deleteAllFoodPosts);
+
 // ------------------------------------------------------------
 
 //routes for the food order
