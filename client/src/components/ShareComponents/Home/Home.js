@@ -16,7 +16,7 @@ function Home() {
         </button>
         {showLogin ? (
           <div className="home-dropdown-container">
-            <Link to="/login" className="home-login-link">
+            <Link to="/signin" className="home-login-link">
               <p>Log In</p>
             </Link>
             <Link to="/signup" className="home-reg-link">

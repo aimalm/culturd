@@ -175,7 +175,7 @@ function App() {
               />
             </Route>
 
-            <Route path="/login">
+            <Route path="/signin">
               <SignIn />
               <Footer />
             </Route>
