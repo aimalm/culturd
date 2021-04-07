@@ -115,8 +115,8 @@
   position: absolute;
   bottom: 10%;
   left: 45%;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   box-sizing: border-box;
   border-radius: 50%;
   background-color: white;
@@ -135,7 +135,7 @@
 
 .home-logo-food,
 .home-logo-workshop {
-  width: 130px;
+  width: 110px;
 }
 .home-logo-food {
   align-self: end;
@@ -184,13 +184,13 @@
 
 @media only screen and (max-width: 768px) {
   .home-aboutus-link {
-    bottom: 42%;
+    bottom: 45%;
     width: 6em;
     height: 6rem;
   }
   .home-logo-food,
   .home-logo-workshop {
-    width: 5rem;
+    width: 4.6rem;
   }
 }
 
