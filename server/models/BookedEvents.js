@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 
 const bookingSchema = mongoose.Schema({
-    User_Id: { type: String},
-    Event_Id: { type: String },
+    firstname: { type: String, required: true },
+    firstname: { type: String , required: true},
+    telephone: { type: String , required: true},
+    email: { type: String , required: true},
+    country: { type: String , required: true},
     amount_of_tickets: { type: Number, required: true  },
-    Payment: { type: Boolean, required: true },
     Booking_date_Date: { type: Date, default: Date.now() },   
 })
 var Booking = mongoose.model('BookedEvent', bookingSchema);
