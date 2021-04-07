@@ -1,4 +1,3 @@
-import React from "react";
 
 import {
   Button,
@@ -10,8 +9,34 @@ import {
 } from "react-form-elements";
 
 import {updateUser} from "../../Axois/Axois"
+import { useState } from "react";
 
 function EditProfile({ userData, getUser }) {
+ const [image, setImage] = useState('');
+
+ 
+
+ const show= () => {
+  const b = document.getElementById('file-selector');
+  //data.append('categoryImage', files[0]);
+  //console.log(b.files[0].name);
+  let files = b.files
+
+  let reader = new FileReader();
+
+  console.log(reader.readAsDataURL(files[0]));
+
+  //userData.ProfilePicture = a;
+  //a =b.files[0].name;
+  //return a
+  
+  //('categoryImage', files[0]);
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  
+  };
   return (
     <div className="profile-info">
       <h3 className="profile-info-title">Edit your account details</h3>
@@ -68,8 +93,19 @@ function EditProfile({ userData, getUser }) {
           className="profile-form"
         />
 
-        <Button className="profile-order-button">Save Changes</Button>
+      
+
+        <input
+            type='file'
+            id='file-selector'
+            onChange={show}
+          /> {show}
+          
+          <Button type ="submit" className="profile-order-button" onClick={show}>Save Changes</Button>
+
       </Form>
+
+
     </div>
   );
 }
