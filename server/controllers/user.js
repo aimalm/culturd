@@ -77,7 +77,9 @@ export const updateAnUserImage = async (req, res) => {
 
     //const updateAnUser = 
     //console.log(req.body)
-    await User.findByIdAndUpdate(id, req.body = {ProfilePicture: "http://localhost:5000/" + req.file.path}, { new: true });
+    //path.join(__dirname, "user.js")
+    const path = req.file.path.replace(/\\/g, "/")
+    await User.findByIdAndUpdate(id, req.body = {ProfilePicture: "http://localhost:5000/" + path}, { new: true });
     res.json(updateAnUser);
 }
 
