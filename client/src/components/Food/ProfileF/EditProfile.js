@@ -54,14 +54,7 @@ function EditProfile({ userData, getUser }) {
           initialValue={userData.email}
           className="profile-form"
         />
-        <UrlInput
-          name="ProfilePicture"
-          label="Profile Picture URL"
-          initialValue={userData.ProfilePicture}
-          placeholder="https://www.example.com"
-          className="profile-form"
-        />
-
+       
         <TextBox
           name="Address"
           label="Address"
