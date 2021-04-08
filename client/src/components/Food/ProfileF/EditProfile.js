@@ -48,7 +48,7 @@ const [fileData, setFileData] = useState();
       className="profile-form"
         name="edit profile form"
         onSubmit={(values) => {
-          console.log("edit profile form", values);
+          //console.log("edit profile form", values);
           updateUser(userData._id, values);
 
           setTimeout(() => {

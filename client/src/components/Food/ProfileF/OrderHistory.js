@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { deleteFoodPost } from "../../Axois/Axois";
-import { IoMdClose } from "react-icons/io";
+// import { IoMdClose } from "react-icons/io";
 
 function OrderHistory({ userData, dishData, getAllFood }) {
-  const [deleting, setDeleting] = useState(false);
+  //const [deleting, setDeleting] = useState(false);
 
   const dishPostByMe = dishData.filter(
     (dish) => dish.cookerId === userData._id
@@ -41,7 +41,7 @@ function OrderHistory({ userData, dishData, getAllFood }) {
               <button
                 className="profile-history-button"
                 onClick={() => {
-                  setDeleting(true);
+                  //setDeleting(true);
                   deleteFoodPost(dish._id);
 
                   setTimeout(() => {
