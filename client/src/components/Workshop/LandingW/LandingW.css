@@ -33,12 +33,7 @@
   font-size: 1.3rem;
 }
 
-.extra-div i {
-  background: var(--carol);
-  color: #fff;
-  padding: 18px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-}
+
 
 .extra-div:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
@@ -118,7 +113,6 @@
   border-top: 2px solid #f59d87;
   border-bottom: 2px solid #f59d87;
   background-color: var(--light-turquiose);
-  height: 550px;
   justify-content: space-around;
   background-image: linear-gradient(
       rgba(98, 219, 209, 0.87),
@@ -142,7 +136,7 @@
   margin: 80px 0;
   font-size: 4rem;
   text-align: center;
-  color: rgb(181, 214, 192);
+  color: rgb(153, 218, 201);
   text-shadow: 0 0.1em 20px rgb(98, 170, 142),
     -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
     font-family: 'Londrina Solid', cursive;
@@ -253,6 +247,7 @@ color:rgb(221, 153, 114) !important;
 
 }
 
+
 .title-home {
   position: relative;
   font-family: "Train One", cursive;
@@ -262,51 +257,54 @@ color:rgb(221, 153, 114) !important;
   -webkit-text-fill-color: transparent;
   font-size: 38px;
   font-weight: 700;
-  padding-right: 50px;
+  padding-right: 80px;
   margin-bottom: 15px;
   display: inline-block;
   text-transform: capitalize;
-  margin-left: 200px;
+  margin-left: 150px;
   margin-top: 100px;
 }
 
 .title-home:before {
   position: absolute;
   content: "";
-  right: 0px;
-  bottom: 7px;
+  right: 32px;
+  bottom: 5px;
   width: 50px;
   height: 3px;
-  background-color: #3bdbe0;
+  background-color:rgb(202, 166, 68);
 }
 
 .container-work {
   display: flex;
-  margin: 3rem auto;
+  margin: 0 auto;
   justify-content: space-around;
-  width: 60%;
+  width: 80%;
+  
 }
+
 .box-work {
   border: none;
   background-color: transparent;
-  margin: 0.5rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
   display: grid;
-  grid-template-rows: auto auto auto;
-  grid-gap: 1rem;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 2rem;
+  border-radius: 10px;
+ 
 }
 .box-work:hover {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 8px;
 }
 .box-work i {
-  color: var(--carol);
+  color:rgb(202, 205, 50);
 }
-.box-work h2 {
-  color: var(--greenish);
-}
+
 .box-work p {
-  color: var(--NavbarColor);
+  color:var(--dark-green);
+  font-weight: 600;
 }
 
 /*contact us */
@@ -376,7 +374,7 @@ input[type="text" i] {
   }
   .h1-icon {
     font-size: 2rem;
-    margin: 40px 0;
+    margin: 20px 0;
   }
   .container-service {
     flex-direction: column;
