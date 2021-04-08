@@ -32,7 +32,11 @@ import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 import ScrollToTop from "./components/ShareComponents/ScrollToTop/ScrollToTop";
 import AboutUsF from "./components/Food/AboutUsF/AboutUsF";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+<<<<<<< HEAD
+
+=======
 // import NavLogSign from "./components/ShareComponents/NavLogSign/NavLogSign";
+>>>>>>> b6b531f90500cf2cb7b11627ee5fd53ee3784d46
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);

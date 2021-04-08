@@ -12,7 +12,6 @@ import CarouselW from "./CarouselW";
 function LandingW() {
   return (
     <>
-      
       <div className="container-homepage">
         <div className="dummy-text">
           <h2 className="h1-animation">
@@ -27,14 +26,9 @@ function LandingW() {
           </Link>{" "}
         </div>
       </div>
-
-      <SectionGrid />
-      <CarouselW />
-      <ContactForm />
-      <div className="wrapper-service__home">
-        <h4 className="h1-icon">Pick your choice!</h4>
+   
+        <h4 className="title-home">Activities</h4>
         <div className="container-service">
-          
             <button className="box-service">
               <img src={cook} className="service-logo" alt="" />
               <h4 className="text-service">Cooking</h4>
@@ -47,8 +41,12 @@ function LandingW() {
               <img src={art} className="service-logo" alt="" />
               <h4 className="text-service">Art</h4>
             </button>
-          
+        
         </div>
+      <CarouselW />
+      <ContactForm />
+      <div className="wrapper-service__home">
+      <SectionGrid />
       <div className="button-about-container">
         <Link className="button-about" to="/workshop/listW">
           Find your ideal workshop

@@ -13,14 +13,11 @@ function AboutUs() {
               <div className="inner-column">
                 <div className="sec-title">
                   <div className="title">About Us</div>
-                  <h2 className="h2-main_aboutus">We Are profesional in our culture</h2>
+                  <h2 className="h2-main_aboutus">Who we are</h2>
                 </div>
                 <div className="text">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries
+                We are 4 young professionals who teamed up to offer you an innovative online experience.
+                 Through our site you can access two separate products, namely “Workshop” and “Homecook”.
                 </div>
                 <Link to="/workshop">
                   <button className="theme-btn btn-style-three">
