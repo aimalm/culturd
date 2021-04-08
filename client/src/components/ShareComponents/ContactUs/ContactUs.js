@@ -177,6 +177,7 @@ function ContactForm() {
             <div className="col-md-4">
               <div className="contact-page-map">
                 <iframe
+                  title="map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.0442863459434!2d3.7088639156385197!3d51.033802779560105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c373de30a141a1%3A0xfe9e43a51a58a58e!2sGanzendries%20176%2C%209000%20Gent!5e0!3m2!1sen!2sbe!4v1617333970747!5m2!1sen!2sbe"
                   width="250"
                   height="300"
