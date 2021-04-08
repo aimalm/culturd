@@ -200,8 +200,8 @@
   transform: scale(1.2);
 }
 .service-logo {
-  max-width: 100%;
-  margin: 1rem;
+  max-width: 60%;
+  margin: 1rem auto;
 }
 .box-service h4 {
   justify-self: center;
