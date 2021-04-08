@@ -106,7 +106,7 @@
 }
 
 .popup-logo{
-  width: 30%;
+  max-width: 30%;
   margin-top: -250px;
   margin-left: 200px;
 }
@@ -116,10 +116,32 @@
   .Booking-container {
     width: 80%;
   }
+  .popup-logo{
+    width: 30%;
+    height: 30%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .Booking-container {
     width: 90%;
   }
+
+  .book-from-confirmation{
+    margin: 40px auto;
+    height: 100%;
+    font-size: 1rem;
+    width: 90%;
+
+  }
+
+  .popup-logo{
+    width: 90%;
+    height: 10rem;
+    margin-top: 100px;
+    
+  }
+
+  
 }
+

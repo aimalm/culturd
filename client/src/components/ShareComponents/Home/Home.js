@@ -11,7 +11,7 @@ function Home() {
     <div>
       <div className="home-button-container">
         <Link to="/login" className="home-dropdown-button" >
-          <ImUsers/> log in
+          <ImUsers/>SIGN IN
         </Link>
       </div>
       <div className="home-section-container">
