@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import emailjs from 'emailjs-com';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import { IoMdClose } from "react-icons/io";
-
+import thanks from "../image/thanks.png";
 
 
 function ContactForm() {
@@ -35,7 +35,8 @@ function ContactForm() {
           > 
             <IoMdClose />
           </button>
-          <h5>Thank you for contacting us. We will come back to you shortly.</h5>
+           <img className="logo_thanks" src={thanks} alt="First slide" />
+          <h5 className="h5-popupW">Your Email has been sent.</h5>
         </div>
       ) : (
         ""

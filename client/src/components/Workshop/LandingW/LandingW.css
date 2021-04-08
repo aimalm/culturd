@@ -406,3 +406,26 @@ input[type="text" i] {
     margin: 0;
   }
 }
+
+/*popup style*/
+.h5-popupW{
+  font-family: "Train One", cursive;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: -80px;
+  margin-left: 170px;
+
+}
+
+.pop-up-notice.contact-workshop-submit{
+  width: 60%;
+  height: 400px;
+  border: 2px solid #f5e3b1;
+  border-top: 2px solid #bfede4;
+  border-bottom: 2px solid #f59d87;
+
+}

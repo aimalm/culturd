@@ -132,3 +132,46 @@ padding: 20px 15px 0;
     padding: 2rem ;
     padding-bottom: 0.5rem;
 }
+
+.pop-up-notice.contact-from-submit{
+    background-color: #f5e3b1;
+    width: 60%;
+    height: 430px;
+    border: 2px solid #f5e3b1;
+    border-top: 2px solid #bfede4;
+    border-bottom: 2px solid #f59d87;
+    
+
+}
+
+.h5-popup{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: -70px;
+    margin-left: 120px;
+    font-family: "Train One", cursive;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo_thanks{
+   margin: 40px 60px;
+   -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+  animation: swinging 3.5s ease-in-out forwards infinite;
+}
+
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+  }
+  
+  @keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+  }

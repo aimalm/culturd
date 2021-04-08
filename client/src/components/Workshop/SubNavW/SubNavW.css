@@ -1,37 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 
-
   .logo-icon{
     width: 13%;
     cursor: pointer;
     
     }
 
-    .navbar-style{
-    box-shadow: 2px 2px hsla(0, 66%, 80%, 0.801);
+    
 
+    .white{
+      background-color:white;
+      width: 100%;
     }
 
-
-    .navbar {
-      height: 60px;
-    }
     
     .nav-color{
       color:var( --FontColor)!important;
       font-family: 'Montserrat', sans-serif;
       margin: 0 1rem;
       font-size: 1.1rem;
-      /* font-size: 1.2rem; */
       font-family: 'Train One', cursive;
       text-transform: capitalize;
-      background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color:var(--greenish) !important;
     }
       
-    
-
+    .nav-color.nav-item.dropdown{
+      color:#f59d87 !important;
+    }
     .nav-color:hover{
       background-color:#fffffa;
       border: 2px solid #f5e3b1;
@@ -68,7 +63,6 @@
         -webkit-transform: scale(1, 1);
       }
     }
-    
     
     
     .container-homepage{

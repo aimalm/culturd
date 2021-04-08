@@ -3,30 +3,24 @@ import React from "react";
 function UpComingOrder({ orderData, dishData, userData }) {
   console.log("orderData in profileF:", orderData);
 
-  let onlyProductId = orderData.map((order) => order.product_id);
+  let onlyProductId = orderData.map((order) => order.product_id).flat()
   console.log("onlyProductID: ", onlyProductId);
 
 
- 
-
-
-
-
-  let dishPostByMe = dishData.filter((dish) => dish.cookerId == userData._id);
+  let dishPostByMe = dishData.filter((dish) => dish.cookerId === userData._id).map((dish) => dish._id)
   console.log("dishPostByMe: ", dishPostByMe);
 
-  let dishPostByMeID = dishPostByMe.map((dish) => dish._id);
-  console.log("dishPostByMeID: ", dishPostByMeID);
 
-  let a = ["606d80e54a01683c543245bb", "606d6ac14a01683c543245b2"];
+ let compareArray = dishPostByMe.filter((val) => onlyProductId.includes(val));
 
-  let c = dishPostByMeID.filter((val) => a.includes(val));
+ console.log( compareArray);
 
-  console.log(c);
-
-  let myOrder = dishData.filter((dish) => dish._id === c);
+  let myOrder = dishData.filter((dish) => dish._id === compareArray.join());
 
   console.log("myOrder: ", myOrder);
+
+
+
 
 
   // let x;
