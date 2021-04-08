@@ -11,13 +11,13 @@ function SubNavW() {
 
     return (
       <div className="container-navbar ">
-     <Navbar bg="white fixed-top navbar-style" expand="lg">
+     <Navbar bg="white fixed-top" expand="lg">
         <LinkContainer to="/">
         <img src={workshop} className="logo-icon" alt=""/>
         </LinkContainer>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <Nav className="ml-auto navbar">
+          <Nav className="ml-auto">
               <LinkContainer to="/workshop"><Nav.Link className="nav-color">Home</Nav.Link></LinkContainer>
               <LinkContainer to="/workshop/about_us"><Nav.Link className="nav-color">About Us</Nav.Link></LinkContainer>
               <NavDropdown className="nav-color" title="Worskhops" >
@@ -26,7 +26,7 @@ function SubNavW() {
                 <LinkContainer to="/workshop/HongKong"><NavDropdown.Item className="nav-color" to="/food" >Chinese</NavDropdown.Item></LinkContainer>
                 <LinkContainer to="/workshop/Indonesia"><NavDropdown.Item className="nav-color" to="/food" >Indonesia</NavDropdown.Item></LinkContainer>
              </NavDropdown>
-             <LinkContainer to="/about_us"><Nav.Link className="nav-color">contact us</Nav.Link></LinkContainer>
+             <LinkContainer to="/contact_us"><Nav.Link className="nav-color">contact us</Nav.Link></LinkContainer>
 
           </Nav>
         </Navbar.Collapse>

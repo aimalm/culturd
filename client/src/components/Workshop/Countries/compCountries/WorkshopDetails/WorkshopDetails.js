@@ -27,7 +27,7 @@ function WorkshopDetails() {
                 <div className="booking-details">
                     <span className="booking-icon"><FaRegMoneyBillAlt /></span>
                     <p className="focus">budget</p>
-                    <p>€20 pp</p>
+                    <p>Depends on amount participants</p>
                 </div>
             </div>
             <div className="review-container">

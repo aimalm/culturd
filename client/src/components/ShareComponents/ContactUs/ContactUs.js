@@ -6,6 +6,7 @@ import home from "../image/home.png";
 import "./contactUs.css";
 import { ImUsers } from "react-icons/im";
 import { IoMdClose } from "react-icons/io";
+import thanks from "../image/thanks.png";
 
 
 function ContactForm() {
@@ -54,7 +55,8 @@ function ContactForm() {
           > 
             <IoMdClose />
           </button>
-          <h5>Thank you for your email. We will come back to you shortly.</h5>
+          <img className="logo_thanks" src={thanks} alt="First slide" />
+          <h5 className="h5-popup"> Your Email has been sent.</h5>
         </div>
       ) : (
         ""

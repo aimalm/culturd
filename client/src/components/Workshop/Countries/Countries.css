@@ -9,22 +9,19 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    /* border: solid red; */
 }
 
 .wrapper {
-    width: 90%;
-    margin: 100px auto 100px auto;
+    width: 75rem;
+    margin: 6.25rem 2rem 6.25rem 2rem;
     display: flex;
     flex-direction: column;
-    /* border: solid green; */
 }
 
 .workshop-info {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* border: solid purple; */
 }
 
 .workshop-info > * {
@@ -45,8 +42,7 @@
 }
 
 .ticket-info > * {
-    margin-right: 15px;
-    padding-bottom: 15px;
+    margin-right: 0.938rem;
 }
 
 .info-icon {
@@ -57,24 +53,46 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
-    /* border: solid yellow; */
 }
 
 .inner-container-1 {
-    width: 100%;
+    width: 45rem;
     display: flex;
     flex-direction: column;
-    /* border: solid black; */
 }
 
-/* .inner-container-2 {
-    border: solid black;
-} */
-
 .accordeon-container {
-    padding-top: 25px;
+    padding-top: 1.563rem;
     color:var(--NavbarColor)
+}
+
+@media only screen and (max-width: 760px) {
+    .workshop-info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .workshop-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 50rem;
+    }
+
+    .inner-container-1 {
+        width: 100%;
+    }
+
+    .inner-container-2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 1.5rem;
+    }
 }
 
 

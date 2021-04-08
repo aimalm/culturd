@@ -46,7 +46,7 @@ function SubNavF({ shoppingCart, userData, setUserData }) {
             {userData.firstName === undefined ? (
               <>
                 <LinkContainer to="/login">
-                  <Nav.Link className="nav-color">Login</Nav.Link>
+                  <Nav.Link className="nav-color">Sign in</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/login">
                   <Nav.Link className="nav-color nav-basket-number">

@@ -1,12 +1,13 @@
 .info-section {
     border: solid var(--light-turquiose);
     border-radius: 8px;
-    margin-top: 25px;
+    margin-top: 1.563rem;
+    width: 100%;
 }
 
 .section-wrap {
-    padding: 15px;
-    padding-bottom: 8px;
+    padding: 0.938rem;
+    padding-bottom: 0.5rem;
     background: var(--light-turquiose);
     display: flex;
     justify-content: space-between;
@@ -22,11 +23,11 @@
 }
 
 .dropDown {
-    padding: 10px 15px 20px 15px;
+    padding: 0.625rem 0.938rem 1.25rem 0.938rem;
 }
 
 .lastline {
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
 }
 
 .impDetails > h5 {
@@ -38,7 +39,7 @@
 }
 
 .cross-icon-wrapper {
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 
 .cross-icon {
@@ -46,5 +47,11 @@
 }
 
 .cross-icon-wrapper > p {
-    margin: 0px;
+    margin: 0rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .info-section {
+        width: 100%;
+    }
 }
