@@ -33,7 +33,10 @@ function SubNavF({ shoppingCart, userData, setUserData }) {
               <Nav.Link className="nav-color">Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/food/about_us">
-              <Nav.Link className="nav-color">About Us</Nav.Link>
+              <Nav.Link className="nav-color">about us</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/about_us">
+              <Nav.Link className="nav-color">contact us</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/food/product_list">
