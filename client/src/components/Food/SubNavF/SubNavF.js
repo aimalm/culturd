@@ -8,17 +8,8 @@ import { LinkContainer } from "react-router-bootstrap";
 import foodLogo from "../../ShareComponents/image/logofood.png";
 import { FiLogOut } from "react-icons/fi";
 
-function SubNavF({ shoppingCart, userData, setUserData }) {
+function SubNavF({ shoppingCart, userData, setUserData, logOut }) {
 
-  const logOut = () => {
-    if (localStorage.hasOwnProperty("email")) {
-      window.localStorage.removeItem("email");
-    }
-    if (localStorage.hasOwnProperty("userID")) {
-      window.localStorage.removeItem("userID");
-    }
-    setUserData([])
-  };
 
   return (
     <div className="container-navbar">
@@ -26,8 +17,8 @@ function SubNavF({ shoppingCart, userData, setUserData }) {
         <LinkContainer to="/">
           <img src={foodLogo} className="logo-icon" alt="" />
         </LinkContainer>
-        <Navbar.Toggle />
-        <Navbar.Collapse animation="false">
+        <Navbar.Toggle  aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse  id="basic-navbar-nav" animation="false">
           <Nav className="ml-auto navbar">
             <LinkContainer to="/food">
               <Nav.Link className="nav-color">Home</Nav.Link>
@@ -35,7 +26,7 @@ function SubNavF({ shoppingCart, userData, setUserData }) {
             <LinkContainer to="/food/about_us">
               <Nav.Link className="nav-color">about us</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/about_us">
+            <LinkContainer to="/contact_us">
               <Nav.Link className="nav-color">contact us</Nav.Link>
             </LinkContainer>
 
@@ -46,7 +37,7 @@ function SubNavF({ shoppingCart, userData, setUserData }) {
             {userData.firstName === undefined ? (
               <>
                 <LinkContainer to="/login">
-                  <Nav.Link className="nav-color">Login</Nav.Link>
+                  <Nav.Link className="nav-color">sign in</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/login">
                   <Nav.Link className="nav-color nav-basket-number">

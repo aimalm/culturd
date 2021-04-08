@@ -59,6 +59,17 @@ function App() {
     }
   };
 
+  const logOut = () => {
+    if (localStorage.hasOwnProperty("email")) {
+      window.localStorage.removeItem("email");
+    }
+    if (localStorage.hasOwnProperty("userID")) {
+      window.localStorage.removeItem("userID");
+    }
+    setUserData([])
+  };
+
+
   // save shopping cart to localStorage
   useEffect(() => {
     if (localStorage.hasOwnProperty("culturd")) {
@@ -129,7 +140,7 @@ function App() {
             </Route>
 
             <Route path="/food/shopping_cart">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} logOut={logOut}/>
               <ShoppingCartF
                 shoppingCart={shoppingCart}
                 setShoppingCart={setShoppingCart}
@@ -137,7 +148,7 @@ function App() {
             </Route>
 
             <Route path="/food/profile">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData}/>
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} logOut={logOut}/>
               <ProfileF
                 getUser={getUser}
                 dishData={dishData}
@@ -148,7 +159,7 @@ function App() {
             </Route>
 
             <Route path="/food/products">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData}/>
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} logOut={logOut}/>
               <ProductDetailsF
                 selectedDish={selectedDish}
                 shoppingCart={shoppingCart}
@@ -158,7 +169,7 @@ function App() {
             </Route>
 
             <Route path="/food/product_list">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} logOut={logOut} />
               <ProductListF
                 dishData={dishData}
                 setSelectedDish={setSelectedDish}
@@ -183,13 +194,13 @@ function App() {
 
 
             <Route path="/food/about_us">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData}/>
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} logOut={logOut}/>
               <AboutUsF />
               <Footer />
             </Route>
 
             <Route path="/food">
-              <SubnavF shoppingCart={shoppingCart} userData={userData}  setUserData={setUserData}/>
+              <SubnavF shoppingCart={shoppingCart} userData={userData}  setUserData={setUserData} logOut={logOut}/>
               <LandingF setSelectedDish={setSelectedDish} dishData={dishData} />
               <Footer />
             </Route>
@@ -205,7 +216,7 @@ function App() {
             </Route>
 
             <Route path="/">
-              <Home />
+              <Home userData={userData} logOut={logOut}/>
               <Footer />
             </Route>
           </Switch>
