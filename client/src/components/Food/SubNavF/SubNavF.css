@@ -1,6 +1,10 @@
 .nav-basket-icon{
     color: var(--dark-turquiose);
 }
+.nav-logout-icon{
+    color: var(--beige);
+
+}
 .nav-border{
     box-shadow: 1px .5px var(--light-beige);
 

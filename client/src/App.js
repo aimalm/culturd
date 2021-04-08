@@ -136,7 +136,7 @@ function App() {
             </Route>
 
             <Route path="/food/shopping_cart">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} />
               <ShoppingCartF
                 shoppingCart={shoppingCart}
                 setShoppingCart={setShoppingCart}
@@ -144,7 +144,7 @@ function App() {
             </Route>
 
             <Route path="/food/profile">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData}/>
               <ProfileF
                 getUser={getUser}
                 dishData={dishData}
@@ -155,7 +155,7 @@ function App() {
             </Route>
 
             <Route path="/food/products">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData}/>
               <ProductDetailsF
                 selectedDish={selectedDish}
                 shoppingCart={shoppingCart}
@@ -165,7 +165,7 @@ function App() {
             </Route>
 
             <Route path="/food/product_list">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData} />
               <ProductListF
                 dishData={dishData}
                 setSelectedDish={setSelectedDish}
@@ -190,13 +190,13 @@ function App() {
 
 
             <Route path="/food/about_us">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData} setUserData={setUserData}/>
               <AboutUsF />
               <Footer />
             </Route>
 
             <Route path="/food">
-              <SubnavF shoppingCart={shoppingCart} userData={userData} />
+              <SubnavF shoppingCart={shoppingCart} userData={userData}  setUserData={setUserData}/>
               <LandingF setSelectedDish={setSelectedDish} dishData={dishData} />
               <Footer />
             </Route>
