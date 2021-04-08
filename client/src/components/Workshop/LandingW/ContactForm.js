@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import emailjs from 'emailjs-com';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import { IoMdClose } from "react-icons/io";
+
 
 
 function ContactForm() {
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -14,11 +19,31 @@ function ContactForm() {
           console.log(error.text);
       });
       e.target.reset();
+      setIsSubmitting(true)
   }
 
+  
     return (
       <>
+      {isSubmitting ? (
+        <div className="pop-up-notice contact-workshop-submit">
+          <button
+            className="paypal-button-close"
+            onClick={() => {
+              setIsSubmitting(false);
+            }}
+          > 
+            <IoMdClose />
+          </button>
+          <h5>Thank you for contacting us. We will come back to you shortly.</h5>
+        </div>
+      ) : (
+        ""
+      )}
        <h1 className="title-home">Get in Touch</h1>
+
+       
+
         <div className="container-contactus-work">
           <Form onSubmit={sendEmail}>
             <FormGroup controlId="formBasicEmail">
