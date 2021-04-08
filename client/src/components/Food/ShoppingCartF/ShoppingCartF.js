@@ -64,8 +64,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
 
       {shoppingCart.length === 0 ? (
         <h3 className="cart-empty-msg">
-          Shopping cart is empty, <br></br>search for your next HOME COOK
-          FOOD!
+          Shopping cart is empty, <br></br>search for your next HOME COOK FOOD!
         </h3>
       ) : (
         <div>
@@ -74,7 +73,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
               <img className="cart-img" src={food.imageUrl} alt="" />
               <div className="cart-food-info">
                 <h4>{food.dishName}</h4>
-                <p>pick up date: {food.pickupDate.substring(0,10)}</p>
+                <p>pick up date: {food.pickupDate.substring(0, 10)}</p>
                 <p>pick up time: {food.openingHours}</p>
                 <p>pick up address: {food.address}</p>
               </div>
@@ -159,7 +158,7 @@ function ShoppingCartF({ shoppingCart, setShoppingCart }) {
           </div>
 
           {paid ? (
-            <div className="paypal-buttons-contrainer">
+            <div className="pop-up-notice paypal-buttons-container">
               <button
                 className="paypal-button-close"
                 onClick={() => {
