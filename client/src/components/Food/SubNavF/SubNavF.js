@@ -1,5 +1,4 @@
 import "./SubNavF.css";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,6 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import { LinkContainer } from "react-router-bootstrap";
 import foodLogo from "../../ShareComponents/image/logofood.png";
 import { FiLogOut } from "react-icons/fi";
+import {RiShoppingBasketLine} from "react-icons/ri"
 
 function SubNavF({ shoppingCart, userData, setUserData, logOut }) {
 
@@ -37,15 +37,11 @@ function SubNavF({ shoppingCart, userData, setUserData, logOut }) {
             {userData.firstName === undefined ? (
               <>
                 <LinkContainer to="/login">
-<<<<<<< HEAD
                   <Nav.Link className="nav-color">sign in</Nav.Link>
-=======
-                  <Nav.Link className="nav-color">Sign in</Nav.Link>
->>>>>>> 6c3894f72f0d30ec6150895f45ce6ffc348e5de2
                 </LinkContainer>
                 <LinkContainer to="/login">
                   <Nav.Link className="nav-color nav-basket-number">
-                    <ShoppingBasketIcon className="nav-basket-icon" />
+                    <RiShoppingBasketLine className="nav-basket-icon" />
                     {shoppingCart ? shoppingCart.length : 0}
                   </Nav.Link>
                 </LinkContainer>
@@ -58,7 +54,7 @@ function SubNavF({ shoppingCart, userData, setUserData, logOut }) {
 
                 <LinkContainer to="/food/shopping_cart">
                   <Nav.Link className="nav-color nav-basket-number">
-                    <ShoppingBasketIcon className="nav-basket-icon" />
+                    <RiShoppingBasketLine className="nav-basket-icon" />
                     {shoppingCart ? shoppingCart.length : 0}
                   </Nav.Link>
                 </LinkContainer>

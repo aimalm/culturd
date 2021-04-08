@@ -57,6 +57,17 @@ function ProfileF({
 
         {userData.TypeOfUser === "cook" ? (
           <button
+            className="button profile-menu-categories"
+            onClick={() => setViewSection("order")}
+          >
+            Upcoming orders
+          </button>
+        ) : (
+          ""
+        )}
+
+        {userData.TypeOfUser === "cook" ? (
+          <button
             className="button profile-menu-addpost"
             onClick={() => setViewSection("addPost")}
           >
@@ -67,11 +78,6 @@ function ProfileF({
         )}
       </div>
       <div className="profile-content">
-        <UpComingOrder
-          orderData={orderData}
-          dishData={dishData}
-          userData={userData}
-        />
         <div className="profile-content-border">
           {viewSection === "info" ? (
             <EditProfile userData={userData} getUser={getUser} />
@@ -92,6 +98,16 @@ function ProfileF({
               userData={userData}
               createFood={createFood}
               getAllFood={getAllFood}
+            />
+          ) : (
+            ""
+          )}
+
+          {viewSection === "order" ? (
+            <UpComingOrder
+              orderData={orderData}
+              dishData={dishData}
+              userData={userData}
             />
           ) : (
             ""
