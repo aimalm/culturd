@@ -7,7 +7,12 @@ function AboutUsW() {
     return (
         <div className="aboutUs">
             <div className="the-concept">
-                <img className="img-workshop_group" src={workshop}  alt="" />
+                <div className="team">
+                    <img className="img-workshop_group" src={workshop}  alt="" />
+                    <div className="team-overlay_workshop">
+                        <p>MEET THE TEAM<br/>Valerie & Ismi</p>
+                    </div>
+                </div>
                 <div className="the-concept-content">
                     <h2 className="h2-aboutus">the concept</h2>
                     <p className="multiline-concept">{conceptW}</p>

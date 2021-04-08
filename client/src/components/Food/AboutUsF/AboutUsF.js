@@ -7,7 +7,12 @@ function AboutUsF() {
     return (
         <div className="aboutUs">
             <div className="the-concept">
-                <img className="img-food_group" src={food}  alt="" />
+                <div className="team">
+                    <img className="img-food_group" src={food}  alt="" />
+                    <div className="team-overlay_food">
+                        <p>MEET THE TEAM<br/>Aimal & Wing</p>
+                    </div>
+                </div>
                 <div className="the-concept-content">
                 <h2 className="h2-aboutus ">the concept</h2>
                     <p className="multiline">{conceptF}</p>
