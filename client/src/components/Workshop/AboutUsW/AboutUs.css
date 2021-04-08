@@ -39,6 +39,8 @@
 .the-concept-content {
     font-size: 1.125rem;
     animation: rightToLeft 1.5s 1;
+    margin-right: 7rem;
+    width: 50%;
 }
 
 .trilogy {
@@ -46,6 +48,7 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     place-items: center;
+    padding-top: 3rem;
     padding-bottom: 6rem;
 }
 
@@ -68,7 +71,6 @@
     z-index: 1;
 }
 
-
 .h2-aboutus {
     font-family: 'Train One', cursive;
     text-transform: uppercase;
@@ -78,23 +80,110 @@
     margin-bottom: 1rem;
 }
 
-
-.img-food_group{
-    width: 70%;
-    animation: leftToRight 1.5s 1;
-}
-
-.img-workshop_group{
-    width:20%;
+.team {
+    position: relative;
+    width: 18rem;
+    height: 22.66rem;
     margin: auto 100px;
     animation: leftToRight 1.5s 1;
 }
 
-.multiline{
+.img-food_group,
+.img-workshop_group {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.team-overlay_food,
+.team-overlay_workshop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.team-overlay_food:hover {
+    opacity: 1;
+    background: var(--light-yellow);
+}
+
+.team-overlay_workshop:hover {
+    opacity: 1;
+    background: var(--light-turquiose);
+}
+
+.team-overlay_food p,
+.team-overlay_workshop p {
+    font-size: 1.5rem;
+}
+
+.multiline-concept {
+    white-space: pre-line;
     color: var(--NavbarColor);
 }
 
-
 .p-text{
     color: var(--NavbarColor);
+}
+
+@media only screen and (max-width: 613px) {
+    .mission,
+    .vision {
+        margin-right: 0rem !important;
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    .mission {
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .the-concept {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .the-concept-content {
+        text-align: center;
+        margin-top: 3.5rem;
+        margin-right: 0rem !important;
+        padding: 0rem 1rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .trilogy {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding-top: 0rem;
+    }
+
+    .mission,
+    .vision {
+        margin-right: 1rem;
+    }
+
+    .mis-vis-p {
+        margin-top: 2rem;
+    }
+
+    .the-concept-content {
+        margin-right: 2.5rem;
+    }
 }
