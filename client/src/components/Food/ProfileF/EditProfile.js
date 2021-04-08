@@ -9,37 +9,10 @@ import {
 } from "react-form-elements";
 
 import {updateUser} from "../../Axois/Axois"
-import { useState } from "react";
+import UploadProfileImage from "./UploadProfileImage"
 
 function EditProfile({ userData, getUser }) {
 
-
-const [fileData, setFileData] = useState();
-
-  const fileChangeHandler = (e) => {
-    setFileData(e.target.files[0]);
-  };
-
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-
-    // Handle File Data from the state Before Sending
-    const data = new FormData();
-
-    data.append("ProfilePicture", fileData);
-
-    fetch("http://localhost:5000/culturd_api/Em3Wi5va8is15/user/606b2d70b3d1692a3cc3ac4b", {
-      method: "PATCH",
-      body: data,
-    })
-      .then((result) => {
-        console.log("File Sent Successful");
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-    }
-      
   return (
     <div className="profile-info">
       <h3 className="profile-info-title">Edit your account details</h3>
@@ -99,15 +72,7 @@ const [fileData, setFileData] = useState();
           <Button type ="submit" className="profile-order-button">Save Changes</Button>
 
       </Form>
-
-      <form onSubmit={onSubmitHandler}>
-        <input type="file" onChange={fileChangeHandler} />
-        <br />
-        <br />
-        <button type="submit">Confirm</button>
-      </form>
-
-
+        <UploadProfileImage />
     </div>
   );
 }
