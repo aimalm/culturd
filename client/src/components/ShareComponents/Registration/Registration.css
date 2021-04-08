@@ -132,6 +132,7 @@ form > h1 {
 
 .sign-form-container {
     margin: 70px;
+    margin-top: 0rem;
     display: flex;
     height: auto;
     width: 70rem;

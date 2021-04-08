@@ -1,7 +1,5 @@
 import multer from 'multer';
 //import path from 'path';
-import  validation from '../middleware/validation.js'
-
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -15,13 +13,14 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-    if(validation){
-    cb(null, true);
+    console.log(file.mimetype)
+    if((file.mimetype).includes('jpeg') || (file.mimetype).includes('png') || (file.mimetype).includes('jpg')){
+        cb(null, true);
     } else{
         cb(null, false);
 
     }
-    
+
 };
 
 let upload = multer({ storage: storage, fileFilter: fileFilter,});
