@@ -73,8 +73,10 @@
   text-shadow: 0 0.1em 20px rgb(98, 170, 142),
     -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
     font-family: 'Londrina Solid', cursive;
-    
+    animation: rightToLeft 1.5s 1;
 }
+    
+
 
 .span-animation {
   transform: scale(0.9);
@@ -153,22 +155,25 @@
   border-radius: 50px;
   box-sizing: border-box;
   text-decoration: none;
-  color: #1c2c27;
+  color: white;
   text-align: center;
   transition: all 0.15s;
   background-color: var(--carol);
   font-family: var(--font);
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   margin: 0 150px;
+  animation: rightToLeft 1.5s 1;
 }
+
 
 .landing_main-button:hover {
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;
   text-decoration: none;
+  background-color: var(--dark-turquiose);
 }
 
 .h4-homeW {
@@ -177,6 +182,8 @@
   text-shadow: 0 0.1em 20px rgb(159, 212, 135),
     -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
     font-family: 'Londrina Solid', cursive;
+    animation: rightToLeft 1.5s 1;
+
 }
 
 .container-service {
@@ -220,7 +227,7 @@
   padding: 10px 20px;
   box-sizing: border-box;
   text-decoration: none;
-  color: #0b523a;
+  color:white;
   text-align: center;
   transition: all 0.15s;
   background-color: var(--carol);
@@ -238,6 +245,7 @@
   color: #ffffff;
   border-color: #ffffff;
   text-decoration: none;
+  background-color: var(--dark-turquiose);
 }
 
 .text-service{

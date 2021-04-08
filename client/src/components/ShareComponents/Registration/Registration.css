@@ -8,6 +8,7 @@
     padding-top: 6.5rem;
     padding-bottom: 7rem;
     background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
+   
 }
 
 .log-form-container {
@@ -35,6 +36,7 @@
     justify-content: center;
     text-align: center;
     background-color:white;
+    animation: rightToLeft 1.5s 1;
 }
 
 .form-container-2,
@@ -46,6 +48,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--light-turquiose);
+    
 }
 
 .reg-link {
