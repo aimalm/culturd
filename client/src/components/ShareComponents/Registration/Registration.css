@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--light-turquiose);
+    background-color:white;
 }
 
 .form-container-2,
@@ -45,7 +45,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: var(--light-turquiose);
 }
 
 .reg-link {
