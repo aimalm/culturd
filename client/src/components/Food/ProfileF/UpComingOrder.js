@@ -3,7 +3,30 @@ import React from "react";
 function UpComingOrder({ orderData, dishData, userData }) {
   console.log("orderData in profileF:", orderData);
 
+  let onlyProductId = orderData.map((order) => order.product_id);
+  console.log("onlyProductID: ", onlyProductId);
+
+
  
+
+
+
+
+  let dishPostByMe = dishData.filter((dish) => dish.cookerId == userData._id);
+  console.log("dishPostByMe: ", dishPostByMe);
+
+  let dishPostByMeID = dishPostByMe.map((dish) => dish._id);
+  console.log("dishPostByMeID: ", dishPostByMeID);
+
+  let a = ["606d80e54a01683c543245bb", "606d6ac14a01683c543245b2"];
+
+  let c = dishPostByMeID.filter((val) => a.includes(val));
+
+  console.log(c);
+
+  let myOrder = dishData.filter((dish) => dish._id === c);
+
+  console.log("myOrder: ", myOrder);
 
 
   // let x;
