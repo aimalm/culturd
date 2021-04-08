@@ -15,8 +15,8 @@
 
 /* left side menu css here */
 .profile-menu {
-  height: 80%;
-  padding: 4rem 1rem;
+  height: 70%;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,6 +50,7 @@
 .profile-menu h3 {
   color: var(--greenish);
   margin: 1rem 0;
+  text-transform: capitalize;
 }
 .profile-menu-categories,
 .profile-menu-addpost {
@@ -251,6 +252,30 @@
   color: var(--NavbarColor);
 }
 
+/* Upcoming order css */
+.upcoming-order-container{
+  padding: 1rem;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  grid-gap: 1rem 0;
+  text-transform: capitalize;
+  overflow-x: auto;
+  overflow-y: hidden;
+  animation: rightToLeft 1.5s 1 ease-in-out;
+  border-bottom: 0.8px solid var(--NavbarColor);
+}
+.upcoming-order-img{
+  width: 9rem; 
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 8px;
+    grid-column: 1/2;
+}
+
+
+
 @media only screen and (max-width: 1024px) {
   .profile-menu-categories,
   .profile-menu-addpost {
@@ -259,6 +284,11 @@
   }
   .profile-history-button {
     font-size: 0.8rem;
+  }
+  .upcoming-order-container{
+    grid-template-columns:100%;
+    grid-template-rows: auto auto;
+    justify-items: center;
   }
 }
 @media only screen and (max-width: 768px) {

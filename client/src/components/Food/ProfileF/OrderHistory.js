@@ -1,16 +1,12 @@
 import React from "react";
 import { deleteFoodPost } from "../../Axois/Axois";
-// import { IoMdClose } from "react-icons/io";
 
 function OrderHistory({ userData, dishData, getAllFood }) {
-  //const [deleting, setDeleting] = useState(false);
 
   const dishPostByMe = dishData.filter(
     (dish) => dish.cookerId === userData._id
   );
- // console.log("dishPostByMe: ", dishPostByMe);
-  // console.log(userData._id)
-  //console.log(cookHistory)
+
   return (
     <div className="profile-history">
       <h3 className="profile-history-title">Your selling post history</h3>
@@ -41,7 +37,6 @@ function OrderHistory({ userData, dishData, getAllFood }) {
               <button
                 className="profile-history-button"
                 onClick={() => {
-                  //setDeleting(true);
                   deleteFoodPost(dish._id);
 
                   setTimeout(() => {

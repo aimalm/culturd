@@ -7,7 +7,7 @@ const orderSchema = mongoose.Schema({
     "cooker_id": { type: Array, required: true},
     "payment": { type: Boolean, required: true},
     "amount": { type: Number, required: true},
-    "pickup_date": { type: Date, required: true},
+    "order_date": { type: Date, required: true},
     "Pickup_address": { type: Array, required: true}
 })
 var Order = mongoose.model('Food_Order', orderSchema);
