@@ -1,10 +1,10 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "react-bootstrap/Navbar";
-import {LinkContainer} from 'react-router-bootstrap'
+import { Link } from "react-router-dom";
 import home from '../image/home.png'
 import './contactUs.css'
+import { ImUsers } from "react-icons/im"
 
 function ContactForm() {
   const sendEmail = (e) => {
@@ -21,17 +21,19 @@ function ContactForm() {
   console.log(localStorage.getItem("email"))
 
   
-    return (
-      <>
-      <Navbar Navbar bg="white  fixed-top"  expand="lg">
-      <LinkContainer to="/">
-        <img src={home} className="logo-book" alt=""/>
-        </LinkContainer>
-        <Navbar.Toggle />
-      </Navbar>
-
-      <h1 className="title-home">Contact Us</h1>
-       
+return (
+<>
+<div className="home-arrow">
+                <Link to="/">
+                    <img src={home} className="arrow" alt=""/>
+                </Link>
+            </div>
+            <div className="reg-button-container">
+            <Link to="/login"> <button className="reg-dropdown-button">
+             <span className="angle-icon"><ImUsers />SIGN UP</span> </button></Link> 
+        </div>
+  
+<h1 className="title-home">Contact Us</h1>    
 <section className="contact-page-sec">
     <div className="container">
       <div className="row">
