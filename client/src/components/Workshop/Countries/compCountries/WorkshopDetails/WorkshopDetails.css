@@ -1,6 +1,7 @@
 .booking-container {
     border-radius: 8px;
     width: 25rem;
+    margin-top: 2rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -118,7 +119,7 @@
     }
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1200px) {
     .booking-container {
         width: 100%;
         justify-content: flex-end;

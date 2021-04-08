@@ -12,7 +12,7 @@
 }
 
 .wrapper {
-    width: 80rem;
+    width: 75rem;
     margin: 6.25rem 2rem 6.25rem 2rem;
     display: flex;
     flex-direction: column;
@@ -59,10 +59,6 @@
     width: 45rem;
     display: flex;
     flex-direction: column;
-}
-
-.inner-container-2 {
-    margin-top: 2rem;
 }
 
 .accordeon-container {
