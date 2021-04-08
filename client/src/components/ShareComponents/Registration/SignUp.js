@@ -3,6 +3,7 @@ import './Registration.css';
 import { Link } from "react-router-dom";
 import axios from "axios";
 import NavSignLog from "../NavLogSign/NavSignLog";
+import NavLogSign from '../NavLogSign/NavLogSign';
 
 function SignUp() {
     const name = useRef();
@@ -41,7 +42,7 @@ function SignUp() {
     }
     return (
         <div>
-            <NavSignLog />
+            <NavLogSign />
             <div className="signup-container">
                 <div className="sign-form-container">
                     <div className="form-container-3">
