@@ -5,13 +5,13 @@ function UpComingOrder({ orderData, dishData, userData }) {
   
   
 
-//   console.log("orderData in profileF:", orderData);
+  console.log("orderData in profileF:", orderData);
 
-//   let onlyProductId = orderData.map((order) => order.product_id)
-//   console.log("onlyProductID: ", onlyProductId)
+  let onlyProductId = orderData.map((order) => order.product_id)
+  console.log("onlyProductID: ", onlyProductId)
 
-//   let dishPostByMe = dishData.filter(dish => dish.cookerId === '606b2d70b3d1692a3cc3ac4b')
-//   console.log("dishPostByMe: ", dishPostByMe)
+  let dishPostByMe = dishData.filter(dish => dish.cookerId === '606b2d70b3d1692a3cc3ac4b')
+  console.log("dishPostByMe: ", dishPostByMe)
 
 
 
