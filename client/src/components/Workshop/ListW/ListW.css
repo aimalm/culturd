@@ -29,9 +29,11 @@
   padding: 20px;
   font-family: 'Train One', cursive;
   text-transform: uppercase;
-   background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
-   background-clip: text;
+  background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  
+  
   
 }
 

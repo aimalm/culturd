@@ -8,7 +8,7 @@
     }
 
     .navbar-style{
-    box-shadow: 2px 2px #dd7d7d;
+    box-shadow: 2px 2px hsla(0, 66%, 80%, 0.801);
 
     }
 
@@ -20,17 +20,14 @@
     .nav-color{
       color:var( --FontColor)!important;
       font-family: 'Montserrat', sans-serif;
-      margin: 0 auto;
-      font-size: 1rem;
-      font-size: 1.2rem;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+      /* font-size: 1.2rem; */
       font-family: 'Train One', cursive;
-      text-transform: uppercase;
+      text-transform: capitalize;
       background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
-     
-  
-
     }
       
     
