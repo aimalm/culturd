@@ -32,6 +32,7 @@ import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 import ScrollToTop from "./components/ShareComponents/ScrollToTop/ScrollToTop";
 import AboutUsF from "./components/Food/AboutUsF/AboutUsF";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+import NavLogSign from "./components/ShareComponents/NavLogSign/NavLogSign";
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
@@ -206,7 +207,6 @@ function App() {
               <Footer />
             </Route>
             <Route path="/contact_us">
-              <MainNav />
               <ContactUs />
               <Footer />
             </Route>
