@@ -1,6 +1,18 @@
+.arrow {
+    position: absolute;
+    margin-top: 2rem;
+    left: 3%;
+    height: 2.2rem;
+    width: 3rem;
+}
+
+.arrow:hover {
+    animation: spring 300ms ease-out; 
+}
+
 .reg-button-container {
     position: absolute;
-    top: 5%;
+    margin-top: 1.3rem;
     right: 3%;
 }
 
@@ -26,7 +38,7 @@
 .reg-login-link,
 .reg-signup-link,
 .reg-contact-us-link {
-    color: #19d1d1;
+    color: var(--dark-turquiose);
     transition: all 0.2s ease-in-out;
 }
 

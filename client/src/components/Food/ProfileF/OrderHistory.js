@@ -42,38 +42,16 @@ function OrderHistory({ userData, dishData, getAllFood }) {
                 className="profile-history-button"
                 onClick={() => {
                   setDeleting(true);
+                  deleteFoodPost(dish._id);
+
+                  setTimeout(() => {
+                    getAllFood();
+                  }, 500);
                 }}
               >
                 Remove This post
               </button>
-              {deleting ? (
-                <div className="pop-up-notice delete-confirm-container ">
-                  <button
-                    className="paypal-button-close"
-                    onClick={() => {
-                      setDeleting(false);
-                    }}
-                  >
-                    <IoMdClose />
-                  </button>
-                  <h4>Are you sure to DELETE the post?</h4>
-                  
-                  <button
-                  className="button delete-post-button"
-                    onClick={() => {
-                      deleteFoodPost(dish._id);
-                      setDeleting(false);
-                      setTimeout(() => {
-                        getAllFood();
-                      }, 500);
-                    }}
-                  >
-                    Confirm
-                  </button>
-                </div>
-              ) : (
-                ""
-              )}
+              
             </div>
           ))}
         </div>

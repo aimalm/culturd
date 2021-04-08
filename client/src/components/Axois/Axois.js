@@ -62,6 +62,7 @@ export const createFood = async (userData, values) => {
 
 //delete for food
 export const deleteFoodPost = async (id) => {
+  console.log(id)
   await axois.delete(`/food/${id}`).catch((err) => console.log(err));
 };
 

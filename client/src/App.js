@@ -8,9 +8,9 @@ import MainNav from "./components/ShareComponents/Nav/MainNav";
 import Home from "./components/ShareComponents/Home/Home";
 import AboutUs from "./components/ShareComponents/AboutUs/AboutUs";
 import Footer from "./components/ShareComponents/Footer/Footer";
-import LogIn from "./components/ShareComponents/Registration/LogIn";
 import SignUp from "./components/ShareComponents/Registration/SignUp";
 import ContactUs from "./components/ShareComponents/ContactUs/ContactUs";
+import Login from "./components/ShareComponents/Registration/Login";
 
 //workshop components
 import SubNavW from "./components/Workshop/SubNavW/SubNavW";
@@ -32,6 +32,7 @@ import ShoppingCartF from "./components/Food/ShoppingCartF/ShoppingCartF";
 import ScrollToTop from "./components/ShareComponents/ScrollToTop/ScrollToTop";
 import AboutUsF from "./components/Food/AboutUsF/AboutUsF";
 import AboutUsW from "./components/Workshop/AboutUsW/AboutUsW";
+import NavLogSign from "./components/ShareComponents/NavLogSign/NavLogSign";
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
@@ -58,6 +59,10 @@ function App() {
     }
   };
 
+  // const deleteSpecificFood = async () => {
+   
+  //   await axois.delete('/food/606d6b424a01683c543245b3').catch((err) => console.log(err));
+  // };
 
 
   // save shopping cart to localStorage
@@ -69,7 +74,7 @@ function App() {
       getUser(localStorage.getItem("email"));
     }
     getAllFood()
-    
+    //deleteSpecificFood()
   }, []);
 
   useEffect(() => {
@@ -168,7 +173,7 @@ function App() {
             </Route>
 
             <Route path="/login">
-              <LogIn />
+              <Login />
               <Footer />
             </Route>
 
@@ -202,7 +207,6 @@ function App() {
               <Footer />
             </Route>
             <Route path="/contact_us">
-              <MainNav />
               <ContactUs />
               <Footer />
             </Route>

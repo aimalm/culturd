@@ -1,36 +1,23 @@
-import React, { useState } from 'react';
+
 import './NavLogSign.css';
+import home from '../image/home.png'
 import { Link } from "react-router-dom";
-import { ImUsers } from "react-icons/im";
+import { MdContactMail} from "react-icons/md";
 
 function NavLogSign() {
-    const [showLogin, setShowLogin] = useState(false);
+   
     return (
         <div>
-            <div className="reg-button-container">
-                <button className="reg-dropdown-button" onClick={()=>setShowLogin(!showLogin)}>
-             <span className="angle-icon"><ImUsers /> SIGN UP</span>
-                </button>
-                {showLogin ? (
-                <div className="reg-dropdown-container">
-                    <Link to="/" className="reg-home-link">
-                    <p>Home</p>
-                    </Link>
-                    <Link to="/login" className="reg-login-link">
-                    <p>Log In</p>
-                    </Link>
-                    <Link to="/signup" className="reg-signup-link">
-                    <p>Sign Up</p>
-                    </Link>
-                    <Link to="/contact_us" className="reg-contact-us-link">
-                    <p>Contact Us</p>
-                    </Link>
-                </div>
-                ) : (
-                ""
-                )}
+            <div className="home-arrow">
+                <Link to="/">
+                    <img src={home} className="arrow" alt=""/>
+                </Link>
             </div>
+            <div className="reg-button-container">
+            <Link to="/contact_us"> <button className="reg-dropdown-button">
+             <span className="angle-icon"><MdContactMail /> CONTACT US</span> </button></Link> 
         </div>
+    </div>
     );
 }
 

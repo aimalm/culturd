@@ -1,21 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.arrow {
-    position: absolute;
-    margin-top: 2%;
-    left: 2%;
-    height: 2.2rem;
-    width: 3rem !important;
-}
-
-.arrow:hover {
-    animation: spring 300ms ease-out; 
-}
-
 .login-container, 
 .signup-container {
     display: flex;
@@ -23,34 +5,30 @@
     align-items: center;
     height: auto;
     width: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6.5rem;
+    padding-bottom: 7rem;
     background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
-}
-
-.home-arrow{
-   position: absolute;
-   top: 3%;
-   left: 3%;
-}
-.arrow{
-    width: 2rem;
 }
 
 .log-form-container {
     display: flex;
     height: auto;
-    width: 65%;
+    width: 50rem;
     box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
 }
 
 .p-login {
     font-size: 1.125rem;
+    color: var(--NavbarColor);
+}
+.nav-color{
+    color: var(--NavbarColor);
 }
 
-.form-container-1 {
+.form-container-1,
+.form-container-3 {
     width: 50%;
-    padding: 0rem 0.625rem;
+    padding: 0rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +37,8 @@
     background-color: var(--light-turquiose);
 }
 
-.form-container-2 {
+.form-container-2,
+.form-container-4 {
     width: 50%;
     padding: 6.25rem 0rem;
     display: flex;
@@ -86,7 +65,7 @@
 #password-link {
     font-size: 0.813rem;
     text-decoration: underline;
-    color: #808080;
+    color: var(--NavbarColor);
 }
 
 #password-link:hover {
@@ -103,20 +82,22 @@ form > h1 {
     margin-bottom: 1.875rem;
 }
 
+.login-h2 {
+    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.813rem;
+}
+
 .form-group > label {
     font-size: 1rem;
     margin-bottom: 0rem;
-    color: var(--dark-turquiose); 
+    color: var(--NavbarColor); 
 }
 
-.form-group > select {
-    font-size: 0.875rem;
-    color: var(--dark-turquiose);
-}
-
-.input-fields, 
+.input-fields,
 .submit-btn {
-    width: 15.625rem;
+    width: 15.625rem !important;
     height: 2.188rem !important;
     border:1px solid #f59d87;
     border-top:1px solid #3aab95;
@@ -136,9 +117,8 @@ form > h1 {
     background-color: var(--carol);
     border: none;
     border-radius: 3px;
-    height: 1.875rem;
     padding-bottom: 0.125rem;
-    color: var(--light-turquiose);
+    color: #FFFFFF;
     font-size: 1.125rem;
 }
 
@@ -147,52 +127,118 @@ form > h1 {
     color: #FFFFFF;
 }
 
-.signup-container {
-    height: 150vh;
-}
-
 .sign-form-container {
+    margin: 70px;
     display: flex;
     height: auto;
-    width: 600px;
+    width: 70rem;
     box-shadow: -2px 2px 11px 1px rgba(0,0,0,0.41);
 }
 
-.login-h2{
-    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 45px;
+.signUp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 2rem;
+    width: 100%;
+}
+
+.name-container,
+.email-container,
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#firstName,
+#sign-email,
+#sign-pass {
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 360px) {
+    .login-h2,
+    .form-header {
+        font-size: 2rem;
+    }
+    
+    .reg-link {
+        font-size: 1.5rem;
+    }
+
+    #user {
+        width: 7.3rem !important;
+    }
 }
 
 @media only screen and (max-width: 450px){
-    form {
-        width: 95%;
+    .log-form {
+        padding: 0rem 2rem;
+        width: 100% !important;
     }
 
     .input-fields,
-    .submit-btn {
-        width: 100%;
+    .submit-btn{
+        width: 100% !important;
     }
+
 }
 
 @media only screen and (max-width: 960px){
     .log-form-container {
+        width: 65% !important;
         flex-direction: column;
     }
 
-    .form-container-1,
-    .form-container-2 {
+    .form-container-1 {
+        padding: 2rem 1rem;
         width: 100%;
     }
 
-    .form-container-1 {
-        padding: 2rem 0rem;
+    .form-container-2 {   
+        padding: 3.5rem 0rem 5rem 0rem;
+        width: 100%;
     }
 
-    .form-container-2 {
-        padding: 3.5rem 0rem 5rem 0rem;
+}
+
+@media only screen and (max-width: 1020px) {
+    .name-container,
+    .email-container,
+    .password-container {
+        flex-direction: column;
+        align-items: center;
     }
+
+    #firstName,
+    #sign-email,
+    #sign-pass {
+        margin-right: 0rem;
+    }
+
+    #user {
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .sign-form-container {
+        flex-direction: column;
+        width: 55%;
+    }
+
+    .form-container-3 {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .form-container-4 {
+        padding: 3.5rem 0rem 5rem 0rem;
+        width: 100%;
+    }
+
 }
 
 

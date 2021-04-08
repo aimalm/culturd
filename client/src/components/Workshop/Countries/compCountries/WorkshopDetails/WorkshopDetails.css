@@ -104,7 +104,8 @@
 
 .booking-button:hover {
     text-decoration: none;
-    background: var(--turquiose);
+    background: var( --dark-turquiose);
+   
 }
 
 .booking-button > * {
