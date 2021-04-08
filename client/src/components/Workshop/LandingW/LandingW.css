@@ -112,11 +112,10 @@
 .wrapper-service__home {
   border-top: 2px solid #f59d87;
   border-bottom: 2px solid #f59d87;
-  background-color: var(--light-turquiose);
   justify-content: space-around;
   background-image: linear-gradient(
-      rgba(98, 219, 209, 0.87),
-      rgba(67, 218, 205, 0.836)
+      rgba(60, 173, 164, 0.87),
+      rgba(121, 224, 216, 0.836)
     ),
     url("../image/a.jpeg");
   background-repeat: no-repeat;
@@ -134,9 +133,9 @@
 
 .h1-icon {
   margin: 80px 0;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
-  color: rgb(153, 218, 201);
+  color: rgb(158, 192, 176);
   text-shadow: 0 0.1em 20px rgb(98, 170, 142),
     -0.03em -0.03em 0 rgb(76, 122, 108), -0.03em 0.08em 0 rgb(49, 160, 132);
     font-family: 'Londrina Solid', cursive;
@@ -299,7 +298,7 @@ color:rgb(221, 153, 114) !important;
   border-radius: 8px;
 }
 .box-work i {
-  color:rgb(202, 205, 50);
+  color:rgb(235, 156, 128);
 }
 
 .box-work p {
