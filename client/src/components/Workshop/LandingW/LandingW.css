@@ -308,6 +308,14 @@ color:rgb(221, 153, 114) !important;
 }
 
 /*contact us */
+
+.contact-workshop-submit{
+  position:fixed;
+  background-color: #f6f1eb;
+  width: 70%;
+  height: 80%;
+  z-index: 1;
+}
 .container-contactus-work {
   width: 60%;
   height: 480px;

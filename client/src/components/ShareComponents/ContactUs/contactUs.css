@@ -3,6 +3,14 @@ section {
     padding: 40px 0;
     min-height: 50vh;
 }
+
+.contact-from-submit{
+    width: 70%;
+    height: 80%;
+    background-color: #f6f1eb;
+    z-index: 1;
+}
+
 .contact-info {
 display: inline-block;
 width: 100%;

@@ -37,6 +37,7 @@ function BookForm() {
           <p><strong>Telephone: </strong>{bookFrom.myTelephone}</p>
           <p><strong>Email: </strong>{bookFrom.email}</p>
           <p><strong>Country you picked: </strong>{bookFrom.country}</p>
+          <p><strong>Date & Time: </strong>{bookFrom.date_time}</p>
           <p><strong>Amount of ticket: </strong>{bookFrom.number}</p>
          
           <button className="btn-popup"
@@ -49,7 +50,7 @@ function BookForm() {
             Submit
           </button>
           <div className="flex-popup">
-          <p>We will contact you shortly for details.</p>
+          <p className="p-popup">We will contact you shortly for details.</p>
           <img src={popup} className="popup-logo" alt="" />
           </div>
         </div>
