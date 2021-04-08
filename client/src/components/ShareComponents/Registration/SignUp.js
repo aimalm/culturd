@@ -2,7 +2,6 @@ import React, {useState, useRef} from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
 import axios from "axios";
-import NavSignLog from "../NavLogSign/NavSignLog";
 import NavLogSign from '../NavLogSign/NavLogSign';
 
 function SignUp() {
