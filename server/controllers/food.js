@@ -56,4 +56,17 @@ export const deleteAllFoodPosts = async (req, res) => {
     await Food.remove();
     res.json({ message: "Post deleted successfully." });
 }
+
+
+
+export const getAllFoodOrder = async (req, res) => { 
+    const cookId = req.params._id;
+
+    try {
+        const findFoods = await Food.find();      
+        res.status(200).json(findFoods);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
 export default router;
