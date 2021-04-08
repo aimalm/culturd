@@ -13,11 +13,11 @@ function AboutUs() {
               <div className="inner-column">
                 <div className="sec-title">
                   <div className="title">About Us</div>
-                  <h2 className="h2-main_aboutus">Who we are</h2>
+                  <h2 className="h2-main_aboutus">Who are we</h2>
                 </div>
                 <div className="text">
                 We are 4 young professionals who teamed up to offer you an innovative online experience.
-                 Through our site you can access two separate products, namely “Workshop” and “Homecook”.
+                 Through our site you can access two separate products - “Workshop” and “Homecook”.
                 </div>
                 <Link to="/workshop">
                   <button className="theme-btn btn-style-three">

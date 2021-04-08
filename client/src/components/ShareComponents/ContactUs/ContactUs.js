@@ -33,9 +33,8 @@ function ContactForm() {
 
     setIsSubmitting(true);
   };
-  console.log(localStorage.getItem("email"));
+  //console.log(localStorage.getItem("email"));
 
-  //console.log(isSubmitting)
 
   return (
     <>
@@ -182,7 +181,7 @@ function ContactForm() {
                   width="250"
                   height="300"
                   style={{ border: 0 }}
-                  allowfullscreen=""
+                  allowFullScreen=""
                   loading="lazy"
                 ></iframe>
               </div>
