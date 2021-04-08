@@ -16,8 +16,8 @@ function Accordion(accordionProp) {
         <div>
             {accordionProp.content.map((item, index) => {
                 return (
-                    <div className="info-section">
-                        <div className="section-wrap" onClick={() => toggleAngle(index)} key={index}>
+                    <div className="info-section" key={index}>
+                        <div className="section-wrap" onClick={() => toggleAngle(index)} >
                             <h5>{item.title}</h5>
                             <span>{clicked === index? <FaChevronUp /> : <FaChevronDown />}</span>
                         </div>

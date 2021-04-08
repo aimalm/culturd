@@ -8,7 +8,7 @@ import './Nav.css'
 function MainNav() {
     return (
     <div className="container-header">
-      <Navbar Navbar bg="white  fixed-top navbar-main"  expand="lg">
+      <Navbar  bg="white  fixed-top navbar-main"  expand="lg">
       <LinkContainer to="/">
         <img src={home} className="logo-book" alt=""/>
         </LinkContainer>

@@ -46,7 +46,7 @@ function ContactForm() {
 
         <div className="container-contactus-work">
           <Form onSubmit={sendEmail}>
-            <FormGroup controlId="formBasicEmail">
+            <FormGroup controlid="formBasicEmail">
               <Label className="text-muted">Email address</Label>
               <Input
                 type="email"
@@ -54,7 +54,7 @@ function ContactForm() {
                 placeholder="Enter email"
               />
             </FormGroup>
-            <FormGroup controlId="formBasicName">
+            <FormGroup controlid="formBasicName">
               <Label className="text-muted">Name</Label>
               <Input
                 className="contact-input"
@@ -63,7 +63,7 @@ function ContactForm() {
                 placeholder="Name"
               />
             </FormGroup>
-            <FormGroup controlId="formBasicMessage">
+            <FormGroup controlid="formBasicMessage">
               <Label className="text-muted">Message</Label>
               <Input
                 type="textarea"

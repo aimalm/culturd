@@ -4,7 +4,7 @@ import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
 import ImageCards from './compCountries/ImageCards/ImageCards';
 import Accordeon from './compCountries/Accordion/Accordion';
-import InProgress from '../image/inProgress.png';
+// import InProgress from '../image/inProgress.png';
 import Food from '../image/indoFood.jpg';
 import Dance from '../image/indoDance.jpg';
 import Art from '../image/indoArt.jpg';

@@ -1,7 +1,6 @@
 import React from "react";
 import "./LandingW.css";
 import { Link } from "react-router-dom";
-import "react-alice-carousel/lib/alice-carousel.css";
 import cook from "../image/cooking.png";
 import dance from "../image/dance.png";
 import art from "../image/art.png";

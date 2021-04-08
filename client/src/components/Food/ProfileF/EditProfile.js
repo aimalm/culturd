@@ -2,9 +2,8 @@ import {
   Button,
   Form,
   TextBox,
-  EmailInput,
-  UrlInput,
-} from "react-form-elements";
+  EmailInput
+  } from "react-form-elements";
 
 import { updateUser } from "../../Axois/Axois";
 import React, { useState } from "react";
