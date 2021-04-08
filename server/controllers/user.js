@@ -50,6 +50,8 @@ export const createAnUser = async (req, res) => {
 }
 
  export const updateAnUser = async (req, res) => {
+  console.log(req.file);
+
     const id = req.params._id;
     //const { eventTitle, description } = req.body;
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
@@ -57,6 +59,27 @@ export const createAnUser = async (req, res) => {
     const updateAnUser = req.body;
     console.log(req.body)
     await User.findByIdAndUpdate(id, updateAnUser, { new: true });
+    res.json(updateAnUser);
+}
+//updateAnUserImage
+
+export const updateAnUserImage = async (req, res) => {
+
+  console.log(req.file.path);
+
+    const id = req.params._id;
+    console.log(id)
+
+    //const { eventTitle, description } = req.body;
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+   // const {ProfilePicture} = req.file.path;
+    //req.body = {"ProfilePicture": req.file.path}
+
+    //const updateAnUser = 
+    //console.log(req.body)
+    //path.join(__dirname, "user.js")
+    const path = req.file.path.replace(/\\/g, "/")
+    await User.findByIdAndUpdate(id, req.body = {ProfilePicture: "http://localhost:5000/" + path}, { new: true });
     res.json(updateAnUser);
 }
 

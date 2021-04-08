@@ -90,11 +90,11 @@ export const updateUser = async (id, values) => {
   const newObj = {
     firstName: values.firstName,
     lastName: values.lastName,
-    ProfilePicture: values.ProfilePicture,
     email: values.email,
-    // password: values.password,
     address: values.address,
   };
+
+  console.log(newObj)
   await axois.patch(`/user/${id}`, newObj).catch((err) => console.log(err));
 };
 

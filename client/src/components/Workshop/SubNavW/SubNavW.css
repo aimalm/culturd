@@ -20,17 +20,14 @@
     .nav-color{
       color:var( --FontColor)!important;
       font-family: 'Montserrat', sans-serif;
-      margin: 0 auto;
-      font-size: 1rem;
-      font-size: 1.2rem;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+      /* font-size: 1.2rem; */
       font-family: 'Train One', cursive;
-      text-transform: uppercase;
+      text-transform: capitalize;
       background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
-     
-  
-
     }
       
     

@@ -3,11 +3,12 @@ import path from 'path';
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './uploads/');
+        cb(null, './uploads');
     },
     filename: function (req, file, cb) {
         console.log(file)
-        cb(null, 'profile' + '-' + Date.now() + path.extname(file.originalname));
+        //cb(null, 'profile' + '-' + Date.now() + path.extname(file.originalname));
+        cb(null, Date.now() + "--" + file.originalname);
     }
 });
 

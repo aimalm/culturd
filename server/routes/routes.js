@@ -4,7 +4,7 @@ import { getEvents, getEvent, createEvent, updateEvent, deleteEvent } from '../c
 import { getAllBookedEvents, getAnEvent, bookAnEvent, updateBooking, deleteBooking } from '../controllers/booking.js';
 import { getAllFoods, getFood, createFoodPost, updateFood, deleteFoodPost, deleteAllFoodPosts } from '../controllers/food.js';
 import { getAllOrders, createAnOrder, showAnOrder, updateAnOrder, deleteAnOrder } from '../controllers/order.js';
-import { showUserById, signin, signup, getAllUsers, createAnUser, showUser, updateAnUser, deleteAnUser } from '../controllers/user.js';
+import { showUserById, signin, signup, getAllUsers, createAnUser, showUser, updateAnUser, deleteAnUser, updateAnUserImage } from '../controllers/user.js';
 import upload from '../middleware/upload.js'
 //import  validation from '../middleware/validation.js'
 
@@ -58,7 +58,9 @@ router.get('/user/:email', showUser);
 router.get('/user/id/:_id', showUserById);
 
 
-router.patch('/user/:_id', upload, updateAnUser);
+router.patch('/user/:_id', updateAnUser);
+router.patch('/user/email/:_id', upload, updateAnUserImage);
+
 router.delete('/user/:_id', deleteAnUser);
 
 router.post("/signin", signin);
