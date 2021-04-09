@@ -27,9 +27,7 @@
 
 }
 
-
 /* styling id from depencies*/
-
 .rfe-form__row input {
   margin: 5px;
   padding: 10px 5px;
@@ -52,34 +50,30 @@
   background:hsl(168, 53%, 86%);
   width: 70%;
   height: 75%;
-  text-align:left;
+  text-align: left;
   padding: 40px auto;
   color: var(--NavbarColor);
   border: 2px solid #f5bbb1;
-
-   
-
 }
 
-.h3-popup{
+.h3-popup {
   font-family: "Train One", cursive;
   text-transform: uppercase;
   background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align:center;
+  text-align: center;
   margin: 20px;
 }
 
-
-.pop-op_content{
+.pop-op_content {
   margin: 40px 80px;
   line-height: 1.4;
   
   
 }
 
-.btn-popup{
+.btn-popup {
   display: inline-block;
   padding: 10px 20px;
   border: 0.1em solid #be7979;
@@ -126,7 +120,6 @@
     margin: 0 auto;
     font-size: 1rem;
     width: 90%;
-
   }
 
   }

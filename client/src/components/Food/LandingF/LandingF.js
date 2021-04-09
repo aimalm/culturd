@@ -8,13 +8,9 @@ import CarouselF from "./CarouselF";
 import SearchF from "./SearchF";
 import NewInCardF from "./NewInCardF";
 
-function LandingF({
-  setSelectedDish,
-  dishData,
-}) {
+function LandingF({ setSelectedDish, dishData }) {
   return (
     <div className="food-home">
-
       <SearchF setSelectedDish={setSelectedDish} dishData={dishData} />
 
       <svg
@@ -50,7 +46,6 @@ function LandingF({
         <div className="step-two">
           <div>
             <h3>
-              {" "}
               <FaShoppingCart />
             </h3>
             <p>
@@ -62,7 +57,6 @@ function LandingF({
         <div className="step-three">
           <div>
             <h3>
-              {" "}
               <RiEmotionHappyLine />
             </h3>
             <p>

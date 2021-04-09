@@ -1,12 +1,11 @@
 .footer {
-  background-color:#dfd0c1;
+  background-color: #dfd0c1;
   padding-bottom: 1rem;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
 }
 .footer-icon-container {
   width: 30%;
@@ -27,23 +26,22 @@
   color: var(--dark-turquiose);
 }
 .footer-icon:hover {
-  color:var(--carol) ;
+  color: var(--carol);
 }
 .footer-icon:focus {
-  outline:none;
+  outline: none;
 }
 .footer-line {
-  color:var(--dark-turquiose) ;
+  color: var(--dark-turquiose);
   font-size: 3rem;
   line-height: 1;
-  
 }
 
 @media only screen and (max-width: 376px) {
-    .footer{
-        padding:1rem;
-    }
-    .footer-copyright{
-        font-size: .6rem;
-    }
+  .footer {
+    padding: 1rem;
+  }
+  .footer-copyright {
+    font-size: 0.6rem;
+  }
 }

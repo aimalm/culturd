@@ -1,74 +1,72 @@
 .imageCards {
-    display: flex;
-    justify-content: space-between;
-    color: var(  --dark-turquiose);
+  display: flex;
+  justify-content: space-between;
+  color: var(--dark-turquiose);
 }
 
 .imageCard {
-    width: 13.75rem;
-    height: 19.80rem;
-    margin-top: 2rem;
-    border-radius: 8px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 10px -3px rgba(0,0,0,0.76);
+  width: 13.75rem;
+  height: 19.8rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 1px 10px -3px rgba(0, 0, 0, 0.76);
 }
 
 .image {
-    position: relative;
+  position: relative;
 }
 
 .image_img {
-    display: block;
-    width: 100%;
-    height: 16rem;
-    border-radius: 8px 8px 0 0;
+  display: block;
+  width: 100%;
+  height: 16rem;
+  border-radius: 8px 8px 0 0;
 }
 
 .image_overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border-radius: 8px 8px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
 }
 
 .image_overlay:hover {
-    opacity: 1;
-    background: var(--carol);
+  opacity: 1;
+  background: var(--carol);
 }
 
 .image_overlay > * {
-    color:#FFFFFF;
-    font-size: 1rem;
-    padding: 0.313rem;
-    margin-top: 0.5rem;
-    text-align: center;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.313rem;
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 .workshop-title {
-    font-size: 1rem;
-    padding: 0.313rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  font-size: 1rem;
+  padding: 0.313rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-
-@media only screen and (max-width: 760px){
-    .imageCards {
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+@media only screen and (max-width: 760px) {
+  .imageCards {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
-
