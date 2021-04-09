@@ -83,13 +83,13 @@ function App() {
   useEffect(() => {
     window.localStorage.setItem("culturd", JSON.stringify(shoppingCart));
   }, [shoppingCart]);
-  useEffect(() => {
-    // const getFoodOrder = async () => {
-    //   const response = await axois.get("/food_order").catch((err) => console.log(err));
-    //   setOrderData(response.data.filter(order=>order.cooker_id.includes(userData._id)))
-    // };
-    // getFoodOrder()
-  }, [userData]);
+  // useEffect(() => {
+  //   // const getFoodOrder = async () => {
+  //   //   const response = await axois.get("/food_order").catch((err) => console.log(err));
+  //   //   setOrderData(response.data.filter(order=>order.cooker_id.includes(userData._id)))
+  //   // };
+  //   // getFoodOrder()
+  // }, [userData]);
 
   return (
     <div className="App">
