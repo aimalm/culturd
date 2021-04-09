@@ -66,6 +66,7 @@ function App() {
       window.localStorage.removeItem("userID");
     }
     setUserData([])
+    setShoppingCart([])
   };
 
 

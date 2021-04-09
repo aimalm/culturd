@@ -1,7 +1,10 @@
 import Axios from "axios";
 
+export const API_KEY = process.env.REACT_APP_API_KEY
+export const API_URL = process.env.REACT_APP_API_URL
+
 export const axois = Axios.create({
-  baseURL: "http://localhost:5000/culturd_api/Em3Wi5va8is15",
+  baseURL: `${API_URL}${API_KEY}`,
 });
 
 //prepare the array for ingredients and keywords before the POST req

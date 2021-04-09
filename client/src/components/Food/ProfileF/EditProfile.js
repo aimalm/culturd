@@ -1,6 +1,6 @@
 import { Button, Form, TextBox, EmailInput } from "react-form-elements";
 
-import { updateUser } from "../../Axois/Axois";
+import { updateUser, API_KEY, API_URL } from "../../Axois/Axois";
 import React, { useState, useEffect } from "react";
 
 function EditProfile({ userData, getUser }) {
@@ -32,7 +32,7 @@ function EditProfile({ userData, getUser }) {
       data.append("ProfilePicture", fileData);
 
       fetch(
-        `http://localhost:5000/culturd_api/Em3Wi5va8is15/user/email/${localStorage.getItem(
+        `${API_URL}${API_KEY}/user/email/${localStorage.getItem(
           "userID"
         )}`,
         {

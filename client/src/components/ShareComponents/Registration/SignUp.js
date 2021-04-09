@@ -2,6 +2,7 @@ import React, {useState, useRef} from 'react';
 import './Registration.css';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { API_KEY, API_URL } from "../../Axois/Axois"
 import NavLogSign from '../NavLogSign/NavLogSign';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
@@ -77,9 +78,9 @@ function SignUp() {
             "password": `${userPassword}`
         };
             axios
-                .post("http://localhost:5000/culturd_api/Em3Wi5va8is15/signup", data)
+                .post(`${API_URL}${API_KEY}/signup`, data)
                 .then(function(res) {
-                    window.location.replace("http://localhost:3000/login");
+                    window.location.replace("/login");
                 })
                 .catch(function(res) {
                     sessionStorage.setItem("emailError", "* Someone has already registered with this email");

@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Registration.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { API_KEY, API_URL } from "../../Axois/Axois"
 import NavLogSign from "../NavLogSign/NavLogSign";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
@@ -66,7 +67,7 @@ function Login() {
     };
 
     const API = axios.create({
-      baseURL: "http://localhost:5000/culturd_api/Em3Wi5va8is15",
+      baseURL: `${API_URL}${API_KEY}`,
     });
     API.interceptors.request.use((req) => {
       if (localStorage.getItem("profile")) {
@@ -97,7 +98,7 @@ function Login() {
         setSignInError(sessionStorage.getItem("SignInError"));
         getUser();
         localStorage.removeItem("SignInError");
-        window.location.replace("http://localhost:3000/food");
+        window.location.replace("/food");
       })
 
       .catch(function (res) {
