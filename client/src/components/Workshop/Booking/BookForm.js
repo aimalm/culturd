@@ -50,7 +50,6 @@ function BookForm() {
             Submit
           </button>
           <div className="flex-popup">
-          <p className="p-popup">We will contact you shortly for details.</p>
           <img src={popup} className="popup-logo" alt="" />
           </div>
         </div>

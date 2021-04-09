@@ -85,7 +85,7 @@
   border-radius: 50px;
   box-sizing: border-box;
   text-decoration: none;
-  color: #1c2c27;
+  color: #e9f8f3;
   text-align: center;
   transition: all 0.15s;
   background-color: var(--carol);
@@ -110,7 +110,7 @@
 .popup-logo{
   max-width: 30%;
   margin-top: -250px;
-  margin-left: 200px;
+  margin-left: 600px;
 }
 
 /*responsive*/
