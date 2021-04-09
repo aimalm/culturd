@@ -5,14 +5,7 @@ import OrderHistory from "./OrderHistory";
 import AddPost from "./AddPost";
 import UpComingOrder from "./UpComingOrder";
 
-function ProfileF({
-  userData,
-  dishData,
-  getUser,
-  createFood,
-  getAllFood,
-  orderData,
-}) {
+function ProfileF({ userData, dishData, getUser, createFood, getAllFood }) {
   const [viewSection, setViewSection] = useState("info");
 
   return (
@@ -103,11 +96,7 @@ function ProfileF({
             ""
           )}
 
-          {viewSection === "order" ? (
-            <UpComingOrder />
-          ) : (
-            ""
-          )}
+          {viewSection === "order" ? <UpComingOrder /> : ""}
         </div>
       </div>
     </div>

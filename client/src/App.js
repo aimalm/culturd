@@ -39,7 +39,6 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [dishData, setDishData] = useState([]);
   const [userData, setUserData] = useState([]);
-  const [orderData, setOrderData] = useState([]);
 
   //Get all for food and save in dishData state
   const getAllFood = async () => {
@@ -154,7 +153,6 @@ function App() {
                 dishData={dishData}
                 userData={userData}
                 getAllFood={getAllFood}
-                orderData={orderData}
               />
             </Route>
 

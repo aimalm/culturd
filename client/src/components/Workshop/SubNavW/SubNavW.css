@@ -34,34 +34,14 @@
       border-bottom: 2px solid #f59d87;
       background-size: 50% 50%;
       border-radius: 5%;
-      animation: spring 300ms ease-out;
       font-weight: bold;
       color: turquoise;
+      margin: auto auto;
       
     }
     .nav-color:active{
-      transform: translateY(4px);
+      transform: translateY(2px);
       
-    }
-    
-    
-    @keyframes spring {
-      15% {
-        -webkit-transform-origin: center center;
-        -webkit-transform: scale(1.2, 1.1);
-      }
-      40% {
-        -webkit-transform-origin: center center;
-        -webkit-transform: scale(0.95, 0.95);
-      }
-      75% {
-        -webkit-transform-origin: center center;
-        -webkit-transform: scale(1.05, 1);
-      }
-      100% {
-        -webkit-transform-origin: center center;
-        -webkit-transform: scale(1, 1);
-      }
     }
     
     
@@ -71,9 +51,9 @@
     }
     
     /*responsive*/
-@media screen and (max-width: 768px) {
-.logo-icon{
-  width: 30%;
+    @media screen and (max-width: 768px) {
+    .logo-icon{
+     width: 30%;
      
    }
 }

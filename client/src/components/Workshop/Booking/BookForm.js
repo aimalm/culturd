@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./BookForm.css";
 import { createBookForm } from "../../Axois/Axois";
 import { IoMdClose } from "react-icons/io";
-import popup from "../image/popup.png";
+
 
 import {
   TextBox,
@@ -32,50 +32,23 @@ function BookForm() {
 
           <h3 className="h3-popup">Please confirm the information</h3>
           <div className="pop-op_content">
-            <p>
-              <strong>First Name: </strong>
-              {bookFrom.firstname}
-            </p>
-            <p>
-              <strong>Last Name: </strong>
-              {bookFrom.lastname}
-            </p>
-            <p>
-              <strong>Telephone: </strong>
-              {bookFrom.myTelephone}
-            </p>
-            <p>
-              <strong>Email: </strong>
-              {bookFrom.email}
-            </p>
-            <p>
-              <strong>Country you picked: </strong>
-              {bookFrom.country}
-            </p>
-            <p>
-              <strong>Date & Time: </strong>
-              {bookFrom.date_time}
-            </p>
-            <p>
-              <strong>Amount of ticket: </strong>
-              {bookFrom.number}
-            </p>
-
-            <button
-              className="btn-popup"
-              onClick={() => {
-                createBookForm(bookFrom);
-                setIsSubmitting(false);
-              }}
-            >
-              Submit
-            </button>
-            <div className="flex-popup">
-              <p className="p-popup">
-                We will contact you shortly for details.
-              </p>
-              <img src={popup} className="popup-logo" alt="" />
-            </div>
+          <p><strong>First Name: </strong>{bookFrom.firstname}</p>
+          <p><strong>Last Name: </strong>{bookFrom.lastname}</p>
+          <p><strong>Telephone: </strong>{bookFrom.myTelephone}</p>
+          <p><strong>Email: </strong>{bookFrom.email}</p>
+          <p><strong>Country you picked: </strong>{bookFrom.country}</p>
+          <p><strong>Date & Time: </strong>{bookFrom.date_time}</p>
+          <p><strong>Amount of ticket: </strong>{bookFrom.number}</p>
+         
+          <button className="btn-popup"
+            onClick={() => {
+              createBookForm(bookFrom);
+              setIsSubmitting(false);
+              
+            }}
+          >
+            Submit
+          </button>
           </div>
         </div>
       ) : (
@@ -83,7 +56,6 @@ function BookForm() {
       )}
 
       <h1 className="h1-book">Request your price quote here</h1>
-
       <div className="Booking-container">
         <Form
           name="testForm"

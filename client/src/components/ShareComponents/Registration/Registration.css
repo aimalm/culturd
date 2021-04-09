@@ -1,13 +1,13 @@
 .login-container,
 .signup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: auto;
-  padding-top: 6.5rem;
-  padding-bottom: 7rem;
-  background: linear-gradient(90deg, #bfede4 50%, #ffffff 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding-top: 6.5rem;
+    padding-bottom: 7rem;
+    background: linear-gradient(90deg, #bfede4 50%, #FFFFFF 50%);
 }
 
 .log-form-container {
@@ -27,25 +27,27 @@
 
 .form-container-1,
 .form-container-3 {
-  width: 50%;
-  padding: 0rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--light-turquiose);
+    width: 50%;
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:white;
+    animation: rightToLeft 1.5s 1;
 }
 
 .form-container-2,
 .form-container-4 {
-  width: 50%;
-  padding: 6.25rem 0rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
+    width: 50%;
+    padding: 6.25rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-turquiose);
+    
 }
 
 .reg-link {

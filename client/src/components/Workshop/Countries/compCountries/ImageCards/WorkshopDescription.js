@@ -58,8 +58,8 @@ const HongWorkshop = [
     description: `Using only brush and ink, calligraphers developed their techniques over generations.
         This graphic art is an outward expression of the artist’s inner psychology. Its rhythm, 
         movement and flow is accessible to anyone who views it. `,
-    title: "Chinese calligraphy",
-  },
+        title: 'Chinese Calligraphy'
+    }
 ];
 
 const IndoWorkshop = [
