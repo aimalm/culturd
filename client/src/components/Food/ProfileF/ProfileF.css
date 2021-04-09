@@ -81,7 +81,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 .profile-content-border {
   height: 78vh;
@@ -152,8 +151,8 @@
   padding: 1rem;
   margin: 1rem 0;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 70% 30%;
+  grid-template-columns: 10% 60% 40%;
+  /* grid-template-rows: 70% 30%; */
   grid-gap: 1rem 0;
   text-transform: capitalize;
   overflow-x: auto;
@@ -161,12 +160,12 @@
   animation: rightToLeft 1.5s 1 ease-in-out;
 }
 .profile-order-img {
+  grid-column: 3/4;
+}
+.profile-order-details {
   grid-column: 2/3;
-  justify-self: end;
 }
-.profile-order-details{
-  grid-row:1/2;
-}
+
 .profile-order-button {
   padding: 10px 50px;
   text-decoration: none;
@@ -181,47 +180,23 @@
   margin: 2rem 0 0.5rem 0;
 }
 .profile-history-button {
-  padding: 8px 50px;
-  color: white;
-  text-align: center;
-  font-family: var(--font);
-  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
-  font-size: 1rem;
-  text-transform: uppercase;
-  border-radius: 30px;
-  border: 0.1em solid var(--greenish);
-  background-color: var(--greenish);
-  grid-column: 1/3;
-  width: 50%;
-  margin: auto;
+  border: none;
+  background-color: transparent;
+  grid-row: 1/2;
+  height: 50%;
 }
-.profile-history-button:hover,
+
 .profile-order-button:hover {
   border: 0.1em solid var(--light-green);
   background-color: var(--light-green);
 }
-.delete-confirm-container {
-  background-color: var(--light-green);
-  border-radius: 10px;
-  width: 50%;
-  height: 60vh;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.profile-history-button-icon {
+  color: var(--dark-carol);
+  font-size: 1.5rem;
 }
-.delete-confirm-container h4 {
-  color: white;
-}
-.delete-post-button {
-  border: 0.1em solid var(--greenish);
-  background-color: var(--greenish);
-  margin: 2rem 0;
-}
-.delete-post-button:hover {
-  border: 0.1em solid var(--dark-green);
-  background-color: var(--dark-green);
+.profile-history-button-icon:hover {
+  color: var(--light-carol);
+  transform: scale(1.2);
 }
 
 /* AddPost component css  */
@@ -253,7 +228,7 @@
 }
 
 /* Upcoming order css */
-.upcoming-order-container{
+.upcoming-order-container {
   padding: 1rem;
   margin: 1.5rem 0;
   display: grid;
@@ -266,15 +241,13 @@
   animation: rightToLeft 1.5s 1 ease-in-out;
   border-bottom: 0.8px solid var(--NavbarColor);
 }
-.upcoming-order-img{
-  width: 9rem; 
-    height: 9rem;
-    object-fit: cover;
-    border-radius: 8px;
-    grid-column: 1/2;
+.upcoming-order-img {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 8px;
+  grid-column: 1/2;
 }
-
-
 
 @media only screen and (max-width: 1024px) {
   .profile-menu-categories,
@@ -285,8 +258,8 @@
   .profile-history-button {
     font-size: 0.8rem;
   }
-  .upcoming-order-container{
-    grid-template-columns:100%;
+  .upcoming-order-container {
+    grid-template-columns: 100%;
     grid-template-rows: auto auto;
     justify-items: center;
   }
@@ -296,12 +269,12 @@
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
   }
-.profile-order-details{
-  grid-row:2/3;
-}
-.profile-history-button{
-padding: .2rem .5rem;
-}
+  .profile-order-details {
+    grid-row: 2/3;
+  }
+  .profile-history-button {
+    padding: 0.2rem 0.5rem;
+  }
   .profile-order-img.cart-img {
     grid-row: 1/2;
     grid-column: 1/2;
@@ -343,7 +316,7 @@ padding: .2rem .5rem;
   .profile-info-title {
     font-size: 1.5rem;
   }
-  .rfe-form.add-post-form{
+  .rfe-form.add-post-form {
     width: 90%;
   }
 }

@@ -4,7 +4,6 @@ import { createBookForm } from "../../Axois/Axois";
 import { IoMdClose } from "react-icons/io";
 
 
-
 import {
   TextBox,
   EmailInput,
@@ -26,10 +25,11 @@ function BookForm() {
         <div className="pop-up-notice book-from-confirmation">
           <button
             className="paypal-button-close"
-            onClick={() => setIsSubmitting(false)}>
+            onClick={() => setIsSubmitting(false)}
+          >
             <IoMdClose />
           </button>
-          
+
           <h3 className="h3-popup">Please confirm the information</h3>
           <div className="pop-op_content">
           <p><strong>First Name: </strong>{bookFrom.firstname}</p>
@@ -61,7 +61,7 @@ function BookForm() {
           name="testForm"
           onSubmit={(data) => {
             //console.log(data);
-            setBookFrom(data);      
+            setBookFrom(data);
           }}
         >
           <TextBox label="Firstname" required name="firstname" />
@@ -98,10 +98,9 @@ function BookForm() {
             Save
           </button>
         </Form>
-     </div>
-     
-   </>
-    )
-  }
-  
-export default BookForm
+      </div>
+    </>
+  );
+}
+
+export default BookForm;

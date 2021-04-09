@@ -1,12 +1,9 @@
-.nav-basket-icon{
-    color: var(--greenish);
+.nav-basket-icon {
+  color: var(--greenish);
 }
-.nav-logout-icon{
-    color: var(--greenish);
-
+.nav-logout-icon {
+  color: var(--greenish);
 }
-.nav-border{
-    box-shadow: 1px .5px var(--light-beige);
-
+.nav-border {
+  box-shadow: 1px 0.5px var(--light-beige);
 }
-

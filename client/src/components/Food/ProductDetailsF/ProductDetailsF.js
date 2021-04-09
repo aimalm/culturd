@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./ProductDetailsF.css";
 import { FaLeaf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
@@ -8,12 +8,7 @@ import { CgArrowLongUp } from "react-icons/cg";
 
 import { Link } from "react-router-dom";
 
-function ProductDetailsF({
-  selectedDish,
-  shoppingCart,
-  setShoppingCart,
-  
-}) {
+function ProductDetailsF({ selectedDish, shoppingCart, setShoppingCart }) {
   const [viewingCart, setViewingCart] = useState(false);
 
   const addCart = (dishID) => {
@@ -38,11 +33,8 @@ function ProductDetailsF({
     }, 4000);
   };
 
-  console.log(selectedDish)
-
   return (
     <div>
-
       {/* shopping cart alert here */}
       {viewingCart ? (
         <div className="alert-button add-cart-alert">
@@ -91,7 +83,8 @@ function ProductDetailsF({
                   </h3>
                   <p className="products-description">{dish.dishDescription}</p>
                   <p className="products-pickup-details">
-                    <strong>Pick Up Date:</strong> {dish.pickupDate.substring(0,10)}
+                    <strong>Pick Up Date:</strong>{" "}
+                    {dish.pickupDate.substring(0, 10)}
                   </p>
                   <p className="products-pickup-details">
                     <strong>Pick Up Time:</strong> {dish.openingHours}
@@ -108,7 +101,7 @@ function ProductDetailsF({
                   />
                   <p>{dish.cooker}</p>
                   <div className="products-cooker-score">
-                    {dish.cookerScore.map(( index) => (
+                    {dish.cookerScore.map((star, index) => (
                       <StarIcon key={index} className="star" />
                     ))}
                   </div>

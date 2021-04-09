@@ -1,191 +1,191 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .aboutUs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
 }
 
 .the-concept {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 4.375rem;
-    padding: 2.5rem 0rem;
-    width: 100%;
-    background: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4.375rem;
+  padding: 2.5rem 0rem;
+  width: 100%;
+  background: #ffffff;
 }
 
 .the-concept-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.the-concept-header > *, 
+.the-concept-header > *,
 .mis-vis-p > h3 {
-    font-family: 'Train One', cursive;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+  font-family: "Train One", cursive;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
 
 .the-concept-content {
-    font-size: 1.125rem;
-    animation: rightToLeft 1.5s 1;
-    margin-right: 7rem;
-    width: 50%;
+  font-size: 1.125rem;
+  animation: rightToLeft 1.5s 1;
+  margin-right: 7rem;
+  width: 50%;
 }
 
 .trilogy {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    place-items: center;
-    padding-top: 3rem;
-    padding-bottom: 6rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  place-items: center;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
 }
 
 .mis-vis-p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 18rem;
-    height: 13rem;
-    padding: 1.8rem 0.5rem 0rem 0.5rem;
-    border: 2px solid #f5e3b1;
-    border-top: 2px solid #bfede4;
-    border-bottom: 2px solid #f59d87;
-    transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 18rem;
+  height: 13rem;
+  padding: 1.8rem 0.5rem 0rem 0.5rem;
+  border: 2px solid #f5e3b1;
+  border-top: 2px solid #bfede4;
+  border-bottom: 2px solid #f59d87;
+  transition: 0.5s;
 }
 
 .mis-vis-p:hover {
-    transform: scale(1.1);
-    z-index: 1;
+  transform: scale(1.1);
+  z-index: 1;
 }
 
 .h2-aboutus {
-    font-family: 'Train One', cursive;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+  font-family: "Train One", cursive;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
 
 .team {
-    position: relative;
-    width: 18rem;
-    height: 22.66rem;
-    margin: auto 100px;
-    animation: leftToRight 1.5s 1;
+  position: relative;
+  width: 18rem;
+  height: 22.66rem;
+  margin: auto 100px;
+  animation: leftToRight 1.5s 1;
 }
 
 .img-food_group,
 .img-workshop_group {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .team-overlay_food,
 .team-overlay_workshop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.25s;
 }
 
 .team-overlay_food:hover {
-    opacity: 1;
-    background: var(--light-yellow);
+  opacity: 1;
+  background: var(--light-yellow);
 }
 
 .team-overlay_workshop:hover {
-    opacity: 1;
-    background: var(--light-turquiose);
+  opacity: 1;
+  background: var(--light-turquiose);
 }
 
 .team-overlay_food p,
 .team-overlay_workshop p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .multiline-concept {
-    white-space: pre-line;
-    color: var(--NavbarColor);
+  white-space: pre-line;
+  color: var(--NavbarColor);
 }
 
-.p-text{
-    color: var(--NavbarColor);
+.p-text {
+  color: var(--NavbarColor);
 }
 
 
 
 @media only screen and (max-width: 613px) {
-    .mission,
-    .vision {
-        margin-right: 0rem !important;
-    }
+  .mission,
+  .vision {
+    margin-right: 0rem !important;
+  }
 }
 
 @media only screen and (max-width: 665px) {
-    .mission {
-        margin-right: 1rem;
-    }
+  .mission {
+    margin-right: 1rem;
+  }
 }
 
 @media only screen and (max-width: 900px) {
-    .the-concept {
-        flex-direction: column;
-        align-items: center;
-    }
+  .the-concept {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .the-concept-content {
-        text-align: center;
-        margin-top: 3.5rem;
-        margin-right: 0rem !important;
-        padding: 0rem 1rem;
-        width: 100%;
-    }
+  .the-concept-content {
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-right: 0rem !important;
+    padding: 0rem 1rem;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1030px) {
-    .trilogy {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        padding-top: 0rem;
-    }
+  .trilogy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 0rem;
+  }
 
-    .mission,
-    .vision {
-        margin-right: 1rem;
-    }
+  .mission,
+  .vision {
+    margin-right: 1rem;
+  }
 
-    .mis-vis-p {
-        margin-top: 2rem;
-    }
+  .mis-vis-p {
+    margin-top: 2rem;
+  }
 
-    .the-concept-content {
-        margin-right: 2.5rem;
-    }
+  .the-concept-content {
+    margin-right: 2.5rem;
+  }
 }

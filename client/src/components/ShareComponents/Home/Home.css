@@ -7,16 +7,17 @@
   background: var(--light-turquiose);
   padding: 0.5rem;
 }
+
 .home-dropdown-button {
   color: white;
-  font-family: 'Train One', cursive;
+  font-family: "Train One", cursive;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.5rem;
   font-size: 1.3rem;
 }
-.home-dropdown-button:hover{
+.home-dropdown-button:hover {
   text-decoration: none;
   color: var(--dark-turquiose);
 }
@@ -65,8 +66,6 @@
       rgba(245, 217, 142, 0.7)
     ),
     url("../image/spices.jfif");
-   
-
 }
 .home-section-workshop {
   background-image: linear-gradient(
@@ -81,8 +80,6 @@
   margin-bottom: 2rem;
   font-weight: 600;
   text-transform: capitalize;
- 
-  
 }
 .home-section-title-food {
   animation: rightToLeft 1.5s 1;
@@ -100,7 +97,7 @@
   border: 0.1em solid var(--dark-yellow);
   text-decoration: none;
   color: white;
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .home-workshop-link {
@@ -112,7 +109,7 @@
   border: 0.1em solid var(--light-turquiose);
   text-decoration: none;
   color: var(--NavbarColor);
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 .home-aboutus-link {
   position: absolute;
@@ -127,13 +124,12 @@
   grid-template-rows: 50% 50%;
   align-items: center;
   justify-items: center;
-  box-shadow: 0 2px 4px 2px rgba(43, 42, 42, 0.3),inset 0 5px 5px rgba(219, 198, 198, 0.5);
- 
+  box-shadow: 0 2px 4px 2px rgba(43, 42, 42, 0.3),
+    inset 0 5px 5px rgba(219, 198, 198, 0.5);
 }
-.home-aboutus-link:hover{
-  background-color:rgb(245, 234, 210);
-  transform: scale(1.1)
-
+.home-aboutus-link:hover {
+  background-color: rgb(245, 234, 210);
+  transform: scale(1.1);
 }
 
 .home-logo-food,
@@ -146,7 +142,6 @@
 .home-logo-workshop {
   align-self: start;
 }
-
 
 .workshop-img {
   width: 65%;
@@ -227,9 +222,9 @@
   }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 320px) {
   .home-aboutus-link {
-    bottom:48%;
+    bottom: 48%;
     width: 4em;
     height: 4rem;
   }

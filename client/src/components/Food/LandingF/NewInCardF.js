@@ -3,13 +3,9 @@ import { Link } from "react-router-dom";
 import AddCircleSharpIcon from "@material-ui/icons/AddCircleSharp";
 import StarIcon from "@material-ui/icons/Star";
 
-
 function NewInCardF({ setSelectedDish, dishData }) {
-
-
   let newInArray = dishData.slice(Math.max(dishData.length - 4, 1));
 
- 
   const selectHandler = (selectedDishId) => {
     setSelectedDish(dishData.filter((item) => item._id === selectedDishId));
   };
@@ -21,8 +17,10 @@ function NewInCardF({ setSelectedDish, dishData }) {
       <div className="random-container">
         {newInArray.map((dish) => (
           <div className="food-card" key={dish._id}>
-          <Link  to={"/food/products/" + dish._id} onClick={() => selectHandler(dish._id)}>
-            
+            <Link
+              to={"/food/products/" + dish._id}
+              onClick={() => selectHandler(dish._id)}
+            >
               <div className="food-card-img">
                 <img className="product-image" src={dish.imageUrl} alt="" />
               </div>
@@ -34,25 +32,23 @@ function NewInCardF({ setSelectedDish, dishData }) {
                   </button>
                 </div>
                 <p className="cook-info">
-                  {dish.cooker}<br></br>
+                  {dish.cooker}
+                  <br></br>
                   {dish.cookerScore.map((star, index) => (
                     <StarIcon key={index} className="star" />
                   ))}
                 </p>
               </div>
-            
-          </Link>
+            </Link>
           </div>
         ))}
-        
       </div>
-      
-      <div className="food-list-container">
 
-      <Link to="/food/product_list" className="button food-list-link">
+      <div className="food-list-container">
+        <Link to="/food/product_list" className="button food-list-link">
           see more
         </Link>
-        </div>
+      </div>
     </div>
   );
 }

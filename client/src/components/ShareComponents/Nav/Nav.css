@@ -1,44 +1,34 @@
-
-img.logo-book{
+img.logo-book {
   width: 3%;
   margin: 30px 100px;
-  
 }
-
-img.logo-book:hover{
-  animation: spring 300ms ease-out; 
+img.logo-book:hover {
+  animation: spring 300ms ease-out;
 }
-
-
-
-.nav-color{
-  color:var( --FontColor)!important;
-  font-family: 'Montserrat', sans-serif;
+.nav-color {
+  color: var(--FontColor) !important;
+  font-family: "Montserrat", sans-serif;
   margin: 5px 10px;
   font-size: 1.5rem;
-  color:var( --NavbarColor )!important;
-
+  color: var(--NavbarColor) !important;
 }
-  
-
-.bgwhite{
-  background-color:  white !important;
+.bgwhite {
+  background-color: white !important;
 }
-	
-
-.nav-color:hover{
-  background-color:#eef5b1;
+.nav-color:hover {
+  background-color: #eef5b1;
   background-size: 50% 50%;
   border-radius: 5%;
   animation: spring 300ms ease-out;
   font-weight: bold;
-  
 }
-.nav-color:active{
+.nav-color:active {
   transform: translateY(4px);
-  
 }
-
+.container-homepage {
+  display: grid;
+  grid-template-columns: auto auto;
+}
 
 @keyframes spring {
   15% {
@@ -57,12 +47,5 @@ img.logo-book:hover{
     -webkit-transform-origin: center center;
     -webkit-transform: scale(1, 1);
   }
-}
-
-
-
-.container-homepage{
-  display: grid;
-  grid-template-columns: auto auto;
 }
 

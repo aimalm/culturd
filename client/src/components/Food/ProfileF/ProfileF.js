@@ -5,14 +5,7 @@ import OrderHistory from "./OrderHistory";
 import AddPost from "./AddPost";
 import UpComingOrder from "./UpComingOrder";
 
-function ProfileF({
-  userData,
-  dishData,
-  getUser,
-  createFood,
-  getAllFood,
-  orderData,
-}) {
+function ProfileF({ userData, dishData, getUser, createFood, getAllFood }) {
   const [viewSection, setViewSection] = useState("info");
 
   return (
@@ -25,13 +18,13 @@ function ProfileF({
             <img
               className="profile-user-pic"
               src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-              alt=""
+              alt="user_picture"
             />
           ) : (
             <img
               className="profile-user-pic"
               src={userData.ProfilePicture}
-              alt=""
+              alt="user_picture"
             />
           )}
         </div>
@@ -103,15 +96,7 @@ function ProfileF({
             ""
           )}
 
-          {viewSection === "order" ? (
-            <UpComingOrder
-              orderData={orderData}
-              dishData={dishData}
-              userData={userData}
-            />
-          ) : (
-            ""
-          )}
+          {viewSection === "order" ? <UpComingOrder /> : ""}
         </div>
       </div>
     </div>

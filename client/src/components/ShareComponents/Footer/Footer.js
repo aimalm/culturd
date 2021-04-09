@@ -8,7 +8,6 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 function footer() {
   return (
-    
     <div className="footer">
       <span className="footer-line">&#x2015;</span>
       <div className="footer-icon-container">

@@ -1,103 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .country-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper {
-    width: 75rem;
-    margin: 6.25rem 2rem 6.25rem 2rem;
-    display: flex;
-    flex-direction: column;
+  width: 75rem;
+  margin: 6.25rem 2rem 6.25rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .workshop-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .workshop-info > * {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .workshop-info > h1 {
-    font-family: 'Train One', cursive;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-family: "Train One", cursive;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #19d1d1 0%, #fa9726 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ticket-info {
-    display: flex;
-    color: var(--NavbarColor);
+  display: flex;
+  color: var(--NavbarColor);
 }
 
 .ticket-info > * {
-    margin-right: 0.938rem;
+  margin-right: 0.938rem;
 }
 
 .info-icon {
-    color: var(--carol);
+  color: var(--carol);
 }
 
 .workshop-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .inner-container-1 {
-    width: 45rem;
-    display: flex;
-    flex-direction: column;
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .accordeon-container {
-    padding-top: 1.563rem;
-    color:var(--NavbarColor)
+  padding-top: 1.563rem;
+  color: var(--NavbarColor);
 }
 
 @media only screen and (max-width: 760px) {
-    .workshop-info {
-        align-items: center;
-        text-align: center;
-    }
+  .workshop-info {
+    align-items: center;
+    text-align: center;
+  }
 }
 
-@media only screen and (max-width: 1200px){
-    .workshop-container {
-        flex-direction: column;
-        align-items: center;
-    }
+@media only screen and (max-width: 1200px) {
+  .workshop-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .wrapper {
-        width: 50rem;
-    }
+  .wrapper {
+    width: 50rem;
+  }
 
-    .inner-container-1 {
-        width: 100%;
-    }
+  .inner-container-1 {
+    width: 100%;
+  }
 
-    .inner-container-2 {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding-top: 1.5rem;
-    }
+  .inner-container-2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1.5rem;
+  }
 }
-
-
-
-
-
-
-

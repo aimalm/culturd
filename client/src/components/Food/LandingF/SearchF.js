@@ -50,29 +50,29 @@ function SearchF({ setSelectedDish, dishData }) {
         </button>
 
         <div className="search-result-display">
-        {searchResult.length > 0 ? (
-          <div className="search-suggestion">
-            {searchResult.map((food) => (
-              <Link
-                key={food._id}
-                to={"/food/products/" + food._id}
-                onClick={() => resultHandler(food._id)}
-              >
-                <p key={food._id}>{food.dishName}</p>
-              </Link>
-            ))}
-          </div>
-        ) : (
-          ""
-        )}
+          {searchResult.length > 0 ? (
+            <div className="search-suggestion">
+              {searchResult.map((food) => (
+                <Link
+                  key={food._id}
+                  to={"/food/products/" + food._id}
+                  onClick={() => resultHandler(food._id)}
+                >
+                  <p key={food._id}>{food.dishName}</p>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
 
-        {isSearching && searchResult.length === 0 ? (
-          <div className="search-suggestion">
-            <p>no matching dish yet</p>
-          </div>
-        ) : (
-          ""
-        )}
+          {isSearching && searchResult.length === 0 ? (
+            <div className="search-suggestion">
+              <p>no matching dish yet</p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </form>
     </div>

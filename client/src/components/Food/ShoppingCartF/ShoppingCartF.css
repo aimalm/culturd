@@ -6,7 +6,8 @@
 }
 .shopping-cart-wrapper h4,
 .shopping-cart-wrapper h5,
-.shopping-cart-wrapper p, .cart-empty-msg {
+.shopping-cart-wrapper p,
+.cart-empty-msg {
   color: var(--NavbarColor);
   font-family: var(--font);
 }
@@ -33,7 +34,8 @@
   -webkit-text-fill-color: transparent;
   font-family: "Train One", cursive;
 }
-.cart-empty-msg{
+
+.cart-empty-msg {
   padding: 3rem 15rem;
 }
 
@@ -48,6 +50,7 @@
   color: var(--NavbarColor);
   font-weight: 600;
 }
+
 .cart-img {
   width: 6rem;
   height: 6rem;
@@ -58,9 +61,11 @@
 .cart-food-info {
   text-transform: capitalize;
 }
+
 .cart-food-info h4 {
   padding: 0.5rem 0 1rem 0;
 }
+
 .cart-quantity {
   height: 30%;
   width: 50%;
@@ -68,6 +73,7 @@
   grid-template-columns: 33% 63% 33%;
   justify-self: center;
 }
+
 .cart-plus-button,
 .cart-minus-button {
   background-color: transparent;
@@ -80,6 +86,7 @@
 .cart-minus-button {
   border-radius: 0 8px 8px 0;
 }
+
 .cart-quantity-input {
   background-color: var(--light-turquiose);
   border: none;
@@ -107,6 +114,7 @@
   margin: auto;
   margin-bottom: 3rem;
 }
+
 .cart-checkout-button {
   background-color: var(--greenish);
   border: 1px solid var(--greenish);
@@ -115,7 +123,6 @@
 .cart-checkout-button:hover {
   background-color: var(--light-green);
   border: 1px solid var(--light-green);
-  
 }
 
 .paypal-buttons-container {
@@ -161,7 +168,8 @@
     top: 6%;
     left: 1%;
   }
-  .shopping-cart-title, .cart-empty-msg {
+  .shopping-cart-title,
+  .cart-empty-msg {
     padding: 1rem 5rem;
   }
   .shopping-cart-item {
@@ -176,7 +184,7 @@
   .cart-delete-button {
     grid-column: 3/4;
     grid-row: 2/3;
-  
+
     height: 50%;
   }
   .cart-quantity {
@@ -207,7 +215,6 @@
   .cart-food-info p {
     font-size: 0.8rem;
   }
-
   .cart-checkout-button {
     width: auto;
   }
