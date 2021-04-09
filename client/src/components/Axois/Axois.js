@@ -113,7 +113,7 @@ export const createFoodOrder = async (amount, shoppingCart) => {
     cooker_id: shoppingCart.map((dish) => dish.cookerId),
     payment: "yes",
     amount: amount,
-    pickup_date: new Date().toString(),
+    order_date: new Date().toString(),
     Pickup_address: shoppingCart.map((dish) => dish.address),
   };
 

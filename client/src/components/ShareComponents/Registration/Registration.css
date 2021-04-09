@@ -130,6 +130,10 @@ form > h1 {
     color: #FFFFFF;
 }
 
+.signUp {
+    margin-top: 1rem;
+}
+
 .sign-form-container {
     margin: 70px;
     margin-top: 0rem;
@@ -161,7 +165,6 @@ form > h1 {
     margin-right: 10px;
 }
 
-
 @media only screen and (max-width: 360px) {
     .login-h2,
     .form-header {
@@ -172,9 +175,6 @@ form > h1 {
         font-size: 1.5rem;
     }
 
-    #user {
-        width: 7.3rem !important;
-    }
 }
 
 @media only screen and (max-width: 450px){
@@ -187,7 +187,6 @@ form > h1 {
     .submit-btn{
         width: 100% !important;
     }
-
 }
 
 @media only screen and (max-width: 960px){
@@ -208,7 +207,7 @@ form > h1 {
 
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 700px) {
     .name-container,
     .email-container,
     .password-container {
@@ -222,15 +221,15 @@ form > h1 {
         margin-right: 0rem;
     }
 
-    #user {
-        margin-bottom: 1rem;
+    .email-field {
+        margin-bottom: 0rem;
     }
 }
 
 @media only screen and (max-width: 1200px) {
     .sign-form-container {
         flex-direction: column;
-        width: 55%;
+        width: 40rem;
     }
 
     .form-container-3 {

@@ -4,7 +4,7 @@ import { IoTicketSharp } from "react-icons/io5";
 import { BsFillLightningFill } from "react-icons/bs";
 import ImageCards from './compCountries/ImageCards/ImageCards';
 import Accordeon from './compCountries/Accordion/Accordion';
-import Food from '../image/afghaniBread.jpg';
+import Food from '../image/afghanFood.PNG';
 import Dance from '../image/afghanDance.jpg';
 import Art from '../image/afghanCarpet.jpg';
 import { AfghanWorkshop } from './compCountries/ImageCards/WorkshopDescription';
