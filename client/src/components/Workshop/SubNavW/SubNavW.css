@@ -37,10 +37,11 @@
       animation: spring 300ms ease-out;
       font-weight: bold;
       color: turquoise;
+      margin: auto auto;
       
     }
     .nav-color:active{
-      transform: translateY(4px);
+      transform: translateY(2px);
       
     }
     
