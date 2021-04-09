@@ -3,6 +3,8 @@ import './Registration.css';
 import { Link } from "react-router-dom";
 import axios from "axios";
 import NavLogSign from '../NavLogSign/NavLogSign';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Form from 'react-bootstrap/Form';
 
 function SignUp() {
     const name = useRef();
@@ -12,6 +14,50 @@ function SignUp() {
     const userType = useRef();
 
     const [ emailError, setEmailError] = useState("");
+
+    const [ form, setForm ] = useState({});
+    const [ errors, setErrors ] = useState({});
+
+    const setField = (field, value) => {
+        setForm({
+        ...form,
+        [field]: value
+        })
+    
+        if ( !!errors[field] ) setErrors({
+        ...errors,
+        [field]: null
+        })
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        const newErrors = findFormErrors()
+        if ( Object.keys(newErrors).length > 0 ) {
+        setErrors(newErrors)
+        } 
+    }
+
+    const findFormErrors = () => {
+        const { firstName, lastName, signEmail, signPassword, confirmPass } = form
+        const newErrors = {}
+        const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if ( !firstName || firstName === '' ) newErrors.firstName = '* First name is empty'
+
+        if ( !lastName || lastName === '' ) newErrors.lastName = '* Last name is empty'
+
+        if ( !signEmail || signEmail === '' ) newErrors.signEmail = '* Email address is empty'
+        else if ( !signEmail.match(regexEmail) ) newErrors.signEmail = '* Invalid email address'
+        
+        if ( !signPassword || signPassword === '' ) newErrors.signPassword = '* Password is empty'
+        else if ( signPassword.length > 30 ) newErrors.signPassword = '* Password is too long'
+
+        if ( !confirmPass || confirmPass === '' ) newErrors.confirmPass = '* Password not confirmed'
+        else if ( confirmPass !== signPassword ) newErrors.confirmPass = '* Passwords don\'t match'
+
+        return newErrors
+    }
 
     function register(e){
         e.preventDefault();
@@ -49,48 +95,104 @@ function SignUp() {
                         <p className="p-login"><Link to="/login" className="reg-link">SIGN IN</Link> to get access to all features of the application</p>
                     </div>
                     <div className="form-container-4">
-                        <form className="signUp-form">
+                        <Form className="signUp-form">
                             <h1 className="form-header">SIGN UP</h1>
                             <div className="name-container">
-                                <div className="form-group">
-                                    <label htmlFor="firstName">First Name</label><br/>
-                                    <input ref = {name} type="text" name="firstName" id="firstName" className="input-fields" required/>
-                                    <p className="error-msg" ></p>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="lastName">Last Name</label><br/>
-                                    <input ref = {lastName} type="text" name="lastName" id="lastName" className="input-fields" required/>
-                                    <p className="error-msg"></p>
-                                </div>
+                                <Form.Group>
+                                    <Form.Label>First Name</Form.Label>
+                                    <Form.Control 
+                                        ref = {name} 
+                                        type="text" 
+                                        name="firstName" 
+                                        id="firstName" 
+                                        className="input-fields" 
+                                        onChange={ e => setField("firstName", e.target.value) }
+                                        isInvalid={ !!errors.firstName }
+                                    />
+                                    <Form.Control.Feedback type='invalid'>
+                                        { errors.firstName }
+                                    </Form.Control.Feedback>
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Last Name</Form.Label>
+                                    <Form.Control 
+                                        ref = {lastName} 
+                                        type="text" 
+                                        name="lastName" 
+                                        id="lastName" 
+                                        className="input-fields" 
+                                        onChange={ e => setField("lastName", e.target.value) }
+                                        isInvalid={ !!errors.lastName }
+                                    />
+                                    <Form.Control.Feedback type='invalid'>
+                                        { errors.lastName }
+                                    </Form.Control.Feedback>
+                                </Form.Group>
                             </div>
                             <div className="email-container">
-                                <div className="form-group">
-                                    <label  htmlFor="email">Email</label><br/>
-                                    <input ref = {email} type="email" name="email" id="sign-email" className="input-fields" required/>
+                                <Form.Group className="email-field">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control 
+                                        ref = {email} 
+                                        type="email" 
+                                        name="email" 
+                                        id="sign-email" 
+                                        className="input-fields" 
+                                        onChange={ e => setField("signEmail", e.target.value) }
+                                        isInvalid={ !!errors.signEmail }
+                                    />
+                                    <Form.Control.Feedback type='invalid'>
+                                        { errors.signEmail }
+                                    </Form.Control.Feedback>
                                     <p className="error-msg"> {emailError}</p>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="user">Choose</label><br/>
-                                    <select ref = {userType} name="user" id="user" className="input-fields">
-                                        <option value="guest" className="sign-option">Guest</option>
-                                        <option value="cook" className="sign-option">Cook</option>
-                                    </select>
-                                </div>
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Choose</Form.Label>
+                                    <Form.Control 
+                                        as="select" 
+                                        ref = {userType} 
+                                        name="user" 
+                                        id="user" 
+                                        className="input-fields"
+                                    >
+                                        <option value="guest" className="sign-option" >Guest &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</option>
+                                        <option value="cook" className="sign-option" >Cook</option>
+                                    </Form.Control>
+                                </Form.Group>
                             </div>
                             <div className="password-container">
-                                <div className="form-group">
-                                    <label  htmlFor="password">Password</label><br/>
-                                    <input ref = {password} type="password" name="password" id="sign-pass" className="input-fields" required/>
-                                    <p className="error-msg"></p>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="confirmPass">Confirm Password</label><br/>
-                                    <input type="password" name="confirmPass" id="confirmPass" className="input-fields" required/>
-                                    <p className="error-msg"></p>
-                                </div>
+                                <Form.Group>
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control 
+                                        ref = {password} 
+                                        type="password" 
+                                        name="password" 
+                                        id="sign-pass" 
+                                        className="input-fields" 
+                                        onChange={ e => setField("signPassword", e.target.value) }
+                                        isInvalid={ !!errors.signPassword }
+                                    />
+                                    <Form.Control.Feedback type='invalid'>
+                                        { errors.signPassword }
+                                    </Form.Control.Feedback>
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Confirm Password</Form.Label>
+                                    <Form.Control 
+                                        type="password" 
+                                        name="confirmPass" 
+                                        id="confirmPass" 
+                                        className="input-fields" 
+                                        onChange={ e => setField("confirmPass", e.target.value) }
+                                        isInvalid={ !!errors.confirmPass }
+                                    />
+                                    <Form.Control.Feedback type='invalid'>
+                                        { errors.confirmPass }
+                                    </Form.Control.Feedback>
+                                </Form.Group>
                             </div>
-                            <button type="submit" className="submit-btn" onClick={register}>SIGN UP</button>
-                        </form>
+                            <button type="submit" className="submit-btn signUp" onClick={register}  onClick={ handleSubmit }>SIGN UP</button>
+                        </Form> 
                     </div>
                 </div>
             </div>

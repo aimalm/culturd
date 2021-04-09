@@ -4,7 +4,7 @@ import { IoTicketSharp } from 'react-icons/io5';
 import { BsFillLightningFill } from 'react-icons/bs';
 import ImageCards from './compCountries/ImageCards/ImageCards';
 import Accordeon from './compCountries/Accordion/Accordion';
-import Food from '../image/liboke.jpg';
+import Food from '../image/congoFood.jpg';
 import Dance from '../image/congoDance.jpeg';
 import Art from '../image/congoMask.jpg';
 import { CongoWorkshop } from './compCountries/ImageCards/WorkshopDescription';
