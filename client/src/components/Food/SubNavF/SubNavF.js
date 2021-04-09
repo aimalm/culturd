@@ -6,19 +6,17 @@ import Nav from "react-bootstrap/Nav";
 import { LinkContainer } from "react-router-bootstrap";
 import foodLogo from "../../ShareComponents/image/logofood.png";
 import { FiLogOut } from "react-icons/fi";
-import {RiShoppingBasketLine} from "react-icons/ri"
+import { RiShoppingBasketLine } from "react-icons/ri";
 
 function SubNavF({ shoppingCart, userData, setUserData, logOut }) {
-
-
   return (
     <div className="container-navbar">
       <Navbar bg="white fixed-top nav-border" animation="false" expand="lg">
         <LinkContainer to="/">
           <img src={foodLogo} className="logo-icon" alt="" />
         </LinkContainer>
-        <Navbar.Toggle  aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse  id="basic-navbar-nav" animation="false">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" animation="false">
           <Nav className="ml-auto navbar">
             <LinkContainer to="/food">
               <Nav.Link className="nav-color">Home</Nav.Link>
@@ -59,10 +57,9 @@ function SubNavF({ shoppingCart, userData, setUserData, logOut }) {
                   </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/">
-
-                <Nav.Link className="nav-color" onClick={logOut}>
-                  <FiLogOut className="nav-logout-icon" />
-                </Nav.Link>
+                  <Nav.Link className="nav-color" onClick={logOut}>
+                    <FiLogOut className="nav-logout-icon" />
+                  </Nav.Link>
                 </LinkContainer>
               </>
             )}

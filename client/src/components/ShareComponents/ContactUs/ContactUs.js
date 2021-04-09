@@ -8,7 +8,6 @@ import { ImUsers } from "react-icons/im";
 import { IoMdClose } from "react-icons/io";
 import thanks from "../image/thanks.png";
 
-
 function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -34,8 +33,6 @@ function ContactForm() {
 
     setIsSubmitting(true);
   };
-  //console.log(localStorage.getItem("email"));
-
 
   return (
     <>
@@ -52,7 +49,7 @@ function ContactForm() {
             onClick={() => {
               setIsSubmitting(false);
             }}
-          > 
+          >
             <IoMdClose />
           </button>
           <img className="logo_thanks" src={thanks} alt="First slide" />
@@ -64,7 +61,6 @@ function ContactForm() {
 
       <div className="reg-button-container">
         <Link to="/login">
-         
           <button className="reg-dropdown-button">
             <span className="angle-icon">
               <ImUsers />

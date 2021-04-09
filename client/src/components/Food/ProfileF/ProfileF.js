@@ -104,11 +104,7 @@ function ProfileF({
           )}
 
           {viewSection === "order" ? (
-            <UpComingOrder
-              orderData={orderData}
-              dishData={dishData}
-              userData={userData}
-            />
+            <UpComingOrder />
           ) : (
             ""
           )}

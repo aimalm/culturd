@@ -1,23 +1,8 @@
 import React from "react";
 
-function UpComingOrder({ orderData, dishData, userData }) {
-  console.log("orderData in profileF:", orderData);
-
-  let onlyProductId = orderData.map((order) => order.product_id).flat();
-  console.log("onlyProductID: ", onlyProductId);
-
-  let dishPostByMe = dishData
-    .filter((dish) => dish.cookerId === userData._id)
-    .map((dish) => dish._id);
-  console.log("dishPostByMe: ", dishPostByMe);
-
-  let compareArray = dishPostByMe.filter((val) => onlyProductId.includes(val));
-
-  console.log(compareArray);
-
-  let myOrder = dishData.filter((dish) => dish._id === compareArray.join());
-
-  console.log("myOrder: ", myOrder);
+function UpComingOrder() {
+ 
+  // TODO: Build logic to show login user's latest orders
 
   return (
     <div className="profile-history">

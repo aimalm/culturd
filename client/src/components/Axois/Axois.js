@@ -54,36 +54,29 @@ export const createFood = async (userData, values) => {
     quantity: "1",
   };
   //console.log(newObj);
-  await axois
-    .post("/food", newObj)
-    .catch((err) => console.error(err));
+  await axois.post("/food", newObj).catch((err) => console.error(err));
 };
-
 
 //delete for food
 export const deleteFoodPost = async (id) => {
-  console.log(id)
+  console.log(id);
   await axois.delete(`/food/${id}`).catch((err) => console.log(err));
 };
-
 
 //POST for bookform workshop
 export const createBookForm = async (values) => {
   const newObj = {
     firstname: values.firstname,
     lastname: values.lastname,
-    telephone:values.myTelephone,
-    amount_of_tickets:values.number,
-    email:values.email,
-    country:values.country,
-    book_date:values.date_time,
+    telephone: values.myTelephone,
+    amount_of_tickets: values.number,
+    email: values.email,
+    country: values.country,
+    book_date: values.date_time,
   };
   //console.log("axois obj:", newObj);
-  await axois
-    .post("/booked_event", newObj)
-    .catch((err) => console.error(err));
+  await axois.post("/booked_event", newObj).catch((err) => console.error(err));
 };
-
 
 //Patch user info
 export const updateUser = async (id, values) => {
@@ -94,16 +87,14 @@ export const updateUser = async (id, values) => {
     address: values.address,
   };
 
-  console.log(newObj)
+  console.log(newObj);
   await axois.patch(`/user/${id}`, newObj).catch((err) => console.log(err));
 };
-
 
 //Get all for food_order
 export const getFoodOrder = async () => {
   await axois.get("/food_order").catch((err) => console.log(err));
 };
-
 
 //POST for food_order
 export const createFoodOrder = async (amount, shoppingCart) => {

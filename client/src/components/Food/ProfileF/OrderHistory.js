@@ -1,9 +1,8 @@
 import React from "react";
 import { deleteFoodPost } from "../../Axois/Axois";
-import {RiDeleteBin6Line} from "react-icons/ri"
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 function OrderHistory({ userData, dishData, getAllFood }) {
-
   const dishPostByMe = dishData.filter(
     (dish) => dish.cookerId === userData._id
   );
@@ -28,13 +27,10 @@ function OrderHistory({ userData, dishData, getAllFood }) {
                   }, 500);
                 }}
               >
-                <RiDeleteBin6Line className="profile-history-button-icon"/>
+                <RiDeleteBin6Line className="profile-history-button-icon" />
               </button>
-              
-              
+
               <div className="profile-order-details">
-               
-               
                 <p>
                   <strong>Dish: </strong> {dish.dishName}
                 </p>
@@ -42,7 +38,8 @@ function OrderHistory({ userData, dishData, getAllFood }) {
                   <strong>Description: </strong> {dish.dishDescription}
                 </p>
                 <p>
-                  <strong>Pick up date: </strong> {dish.pickupDate.substring(0, 10)}
+                  <strong>Pick up date: </strong>{" "}
+                  {dish.pickupDate.substring(0, 10)}
                 </p>
               </div>
 
@@ -51,7 +48,6 @@ function OrderHistory({ userData, dishData, getAllFood }) {
                 src={dish.imageUrl}
                 alt=""
               />
-              
             </div>
           ))}
         </div>

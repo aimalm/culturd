@@ -9,7 +9,6 @@
 /* search section start here */
 .home-search-container {
   margin-top: 6rem;
-  /* margin-bottom: -7rem; */
   padding: 3rem 7rem 0 7rem;
   text-transform: uppercase;
   text-align: center;
@@ -113,7 +112,6 @@
 }
 .food-card-img:hover {
   opacity: 0.5;
-
 }
 .food-card-img {
   width: 18rem;
@@ -145,7 +143,7 @@
 }
 .cook-info {
   text-transform: capitalize;
-  color:var(--NavbarColor);
+  color: var(--NavbarColor);
 }
 .star {
   color: var(--yellowish) !important;
@@ -305,7 +303,6 @@
   .food-title-new {
     font-size: 1.5rem;
   }
-
   .how-it-works-title {
     padding: 3rem 0;
     text-align: center;
@@ -315,6 +312,7 @@
     width: 90%;
   }
 }
+
 @media only screen and (max-width: 375px) {
   .how-it-works {
     padding: 0;
