@@ -34,8 +34,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color:white;
-    animation: rightToLeft 1.5s 1;
 }
 
 .form-container-2,
@@ -46,7 +44,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--light-turquiose);
+    background-color: #FFFFFF;
     
 }
 
