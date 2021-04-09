@@ -25,14 +25,15 @@ const impDet = () => {
 const AfghanWorkshopInfo = [
     {
         title: 'What We Offer',
-        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Donec gravida tincidunt euismod. Mauris lacus mi, vulputate eget sem
-        vitae, imperdiet consectetur urna. In ante sapien, mattis eu nisi ut,
-        malesuada fringilla massa. Ut pulvinar, quam quis interdum convallis,
-        sem dolor ullamcorper lacus, vel tristique felis nunc in risus.
-        Duis ex dolor, commodo vitae metus ac, egestas tincidunt turpis.
-        Morbi leo quam, ornare molestie pellentesque interdum, euismod ut magna.
-        Aliquam tincidunt orci vulputate interdum varius.`
+        content: ` We offer 3 activities in a 3-hour workshop. Guests will be 
+        introduced to authentic food, dance and art. They will get to taste, 
+        dance and learn more about a culture of choice.
+        The workshops will take place in small groups of up to 15 people
+        to ensure everybody gets the maximum out of the workshops. 
+        Corona measurements will be respected. The workshops will be held in big enough 
+        rooms so social distancing can be ensured.
+        We have put thought into these workshops and we are open for questions and dialogue.
+        Feel free to leave a review in case you have followed one of our workshops.`
     },
     {
         title: 'Important Details',
