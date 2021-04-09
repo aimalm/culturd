@@ -134,6 +134,8 @@ padding: 20px 15px 0;
     animation: rightToLeft 1.5s 1;
 }
 
+/*popup*/
+
 .pop-up-notice.contact-from-submit{
     background-color: #f5e3b1;
     width: 60%;
@@ -176,3 +178,29 @@ padding: 20px 15px 0;
     50%{transform: rotate(-5deg)}
     100%{transform: rotate(10deg);}
   }
+
+
+  /*responsive*/
+@media screen and (max-width: 720px) {
+    .h5-popup{
+     font-size: 1.5rem;
+     margin:20px;
+    }
+    .pop-up-notice.contact-from-submit{
+        width: 80%;
+    }
+    .contact-page-sec{
+        width: 80%;
+    }
+
+    .logo_thanks{
+        width: 30%;
+    }
+    
+      
+    }
+  
+  
+  
+  
+    

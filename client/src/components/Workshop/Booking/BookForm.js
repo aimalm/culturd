@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./BookForm.css";
 import { createBookForm } from "../../Axois/Axois";
 import { IoMdClose } from "react-icons/io";
-import popup from "../image/popup.png";
+
 
 
 import {
@@ -49,17 +49,13 @@ function BookForm() {
           >
             Submit
           </button>
-          <div className="flex-popup">
-          <img src={popup} className="popup-logo" alt="" />
           </div>
-        </div>
         </div>
       ) : (
         ""
       )}
 
       <h1 className="h1-book">Request your price quote here</h1>
-
       <div className="Booking-container">
         <Form
           name="testForm"

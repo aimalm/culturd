@@ -137,6 +137,8 @@
     color: var(--NavbarColor);
 }
 
+
+
 @media only screen and (max-width: 613px) {
     .mission,
     .vision {

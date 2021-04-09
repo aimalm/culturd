@@ -76,6 +76,7 @@
   margin: 40px 80px;
   line-height: 1.4;
   
+  
 }
 
 .btn-popup{
@@ -103,26 +104,18 @@
   text-decoration: none;
 }
 
-.flex-popup{
-  display: flex;
-}
 
-.popup-logo{
-  max-width: 30%;
-  margin-top: -250px;
-  margin-left: 600px;
-}
+
 
 /*responsive*/
 @media screen and (max-width: 320px) {
   .Booking-container {
     width: 80%;
   }
-  .popup-logo{
-    width: 30%;
-    height: 30%;
+  
+    
   }
-}
+
 
 @media screen and (max-width: 768px) {
   .Booking-container {
@@ -137,13 +130,8 @@
 
   }
 
-  .popup-logo{
-    width: 90%;
-    height: 10rem;
-    margin-top: 100px;
-    
   }
 
   
-}
+
 
