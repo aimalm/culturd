@@ -1,5 +1,6 @@
 import React from "react";
 import { deleteFoodPost } from "../../Axois/Axois";
+import {RiDeleteBin6Line} from "react-icons/ri"
 
 function OrderHistory({ userData, dishData, getAllFood }) {
 
@@ -17,7 +18,23 @@ function OrderHistory({ userData, dishData, getAllFood }) {
         <div>
           {dishPostByMe.map((dish) => (
             <div className="profile-order-container" key={dish._id}>
+              <button
+                className="profile-history-button"
+                onClick={() => {
+                  deleteFoodPost(dish._id);
+
+                  setTimeout(() => {
+                    getAllFood();
+                  }, 500);
+                }}
+              >
+                <RiDeleteBin6Line className="profile-history-button-icon"/>
+              </button>
+              
+              
               <div className="profile-order-details">
+               
+               
                 <p>
                   <strong>Dish: </strong> {dish.dishName}
                 </p>
@@ -34,18 +51,6 @@ function OrderHistory({ userData, dishData, getAllFood }) {
                 src={dish.imageUrl}
                 alt=""
               />
-              <button
-                className="profile-history-button"
-                onClick={() => {
-                  deleteFoodPost(dish._id);
-
-                  setTimeout(() => {
-                    getAllFood();
-                  }, 500);
-                }}
-              >
-                Remove This post
-              </button>
               
             </div>
           ))}

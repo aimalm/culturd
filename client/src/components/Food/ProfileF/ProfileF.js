@@ -25,13 +25,13 @@ function ProfileF({
             <img
               className="profile-user-pic"
               src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-              alt=""
+              alt="user_picture"
             />
           ) : (
             <img
               className="profile-user-pic"
               src={userData.ProfilePicture}
-              alt=""
+              alt="user_picture"
             />
           )}
         </div>
