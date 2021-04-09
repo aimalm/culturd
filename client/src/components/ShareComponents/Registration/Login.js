@@ -55,58 +55,62 @@ function Login() {
         setSignInError(sessionStorage.getItem("SignInError"));
       });
   }
-
   return (
     <div>
       <NavLogSign />
       <div className="login-container">
-          <div className="log-form-container">
-              <div className="form-container-1">
-                  <h2 className="login-h2">New User?</h2>
-                  <p className="p-login"><Link to="/signup" className="reg-link">Sign up</Link> to get access to all features of the application</p>
-              </div>
-              <div className="form-container-2">
-                  <Form className="log-form">
-                    <h1 className="form-header">SIGN IN</h1>
-                    <Form.Group className="form-group">
-                      <Form.Label>Email</Form.Label>
-                      <Form.Control 
-                        ref = {email} 
-                        type="email" 
-                        name="email" 
-                        id="log-email" 
-                        className="input-fields"
-                        onChange={ e => setField('email', e.target.value) }
-                        isInvalid={ !!errors.email }
-                      />
-                      <Form.Control.Feedback type='invalid'>
-                        { errors.email }
-                      </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group className="form-group">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control 
-                        ref = {password} 
-                        type="password" 
-                        name="password" 
-                        id="log-pass" 
-                        className="input-fields" 
-                        onChange={ e => setField('password', e.target.value) }
-                        isInvalid={ !!errors.password }
-                      />
-                      <Form.Control.Feedback type='invalid'>
-                        { errors.password }
-                      </Form.Control.Feedback>
-                        <p className="error-msg">{SignInError}</p>
-                        <p><Link to="/" id="password-link">Forgot password?</Link></p>
-                    </Form.Group>
-                    <button type="submit"className="submit-btn" onClick={logIn}  onClick={ handleSubmit }>SIGN IN</button>
-                  </Form>
-              </div>
+        <div className="log-form-container">
+          <div className="form-container-1">
+            <h2 className="login-h2">New User?</h2>
+            <p className="p-login">
+              <Link to="/signup" className="reg-link">
+                Sign up
+              </Link>{" "}
+              to get access to all features of the application
+            </p>
           </div>
+          <div className="form-container-2">
+            <form className="log-form">
+              <h1 className="form-header">SIGN IN</h1>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <br />
+                <input
+                  ref={email}
+                  type="email"
+                  name="email"
+                  id="log-email"
+                  className="input-fields"
+                  required
+                />
+                <p className="error-msg"></p>
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <br />
+                <input
+                  ref={password}
+                  type="password"
+                  name="password"
+                  id="log-pass"
+                  className="input-fields"
+                  required
+                />
+                <p className="error-msg">{SignInError}</p>
+                <p>
+                  <Link to="/" id="password-link">
+                    Forgot password?
+                  </Link>
+                </p>
+              </div>
+              <button type="submit" className="submit-btn" onClick={logIn}>
+                SIGN IN
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-
 export default Login;
