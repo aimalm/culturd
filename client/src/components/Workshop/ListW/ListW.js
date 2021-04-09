@@ -15,14 +15,14 @@ function ListW() {
      
     <h1 className="h1-text__list">CHOOSE YOUR WORKSHOP</h1>
      <div className="cards-flex">
-       <div class="card_content">
+       <div className="card_content">
           <div className="card_image"><img className="img-cards" src={image1} alt=""/></div>
           <h2 className="card_title">Indonesia</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
           <Link to="/workshop/Indonesia" className="btn-listW">Read More</Link>{" "}
         </div>
       
-      <div class="card_content">
+      <div className="card_content">
           <div className="card_image"><img className="img-cards" src={image2} alt=""/></div>
           <h2 className="card_title">Afganistan</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
@@ -30,13 +30,13 @@ function ListW() {
       </div>
     </div>
     <div className="cards-flex_two">
-      <div class="card_content">
+      <div className="card_content">
           <div className="card_image"><img className="img-cards" src={image3} alt=""/></div>
           <h2 className="card_title">Congo</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
           <Link to="/workshop/Congo" className="btn-listW">Read More</Link>{" "}
       </div>
-      <div class="card_content">
+      <div className="card_content">
           <div className="card_image"><img className="img-cards" src={image4} alt=""/></div>
           <h2 className="card_title">Chinese</h2>
           <p className="card_text">Indonesia is centrally-located along ancient trading routes between the Far East, South Asia and the Middle East,</p>
