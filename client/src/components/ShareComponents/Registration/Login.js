@@ -14,7 +14,12 @@ function Login() {
   const [ form, setForm ] = useState({});
   const [ errors, setErrors ] = useState({});
 
+  useEffect(() => {
+    setSignInError();
+  }, []);
+
   const setField = (field, value) => {
+
     setForm({
       ...form,
       [field]: value
@@ -26,8 +31,8 @@ function Login() {
     })
   }
 
-  const handleSubmit = e => {
-    e.preventDefault()
+  const handleSubmit = () => {
+    //e.preventDefault()
     const newErrors = findFormErrors()
     if ( Object.keys(newErrors).length > 0 ) {
       setErrors(newErrors)
@@ -35,12 +40,12 @@ function Login() {
   }
 
   const findFormErrors = () => {
-    const { email, password } = form
+    const { password } = form
     const newErrors = {}
-    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //const regexEmail = /^w+([.-]?w+)@w+([.-]?w+)(.w{2,3})+$/;
 
-    if ( !email || email === '' ) newErrors.email = '* Email address is empty'
-    else if ( !email.match(regexEmail) ) newErrors.email = '* Invalid email address'
+    // if ( !email || email === '' ) newErrors.email = '* Email address is empty'
+    // else if ( !email.match(regexEmail) ) newErrors.email = '* Invalid email address'
     
     if ( !password || password === '' ) newErrors.password = '* Password is empty'
     else if ( password.length > 30 ) newErrors.password = '* Password is too long'
@@ -48,12 +53,11 @@ function Login() {
     return newErrors
   }
 
-  useEffect(() => {
-    setSignInError();
-  }, []);
+ 
 
   function logIn(e) {
     e.preventDefault();
+    handleSubmit();
     const userEmail = email.current.value;
     const userPassword = password.current.value;
     const data = {
@@ -146,7 +150,7 @@ function Login() {
                         <p className="error-msg">{SignInError}</p>
                         <p><Link to="/" id="password-link">Forgot password?</Link></p>
                     </Form.Group>
-                    <button type="submit"className="submit-btn" onClick={logIn}  onClick={ handleSubmit }>SIGN IN</button>
+                    <button type="submit"className="submit-btn" onClick={logIn} >SIGN IN</button>
                   </Form>
               </div>
           </div>

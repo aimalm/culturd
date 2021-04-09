@@ -30,8 +30,8 @@ function SignUp() {
         })
     }
 
-    const handleSubmit = e => {
-        e.preventDefault()
+    const handleSubmit = ()=> {
+        //e.preventDefault()
         const newErrors = findFormErrors()
         if ( Object.keys(newErrors).length > 0 ) {
         setErrors(newErrors)
@@ -39,16 +39,16 @@ function SignUp() {
     }
 
     const findFormErrors = () => {
-        const { firstName, lastName, signEmail, signPassword, confirmPass } = form
+        const { firstName, lastName, signPassword, confirmPass } = form
         const newErrors = {}
-        const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        //const regexEmail = /^w+([.-]?w+)@w+([.-]?w+)(.w{2,3})+$/;
 
         if ( !firstName || firstName === '' ) newErrors.firstName = '* First name is empty'
 
         if ( !lastName || lastName === '' ) newErrors.lastName = '* Last name is empty'
 
-        if ( !signEmail || signEmail === '' ) newErrors.signEmail = '* Email address is empty'
-        else if ( !signEmail.match(regexEmail) ) newErrors.signEmail = '* Invalid email address'
+        // if ( !signEmail || signEmail === '' ) newErrors.signEmail = '* Email address is empty'
+        // else if ( !signEmail.match(regexEmail) ) newErrors.signEmail = '* Invalid email address'
         
         if ( !signPassword || signPassword === '' ) newErrors.signPassword = '* Password is empty'
         else if ( signPassword.length > 30 ) newErrors.signPassword = '* Password is too long'
@@ -61,7 +61,8 @@ function SignUp() {
 
     function register(e){
         e.preventDefault();
-
+        if(!handleSubmit()){
+            
         const fName = name.current.value;
         const lName = lastName.current.value;
         const userEmail = email.current.value;
@@ -84,6 +85,10 @@ function SignUp() {
                     sessionStorage.setItem("emailError", "* Someone has already registered with this email");
                     setEmailError(sessionStorage.getItem("emailError"));
                 });
+
+        }
+        
+
     }
     return (
         <div>
@@ -191,7 +196,7 @@ function SignUp() {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                             </div>
-                            <button type="submit" className="submit-btn signUp" onClick={register}  onClick={ handleSubmit }>SIGN UP</button>
+                            <button type="submit" className="submit-btn signUp" onClick={register} >SIGN UP</button>
                         </Form> 
                     </div>
                 </div>
