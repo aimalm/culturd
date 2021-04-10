@@ -124,7 +124,7 @@ form > h1 {
 }
 
 .submit-btn:hover {
-  background-color: var(--turquiose);
+  background-color: var(--dark-turquiose);
   color: #ffffff;
 }
 
