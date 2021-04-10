@@ -1,4 +1,4 @@
-# :earth_americas Culturd
+# :earth_americas: Culturd
 
 ## Culturd Workshop
 ### :woman: [Ismi](https://github.com/IsmiAndhyka18)
