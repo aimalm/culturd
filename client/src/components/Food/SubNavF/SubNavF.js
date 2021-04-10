@@ -8,7 +8,7 @@ import foodLogo from "../../ShareComponents/image/logofood.png";
 import { FiLogOut } from "react-icons/fi";
 import { RiShoppingBasketLine } from "react-icons/ri";
 
-function SubNavF({ shoppingCart, userData, setUserData, logOut }) {
+function SubNavF({ shoppingCart, userData, logOut }) {
   return (
     <div className="container-navbar">
       <Navbar bg="white fixed-top nav-border" animation="false" expand="lg">
