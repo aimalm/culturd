@@ -24,7 +24,7 @@ function AboutUsF() {
         </div>
         <div className="the-concept-content">
           <h2 className="h2-aboutus ">the concept</h2>
-          <p className="multiline">{conceptF}</p>
+          <p className="multiline-concept">{conceptF}</p>
         </div>
       </div>
       <div className="trilogy">
