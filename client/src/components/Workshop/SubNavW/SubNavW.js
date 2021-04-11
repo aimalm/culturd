@@ -15,9 +15,9 @@ function SubNavW() {
         <LinkContainer to="/">
         <img src={workshop} className="logo-icon" alt=""/>
         </LinkContainer>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
-          <Nav className="ml-auto">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" animation="false">
+          <Nav className="ml-auto navbar">
               <LinkContainer to="/workshop"><Nav.Link className="nav-color">Home</Nav.Link></LinkContainer>
               <LinkContainer to="/workshop/about_us"><Nav.Link className="nav-color">About Us</Nav.Link></LinkContainer>
               <NavDropdown className="nav-color" title="Worskhops" >
