@@ -9,7 +9,7 @@ In this part of the project people can find information about the workshops, the
 book workshops and they can contact the team behind Culturd Workshop.
 The workshops are centered around 4 countries where participants will get introduced to the culture of their choice.
 
-## :stew: Culturd Food - Wing & Aimail
+## :stew: Culturd Food - Wing & Aimal
 In this part of the project people can make a profile to sell their (native, authentic) food or they can buy food from sellers.
 Users can look at the meals offered, they can search for different kinds of meals, they can add and delete meals and finally they can checkout.
 
