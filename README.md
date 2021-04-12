@@ -4,6 +4,8 @@ We chose to build this project with the React.js framework.
 The project consists of two parts: Culturd Workshop & Culturd Food.
 The idea behind these products is to connect people from different cultures.
 
+Have a look: [Culturd project](https://culturd.netlify.app/) :eyes:
+
 ## :art: Culturd Workshop - Ismi & Valerie
 In this part of the project people can find information about the workshops, they can
 book workshops and they can contact the team behind Culturd Workshop.
