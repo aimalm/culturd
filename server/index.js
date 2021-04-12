@@ -17,7 +17,7 @@ app.use(express.static('./public'));
 app.use('/uploads', express.static('uploads'));
 
 
-//const a = bodyParser
+
 //app.use(express.json());
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
@@ -28,7 +28,6 @@ const key = process.env.KEY;
 app.use(`/culturd_api/${key}`, Routes);
 
 
-//const CONNECTION_URL = "mongodb+srv://cuturd:culturd123@cluster0.adry7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
