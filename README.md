@@ -21,6 +21,7 @@ Users can look at the meals offered, they can search for different kinds of meal
 - Node.js
 - MongoDB
 - Figma
+- Photoshop
 - Visual Studio Code
 - Netlify
 - Heroku
